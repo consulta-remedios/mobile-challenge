@@ -7,6 +7,13 @@ O teste consiste em construir uma aplicação nativa iOS de um pseudo ecommerce 
 - Documentação da api no arquivo [docs/api.md](docs/api.md)
 - Imagens disponiveis na pasta [images/assets-ios](images/assets-ios/)
 
+### Escopo
+- A lista de jogos deve ser carregada automaticamente ao entrar no aplicativo, jogos devem vir da API
+- Ao clicar em algum item da lista, ir para tela de detalhes
+- O carrinho de compra deve exibir todos os itens adicionados.
+- Cada produto adicionado no carrinho, soma R$:10,00 ao frete do produto
+- O frete é grátis para compras acima de R$:250,00
+
 ### O que iremos avaliar...
 - Funcionamento do aplicativo(ele não pode quebrar)
 - Layout(Usabilidade e se fez conforme escopo)
