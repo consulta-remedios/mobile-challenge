@@ -3,8 +3,9 @@
 O teste consiste em construir uma aplicação nativa iOS de um pseudo ecommerce de games.
 
 ### Recursos
-- Faça aplicação conforme o layout -> [Layout iOS](https://xd.adobe.com/view/46d6098f-efdf-4d13-6096-690517595f3b-30e7/)
-- Faça uso da API -> [API](docs/api.md)
+- Faça aplicação conforme o layout: [Layout iOS](https://xd.adobe.com/view/46d6098f-efdf-4d13-6096-690517595f3b-30e7/)
+- Documentação da api no arquivo [docs/api.md](docs/api.md)
+- Imagens disponiveis na pasta [images/assets-ios](images/assets-ios/)
 
 ### O que iremos avaliar...
 - Funcionamento do aplicativo(ele não pode quebrar)
@@ -20,6 +21,6 @@ Faça um pull request para este repositório com o código a ser avaliado
 
 ##### Recomendações
 * Crie um código escalável
-* Versione como se estivesse trabalhando junto com uma equipe grande
-* Escreva um `README` descrevendo o que você fez de interessante, arquitetura que usou, lista de bibliotecas que usou e dificuldades que encontrou no desenvolvimento da aplicação(Se não consegui terminar em tempo hábil, aproveite este espaço para fazer um checklist do que está faltando)
+* Versione como se estivesse trabalhando em equipe
+* Descreva em um `README.md` o que você fez de interessante, a arquitetura que usou, lista de bibliotecas que usou e as dificuldades encontradas no desenvolvimento da aplicação(Se não consegui terminar em tempo hábil, aproveite este espaço para fazer um checklist do que está faltando)
 * Preze pela qualidade, se faltar tempo para terminar o teste, faça uma lista de pendências
