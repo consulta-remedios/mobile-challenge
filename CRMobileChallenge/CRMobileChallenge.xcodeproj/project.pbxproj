@@ -30,6 +30,19 @@
 		E1F226EF2215760A00BEA577 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1F226DA2215760900BEA577 /* Shared.framework */; };
 		E1F226F02215760A00BEA577 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1F226DA2215760900BEA577 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E1F226F82215764800BEA577 /* Planejamento.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E1F226F72215764800BEA577 /* Planejamento.rtf */; };
+		E1F226FB2216AB4700BEA577 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F226FA2216AB4700BEA577 /* Game.swift */; };
+		E1F226FD2216ABB500BEA577 /* Entitiy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F226FC2216ABB500BEA577 /* Entitiy.swift */; };
+		E1F226FF2216AEA200BEA577 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F226FE2216AEA200BEA577 /* Address.swift */; };
+		E1F227012216AFFA00BEA577 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227002216AFFA00BEA577 /* CreditCard.swift */; };
+		E1F227042216B05F00BEA577 /* CreditCardFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227032216B05F00BEA577 /* CreditCardFlag.swift */; };
+		E1F227062216B15400BEA577 /* PaymentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227052216B15400BEA577 /* PaymentType.swift */; };
+		E1F2270A2216B28A00BEA577 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227092216B28A00BEA577 /* Order.swift */; };
+		E1F2270D2216B38200BEA577 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2270C2216B38200BEA577 /* Price.swift */; };
+		E1F2270F2216B60D00BEA577 /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2270E2216B60D00BEA577 /* OrderItem.swift */; };
+		E1F227122216BEA800BEA577 /* Double+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227112216BEA800BEA577 /* Double+Formatter.swift */; };
+		E1F227142216C26F00BEA577 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227132216C26F00BEA577 /* Score.swift */; };
+		E1F227162216C44900BEA577 /* OrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227152216C44900BEA577 /* OrderTests.swift */; };
+		E1F227182216CDBE00BEA577 /* OrderItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227172216CDBE00BEA577 /* OrderItemTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +152,19 @@
 		E1F226E92215760A00BEA577 /* SharedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTests.swift; sourceTree = "<group>"; };
 		E1F226EB2215760A00BEA577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1F226F72215764800BEA577 /* Planejamento.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Planejamento.rtf; sourceTree = "<group>"; };
+		E1F226FA2216AB4700BEA577 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		E1F226FC2216ABB500BEA577 /* Entitiy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entitiy.swift; sourceTree = "<group>"; };
+		E1F226FE2216AEA200BEA577 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		E1F227002216AFFA00BEA577 /* CreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
+		E1F227032216B05F00BEA577 /* CreditCardFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardFlag.swift; sourceTree = "<group>"; };
+		E1F227052216B15400BEA577 /* PaymentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentType.swift; sourceTree = "<group>"; };
+		E1F227092216B28A00BEA577 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		E1F2270C2216B38200BEA577 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
+		E1F2270E2216B60D00BEA577 /* OrderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
+		E1F227112216BEA800BEA577 /* Double+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Formatter.swift"; sourceTree = "<group>"; };
+		E1F227132216C26F00BEA577 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		E1F227152216C44900BEA577 /* OrderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTests.swift; sourceTree = "<group>"; };
+		E1F227172216CDBE00BEA577 /* OrderItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemTests.swift; sourceTree = "<group>"; };
 		F0EDCBC018B94C40C1EC64BB /* Pods-Shared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared.debug.xcconfig"; path = "Target Support Files/Pods-Shared/Pods-Shared.debug.xcconfig"; sourceTree = "<group>"; };
 		FE1D9456F403FC2F748949FA /* Pods_DomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -266,6 +292,9 @@
 		E1F226B92215760200BEA577 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				E1F2270B2216B2BB00BEA577 /* ValueObjects */,
+				E1F227022216B04F00BEA577 /* Enums */,
+				E1F226F92216AB3900BEA577 /* Entities */,
 				E1F226BA2215760200BEA577 /* Domain.h */,
 				E1F226BB2215760200BEA577 /* Info.plist */,
 			);
@@ -275,8 +304,11 @@
 		E1F226C62215760200BEA577 /* DomainTests */ = {
 			isa = PBXGroup;
 			children = (
+				E1F227192216CE3900BEA577 /* Mocks */,
 				E1F226C72215760200BEA577 /* DomainTests.swift */,
 				E1F226C92215760200BEA577 /* Info.plist */,
+				E1F227152216C44900BEA577 /* OrderTests.swift */,
+				E1F227172216CDBE00BEA577 /* OrderItemTests.swift */,
 			);
 			path = DomainTests;
 			sourceTree = "<group>";
@@ -284,8 +316,10 @@
 		E1F226DB2215760900BEA577 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E1F227102216BE9400BEA577 /* Extensions */,
 				E1F226DC2215760900BEA577 /* Shared.h */,
 				E1F226DD2215760900BEA577 /* Info.plist */,
+				E1F226FC2216ABB500BEA577 /* Entitiy.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -297,6 +331,51 @@
 				E1F226EB2215760A00BEA577 /* Info.plist */,
 			);
 			path = SharedTests;
+			sourceTree = "<group>";
+		};
+		E1F226F92216AB3900BEA577 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				E1F226FA2216AB4700BEA577 /* Game.swift */,
+				E1F227092216B28A00BEA577 /* Order.swift */,
+				E1F2270E2216B60D00BEA577 /* OrderItem.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		E1F227022216B04F00BEA577 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				E1F227032216B05F00BEA577 /* CreditCardFlag.swift */,
+				E1F227052216B15400BEA577 /* PaymentType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		E1F2270B2216B2BB00BEA577 /* ValueObjects */ = {
+			isa = PBXGroup;
+			children = (
+				E1F227002216AFFA00BEA577 /* CreditCard.swift */,
+				E1F226FE2216AEA200BEA577 /* Address.swift */,
+				E1F2270C2216B38200BEA577 /* Price.swift */,
+				E1F227132216C26F00BEA577 /* Score.swift */,
+			);
+			path = ValueObjects;
+			sourceTree = "<group>";
+		};
+		E1F227102216BE9400BEA577 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E1F227112216BEA800BEA577 /* Double+Formatter.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E1F227192216CE3900BEA577 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		FCA6E46EA341924F4D54401B /* Pods */ = {
@@ -477,6 +556,7 @@
 					};
 					E1F226B72215760200BEA577 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					E1F226BF2215760200BEA577 = {
 						CreatedOnToolsVersion = 10.1;
@@ -484,6 +564,7 @@
 					};
 					E1F226D92215760900BEA577 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					E1F226E12215760900BEA577 = {
 						CreatedOnToolsVersion = 10.1;
@@ -720,6 +801,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1F227012216AFFA00BEA577 /* CreditCard.swift in Sources */,
+				E1F2270D2216B38200BEA577 /* Price.swift in Sources */,
+				E1F2270A2216B28A00BEA577 /* Order.swift in Sources */,
+				E1F226FF2216AEA200BEA577 /* Address.swift in Sources */,
+				E1F227062216B15400BEA577 /* PaymentType.swift in Sources */,
+				E1F2270F2216B60D00BEA577 /* OrderItem.swift in Sources */,
+				E1F227042216B05F00BEA577 /* CreditCardFlag.swift in Sources */,
+				E1F227142216C26F00BEA577 /* Score.swift in Sources */,
+				E1F226FB2216AB4700BEA577 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -727,6 +817,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1F227182216CDBE00BEA577 /* OrderItemTests.swift in Sources */,
+				E1F227162216C44900BEA577 /* OrderTests.swift in Sources */,
 				E1F226C82215760200BEA577 /* DomainTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -735,6 +827,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1F226FD2216ABB500BEA577 /* Entitiy.swift in Sources */,
+				E1F227122216BEA800BEA577 /* Double+Formatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -926,6 +1020,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6D8B0CD1D16480631A406BCC /* Pods-CRMobileChallenge.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MM4N959BB5;
@@ -946,6 +1041,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8375868B7B67C76ADDF591FB /* Pods-CRMobileChallenge.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MM4N959BB5;
@@ -1010,6 +1106,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0769B12FF9FF3644F2FFB431 /* Pods-Domain.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1029,6 +1126,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = adriano.challenge.Domain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1040,6 +1138,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 555E8167B34A8B39590CACC3 /* Pods-Domain.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1112,6 +1211,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F0EDCBC018B94C40C1EC64BB /* Pods-Shared.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1131,6 +1231,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = adriano.challenge.Shared;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1142,6 +1243,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 823BC4ADA926A5CD2DB55B14 /* Pods-Shared.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
