@@ -11,6 +11,6 @@ import Foundation
 public enum PaymentType {
     
     case creditCard(CreditCard)
-    case bankSlip
+    case paymentSlip
     
 }

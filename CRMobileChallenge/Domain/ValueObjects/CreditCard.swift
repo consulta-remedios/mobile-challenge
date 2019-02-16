@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Shared
 
 public struct CreditCard {
     
@@ -17,8 +18,14 @@ public struct CreditCard {
 
 public extension CreditCard {
     
-    public var ofuscatedNumber: String {
-        return number
+    public var isValid: Bool {
+        return number.matches(flag.expression)
+    }
+    
+    public var ofuscatedNumber: String? {
+        guard isValid else { return nil }
+        let secret = number.substring(from: 3, length: 8).map { _ in "*" }.joined()
+        return "\(number.prefix(4))\(secret)\(number.suffix(4))"
     }
     
 }

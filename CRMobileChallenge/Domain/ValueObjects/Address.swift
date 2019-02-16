@@ -13,6 +13,7 @@ public struct Address {
     public var postalCode: String
     public var street: String
     public var number: Int
+    public var neighborhood: String
     public var city: String
     public var state: String
     
@@ -21,7 +22,7 @@ public struct Address {
 public extension Address {
     
     public var description: String {
-        return "\(postalCode) - \(street), \(number) - \(city), \(state)"
+        return "\(postalCode) - \(street), \(number) - \(neighborhood) - \(city) - \(state)"
     }
     
 }

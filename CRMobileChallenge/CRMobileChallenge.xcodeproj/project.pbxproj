@@ -20,7 +20,6 @@
 		E1F226592215745900BEA577 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1F226572215745900BEA577 /* LaunchScreen.storyboard */; };
 		E1F226642215745A00BEA577 /* CRMobileChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F226632215745A00BEA577 /* CRMobileChallengeTests.swift */; };
 		E1F226C12215760200BEA577 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1F226B82215760200BEA577 /* Domain.framework */; };
-		E1F226C82215760200BEA577 /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F226C72215760200BEA577 /* DomainTests.swift */; };
 		E1F226CA2215760200BEA577 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = E1F226BA2215760200BEA577 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E1F226CD2215760200BEA577 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1F226B82215760200BEA577 /* Domain.framework */; };
 		E1F226CE2215760200BEA577 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1F226B82215760200BEA577 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -43,6 +42,12 @@
 		E1F227142216C26F00BEA577 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227132216C26F00BEA577 /* Score.swift */; };
 		E1F227162216C44900BEA577 /* OrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227152216C44900BEA577 /* OrderTests.swift */; };
 		E1F227182216CDBE00BEA577 /* OrderItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227172216CDBE00BEA577 /* OrderItemTests.swift */; };
+		E1F2271D2217754D00BEA577 /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2271C2217754D00BEA577 /* AddressTests.swift */; };
+		E1F2272122178A8000BEA577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1F2272022178A8000BEA577 /* Assets.xcassets */; };
+		E1F2272822178ADD00BEA577 /* CreditCardFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227032216B05F00BEA577 /* CreditCardFlag.swift */; };
+		E1F2272A22178C6C00BEA577 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2272922178C6C00BEA577 /* String+Regex.swift */; };
+		E1F2272C22178FB300BEA577 /* CreditCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2272B22178FB300BEA577 /* CreditCardTests.swift */; };
+		E1F2272E221799F800BEA577 /* String+Substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2272D221799F800BEA577 /* String+Substring.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,7 +148,6 @@
 		E1F226BA2215760200BEA577 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		E1F226BB2215760200BEA577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1F226C02215760200BEA577 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1F226C72215760200BEA577 /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
 		E1F226C92215760200BEA577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1F226DA2215760900BEA577 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1F226DC2215760900BEA577 /* Shared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shared.h; sourceTree = "<group>"; };
@@ -165,6 +169,11 @@
 		E1F227132216C26F00BEA577 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		E1F227152216C44900BEA577 /* OrderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTests.swift; sourceTree = "<group>"; };
 		E1F227172216CDBE00BEA577 /* OrderItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemTests.swift; sourceTree = "<group>"; };
+		E1F2271C2217754D00BEA577 /* AddressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTests.swift; sourceTree = "<group>"; };
+		E1F2272022178A8000BEA577 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E1F2272922178C6C00BEA577 /* String+Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Regex.swift"; sourceTree = "<group>"; };
+		E1F2272B22178FB300BEA577 /* CreditCardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardTests.swift; sourceTree = "<group>"; };
+		E1F2272D221799F800BEA577 /* String+Substring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Substring.swift"; sourceTree = "<group>"; };
 		F0EDCBC018B94C40C1EC64BB /* Pods-Shared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared.debug.xcconfig"; path = "Target Support Files/Pods-Shared/Pods-Shared.debug.xcconfig"; sourceTree = "<group>"; };
 		FE1D9456F403FC2F748949FA /* Pods_DomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -304,11 +313,11 @@
 		E1F226C62215760200BEA577 /* DomainTests */ = {
 			isa = PBXGroup;
 			children = (
-				E1F227192216CE3900BEA577 /* Mocks */,
-				E1F226C72215760200BEA577 /* DomainTests.swift */,
 				E1F226C92215760200BEA577 /* Info.plist */,
 				E1F227152216C44900BEA577 /* OrderTests.swift */,
 				E1F227172216CDBE00BEA577 /* OrderItemTests.swift */,
+				E1F2271C2217754D00BEA577 /* AddressTests.swift */,
+				E1F2272B22178FB300BEA577 /* CreditCardTests.swift */,
 			);
 			path = DomainTests;
 			sourceTree = "<group>";
@@ -320,6 +329,7 @@
 				E1F226DC2215760900BEA577 /* Shared.h */,
 				E1F226DD2215760900BEA577 /* Info.plist */,
 				E1F226FC2216ABB500BEA577 /* Entitiy.swift */,
+				E1F2272022178A8000BEA577 /* Assets.xcassets */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -367,15 +377,10 @@
 			isa = PBXGroup;
 			children = (
 				E1F227112216BEA800BEA577 /* Double+Formatter.swift */,
+				E1F2272922178C6C00BEA577 /* String+Regex.swift */,
+				E1F2272D221799F800BEA577 /* String+Substring.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		E1F227192216CE3900BEA577 /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Mocks;
 			sourceTree = "<group>";
 		};
 		FCA6E46EA341924F4D54401B /* Pods */ = {
@@ -632,6 +637,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1F2272122178A8000BEA577 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -817,9 +823,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1F2272C22178FB300BEA577 /* CreditCardTests.swift in Sources */,
 				E1F227182216CDBE00BEA577 /* OrderItemTests.swift in Sources */,
 				E1F227162216C44900BEA577 /* OrderTests.swift in Sources */,
-				E1F226C82215760200BEA577 /* DomainTests.swift in Sources */,
+				E1F2271D2217754D00BEA577 /* AddressTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -829,6 +836,9 @@
 			files = (
 				E1F226FD2216ABB500BEA577 /* Entitiy.swift in Sources */,
 				E1F227122216BEA800BEA577 /* Double+Formatter.swift in Sources */,
+				E1F2272A22178C6C00BEA577 /* String+Regex.swift in Sources */,
+				E1F2272E221799F800BEA577 /* String+Substring.swift in Sources */,
+				E1F2272822178ADD00BEA577 /* CreditCardFlag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,7 +20,8 @@ public extension Order {
     
     public var freight: Double {
         let total = Double(orderItems.count * 10)
-        return total > 250 ? 0 : total
+        guard total <= 250 else { return 0 }
+        return total
     }
     
     public var total: Double {

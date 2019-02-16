@@ -26,5 +26,10 @@ class OrderItemTests: XCTestCase {
         let orderItem = OrderItem(game: game, quantitiy: 10)
         XCTAssertEqual(orderItem.total, 2500)
     }
+    
+    func testeQuantidadeNegativasNaoPodeGerarValorNegativoESimZero() {
+        let orderItem = OrderItem(game: game, quantitiy: -10)
+        XCTAssertEqual(orderItem.total, 0)
+    }
 
 }

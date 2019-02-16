@@ -17,6 +17,7 @@ class OrderTests: XCTestCase {
             postalCode: "36025-590",
             street: "Imaculda Conceição",
             number: 110,
+            neighborhood: "Dom Bosco",
             city: "Juiz de Fora",
             state: "Minas Gerais")
     }
@@ -32,7 +33,7 @@ class OrderTests: XCTestCase {
     }
     
     func testeCadaItemDeveAdicionar10ReaisNoValorDoFrete() {
-        var order = Order(orderItems: [OrderItem(game: game, quantitiy: 1)], address: address, paymentType: .bankSlip)
+        var order = Order(orderItems: [OrderItem(game: game, quantitiy: 1)], address: address, paymentType: .paymentSlip)
         
         XCTAssertEqual(order.freight, 10)
         
@@ -50,7 +51,7 @@ class OrderTests: XCTestCase {
             return OrderItem(game: game, quantitiy: 1)
         }
         
-        let order = Order(orderItems: orderItems, address: address, paymentType: .bankSlip)
+        let order = Order(orderItems: orderItems, address: address, paymentType: .paymentSlip)
         
         XCTAssertEqual(order.freight, 0)
     }
@@ -60,7 +61,7 @@ class OrderTests: XCTestCase {
             return OrderItem(game: game, quantitiy: 1)
         }
         
-        let order = Order(orderItems: orderItems, address: address, paymentType: .bankSlip)
+        let order = Order(orderItems: orderItems, address: address, paymentType: .paymentSlip)
         
         XCTAssertNotEqual(order.freight, 0)
     }
@@ -70,9 +71,9 @@ class OrderTests: XCTestCase {
             return OrderItem(game: game, quantitiy: 1)
         }
         
-        let order = Order(orderItems: orderItems, address: address, paymentType: .bankSlip)
+        let order = Order(orderItems: orderItems, address: address, paymentType: .paymentSlip)
         
-        XCTAssertNotEqual(order.freight, 0)
+        XCTAssertNotEqual(order.freight, 0.0)
     }
     
     func testeValorTotalDoPedidoDeveSerQuantidadeDeItemsPedidoVezesSeuValorTotalMaisFrete() {
@@ -80,7 +81,7 @@ class OrderTests: XCTestCase {
             return OrderItem(game: game, quantitiy: 1)
         }
         
-        let order = Order(orderItems: orderItems, address: address, paymentType: .bankSlip)
+        let order = Order(orderItems: orderItems, address: address, paymentType: .paymentSlip)
         
         XCTAssertEqual(order.total, 780)
     }
