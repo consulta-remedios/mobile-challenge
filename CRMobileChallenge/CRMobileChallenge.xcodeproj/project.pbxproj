@@ -48,6 +48,23 @@
 		E1F2272A22178C6C00BEA577 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2272922178C6C00BEA577 /* String+Regex.swift */; };
 		E1F2272C22178FB300BEA577 /* CreditCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2272B22178FB300BEA577 /* CreditCardTests.swift */; };
 		E1F2272E221799F800BEA577 /* String+Substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2272D221799F800BEA577 /* String+Substring.swift */; };
+		E1F227342218268C00BEA577 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227332218268C00BEA577 /* EndPointType.swift */; };
+		E1F227372218277A00BEA577 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227362218277A00BEA577 /* HTTPMethod.swift */; };
+		E1F2273A2218282600BEA577 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227392218282600BEA577 /* HTTPTask.swift */; };
+		E1F2273D221829FD00BEA577 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2273C221829FD00BEA577 /* ParameterEncoding.swift */; };
+		E1F2273F22182B5F00BEA577 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2273E22182B5F00BEA577 /* URLParameterEncoder.swift */; };
+		E1F2274122182BB300BEA577 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2274022182BB300BEA577 /* NetworkError.swift */; };
+		E1F2274322182C2F00BEA577 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2274222182C2F00BEA577 /* JSONParameterEncoder.swift */; };
+		E1F2274522182F0800BEA577 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2274422182F0800BEA577 /* NetworkLogger.swift */; };
+		E1F2274722182F6B00BEA577 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2274622182F6B00BEA577 /* Router.swift */; };
+		E1F22749221831E800BEA577 /* GameEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F22748221831E800BEA577 /* GameEndPoint.swift */; };
+		E1F2274D2219819100BEA577 /* NetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2274C2219819100BEA577 /* NetworkEnvironment.swift */; };
+		E1F22751221983C100BEA577 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F22750221983C100BEA577 /* Result.swift */; };
+		E1F227542219849900BEA577 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227532219849900BEA577 /* NetworkManager.swift */; };
+		E1F227562219850E00BEA577 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227552219850E00BEA577 /* NetworkRouter.swift */; };
+		E1F227592219886700BEA577 /* GameAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227582219886700BEA577 /* GameAPI.swift */; };
+		E1F2275B2219A16900BEA577 /* Encoder+Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2275A2219A16900BEA577 /* Encoder+Parse.swift */; };
+		E1F2275D2219A17C00BEA577 /* Decoder+Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2275C2219A17C00BEA577 /* Decoder+Parse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,6 +191,23 @@
 		E1F2272922178C6C00BEA577 /* String+Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Regex.swift"; sourceTree = "<group>"; };
 		E1F2272B22178FB300BEA577 /* CreditCardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardTests.swift; sourceTree = "<group>"; };
 		E1F2272D221799F800BEA577 /* String+Substring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Substring.swift"; sourceTree = "<group>"; };
+		E1F227332218268C00BEA577 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		E1F227362218277A00BEA577 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		E1F227392218282600BEA577 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		E1F2273C221829FD00BEA577 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		E1F2273E22182B5F00BEA577 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		E1F2274022182BB300BEA577 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		E1F2274222182C2F00BEA577 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		E1F2274422182F0800BEA577 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		E1F2274622182F6B00BEA577 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		E1F22748221831E800BEA577 /* GameEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndPoint.swift; sourceTree = "<group>"; };
+		E1F2274C2219819100BEA577 /* NetworkEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnvironment.swift; sourceTree = "<group>"; };
+		E1F22750221983C100BEA577 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		E1F227532219849900BEA577 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E1F227552219850E00BEA577 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		E1F227582219886700BEA577 /* GameAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAPI.swift; sourceTree = "<group>"; };
+		E1F2275A2219A16900BEA577 /* Encoder+Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encoder+Parse.swift"; sourceTree = "<group>"; };
+		E1F2275C2219A17C00BEA577 /* Decoder+Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decoder+Parse.swift"; sourceTree = "<group>"; };
 		F0EDCBC018B94C40C1EC64BB /* Pods-Shared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared.debug.xcconfig"; path = "Target Support Files/Pods-Shared/Pods-Shared.debug.xcconfig"; sourceTree = "<group>"; };
 		FE1D9456F403FC2F748949FA /* Pods_DomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -301,6 +335,10 @@
 		E1F226B92215760200BEA577 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				E1F2273222181EFC00BEA577 /* Commands */,
+				E1F2273122181EE900BEA577 /* CommandsHandlers */,
+				E1F2273022181E9300BEA577 /* Network */,
+				E1F2272F22181C4700BEA577 /* Repositories */,
 				E1F2270B2216B2BB00BEA577 /* ValueObjects */,
 				E1F227022216B04F00BEA577 /* Enums */,
 				E1F226F92216AB3900BEA577 /* Entities */,
@@ -381,6 +419,115 @@
 				E1F2272D221799F800BEA577 /* String+Substring.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E1F2272F22181C4700BEA577 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		E1F2273022181E9300BEA577 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E1F227572219885C00BEA577 /* API */,
+				E1F227522219846E00BEA577 /* Manager */,
+				E1F2274E2219833400BEA577 /* Router */,
+				E1F2274B2218333800BEA577 /* Response */,
+				E1F2274A2218332E00BEA577 /* Request */,
+				E1F2273B221828E700BEA577 /* Encoding */,
+				E1F227382218280E00BEA577 /* Service */,
+				E1F227352218269900BEA577 /* EndPoint */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E1F2273122181EE900BEA577 /* CommandsHandlers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CommandsHandlers;
+			sourceTree = "<group>";
+		};
+		E1F2273222181EFC00BEA577 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
+		E1F227352218269900BEA577 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				E1F22748221831E800BEA577 /* GameEndPoint.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		E1F227382218280E00BEA577 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E1F227332218268C00BEA577 /* EndPointType.swift */,
+				E1F227362218277A00BEA577 /* HTTPMethod.swift */,
+				E1F227392218282600BEA577 /* HTTPTask.swift */,
+				E1F2274C2219819100BEA577 /* NetworkEnvironment.swift */,
+				E1F2274422182F0800BEA577 /* NetworkLogger.swift */,
+				E1F22750221983C100BEA577 /* Result.swift */,
+				E1F227552219850E00BEA577 /* NetworkRouter.swift */,
+				E1F2275A2219A16900BEA577 /* Encoder+Parse.swift */,
+				E1F2275C2219A17C00BEA577 /* Decoder+Parse.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E1F2273B221828E700BEA577 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				E1F2273C221829FD00BEA577 /* ParameterEncoding.swift */,
+				E1F2273E22182B5F00BEA577 /* URLParameterEncoder.swift */,
+				E1F2274022182BB300BEA577 /* NetworkError.swift */,
+				E1F2274222182C2F00BEA577 /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		E1F2274A2218332E00BEA577 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		E1F2274B2218333800BEA577 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		E1F2274E2219833400BEA577 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E1F2274622182F6B00BEA577 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E1F227522219846E00BEA577 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E1F227532219849900BEA577 /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		E1F227572219885C00BEA577 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E1F227582219886700BEA577 /* GameAPI.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		FCA6E46EA341924F4D54401B /* Pods */ = {
@@ -807,14 +954,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1F2275D2219A17C00BEA577 /* Decoder+Parse.swift in Sources */,
+				E1F2274322182C2F00BEA577 /* JSONParameterEncoder.swift in Sources */,
+				E1F2273A2218282600BEA577 /* HTTPTask.swift in Sources */,
 				E1F227012216AFFA00BEA577 /* CreditCard.swift in Sources */,
+				E1F227562219850E00BEA577 /* NetworkRouter.swift in Sources */,
+				E1F227592219886700BEA577 /* GameAPI.swift in Sources */,
 				E1F2270D2216B38200BEA577 /* Price.swift in Sources */,
+				E1F227542219849900BEA577 /* NetworkManager.swift in Sources */,
+				E1F2274722182F6B00BEA577 /* Router.swift in Sources */,
+				E1F2274D2219819100BEA577 /* NetworkEnvironment.swift in Sources */,
+				E1F227342218268C00BEA577 /* EndPointType.swift in Sources */,
+				E1F2273F22182B5F00BEA577 /* URLParameterEncoder.swift in Sources */,
+				E1F227372218277A00BEA577 /* HTTPMethod.swift in Sources */,
+				E1F2275B2219A16900BEA577 /* Encoder+Parse.swift in Sources */,
 				E1F2270A2216B28A00BEA577 /* Order.swift in Sources */,
 				E1F226FF2216AEA200BEA577 /* Address.swift in Sources */,
+				E1F22749221831E800BEA577 /* GameEndPoint.swift in Sources */,
+				E1F2273D221829FD00BEA577 /* ParameterEncoding.swift in Sources */,
+				E1F2274122182BB300BEA577 /* NetworkError.swift in Sources */,
 				E1F227062216B15400BEA577 /* PaymentType.swift in Sources */,
 				E1F2270F2216B60D00BEA577 /* OrderItem.swift in Sources */,
 				E1F227042216B05F00BEA577 /* CreditCardFlag.swift in Sources */,
 				E1F227142216C26F00BEA577 /* Score.swift in Sources */,
+				E1F22751221983C100BEA577 /* Result.swift in Sources */,
+				E1F2274522182F0800BEA577 /* NetworkLogger.swift in Sources */,
 				E1F226FB2216AB4700BEA577 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
