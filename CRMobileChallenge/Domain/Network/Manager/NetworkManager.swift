@@ -20,15 +20,27 @@ public struct NetworkManager {
     
     // MARK: - Public Methods
     
+    public init() {}
+    
     public func games(_ completion: @escaping (Result<[Game]>) -> Void) {
         router.request(.games) { (data, response, error) in
             if let error = error {
                 return completion(.failure(error))
             }
             
-            if let teste = response as? HTTPURLResponse {
-                
+            guard let response = response as? HTTPURLResponse else { return }
+            
+            let result = self.handleNetworkResponse(response)
+            
+            switch result {
+                case .success:
+                    if let responseData = data {
+                        print(responseData)
+                    }
+                case .failure(let error):
+                    completion(.failure(error))
             }
+            
         }
     }
     
@@ -36,10 +48,10 @@ public struct NetworkManager {
     
     private func handleNetworkResponse(_ response: HTTPURLResponse) -> EmptyResult {
         switch response.statusCode {
-            case 200...299: return .success
-            case 401...500: return .failure(NetworkErrorResponse.authentication)
-            case 501...599: return .failure(NetworkErrorResponse.badRequest)
-            case 600: return .failure(NetworkErrorResponse.outdated)
+            case 200...203, 205, 206: return .success
+            case 204, 444: return .failure(NetworkErrorResponse.noData)
+            case 401...407: return .failure(NetworkErrorResponse.authentication)
+            case 500...511: return .failure(NetworkErrorResponse.badRequest)
             default: return .failure(NetworkErrorResponse.failed)
         }
     }

@@ -15,5 +15,19 @@ public protocol EndPointType {
     var httpMethod: HTTPMethod { get }
     var task: HTTPTask { get }
     var headers: HTTPHeaders? { get }
+    var timeoutInterval: TimeInterval { get }
+    var cachePolicy: NSURLRequest.CachePolicy { get }
+    
+}
+
+public extension EndPointType {
+    
+    var timeoutInterval: TimeInterval {
+        return 10.0
+    }
+    
+    var cachePolicy: NSURLRequest.CachePolicy {
+        return .reloadIgnoringLocalAndRemoteCacheData
+    }
     
 }

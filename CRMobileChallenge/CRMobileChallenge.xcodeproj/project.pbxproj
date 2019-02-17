@@ -57,7 +57,6 @@
 		E1F2274322182C2F00BEA577 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2274222182C2F00BEA577 /* JSONParameterEncoder.swift */; };
 		E1F2274522182F0800BEA577 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2274422182F0800BEA577 /* NetworkLogger.swift */; };
 		E1F2274722182F6B00BEA577 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2274622182F6B00BEA577 /* Router.swift */; };
-		E1F22749221831E800BEA577 /* GameEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F22748221831E800BEA577 /* GameEndPoint.swift */; };
 		E1F2274D2219819100BEA577 /* NetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2274C2219819100BEA577 /* NetworkEnvironment.swift */; };
 		E1F22751221983C100BEA577 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F22750221983C100BEA577 /* Result.swift */; };
 		E1F227542219849900BEA577 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227532219849900BEA577 /* NetworkManager.swift */; };
@@ -200,7 +199,6 @@
 		E1F2274222182C2F00BEA577 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
 		E1F2274422182F0800BEA577 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		E1F2274622182F6B00BEA577 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		E1F22748221831E800BEA577 /* GameEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndPoint.swift; sourceTree = "<group>"; };
 		E1F2274C2219819100BEA577 /* NetworkEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnvironment.swift; sourceTree = "<group>"; };
 		E1F22750221983C100BEA577 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		E1F227532219849900BEA577 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -431,14 +429,13 @@
 		E1F2273022181E9300BEA577 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				E1F227572219885C00BEA577 /* API */,
+				E1F227572219885C00BEA577 /* EndPoint */,
 				E1F227522219846E00BEA577 /* Manager */,
 				E1F2274E2219833400BEA577 /* Router */,
 				E1F2274B2218333800BEA577 /* Response */,
 				E1F2274A2218332E00BEA577 /* Request */,
 				E1F2273B221828E700BEA577 /* Encoding */,
 				E1F227382218280E00BEA577 /* Service */,
-				E1F227352218269900BEA577 /* EndPoint */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -455,14 +452,6 @@
 			children = (
 			);
 			path = Commands;
-			sourceTree = "<group>";
-		};
-		E1F227352218269900BEA577 /* EndPoint */ = {
-			isa = PBXGroup;
-			children = (
-				E1F22748221831E800BEA577 /* GameEndPoint.swift */,
-			);
-			path = EndPoint;
 			sourceTree = "<group>";
 		};
 		E1F227382218280E00BEA577 /* Service */ = {
@@ -522,12 +511,12 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
-		E1F227572219885C00BEA577 /* API */ = {
+		E1F227572219885C00BEA577 /* EndPoint */ = {
 			isa = PBXGroup;
 			children = (
 				E1F227582219886700BEA577 /* GameAPI.swift */,
 			);
-			path = API;
+			path = EndPoint;
 			sourceTree = "<group>";
 		};
 		FCA6E46EA341924F4D54401B /* Pods */ = {
@@ -970,7 +959,6 @@
 				E1F2275B2219A16900BEA577 /* Encoder+Parse.swift in Sources */,
 				E1F2270A2216B28A00BEA577 /* Order.swift in Sources */,
 				E1F226FF2216AEA200BEA577 /* Address.swift in Sources */,
-				E1F22749221831E800BEA577 /* GameEndPoint.swift in Sources */,
 				E1F2273D221829FD00BEA577 /* ParameterEncoding.swift in Sources */,
 				E1F2274122182BB300BEA577 /* NetworkError.swift in Sources */,
 				E1F227062216B15400BEA577 /* PaymentType.swift in Sources */,

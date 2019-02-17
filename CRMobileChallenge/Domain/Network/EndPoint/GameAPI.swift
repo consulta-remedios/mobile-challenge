@@ -25,9 +25,9 @@ extension GameAPI: EndPointType {
     public var path: String {
         switch self {
         case .games:
-            return "games"
+            return "game"
         case .game(let id):
-            return "games/\(id)"
+            return "game/\(id)"
         case .checkout:
             return "checkout"
         }

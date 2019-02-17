@@ -8,9 +8,13 @@
 
 import Foundation
 
-class Router<EndPoint: EndPointType>: NetworkRouter {
+final class Router<EndPoint: EndPointType>: NetworkRouter {
+    
+    // MARK: - Private Variables
     
     private var task: URLSessionTask?
+    
+    // MARK: - Public Methods
     
     func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion) {
         let session = URLSession.shared
@@ -34,10 +38,17 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
         self.task?.cancel()
     }
     
+    // MARK: - Private Methods
+    
     private func buildRequest(from route: EndPoint) throws -> URLRequest {
-        var request = URLRequest(url: route.baseURL.appendingPathComponent(route.path), cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10.0)
+        var request = URLRequest(
+            url: route.baseURL.appendingPathComponent(route.path),
+            cachePolicy: route.cachePolicy,
+            timeoutInterval: route.timeoutInterval)
         
         request.httpMethod = route.httpMethod.rawValue
+        
+        addAdditionalHeaders(route.headers, request: &request)
         
         do {
             switch route.task {
