@@ -12,77 +12,49 @@ public struct NetworkManager {
     
     // MARK: - Public Variables
     
-    public static let environment: NetworkEnvironment = .dev
+    public static let environment: NetworkEnvironment = .production
     
     // MARK: - Private Variables
     
     private let router = Router<GameAPI>()
     
-    // MARK: - Public Methods
+    // MARK: - Life Cycle
     
     public init() {}
     
+    // MARK: - Public Methods
+    
     public func games(_ completion: @escaping (Result<[Game]>) -> Void) {
-        router.request(.games) { (data, response, error) in
+        router.request(.games) { (data: [Game]?, _, error: Error?) in
             if let error = error {
                 return completion(.failure(error))
+            } else if let games = data {
+                completion(.success(games))
+            } else {
+                completion(.failure(NetworkErrorResponse.noData))
             }
-            
-            guard let response = response as? HTTPURLResponse else { return }
-            
-            let result = self.handleNetworkResponse(response)
-            
-            switch result {
-                case .success:
-                    if let responseData = data {
-                        print(responseData)
-                    }
-                case .failure(let error):
-                    completion(.failure(error))
-            }
-            
         }
     }
     
-    // MARK: - Private Methods
-    
-    private func handleNetworkResponse(_ response: HTTPURLResponse) -> EmptyResult {
-        switch response.statusCode {
-            case 200...203, 205, 206: return .success
-            case 204, 444: return .failure(NetworkErrorResponse.noData)
-            case 401...407: return .failure(NetworkErrorResponse.authentication)
-            case 500...511: return .failure(NetworkErrorResponse.badRequest)
-            default: return .failure(NetworkErrorResponse.failed)
+    public func game(id: Int, _ completion: @escaping (Result<Game>) -> Void) {
+        router.request(.game(id: id)) { (data: Game?, _, error: Error?) in
+            if let error = error {
+                return completion(.failure(error))
+            } else if let game = data {
+                completion(.success(game))
+            } else {
+                completion(.failure(NetworkErrorResponse.noData))
+            }
         }
     }
     
-}
-
-public enum NetworkErrorResponse: LocalizedError {
-    
-    case authentication
-    case badRequest
-    case outdated
-    case failed
-    case noData
-    case unableToDecode
-    
-}
-
-public extension NetworkErrorResponse {
-    
-    public var localizedDescription: String {
-        return errorDescription ?? ""
-    }
-    
-    public var errorDescription: String? {
-        switch self {
-            case .authentication: return "You need to be authenticated first."
-            case .badRequest: return "Bad request"
-            case .outdated: return "The url you requested is outdated."
-            case .failed: return "Network request failed."
-            case .noData: return "Response returned with no data to decode."
-            case .unableToDecode: return "We could not decode the response."
+    public func checkout(_ completion: @escaping (EmptyResult) -> Void) {
+        router.request(.checkout) { (data: Bool?, _, error: Error?) in
+            if let error = error {
+                return completion(.failure(error))
+            } else {
+                return completion(.success)
+            }
         }
     }
     

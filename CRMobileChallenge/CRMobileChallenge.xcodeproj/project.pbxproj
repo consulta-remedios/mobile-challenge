@@ -36,10 +36,8 @@
 		E1F227042216B05F00BEA577 /* CreditCardFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227032216B05F00BEA577 /* CreditCardFlag.swift */; };
 		E1F227062216B15400BEA577 /* PaymentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227052216B15400BEA577 /* PaymentType.swift */; };
 		E1F2270A2216B28A00BEA577 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227092216B28A00BEA577 /* Order.swift */; };
-		E1F2270D2216B38200BEA577 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2270C2216B38200BEA577 /* Price.swift */; };
 		E1F2270F2216B60D00BEA577 /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2270E2216B60D00BEA577 /* OrderItem.swift */; };
 		E1F227122216BEA800BEA577 /* Double+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227112216BEA800BEA577 /* Double+Formatter.swift */; };
-		E1F227142216C26F00BEA577 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227132216C26F00BEA577 /* Score.swift */; };
 		E1F227162216C44900BEA577 /* OrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227152216C44900BEA577 /* OrderTests.swift */; };
 		E1F227182216CDBE00BEA577 /* OrderItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227172216CDBE00BEA577 /* OrderItemTests.swift */; };
 		E1F2271D2217754D00BEA577 /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2271C2217754D00BEA577 /* AddressTests.swift */; };
@@ -62,8 +60,7 @@
 		E1F227542219849900BEA577 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227532219849900BEA577 /* NetworkManager.swift */; };
 		E1F227562219850E00BEA577 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227552219850E00BEA577 /* NetworkRouter.swift */; };
 		E1F227592219886700BEA577 /* GameAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227582219886700BEA577 /* GameAPI.swift */; };
-		E1F2275B2219A16900BEA577 /* Encoder+Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2275A2219A16900BEA577 /* Encoder+Parse.swift */; };
-		E1F2275D2219A17C00BEA577 /* Decoder+Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2275C2219A17C00BEA577 /* Decoder+Parse.swift */; };
+		E1F2275F221A05C400BEA577 /* NetworkErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2275E221A05C400BEA577 /* NetworkErrorResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,10 +176,8 @@
 		E1F227032216B05F00BEA577 /* CreditCardFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardFlag.swift; sourceTree = "<group>"; };
 		E1F227052216B15400BEA577 /* PaymentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentType.swift; sourceTree = "<group>"; };
 		E1F227092216B28A00BEA577 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
-		E1F2270C2216B38200BEA577 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		E1F2270E2216B60D00BEA577 /* OrderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
 		E1F227112216BEA800BEA577 /* Double+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Formatter.swift"; sourceTree = "<group>"; };
-		E1F227132216C26F00BEA577 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		E1F227152216C44900BEA577 /* OrderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTests.swift; sourceTree = "<group>"; };
 		E1F227172216CDBE00BEA577 /* OrderItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemTests.swift; sourceTree = "<group>"; };
 		E1F2271C2217754D00BEA577 /* AddressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTests.swift; sourceTree = "<group>"; };
@@ -204,8 +199,7 @@
 		E1F227532219849900BEA577 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E1F227552219850E00BEA577 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		E1F227582219886700BEA577 /* GameAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAPI.swift; sourceTree = "<group>"; };
-		E1F2275A2219A16900BEA577 /* Encoder+Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encoder+Parse.swift"; sourceTree = "<group>"; };
-		E1F2275C2219A17C00BEA577 /* Decoder+Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decoder+Parse.swift"; sourceTree = "<group>"; };
+		E1F2275E221A05C400BEA577 /* NetworkErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorResponse.swift; sourceTree = "<group>"; };
 		F0EDCBC018B94C40C1EC64BB /* Pods-Shared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared.debug.xcconfig"; path = "Target Support Files/Pods-Shared/Pods-Shared.debug.xcconfig"; sourceTree = "<group>"; };
 		FE1D9456F403FC2F748949FA /* Pods_DomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -403,8 +397,6 @@
 			children = (
 				E1F227002216AFFA00BEA577 /* CreditCard.swift */,
 				E1F226FE2216AEA200BEA577 /* Address.swift */,
-				E1F2270C2216B38200BEA577 /* Price.swift */,
-				E1F227132216C26F00BEA577 /* Score.swift */,
 			);
 			path = ValueObjects;
 			sourceTree = "<group>";
@@ -464,8 +456,7 @@
 				E1F2274422182F0800BEA577 /* NetworkLogger.swift */,
 				E1F22750221983C100BEA577 /* Result.swift */,
 				E1F227552219850E00BEA577 /* NetworkRouter.swift */,
-				E1F2275A2219A16900BEA577 /* Encoder+Parse.swift */,
-				E1F2275C2219A17C00BEA577 /* Decoder+Parse.swift */,
+				E1F2275E221A05C400BEA577 /* NetworkErrorResponse.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -943,20 +934,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1F2275D2219A17C00BEA577 /* Decoder+Parse.swift in Sources */,
+				E1F2275F221A05C400BEA577 /* NetworkErrorResponse.swift in Sources */,
 				E1F2274322182C2F00BEA577 /* JSONParameterEncoder.swift in Sources */,
 				E1F2273A2218282600BEA577 /* HTTPTask.swift in Sources */,
 				E1F227012216AFFA00BEA577 /* CreditCard.swift in Sources */,
 				E1F227562219850E00BEA577 /* NetworkRouter.swift in Sources */,
 				E1F227592219886700BEA577 /* GameAPI.swift in Sources */,
-				E1F2270D2216B38200BEA577 /* Price.swift in Sources */,
 				E1F227542219849900BEA577 /* NetworkManager.swift in Sources */,
 				E1F2274722182F6B00BEA577 /* Router.swift in Sources */,
 				E1F2274D2219819100BEA577 /* NetworkEnvironment.swift in Sources */,
 				E1F227342218268C00BEA577 /* EndPointType.swift in Sources */,
 				E1F2273F22182B5F00BEA577 /* URLParameterEncoder.swift in Sources */,
 				E1F227372218277A00BEA577 /* HTTPMethod.swift in Sources */,
-				E1F2275B2219A16900BEA577 /* Encoder+Parse.swift in Sources */,
 				E1F2270A2216B28A00BEA577 /* Order.swift in Sources */,
 				E1F226FF2216AEA200BEA577 /* Address.swift in Sources */,
 				E1F2273D221829FD00BEA577 /* ParameterEncoding.swift in Sources */,
@@ -964,7 +953,6 @@
 				E1F227062216B15400BEA577 /* PaymentType.swift in Sources */,
 				E1F2270F2216B60D00BEA577 /* OrderItem.swift in Sources */,
 				E1F227042216B05F00BEA577 /* CreditCardFlag.swift in Sources */,
-				E1F227142216C26F00BEA577 /* Score.swift in Sources */,
 				E1F22751221983C100BEA577 /* Result.swift in Sources */,
 				E1F2274522182F0800BEA577 /* NetworkLogger.swift in Sources */,
 				E1F226FB2216AB4700BEA577 /* Game.swift in Sources */,

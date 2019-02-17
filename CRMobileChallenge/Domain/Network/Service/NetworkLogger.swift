@@ -8,9 +8,11 @@
 
 import Foundation
 
-public class NetworkLogger {
+final class NetworkLogger {
     
-    public static func log(request: URLRequest) {
+    // MARK: - Public Methods
+    
+    static func log(request: URLRequest) {
         
         print("\n - - - - - - - - - - OUTGOING - - - - - - - - - - \n")
         
@@ -29,6 +31,7 @@ public class NetworkLogger {
         \(method) \(path)?\(query) HTTP/1.1 \n
         HOST: \(host)\n
         """
+        
         for (key,value) in request.allHTTPHeaderFields ?? [:] {
             logOutput += "\(key): \(value) \n"
         }

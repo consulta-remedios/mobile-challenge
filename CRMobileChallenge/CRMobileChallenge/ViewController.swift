@@ -16,10 +16,10 @@ class ViewController: UIViewController {
         
         let networkManager = NetworkManager()
         
-        networkManager.games { result in
+        networkManager.checkout { result in
             switch result {
-            case .success(let games):
-                print(games)
+            case .success:
+                print("aeeee \\o/")
             case .failure(let error):
                 print(error.localizedDescription)
             }

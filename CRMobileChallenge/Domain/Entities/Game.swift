@@ -9,13 +9,13 @@
 import Foundation
 import Shared
 
-public struct Game: Entity {
+public struct Game: Entity, Codable {
     
     public var name: String
     public var platform: String
     public var description: String
-    public var price: Price
-    public var score: Score
-    public var imageURL: URL
+    public var price: Double
+    public var score: Double
+    public var image: URL
     
 }

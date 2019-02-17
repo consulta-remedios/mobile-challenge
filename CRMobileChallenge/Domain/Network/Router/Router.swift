@@ -16,7 +16,7 @@ final class Router<EndPoint: EndPointType>: NetworkRouter {
     
     // MARK: - Public Methods
     
-    func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion) {
+    func request<T: Decodable>(_ route: EndPoint, completion: @escaping NetworkRouterCompletion<T>) {
         let session = URLSession.shared
         
         do {
@@ -24,9 +24,20 @@ final class Router<EndPoint: EndPointType>: NetworkRouter {
             
             NetworkLogger.log(request: request)
             
-            task = session.dataTask(with: request, completionHandler: { data, response, error in
-                completion(data, response, error)
-            })
+            task = session.dataTask(with: request) { data, response, error in
+                switch self.handleNetworkResponse(response) {
+                case .success:
+                    guard let data = data, !data.isEmpty else { return completion(nil, response, nil) }
+                    
+                    do {
+                        completion(try JSONDecoder().decode(T.self, from: data), response, nil)
+                    } catch {
+                        completion(nil, response, error)
+                    }
+                case .failure(let error):
+                    completion(nil, response, error)
+                }
+            }
         } catch {
             completion(nil, nil, error)
         }
@@ -80,6 +91,20 @@ final class Router<EndPoint: EndPointType>: NetworkRouter {
         
         for (key, value) in headers {
             request.setValue(value, forHTTPHeaderField: key)
+        }
+    }
+    
+    private func handleNetworkResponse(_ response: URLResponse?) -> EmptyResult {
+        guard let response = response as? HTTPURLResponse else {
+            return .failure(NetworkErrorResponse.failed)
+        }
+        
+        switch response.statusCode {
+        case 200...203, 205, 206: return .success
+        case 204, 444: return .failure(NetworkErrorResponse.noData)
+        case 401...407: return .failure(NetworkErrorResponse.authentication)
+        case 500...511: return .failure(NetworkErrorResponse.badRequest)
+        default: return .failure(NetworkErrorResponse.failed)
         }
     }
     
