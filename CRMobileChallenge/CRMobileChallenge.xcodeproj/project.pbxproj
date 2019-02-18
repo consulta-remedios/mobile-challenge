@@ -339,8 +339,6 @@
 		E1F226B92215760200BEA577 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				E1F2273222181EFC00BEA577 /* Commands */,
-				E1F2273122181EE900BEA577 /* CommandsHandlers */,
 				E1F2273022181E9300BEA577 /* Network */,
 				E1F2272F22181C4700BEA577 /* Repositories */,
 				E1F2270B2216B2BB00BEA577 /* ValueObjects */,
@@ -446,20 +444,6 @@
 				E1F227382218280E00BEA577 /* Service */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		E1F2273122181EE900BEA577 /* CommandsHandlers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CommandsHandlers;
-			sourceTree = "<group>";
-		};
-		E1F2273222181EFC00BEA577 /* Commands */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Commands;
 			sourceTree = "<group>";
 		};
 		E1F227382218280E00BEA577 /* Service */ = {
