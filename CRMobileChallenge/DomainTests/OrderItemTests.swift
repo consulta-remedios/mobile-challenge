@@ -17,9 +17,9 @@ class OrderItemTests: XCTestCase {
             name: "Zelda Breath Of The Wild",
             platform: "Switch",
             description: "Melhor Zelda já feito",
-            price: Price(value: 250),
-            score: Score(value: 100),
-            imageURL: URL(string: "https://sm.ign.com/ign_br/video/t/the-legend/the-legend-of-zelda-breath-of-the-wild-15-minutos-de-gamepla_w2ua.jpg")!)
+            price: 250,
+            score: 100,
+            image: URL(string: "https://sm.ign.com/ign_br/video/t/the-legend/the-legend-of-zelda-breath-of-the-wild-15-minutos-de-gamepla_w2ua.jpg")!)
     }
     
     func testeValorTotalDoItemDeveSerQuantidadeVezesSeuValor() {
