@@ -1,5 +1,5 @@
 //
-//  ShippingRepositoryProocol.swift
+//  Coordinator.swift
 //  Domain
 //
 //  Created by Adriano Souza Costa on 17/02/19.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-public protocol ShippingRepositoryProtocol {
+protocol Coordinator {
     
-    func checkout(_ completion: @escaping (EmptyResult) -> Void)
+    func start()
     
 }

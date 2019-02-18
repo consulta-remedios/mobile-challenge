@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol GameRepositoryProtocol {
+public protocol GameRepositoryProtocol {
     
     func games(_ completion: @escaping (Result<[Game]>) -> Void)
     func game(_ game: Game, _ completion: @escaping (Result<Game>) -> Void)
