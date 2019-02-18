@@ -14,7 +14,8 @@ struct ApplicationCoordinator {
     // MARK: - Private Variables
     
     private let window: UIWindow
-    private let gameRepository: GameRepositoryProtocol
+    private let gameRepository: GameRepositoryProtocol = GameRepository()
+    private let shippingRepository: ShippingRepositoryProtocol = ShippingRepository()
     private let navigationController: UINavigationController
     private let gamesListCoordinator: GamesListCoordinator
     
@@ -22,12 +23,12 @@ struct ApplicationCoordinator {
     
     public init(window: UIWindow) {
         self.window = window
-        gameRepository = GameRepository()
         navigationController = UINavigationController()
         navigationController.navigationBar.prefersLargeTitles = true
         
-        gamesListCoordinator = GamesListCoordinator(presenter: navigationController, gameRepository: gameRepository)
+        gamesListCoordinator = GamesListCoordinator(presenter: navigationController, gameRepository: gameRepository, shippingRepository: shippingRepository)
     }
+    
 }
 
 extension ApplicationCoordinator: Coordinator {

@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import Domain
 
 class GamesListViewController: UIViewController {
     
@@ -21,7 +20,6 @@ class GamesListViewController: UIViewController {
     init(gamesListCoordinator: GamesListCoordinator) {
         self.gamesListCoordinator = gamesListCoordinator
         super.init(nibName: nil, bundle: nil)
-        view.backgroundColor = .orange
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -14,6 +14,7 @@ class GamesListCoordinator {
     // MARK: - Public Variables
     
     let gameRepository: GameRepositoryProtocol
+    let shippingRepository: ShippingRepositoryProtocol
     
     // MARK: - Private Variables
     
@@ -21,9 +22,10 @@ class GamesListCoordinator {
     
     // MARK: - Life Cycle
     
-    init(presenter: UINavigationController, gameRepository: GameRepositoryProtocol) {
+    init(presenter: UINavigationController, gameRepository: GameRepositoryProtocol, shippingRepository: ShippingRepositoryProtocol) {
         self.presenter = presenter
         self.gameRepository = gameRepository
+        self.shippingRepository = shippingRepository
     }
     
 }
