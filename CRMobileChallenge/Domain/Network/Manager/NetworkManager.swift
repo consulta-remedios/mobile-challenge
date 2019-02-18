@@ -18,10 +18,6 @@ struct NetworkManager {
     
     private let router = Router<GameAPI>()
     
-    // MARK: - Life Cycle
-    
-    init() {}
-    
     // MARK: - Methods
     
     func games(_ completion: @escaping (Result<[Game]>) -> Void) {

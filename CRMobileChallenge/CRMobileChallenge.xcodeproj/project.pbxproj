@@ -66,6 +66,7 @@
 		E1F22765221A40C700BEA577 /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F22764221A40C700BEA577 /* GameRepository.swift */; };
 		E1F22769221A415300BEA577 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F22768221A415300BEA577 /* BaseRepository.swift */; };
 		E1F2276B221A430B00BEA577 /* ShippingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2276A221A430B00BEA577 /* ShippingRepository.swift */; };
+		E1F2276D221A45BD00BEA577 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2276C221A45BD00BEA577 /* RepositoryProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,6 +211,7 @@
 		E1F22764221A40C700BEA577 /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
 		E1F22768221A415300BEA577 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
 		E1F2276A221A430B00BEA577 /* ShippingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingRepository.swift; sourceTree = "<group>"; };
+		E1F2276C221A45BD00BEA577 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		F0EDCBC018B94C40C1EC64BB /* Pods-Shared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared.debug.xcconfig"; path = "Target Support Files/Pods-Shared/Pods-Shared.debug.xcconfig"; sourceTree = "<group>"; };
 		FE1D9456F403FC2F748949FA /* Pods_DomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -429,6 +431,7 @@
 				E1F22764221A40C700BEA577 /* GameRepository.swift */,
 				E1F22768221A415300BEA577 /* BaseRepository.swift */,
 				E1F2276A221A430B00BEA577 /* ShippingRepository.swift */,
+				E1F2276C221A45BD00BEA577 /* RepositoryProtocol.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -946,6 +949,7 @@
 				E1F22763221A3FAD00BEA577 /* ShippingRepositoryProocol.swift in Sources */,
 				E1F2273F22182B5F00BEA577 /* URLParameterEncoder.swift in Sources */,
 				E1F227372218277A00BEA577 /* HTTPMethod.swift in Sources */,
+				E1F2276D221A45BD00BEA577 /* RepositoryProtocol.swift in Sources */,
 				E1F2270A2216B28A00BEA577 /* Order.swift in Sources */,
 				E1F226FF2216AEA200BEA577 /* Address.swift in Sources */,
 				E1F2273D221829FD00BEA577 /* ParameterEncoding.swift in Sources */,

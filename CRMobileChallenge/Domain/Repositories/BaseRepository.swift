@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class BaseRepository {
+public class BaseRepository: RepositoryProtocol {
     
     // MARK: - Public Variables
     
