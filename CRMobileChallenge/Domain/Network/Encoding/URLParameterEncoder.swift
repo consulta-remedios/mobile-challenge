@@ -8,9 +8,9 @@
 
 import Foundation
 
-public struct URLParameterEncoder: ParameterEncoder {
+struct URLParameterEncoder: ParameterEncoder {
     
-    public func encoder(urlRequest: inout URLRequest, with parameters: Parameters) throws {
+    func encoder(urlRequest: inout URLRequest, with parameters: Parameters) throws {
         guard let url = urlRequest.url else { throw NetworkError.missingURL }
         
         if var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false), !parameters.isEmpty {

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum NetworkEnvironment {
+enum NetworkEnvironment {
     
     case dev
     case production
@@ -16,9 +16,9 @@ public enum NetworkEnvironment {
     
 }
 
-public extension NetworkEnvironment {
+extension NetworkEnvironment {
     
-    public var baseURL: URL {
+    var baseURL: URL {
         return URL(string: "https://game-checkout.herokuapp.com")!
     }
     

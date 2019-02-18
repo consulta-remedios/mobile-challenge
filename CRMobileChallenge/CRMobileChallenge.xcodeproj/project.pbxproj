@@ -61,6 +61,11 @@
 		E1F227562219850E00BEA577 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227552219850E00BEA577 /* NetworkRouter.swift */; };
 		E1F227592219886700BEA577 /* GameAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227582219886700BEA577 /* GameAPI.swift */; };
 		E1F2275F221A05C400BEA577 /* NetworkErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2275E221A05C400BEA577 /* NetworkErrorResponse.swift */; };
+		E1F22761221A3F3E00BEA577 /* GameRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F22760221A3F3E00BEA577 /* GameRepositoryProtocol.swift */; };
+		E1F22763221A3FAD00BEA577 /* ShippingRepositoryProocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F22762221A3FAD00BEA577 /* ShippingRepositoryProocol.swift */; };
+		E1F22765221A40C700BEA577 /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F22764221A40C700BEA577 /* GameRepository.swift */; };
+		E1F22769221A415300BEA577 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F22768221A415300BEA577 /* BaseRepository.swift */; };
+		E1F2276B221A430B00BEA577 /* ShippingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2276A221A430B00BEA577 /* ShippingRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -200,6 +205,11 @@
 		E1F227552219850E00BEA577 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		E1F227582219886700BEA577 /* GameAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAPI.swift; sourceTree = "<group>"; };
 		E1F2275E221A05C400BEA577 /* NetworkErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorResponse.swift; sourceTree = "<group>"; };
+		E1F22760221A3F3E00BEA577 /* GameRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepositoryProtocol.swift; sourceTree = "<group>"; };
+		E1F22762221A3FAD00BEA577 /* ShippingRepositoryProocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingRepositoryProocol.swift; sourceTree = "<group>"; };
+		E1F22764221A40C700BEA577 /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
+		E1F22768221A415300BEA577 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
+		E1F2276A221A430B00BEA577 /* ShippingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingRepository.swift; sourceTree = "<group>"; };
 		F0EDCBC018B94C40C1EC64BB /* Pods-Shared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared.debug.xcconfig"; path = "Target Support Files/Pods-Shared/Pods-Shared.debug.xcconfig"; sourceTree = "<group>"; };
 		FE1D9456F403FC2F748949FA /* Pods_DomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -414,6 +424,11 @@
 		E1F2272F22181C4700BEA577 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				E1F22760221A3F3E00BEA577 /* GameRepositoryProtocol.swift */,
+				E1F22762221A3FAD00BEA577 /* ShippingRepositoryProocol.swift */,
+				E1F22764221A40C700BEA577 /* GameRepository.swift */,
+				E1F22768221A415300BEA577 /* BaseRepository.swift */,
+				E1F2276A221A430B00BEA577 /* ShippingRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -424,8 +439,6 @@
 				E1F227572219885C00BEA577 /* EndPoint */,
 				E1F227522219846E00BEA577 /* Manager */,
 				E1F2274E2219833400BEA577 /* Router */,
-				E1F2274B2218333800BEA577 /* Response */,
-				E1F2274A2218332E00BEA577 /* Request */,
 				E1F2273B221828E700BEA577 /* Encoding */,
 				E1F227382218280E00BEA577 /* Service */,
 			);
@@ -470,20 +483,6 @@
 				E1F2274222182C2F00BEA577 /* JSONParameterEncoder.swift */,
 			);
 			path = Encoding;
-			sourceTree = "<group>";
-		};
-		E1F2274A2218332E00BEA577 /* Request */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Request;
-			sourceTree = "<group>";
-		};
-		E1F2274B2218333800BEA577 /* Response */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Response;
 			sourceTree = "<group>";
 		};
 		E1F2274E2219833400BEA577 /* Router */ = {
@@ -944,6 +943,7 @@
 				E1F2274722182F6B00BEA577 /* Router.swift in Sources */,
 				E1F2274D2219819100BEA577 /* NetworkEnvironment.swift in Sources */,
 				E1F227342218268C00BEA577 /* EndPointType.swift in Sources */,
+				E1F22763221A3FAD00BEA577 /* ShippingRepositoryProocol.swift in Sources */,
 				E1F2273F22182B5F00BEA577 /* URLParameterEncoder.swift in Sources */,
 				E1F227372218277A00BEA577 /* HTTPMethod.swift in Sources */,
 				E1F2270A2216B28A00BEA577 /* Order.swift in Sources */,
@@ -951,10 +951,14 @@
 				E1F2273D221829FD00BEA577 /* ParameterEncoding.swift in Sources */,
 				E1F2274122182BB300BEA577 /* NetworkError.swift in Sources */,
 				E1F227062216B15400BEA577 /* PaymentType.swift in Sources */,
+				E1F22761221A3F3E00BEA577 /* GameRepositoryProtocol.swift in Sources */,
 				E1F2270F2216B60D00BEA577 /* OrderItem.swift in Sources */,
 				E1F227042216B05F00BEA577 /* CreditCardFlag.swift in Sources */,
 				E1F22751221983C100BEA577 /* Result.swift in Sources */,
+				E1F22765221A40C700BEA577 /* GameRepository.swift in Sources */,
 				E1F2274522182F0800BEA577 /* NetworkLogger.swift in Sources */,
+				E1F22769221A415300BEA577 /* BaseRepository.swift in Sources */,
+				E1F2276B221A430B00BEA577 /* ShippingRepository.swift in Sources */,
 				E1F226FB2216AB4700BEA577 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

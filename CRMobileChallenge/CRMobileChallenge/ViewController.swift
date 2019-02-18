@@ -13,17 +13,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let networkManager = NetworkManager()
-        
-        networkManager.checkout { result in
-            switch result {
-            case .success:
-                print("aeeee \\o/")
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
     }
 
 

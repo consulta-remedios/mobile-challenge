@@ -8,9 +8,9 @@
 
 import Foundation
 
-public struct JSONParameterEncoder: ParameterEncoder {
+struct JSONParameterEncoder: ParameterEncoder {
     
-    public func encoder(urlRequest: inout URLRequest, with parameters: Parameters) throws {
+    func encoder(urlRequest: inout URLRequest, with parameters: Parameters) throws {
         do {
             let jsonAsData = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
             urlRequest.httpBody = jsonAsData

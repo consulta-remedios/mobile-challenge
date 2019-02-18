@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol EndPointType {
+protocol EndPointType {
     
     var baseURL: URL { get }
     var path: String { get }
@@ -20,7 +20,7 @@ public protocol EndPointType {
     
 }
 
-public extension EndPointType {
+extension EndPointType {
     
     var timeoutInterval: TimeInterval {
         return 10.0

@@ -8,11 +8,11 @@
 
 import Foundation
 
-public struct NetworkManager {
+struct NetworkManager {
     
-    // MARK: - Public Variables
+    // MARK: - Variables
     
-    public static let environment: NetworkEnvironment = .production
+    static let environment: NetworkEnvironment = .production
     
     // MARK: - Private Variables
     
@@ -20,11 +20,11 @@ public struct NetworkManager {
     
     // MARK: - Life Cycle
     
-    public init() {}
+    init() {}
     
-    // MARK: - Public Methods
+    // MARK: - Methods
     
-    public func games(_ completion: @escaping (Result<[Game]>) -> Void) {
+    func games(_ completion: @escaping (Result<[Game]>) -> Void) {
         router.request(.games) { (data: [Game]?, _, error: Error?) in
             if let error = error {
                 return completion(.failure(error))
@@ -36,7 +36,7 @@ public struct NetworkManager {
         }
     }
     
-    public func game(id: Int, _ completion: @escaping (Result<Game>) -> Void) {
+    func game(id: Int, _ completion: @escaping (Result<Game>) -> Void) {
         router.request(.game(id: id)) { (data: Game?, _, error: Error?) in
             if let error = error {
                 return completion(.failure(error))
@@ -48,7 +48,7 @@ public struct NetworkManager {
         }
     }
     
-    public func checkout(_ completion: @escaping (EmptyResult) -> Void) {
+    func checkout(_ completion: @escaping (EmptyResult) -> Void) {
         router.request(.checkout) { (data: Bool?, _, error: Error?) in
             if let error = error {
                 return completion(.failure(error))
@@ -56,6 +56,10 @@ public struct NetworkManager {
                 return completion(.success)
             }
         }
+    }
+    
+    func cancel() {
+        router.cancel()
     }
     
 }

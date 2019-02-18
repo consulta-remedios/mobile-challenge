@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum GameAPI {
+enum GameAPI {
     
     case games
     case game(id: Int)
@@ -18,11 +18,11 @@ public enum GameAPI {
 
 extension GameAPI: EndPointType {
     
-    public var baseURL: URL {
+    var baseURL: URL {
         return NetworkManager.environment.baseURL
     }
     
-    public var path: String {
+    var path: String {
         switch self {
         case .games:
             return "game"
@@ -33,7 +33,7 @@ extension GameAPI: EndPointType {
         }
     }
     
-    public var httpMethod: HTTPMethod {
+    var httpMethod: HTTPMethod {
         switch self {
         case .checkout:
             return .post
@@ -42,7 +42,7 @@ extension GameAPI: EndPointType {
         }
     }
     
-    public var task: HTTPTask {
+    var task: HTTPTask {
         switch self {
         case .game(let id):
             return .requestParameters(bodyParameters: nil, bodyEncoding: .url, urlParameters: ["id": id])
@@ -51,7 +51,7 @@ extension GameAPI: EndPointType {
         }
     }
     
-    public var headers: HTTPHeaders? {
+    var headers: HTTPHeaders? {
         return ["token": "QceNFo1gHd09MJDzyswNqzStlxYGBzUG"]
     }
     
