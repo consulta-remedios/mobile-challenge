@@ -1,5 +1,5 @@
 //
-//  ShippingRepository.swift
+//  PurchaseRepository.swift
 //  Domain
 //
 //  Created by Adriano Souza Costa on 17/02/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class ShippingRepository: BaseRepository, ShippingRepositoryProtocol {
+public class PurchaseRepository: BaseRepository, PurchaseRepositoryProtocol {
     
     public func checkout(_ completion: @escaping (EmptyResult) -> Void) {
         manager.checkout(completion)

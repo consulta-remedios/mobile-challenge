@@ -1,5 +1,5 @@
 //
-//  GamesListViewController.swift
+//  GameViewController.swift
 //  CRMobileChallenge
 //
 //  Created by Adriano Souza Costa on 18/02/19.
@@ -10,27 +10,27 @@ import Foundation
 import UIKit
 import Domain
 
-protocol GamesListCordinatorDelegate {
+protocol GameDetailCoordinatorDelegate {
     
-    func gamesListDidSelect(game: Game)
-    func gamesListShowShoppingCart()
+    func gameDetailShowShoppingCart()
+    func gameDetailDismiss()
     
 }
 
-class GamesListViewController: UIViewController {
+class GameDetailViewController: UIViewController {
     
     // MARK: - Public Variables
     
-    var delegate: GamesListCordinatorDelegate?
+    var delegate: GameDetailCoordinatorDelegate?
     
-    // MARK: - Private Variable
+    // MARK: - Private Variables
     
-    private let repository: GameRepositoryProtocol
+    private let game: Game
     
     // MARK: - Life Cycle
     
-    init(repository: GameRepositoryProtocol) {
-        self.repository = repository
+    init(game: Game) {
+        self.game = game
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -46,7 +46,7 @@ class GamesListViewController: UIViewController {
     // MARK: - Private Methods
     
     private func setupUI() {
-        title = "Games"
+        title = game.platform
     }
     
 }

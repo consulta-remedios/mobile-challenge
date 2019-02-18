@@ -9,7 +9,17 @@
 import Foundation
 import UIKit
 
+protocol PurchaseCoordinatorDelegate {
+    
+    func purchaseDismiss()
+    
+}
+
 class PurchaseViewController: UIViewController {
+    
+    // MARK: - Public Variables
+    
+    var delegate: PurchaseCoordinatorDelegate?
     
     // MARK: - Life Cycle
     

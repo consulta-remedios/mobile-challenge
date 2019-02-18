@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol ShippingRepositoryProtocol {
+public protocol PurchaseRepositoryProtocol {
     
     func checkout(_ completion: @escaping (EmptyResult) -> Void)
     

@@ -13,11 +13,14 @@
 		BAB1F056721A3D7BDA0F26C9 /* Pods_Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B169148BE520CD8FC12793 /* Pods_Shared.framework */; };
 		C2E0262596FACDAE5A2FF58A /* Pods_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE1D9456F403FC2F748949FA /* Pods_DomainTests.framework */; };
 		C383F38B425E41A8343E2FE1 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA263B11CBBDAE120C3CA50 /* Pods_Domain.framework */; };
+		E16B4081221B7782006D2934 /* ShoppingCartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16B4080221B7782006D2934 /* ShoppingCartCoordinator.swift */; };
+		E16B4083221B7AA6006D2934 /* PurchaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16B4082221B7AA6006D2934 /* PurchaseCoordinator.swift */; };
 		E17AB07F221AC6B20096AD76 /* GamesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17AB07E221AC6B20096AD76 /* GamesListViewController.swift */; };
 		E17AB081221AC9650096AD76 /* ShoppingCartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E17AB080221AC9650096AD76 /* ShoppingCartViewController.xib */; };
 		E17AB083221AC9800096AD76 /* PurchaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E17AB082221AC9800096AD76 /* PurchaseViewController.xib */; };
 		E17AB085221AC9B90096AD76 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E17AB084221AC9B90096AD76 /* GameViewController.xib */; };
-		E1C8CB69221AB5FC00DD58EF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8CB68221AB5FC00DD58EF /* GameViewController.swift */; };
+		E17AB087221B6A1D0096AD76 /* GameDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17AB086221B6A1D0096AD76 /* GameDetailCoordinator.swift */; };
+		E1C8CB69221AB5FC00DD58EF /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8CB68221AB5FC00DD58EF /* GameDetailViewController.swift */; };
 		E1C8CB6B221AB63900DD58EF /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8CB6A221AB63900DD58EF /* ShoppingCartViewController.swift */; };
 		E1C8CB6D221AB66B00DD58EF /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8CB6C221AB66A00DD58EF /* PurchaseViewController.swift */; };
 		E1C8CB6E221AB80100DD58EF /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8CB5F221AB42700DD58EF /* ApplicationCoordinator.swift */; };
@@ -75,7 +78,7 @@
 		E1F22763221A3FAD00BEA577 /* ShippingRepositoryProocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F22762221A3FAD00BEA577 /* ShippingRepositoryProocol.swift */; };
 		E1F22765221A40C700BEA577 /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F22764221A40C700BEA577 /* GameRepository.swift */; };
 		E1F22769221A415300BEA577 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F22768221A415300BEA577 /* BaseRepository.swift */; };
-		E1F2276B221A430B00BEA577 /* ShippingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2276A221A430B00BEA577 /* ShippingRepository.swift */; };
+		E1F2276B221A430B00BEA577 /* PurchaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2276A221A430B00BEA577 /* PurchaseRepository.swift */; };
 		E1F2276D221A45BD00BEA577 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2276C221A45BD00BEA577 /* RepositoryProtocol.swift */; };
 /* End PBXBuildFile section */
 
@@ -163,13 +166,16 @@
 		BDA9AC1879D1C428D1894B0C /* Pods-DomainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.debug.xcconfig"; path = "Target Support Files/Pods-DomainTests/Pods-DomainTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C00958783BB05E2FED8D920B /* Pods_CRMobileChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRMobileChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D562462314439B70861642 /* Pods-SharedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedTests.release.xcconfig"; path = "Target Support Files/Pods-SharedTests/Pods-SharedTests.release.xcconfig"; sourceTree = "<group>"; };
+		E16B4080221B7782006D2934 /* ShoppingCartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartCoordinator.swift; sourceTree = "<group>"; };
+		E16B4082221B7AA6006D2934 /* PurchaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCoordinator.swift; sourceTree = "<group>"; };
 		E17AB07E221AC6B20096AD76 /* GamesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListViewController.swift; sourceTree = "<group>"; };
 		E17AB080221AC9650096AD76 /* ShoppingCartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingCartViewController.xib; sourceTree = "<group>"; };
 		E17AB082221AC9800096AD76 /* PurchaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurchaseViewController.xib; sourceTree = "<group>"; };
 		E17AB084221AC9B90096AD76 /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		E17AB086221B6A1D0096AD76 /* GameDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailCoordinator.swift; sourceTree = "<group>"; };
 		E1C8CB5D221A4D8F00DD58EF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		E1C8CB5F221AB42700DD58EF /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
-		E1C8CB68221AB5FC00DD58EF /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		E1C8CB68221AB5FC00DD58EF /* GameDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
 		E1C8CB6A221AB63900DD58EF /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		E1C8CB6C221AB66A00DD58EF /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 		E1C8CB7B221AB9C400DD58EF /* GamesListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListCoordinator.swift; sourceTree = "<group>"; };
@@ -230,7 +236,7 @@
 		E1F22762221A3FAD00BEA577 /* ShippingRepositoryProocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingRepositoryProocol.swift; sourceTree = "<group>"; };
 		E1F22764221A40C700BEA577 /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
 		E1F22768221A415300BEA577 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
-		E1F2276A221A430B00BEA577 /* ShippingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingRepository.swift; sourceTree = "<group>"; };
+		E1F2276A221A430B00BEA577 /* PurchaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseRepository.swift; sourceTree = "<group>"; };
 		E1F2276C221A45BD00BEA577 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		F0EDCBC018B94C40C1EC64BB /* Pods-Shared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared.debug.xcconfig"; path = "Target Support Files/Pods-Shared/Pods-Shared.debug.xcconfig"; sourceTree = "<group>"; };
 		FE1D9456F403FC2F748949FA /* Pods_DomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -338,7 +344,7 @@
 		E1C8CB64221AB58E00DD58EF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E1C8CB68221AB5FC00DD58EF /* GameViewController.swift */,
+				E1C8CB68221AB5FC00DD58EF /* GameDetailViewController.swift */,
 				E1C8CB6A221AB63900DD58EF /* ShoppingCartViewController.swift */,
 				E1C8CB6C221AB66A00DD58EF /* PurchaseViewController.swift */,
 				E17AB07E221AC6B20096AD76 /* GamesListViewController.swift */,
@@ -504,7 +510,7 @@
 				E1F22762221A3FAD00BEA577 /* ShippingRepositoryProocol.swift */,
 				E1F22764221A40C700BEA577 /* GameRepository.swift */,
 				E1F22768221A415300BEA577 /* BaseRepository.swift */,
-				E1F2276A221A430B00BEA577 /* ShippingRepository.swift */,
+				E1F2276A221A430B00BEA577 /* PurchaseRepository.swift */,
 				E1F2276C221A45BD00BEA577 /* RepositoryProtocol.swift */,
 			);
 			path = Repositories;
@@ -578,6 +584,9 @@
 				E1C8CB5D221A4D8F00DD58EF /* Coordinator.swift */,
 				E1C8CB5F221AB42700DD58EF /* ApplicationCoordinator.swift */,
 				E1C8CB7B221AB9C400DD58EF /* GamesListCoordinator.swift */,
+				E17AB086221B6A1D0096AD76 /* GameDetailCoordinator.swift */,
+				E16B4080221B7782006D2934 /* ShoppingCartCoordinator.swift */,
+				E16B4082221B7AA6006D2934 /* PurchaseCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -993,11 +1002,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E16B4081221B7782006D2934 /* ShoppingCartCoordinator.swift in Sources */,
 				E17AB07F221AC6B20096AD76 /* GamesListViewController.swift in Sources */,
 				E1C8CB6F221AB80400DD58EF /* Coordinator.swift in Sources */,
-				E1C8CB69221AB5FC00DD58EF /* GameViewController.swift in Sources */,
+				E1C8CB69221AB5FC00DD58EF /* GameDetailViewController.swift in Sources */,
 				E1F2264F2215745800BEA577 /* AppDelegate.swift in Sources */,
 				E1C8CB6B221AB63900DD58EF /* ShoppingCartViewController.swift in Sources */,
+				E17AB087221B6A1D0096AD76 /* GameDetailCoordinator.swift in Sources */,
+				E16B4083221B7AA6006D2934 /* PurchaseCoordinator.swift in Sources */,
 				E1C8CB6D221AB66B00DD58EF /* PurchaseViewController.swift in Sources */,
 				E1C8CB6E221AB80100DD58EF /* ApplicationCoordinator.swift in Sources */,
 				E1C8CB7C221AB9C400DD58EF /* GamesListCoordinator.swift in Sources */,
@@ -1042,7 +1054,7 @@
 				E1F22765221A40C700BEA577 /* GameRepository.swift in Sources */,
 				E1F2274522182F0800BEA577 /* NetworkLogger.swift in Sources */,
 				E1F22769221A415300BEA577 /* BaseRepository.swift in Sources */,
-				E1F2276B221A430B00BEA577 /* ShippingRepository.swift in Sources */,
+				E1F2276B221A430B00BEA577 /* PurchaseRepository.swift in Sources */,
 				E1F226FB2216AB4700BEA577 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

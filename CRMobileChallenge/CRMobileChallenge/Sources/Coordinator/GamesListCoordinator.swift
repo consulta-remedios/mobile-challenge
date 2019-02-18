@@ -9,23 +9,23 @@
 import Foundation
 import Domain
 
-class GamesListCoordinator {
+final class GamesListCoordinator {
     
     // MARK: - Public Variables
     
     let gameRepository: GameRepositoryProtocol
-    let shippingRepository: ShippingRepositoryProtocol
+    let purchaseRepository: PurchaseRepositoryProtocol
     
     // MARK: - Private Variables
     
-    private let presenter: UINavigationController
+    fileprivate let presenter: UINavigationController
     
     // MARK: - Life Cycle
     
-    init(presenter: UINavigationController, gameRepository: GameRepositoryProtocol, shippingRepository: ShippingRepositoryProtocol) {
+    init(presenter: UINavigationController, gameRepository: GameRepositoryProtocol, purchaseRepository: PurchaseRepositoryProtocol) {
         self.presenter = presenter
         self.gameRepository = gameRepository
-        self.shippingRepository = shippingRepository
+        self.purchaseRepository = purchaseRepository
     }
     
 }
@@ -33,8 +33,22 @@ class GamesListCoordinator {
 extension GamesListCoordinator: Coordinator {
     
     func start() {
-        let viewController = GamesListViewController(gamesListCoordinator: self)
-        presenter.pushViewController(viewController, animated: true)
+        let controller = GamesListViewController(repository: gameRepository)
+        controller.delegate = self
+        presenter.pushViewController(controller, animated: true)
+    }
+    
+}
+
+extension GamesListCoordinator: GamesListCordinatorDelegate {
+    
+    func gamesListDidSelect(game: Game) {
+        let coordinator = GameDetailCoordinator(presenter: presenter, game: game, purchaseRepository: purchaseRepository)
+        coordinator.start()
+    }
+    
+    func gamesListShowShoppingCart() {
+        
     }
     
 }

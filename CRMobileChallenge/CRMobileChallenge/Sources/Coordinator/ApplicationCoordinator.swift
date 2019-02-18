@@ -9,24 +9,20 @@
 import Foundation
 import Domain
 
-struct ApplicationCoordinator {
+final class ApplicationCoordinator {
     
     // MARK: - Private Variables
     
     private let window: UIWindow
     private let gameRepository: GameRepositoryProtocol = GameRepository()
-    private let shippingRepository: ShippingRepositoryProtocol = ShippingRepository()
-    private let navigationController: UINavigationController
-    private let gamesListCoordinator: GamesListCoordinator
+    private let purchaseRepository: PurchaseRepositoryProtocol = PurchaseRepository()
+    private let navigationController = UINavigationController()
     
     // MARK: - Life Cycle
     
     public init(window: UIWindow) {
         self.window = window
-        navigationController = UINavigationController()
         navigationController.navigationBar.prefersLargeTitles = true
-        
-        gamesListCoordinator = GamesListCoordinator(presenter: navigationController, gameRepository: gameRepository, shippingRepository: shippingRepository)
     }
     
 }
@@ -35,7 +31,10 @@ extension ApplicationCoordinator: Coordinator {
     
     func start() {
         window.rootViewController = navigationController
-        gamesListCoordinator.start()
+        
+        let coordinator = GamesListCoordinator(presenter: navigationController, gameRepository: gameRepository, purchaseRepository: purchaseRepository)
+        coordinator.start()
+        
         window.makeKeyAndVisible()
     }
     
