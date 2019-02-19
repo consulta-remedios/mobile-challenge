@@ -18,7 +18,7 @@
 		E17AB07F221AC6B20096AD76 /* GamesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17AB07E221AC6B20096AD76 /* GamesListViewController.swift */; };
 		E17AB081221AC9650096AD76 /* ShoppingCartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E17AB080221AC9650096AD76 /* ShoppingCartViewController.xib */; };
 		E17AB083221AC9800096AD76 /* PurchaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E17AB082221AC9800096AD76 /* PurchaseViewController.xib */; };
-		E17AB085221AC9B90096AD76 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E17AB084221AC9B90096AD76 /* GameViewController.xib */; };
+		E17AB085221AC9B90096AD76 /* GameDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E17AB084221AC9B90096AD76 /* GameDetailViewController.xib */; };
 		E17AB087221B6A1D0096AD76 /* GameDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17AB086221B6A1D0096AD76 /* GameDetailCoordinator.swift */; };
 		E1C8CB69221AB5FC00DD58EF /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8CB68221AB5FC00DD58EF /* GameDetailViewController.swift */; };
 		E1C8CB6B221AB63900DD58EF /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8CB6A221AB63900DD58EF /* ShoppingCartViewController.swift */; };
@@ -171,7 +171,7 @@
 		E17AB07E221AC6B20096AD76 /* GamesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListViewController.swift; sourceTree = "<group>"; };
 		E17AB080221AC9650096AD76 /* ShoppingCartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingCartViewController.xib; sourceTree = "<group>"; };
 		E17AB082221AC9800096AD76 /* PurchaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurchaseViewController.xib; sourceTree = "<group>"; };
-		E17AB084221AC9B90096AD76 /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		E17AB084221AC9B90096AD76 /* GameDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameDetailViewController.xib; sourceTree = "<group>"; };
 		E17AB086221B6A1D0096AD76 /* GameDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailCoordinator.swift; sourceTree = "<group>"; };
 		E1C8CB5D221A4D8F00DD58EF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		E1C8CB5F221AB42700DD58EF /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
@@ -365,7 +365,7 @@
 				E1C8CB7F221AC53100DD58EF /* GamesListViewController.xib */,
 				E17AB080221AC9650096AD76 /* ShoppingCartViewController.xib */,
 				E17AB082221AC9800096AD76 /* PurchaseViewController.xib */,
-				E17AB084221AC9B90096AD76 /* GameViewController.xib */,
+				E17AB084221AC9B90096AD76 /* GameDetailViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -402,8 +402,8 @@
 		E1F2264D2215745800BEA577 /* CRMobileChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				E1C8CB62221AB55A00DD58EF /* Resources */,
 				E1C8CB61221AB55500DD58EF /* Sources */,
+				E1C8CB62221AB55A00DD58EF /* Resources */,
 				E1F2264E2215745800BEA577 /* AppDelegate.swift */,
 			);
 			path = CRMobileChallenge;
@@ -813,7 +813,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E17AB085221AC9B90096AD76 /* GameViewController.xib in Resources */,
+				E17AB085221AC9B90096AD76 /* GameDetailViewController.xib in Resources */,
 				E17AB081221AC9650096AD76 /* ShoppingCartViewController.xib in Resources */,
 				E1F226F82215764800BEA577 /* Planejamento.rtf in Resources */,
 				E17AB083221AC9800096AD76 /* PurchaseViewController.xib in Resources */,

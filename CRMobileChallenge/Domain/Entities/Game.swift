@@ -18,4 +18,13 @@ public struct Game: Entity, Codable {
     public var score: Double
     public var image: URL
     
+    public init(name: String, platform: String, description: String, price: Double, score: Double, image: URL) {
+        self.name = name
+        self.platform = platform
+        self.description = description
+        self.price = price
+        self.score = score
+        self.image = image
+    }
+    
 }

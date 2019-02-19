@@ -48,7 +48,8 @@ extension GamesListCoordinator: GamesListCordinatorDelegate {
     }
     
     func gamesListShowShoppingCart() {
-        
+        let coordinator = ShoppingCartCoordinator(presenter: presenter, purchaseRepository: purchaseRepository)
+        coordinator.start()
     }
     
 }

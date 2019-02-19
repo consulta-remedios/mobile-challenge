@@ -29,6 +29,10 @@ class ShoppingCartViewController: UIViewController {
     
     private let repository: PurchaseRepositoryProtocol
     
+    private lazy var closeButton: UIBarButtonItem = {
+        return UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(close))
+    }()
+    
     // MARK: - Life Cycle
     
     init(repository: PurchaseRepositoryProtocol) {
@@ -43,12 +47,23 @@ class ShoppingCartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupControls()
     }
     
     // MARK: - Private Methods
     
     private func setupUI() {
-        title = "Carrinho de compras"
+        title = "Carrinho de Compras"
+    }
+    
+    private func setupControls() {
+        navigationItem.leftBarButtonItem = closeButton
+    }
+    
+    // MARK: Actions
+    
+    @IBAction private func close() {
+        delegate?.shoppingCardDismiss()
     }
     
 }

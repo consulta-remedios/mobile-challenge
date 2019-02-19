@@ -23,9 +23,13 @@ class GamesListViewController: UIViewController {
     
     var delegate: GamesListCordinatorDelegate?
     
-    // MARK: - Private Variable
+    // MARK: - Private Variables
     
     private let repository: GameRepositoryProtocol
+    
+    private lazy var cartButton: UIBarButtonItem = {
+        return UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showShoppingCart))
+    }()
     
     // MARK: - Life Cycle
     
@@ -41,12 +45,28 @@ class GamesListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupControls()
     }
     
     // MARK: - Private Methods
     
     private func setupUI() {
         title = "Games"
+    }
+    
+    private func setupControls() {
+        navigationItem.rightBarButtonItem = cartButton
+    }
+    
+    // MARK: Actions
+    
+    @IBAction private func showShoppingCart() {
+        delegate?.gamesListShowShoppingCart()
+    }
+    
+    @IBAction private func showGameDetail() {
+        let game = Game(name: "teste", platform: "teste", description: "teste", price: 1, score: 1, image: URL(string: "http://www.google.com.br")!)
+        delegate?.gamesListDidSelect(game: game)
     }
     
 }

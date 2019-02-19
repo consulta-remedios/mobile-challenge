@@ -13,7 +13,6 @@ import Domain
 protocol GameDetailCoordinatorDelegate {
     
     func gameDetailShowShoppingCart()
-    func gameDetailDismiss()
     
 }
 
@@ -26,6 +25,10 @@ class GameDetailViewController: UIViewController {
     // MARK: - Private Variables
     
     private let game: Game
+    
+    private lazy var cartButton: UIBarButtonItem = {
+        return UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showShoppingCart))
+    }()
     
     // MARK: - Life Cycle
     
@@ -41,12 +44,23 @@ class GameDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupControls()
     }
     
     // MARK: - Private Methods
     
     private func setupUI() {
         title = game.platform
+    }
+    
+    private func setupControls() {
+        navigationItem.rightBarButtonItem = cartButton
+    }
+    
+    // MARK: Actions
+    
+    @IBAction private func showShoppingCart() {
+        delegate?.gameDetailShowShoppingCart()
     }
     
 }

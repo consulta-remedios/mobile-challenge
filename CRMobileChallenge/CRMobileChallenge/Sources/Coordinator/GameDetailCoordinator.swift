@@ -19,12 +19,11 @@ final class GameDetailCoordinator {
     // MARK: - Private Variables
     
     private let game: Game
-    private let presenter: UIViewController
-    private let navigation = UINavigationController()
+    private let presenter: UINavigationController
     
     // MARK: - Life Cycle
     
-    init(presenter: UIViewController, game: Game, purchaseRepository: PurchaseRepositoryProtocol) {
+    init(presenter: UINavigationController, game: Game, purchaseRepository: PurchaseRepositoryProtocol) {
         self.game = game
         self.presenter = presenter
         self.purchaseRepository = purchaseRepository
@@ -37,8 +36,7 @@ extension GameDetailCoordinator: Coordinator {
     func start() {
         let controller = GameDetailViewController(game: game)
         controller.delegate = self
-        navigation.setViewControllers([controller], animated: false)
-        presenter.present(navigation, animated: true)
+        presenter.pushViewController(controller, animated: true)
     }
     
 }
@@ -46,11 +44,8 @@ extension GameDetailCoordinator: Coordinator {
 extension GameDetailCoordinator: GameDetailCoordinatorDelegate {
     
     func gameDetailShowShoppingCart() {
-        
-    }
-    
-    func gameDetailDismiss() {
-        navigation.dismiss(animated: true)
+        let coordinator = ShoppingCartCoordinator(presenter: presenter, purchaseRepository: purchaseRepository)
+        coordinator.start()
     }
     
 }
