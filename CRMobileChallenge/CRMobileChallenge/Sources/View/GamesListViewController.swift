@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Domain
+import Shared
 
 protocol GamesListCordinatorDelegate {
     
@@ -75,6 +76,7 @@ class GamesListViewController: UIViewController {
     }
     
     private func setupCollectionView() {
+        collectionView.collectionViewLayout = GridFlowLayout()
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(GameListCell.nib, forCellWithReuseIdentifier: GameListCell.identifier)
