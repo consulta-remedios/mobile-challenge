@@ -23,7 +23,7 @@ protocol EndPointType {
 extension EndPointType {
     
     var timeoutInterval: TimeInterval {
-        return 10.0
+        return 30.0
     }
     
     var cachePolicy: NSURLRequest.CachePolicy {

@@ -15,6 +15,8 @@
 		C383F38B425E41A8343E2FE1 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA263B11CBBDAE120C3CA50 /* Pods_Domain.framework */; };
 		E16B4081221B7782006D2934 /* ShoppingCartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16B4080221B7782006D2934 /* ShoppingCartCoordinator.swift */; };
 		E16B4083221B7AA6006D2934 /* PurchaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16B4082221B7AA6006D2934 /* PurchaseCoordinator.swift */; };
+		E16B4086221B8D57006D2934 /* GameListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16B4085221B8D57006D2934 /* GameListCell.swift */; };
+		E16B4089221B8E73006D2934 /* GameListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E16B4088221B8E73006D2934 /* GameListCell.xib */; };
 		E17AB07F221AC6B20096AD76 /* GamesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17AB07E221AC6B20096AD76 /* GamesListViewController.swift */; };
 		E17AB081221AC9650096AD76 /* ShoppingCartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E17AB080221AC9650096AD76 /* ShoppingCartViewController.xib */; };
 		E17AB083221AC9800096AD76 /* PurchaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E17AB082221AC9800096AD76 /* PurchaseViewController.xib */; };
@@ -27,6 +29,10 @@
 		E1C8CB6F221AB80400DD58EF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8CB5D221A4D8F00DD58EF /* Coordinator.swift */; };
 		E1C8CB7C221AB9C400DD58EF /* GamesListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8CB7B221AB9C400DD58EF /* GamesListCoordinator.swift */; };
 		E1C8CB80221AC53100DD58EF /* GamesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C8CB7F221AC53100DD58EF /* GamesListViewController.xib */; };
+		E1ECCE25221B944000DA6E85 /* UIView+XIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECCE24221B944000DA6E85 /* UIView+XIB.swift */; };
+		E1ECCE27221B9CAD00DA6E85 /* GameListControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECCE26221B9CAD00DA6E85 /* GameListControllerViewModel.swift */; };
+		E1ECCE29221B9EBD00DA6E85 /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECCE28221B9EBD00DA6E85 /* Collection+Safe.swift */; };
+		E1ECCE2F221C07B200DA6E85 /* GridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECCE2E221C07B200DA6E85 /* GridFlowLayout.swift */; };
 		E1F2264F2215745800BEA577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2264E2215745800BEA577 /* AppDelegate.swift */; };
 		E1F226542215745800BEA577 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1F226522215745800BEA577 /* Main.storyboard */; };
 		E1F226562215745900BEA577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1F226552215745900BEA577 /* Assets.xcassets */; };
@@ -168,6 +174,8 @@
 		C4D562462314439B70861642 /* Pods-SharedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedTests.release.xcconfig"; path = "Target Support Files/Pods-SharedTests/Pods-SharedTests.release.xcconfig"; sourceTree = "<group>"; };
 		E16B4080221B7782006D2934 /* ShoppingCartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartCoordinator.swift; sourceTree = "<group>"; };
 		E16B4082221B7AA6006D2934 /* PurchaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCoordinator.swift; sourceTree = "<group>"; };
+		E16B4085221B8D57006D2934 /* GameListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListCell.swift; sourceTree = "<group>"; };
+		E16B4088221B8E73006D2934 /* GameListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameListCell.xib; sourceTree = "<group>"; };
 		E17AB07E221AC6B20096AD76 /* GamesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListViewController.swift; sourceTree = "<group>"; };
 		E17AB080221AC9650096AD76 /* ShoppingCartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingCartViewController.xib; sourceTree = "<group>"; };
 		E17AB082221AC9800096AD76 /* PurchaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurchaseViewController.xib; sourceTree = "<group>"; };
@@ -180,6 +188,10 @@
 		E1C8CB6C221AB66A00DD58EF /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 		E1C8CB7B221AB9C400DD58EF /* GamesListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListCoordinator.swift; sourceTree = "<group>"; };
 		E1C8CB7F221AC53100DD58EF /* GamesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GamesListViewController.xib; sourceTree = "<group>"; };
+		E1ECCE24221B944000DA6E85 /* UIView+XIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+XIB.swift"; sourceTree = "<group>"; };
+		E1ECCE26221B9CAD00DA6E85 /* GameListControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListControllerViewModel.swift; sourceTree = "<group>"; };
+		E1ECCE28221B9EBD00DA6E85 /* Collection+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
+		E1ECCE2E221C07B200DA6E85 /* GridFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridFlowLayout.swift; sourceTree = "<group>"; };
 		E1F2264B2215745800BEA577 /* CRMobileChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CRMobileChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1F2264E2215745800BEA577 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1F226532215745800BEA577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -311,9 +323,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E16B4084221B8CC9006D2934 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E16B4088221B8E73006D2934 /* GameListCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E16B4087221B8E52006D2934 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E16B4085221B8D57006D2934 /* GameListCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		E1C8CB61221AB55500DD58EF /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				E1ECCE2A221C05EE00DA6E85 /* Utils */,
 				E1F2276E221A4D7500BEA577 /* Coordinator */,
 				E1C8CB65221AB59600DD58EF /* ViewModel */,
 				E1C8CB64221AB58E00DD58EF /* View */,
@@ -344,6 +373,7 @@
 		E1C8CB64221AB58E00DD58EF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E16B4087221B8E52006D2934 /* Cells */,
 				E1C8CB68221AB5FC00DD58EF /* GameDetailViewController.swift */,
 				E1C8CB6A221AB63900DD58EF /* ShoppingCartViewController.swift */,
 				E1C8CB6C221AB66A00DD58EF /* PurchaseViewController.swift */,
@@ -355,6 +385,7 @@
 		E1C8CB65221AB59600DD58EF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E1ECCE26221B9CAD00DA6E85 /* GameListControllerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -362,12 +393,29 @@
 		E1C8CB70221AB85D00DD58EF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E16B4084221B8CC9006D2934 /* Cells */,
 				E1C8CB7F221AC53100DD58EF /* GamesListViewController.xib */,
 				E17AB080221AC9650096AD76 /* ShoppingCartViewController.xib */,
 				E17AB082221AC9800096AD76 /* PurchaseViewController.xib */,
 				E17AB084221AC9B90096AD76 /* GameDetailViewController.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E1ECCE2A221C05EE00DA6E85 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E1ECCE2B221C05F400DA6E85 /* Layout */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E1ECCE2B221C05F400DA6E85 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				E1ECCE2E221C07B200DA6E85 /* GridFlowLayout.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 		E1F226422215745800BEA577 = {
@@ -499,6 +547,8 @@
 				E1F227112216BEA800BEA577 /* Double+Formatter.swift */,
 				E1F2272922178C6C00BEA577 /* String+Regex.swift */,
 				E1F2272D221799F800BEA577 /* String+Substring.swift */,
+				E1ECCE24221B944000DA6E85 /* UIView+XIB.swift */,
+				E1ECCE28221B9EBD00DA6E85 /* Collection+Safe.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -813,6 +863,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E16B4089221B8E73006D2934 /* GameListCell.xib in Resources */,
 				E17AB085221AC9B90096AD76 /* GameDetailViewController.xib in Resources */,
 				E17AB081221AC9650096AD76 /* ShoppingCartViewController.xib in Resources */,
 				E1F226F82215764800BEA577 /* Planejamento.rtf in Resources */,
@@ -1006,9 +1057,12 @@
 				E17AB07F221AC6B20096AD76 /* GamesListViewController.swift in Sources */,
 				E1C8CB6F221AB80400DD58EF /* Coordinator.swift in Sources */,
 				E1C8CB69221AB5FC00DD58EF /* GameDetailViewController.swift in Sources */,
+				E1ECCE27221B9CAD00DA6E85 /* GameListControllerViewModel.swift in Sources */,
+				E1ECCE2F221C07B200DA6E85 /* GridFlowLayout.swift in Sources */,
 				E1F2264F2215745800BEA577 /* AppDelegate.swift in Sources */,
 				E1C8CB6B221AB63900DD58EF /* ShoppingCartViewController.swift in Sources */,
 				E17AB087221B6A1D0096AD76 /* GameDetailCoordinator.swift in Sources */,
+				E16B4086221B8D57006D2934 /* GameListCell.swift in Sources */,
 				E16B4083221B7AA6006D2934 /* PurchaseCoordinator.swift in Sources */,
 				E1C8CB6D221AB66B00DD58EF /* PurchaseViewController.swift in Sources */,
 				E1C8CB6E221AB80100DD58EF /* ApplicationCoordinator.swift in Sources */,
@@ -1078,6 +1132,8 @@
 				E1F227122216BEA800BEA577 /* Double+Formatter.swift in Sources */,
 				E1F2272A22178C6C00BEA577 /* String+Regex.swift in Sources */,
 				E1F2272E221799F800BEA577 /* String+Substring.swift in Sources */,
+				E1ECCE25221B944000DA6E85 /* UIView+XIB.swift in Sources */,
+				E1ECCE29221B9EBD00DA6E85 /* Collection+Safe.swift in Sources */,
 				E1F2272822178ADD00BEA577 /* CreditCardFlag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

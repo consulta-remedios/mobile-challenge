@@ -11,7 +11,7 @@ import Foundation
 public extension Double {
     
     public var currencyDescription: String? {
-        return currencyDescription(with: .current)
+        return currencyDescription(with: Locale(identifier: "pt_br"))
     }
     
     public func currencyDescription(with locale: Locale) -> String? {
