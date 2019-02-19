@@ -32,8 +32,8 @@
 		E1ECCE25221B944000DA6E85 /* UIView+XIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECCE24221B944000DA6E85 /* UIView+XIB.swift */; };
 		E1ECCE27221B9CAD00DA6E85 /* GameListControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECCE26221B9CAD00DA6E85 /* GameListControllerViewModel.swift */; };
 		E1ECCE29221B9EBD00DA6E85 /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECCE28221B9EBD00DA6E85 /* Collection+Safe.swift */; };
-		E1ECCE32221C1A5600DA6E85 /* UIImageView+Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECCE31221C1A5600DA6E85 /* UIImageView+Load.swift */; };
 		E1ECCE33221C25AC00DA6E85 /* GridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECCE2E221C07B200DA6E85 /* GridFlowLayout.swift */; };
+		E1ECCE34221CCF1300DA6E85 /* UIImageView+Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECCE31221C1A5600DA6E85 /* UIImageView+Load.swift */; };
 		E1F2264F2215745800BEA577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2264E2215745800BEA577 /* AppDelegate.swift */; };
 		E1F226542215745800BEA577 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1F226522215745800BEA577 /* Main.storyboard */; };
 		E1F226562215745900BEA577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1F226552215745900BEA577 /* Assets.xcassets */; };
@@ -423,7 +423,6 @@
 		E1ECCE30221C1A4700DA6E85 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E1ECCE31221C1A5600DA6E85 /* UIImageView+Load.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -555,6 +554,7 @@
 		E1F227102216BE9400BEA577 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E1ECCE31221C1A5600DA6E85 /* UIImageView+Load.swift */,
 				E1F227112216BEA800BEA577 /* Double+Formatter.swift */,
 				E1F2272922178C6C00BEA577 /* String+Regex.swift */,
 				E1F2272D221799F800BEA577 /* String+Substring.swift */,
@@ -1098,7 +1098,6 @@
 				E16B4086221B8D57006D2934 /* GameListCell.swift in Sources */,
 				E16B4083221B7AA6006D2934 /* PurchaseCoordinator.swift in Sources */,
 				E1C8CB6D221AB66B00DD58EF /* PurchaseViewController.swift in Sources */,
-				E1ECCE32221C1A5600DA6E85 /* UIImageView+Load.swift in Sources */,
 				E1C8CB6E221AB80100DD58EF /* ApplicationCoordinator.swift in Sources */,
 				E1C8CB7C221AB9C400DD58EF /* GamesListCoordinator.swift in Sources */,
 			);
@@ -1168,6 +1167,7 @@
 				E1ECCE33221C25AC00DA6E85 /* GridFlowLayout.swift in Sources */,
 				E1F2272E221799F800BEA577 /* String+Substring.swift in Sources */,
 				E1ECCE25221B944000DA6E85 /* UIView+XIB.swift in Sources */,
+				E1ECCE34221CCF1300DA6E85 /* UIImageView+Load.swift in Sources */,
 				E1ECCE29221B9EBD00DA6E85 /* Collection+Safe.swift in Sources */,
 				E1F2272822178ADD00BEA577 /* CreditCardFlag.swift in Sources */,
 			);

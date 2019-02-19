@@ -28,8 +28,9 @@ class GamesListViewController: UIViewController {
     
     private let viewModel: GameListControllerViewModel
     
-    private var flowLayout: UICollectionViewFlowLayout {
-        let layout = UICollectionViewFlowLayout()
+    private var gridFlowLayout: GridFlowLayout {
+        let layout = GridFlowLayout(padding: 6)
+        layout.delegate = self
         return layout
     }
     
@@ -57,6 +58,7 @@ class GamesListViewController: UIViewController {
         setupUI()
         setupControls()
         setupCollectionView()
+        setupSearchController()
         fetch()
     }
     
@@ -76,10 +78,14 @@ class GamesListViewController: UIViewController {
     }
     
     private func setupCollectionView() {
-        collectionView.collectionViewLayout = GridFlowLayout()
+        collectionView.collectionViewLayout = gridFlowLayout
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(GameListCell.nib, forCellWithReuseIdentifier: GameListCell.identifier)
+    }
+    
+    private func setupSearchController() {
+        
     }
     
     private func fetch() {
@@ -97,6 +103,21 @@ class GamesListViewController: UIViewController {
     
     @IBAction private func showShoppingCart() {
         delegate?.gamesListShowShoppingCart()
+    }
+    
+}
+
+extension GamesListViewController: GridFlowLayoutDelegate {
+    
+    func numberOfColumnsForGridFlow() -> Int {
+        switch view.bounds.width {
+        case 0...480:
+            return 2
+        case 481...1200:
+            return 4
+        default:
+            return 6
+        }
     }
     
 }

@@ -9,29 +9,39 @@
 import UIKit
 import Foundation
 
+public protocol GridFlowLayoutDelegate {
+    
+    func numberOfColumnsForGridFlow() -> Int
+    
+}
+
 public class GridFlowLayout: UICollectionViewFlowLayout {
     
-    private var cellPadding: CGFloat = 6
+    // MARK: - Public Variables
+    
+    public var delegate: GridFlowLayoutDelegate?
+    
+    // MARK: - Private Variables
+    
+    private var cellPadding: CGFloat
     private var cache: [UICollectionViewLayoutAttributes] = []
     private var contentHeight: CGFloat = 0
-    
-    private var numberOfColumns: Int {
-        let screenWidth = UIScreen.main.bounds.width
-        
-        switch screenWidth {
-        case 0...480:
-            return 2
-        case 481...1200:
-            return 4
-        default:
-            return 6
-        }
-    }
     
     private var contentWidth: CGFloat {
         guard let collectionView = collectionView else { return 0 }
         let insets = collectionView.contentInset
         return collectionView.bounds.width - (insets.left + insets.right)
+    }
+    
+    // MARK: - Life Cycle
+    
+    public init(padding: CGFloat) {
+        self.cellPadding = padding
+        super.init()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override public var collectionViewContentSize: CGSize {
@@ -43,8 +53,10 @@ public class GridFlowLayout: UICollectionViewFlowLayout {
             return
         }
         
+        let numberOfColumns = delegate?.numberOfColumnsForGridFlow() ?? 2
         let columnWidth = contentWidth / CGFloat(numberOfColumns)
-        var xOffset = [CGFloat]()
+        
+        var xOffset: [CGFloat] = []
         
         for column in 0 ..< numberOfColumns {
             xOffset.append(CGFloat(column) * columnWidth)
