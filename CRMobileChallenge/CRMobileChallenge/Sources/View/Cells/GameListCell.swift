@@ -24,6 +24,7 @@ final class GameListCell: UICollectionViewCell {
         platformLabel.text = game.platform
         nameLabel.text = game.name
         priceLabel.text = game.price.currencyDescription
+        gameCoverImage.load(from: game.image)
     }
     
 }

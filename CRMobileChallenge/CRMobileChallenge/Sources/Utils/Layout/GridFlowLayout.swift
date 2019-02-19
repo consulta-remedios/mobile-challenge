@@ -51,7 +51,7 @@ class GridFlowLayout: UICollectionViewFlowLayout {
         
         var column = 0
         var yOffset = [CGFloat](repeating: 0, count: numberOfColumns)
-        let photoHeight = columnWidth * 1.4
+        let photoHeight = columnWidth * 1.5
         
         for item in 0 ..< collectionView.numberOfItems(inSection: 0) {
             let indexPath = IndexPath(item: item, section: 0)    

@@ -3,7 +3,7 @@ platform :ios, '10.3'
 target 'CRMobileChallenge' do
   use_frameworks!
 
-  # Pods for CRMobileChallenge
+  pod 'Kingfisher'
 
   target 'CRMobileChallengeTests' do
     inherit! :search_paths

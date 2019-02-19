@@ -33,6 +33,7 @@
 		E1ECCE27221B9CAD00DA6E85 /* GameListControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECCE26221B9CAD00DA6E85 /* GameListControllerViewModel.swift */; };
 		E1ECCE29221B9EBD00DA6E85 /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECCE28221B9EBD00DA6E85 /* Collection+Safe.swift */; };
 		E1ECCE2F221C07B200DA6E85 /* GridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECCE2E221C07B200DA6E85 /* GridFlowLayout.swift */; };
+		E1ECCE32221C1A5600DA6E85 /* UIImageView+Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECCE31221C1A5600DA6E85 /* UIImageView+Load.swift */; };
 		E1F2264F2215745800BEA577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2264E2215745800BEA577 /* AppDelegate.swift */; };
 		E1F226542215745800BEA577 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1F226522215745800BEA577 /* Main.storyboard */; };
 		E1F226562215745900BEA577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1F226552215745900BEA577 /* Assets.xcassets */; };
@@ -192,6 +193,7 @@
 		E1ECCE26221B9CAD00DA6E85 /* GameListControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListControllerViewModel.swift; sourceTree = "<group>"; };
 		E1ECCE28221B9EBD00DA6E85 /* Collection+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
 		E1ECCE2E221C07B200DA6E85 /* GridFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridFlowLayout.swift; sourceTree = "<group>"; };
+		E1ECCE31221C1A5600DA6E85 /* UIImageView+Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Load.swift"; sourceTree = "<group>"; };
 		E1F2264B2215745800BEA577 /* CRMobileChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CRMobileChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1F2264E2215745800BEA577 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1F226532215745800BEA577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -405,6 +407,7 @@
 		E1ECCE2A221C05EE00DA6E85 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E1ECCE30221C1A4700DA6E85 /* Extensions */,
 				E1ECCE2B221C05F400DA6E85 /* Layout */,
 			);
 			path = Utils;
@@ -416,6 +419,14 @@
 				E1ECCE2E221C07B200DA6E85 /* GridFlowLayout.swift */,
 			);
 			path = Layout;
+			sourceTree = "<group>";
+		};
+		E1ECCE30221C1A4700DA6E85 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E1ECCE31221C1A5600DA6E85 /* UIImageView+Load.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E1F226422215745800BEA577 = {
@@ -691,6 +702,7 @@
 				E1F226482215745800BEA577 /* Frameworks */,
 				E1F226492215745800BEA577 /* Resources */,
 				E1F2268D221574A600BEA577 /* Embed Frameworks */,
+				87E5BD448DC85BBA426589BA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1002,6 +1014,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		87E5BD448DC85BBA426589BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CRMobileChallenge/Pods-CRMobileChallenge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CRMobileChallenge/Pods-CRMobileChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E0E5C358D84A53933C1556DE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1065,6 +1099,7 @@
 				E16B4086221B8D57006D2934 /* GameListCell.swift in Sources */,
 				E16B4083221B7AA6006D2934 /* PurchaseCoordinator.swift in Sources */,
 				E1C8CB6D221AB66B00DD58EF /* PurchaseViewController.swift in Sources */,
+				E1ECCE32221C1A5600DA6E85 /* UIImageView+Load.swift in Sources */,
 				E1C8CB6E221AB80100DD58EF /* ApplicationCoordinator.swift in Sources */,
 				E1C8CB7C221AB9C400DD58EF /* GamesListCoordinator.swift in Sources */,
 			);
