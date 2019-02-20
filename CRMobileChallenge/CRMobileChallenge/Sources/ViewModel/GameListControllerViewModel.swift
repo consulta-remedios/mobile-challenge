@@ -51,4 +51,11 @@ final class GameListControllerViewModel {
         return games[indexPath.row]
     }
     
+    func search(with term: String?) -> [Game] {
+        guard let term = term, !term.isEmpty else { return [] }
+        return games.filter {
+            return ($0.name + $0.platform + $0.description).contains(term)
+        }
+    }
+    
 }

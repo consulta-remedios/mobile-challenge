@@ -28,11 +28,30 @@ class GamesListViewController: UIViewController {
     
     private let viewModel: GameListControllerViewModel
     
-    private var gridFlowLayout: GridFlowLayout {
+    private lazy var searchDisplay: SearchDisplayController<Game> = {
+        return SearchDisplayController<Game>() { [weak self] item in
+            self?.delegate?.gamesListDidSelect(game: item)
+        }
+    }()
+    
+    private lazy var searchController: UISearchController = {
+        let searchController = UISearchController(searchResultsController: searchDisplay)
+        searchController.searchResultsUpdater = self
+        searchController.hidesNavigationBarDuringPresentation = true
+        searchController.dimsBackgroundDuringPresentation = true
+        
+        let searchBar = searchController.searchBar
+        searchBar.placeholder = "Search"
+        searchBar.sizeToFit()
+        
+        return searchController
+    }()
+    
+    private lazy var gridFlowLayout: GridFlowLayout = {
         let layout = GridFlowLayout(padding: 6)
         layout.delegate = self
         return layout
-    }
+    }()
     
     private lazy var cartButton: UIBarButtonItem = {
         return UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showShoppingCart))
@@ -85,7 +104,9 @@ class GamesListViewController: UIViewController {
     }
     
     private func setupSearchController() {
-        
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        definesPresentationContext = true
     }
     
     private func fetch() {
@@ -103,21 +124,6 @@ class GamesListViewController: UIViewController {
     
     @IBAction private func showShoppingCart() {
         delegate?.gamesListShowShoppingCart()
-    }
-    
-}
-
-extension GamesListViewController: GridFlowLayoutDelegate {
-    
-    func numberOfColumnsForGridFlow() -> Int {
-        switch view.bounds.width {
-        case 0...480:
-            return 2
-        case 481...1200:
-            return 4
-        default:
-            return 6
-        }
     }
     
 }
@@ -142,6 +148,30 @@ extension GamesListViewController: UICollectionViewDataSource {
         }
         cell.setup(with: viewModel.game(at: indexPath))
         return cell
+    }
+    
+}
+
+extension GamesListViewController: GridFlowLayoutDelegate {
+    
+    func numberOfColumnsForGridFlow() -> Int {
+        switch view.bounds.width {
+        case 0...480:
+            return 2
+        case 481...1200:
+            return 4
+        default:
+            return 6
+        }
+    }
+    
+}
+
+extension GamesListViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        let games = viewModel.search(with: searchController.searchBar.text)
+        searchDisplay.items = games
     }
     
 }
