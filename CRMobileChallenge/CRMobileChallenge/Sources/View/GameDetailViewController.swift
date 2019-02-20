@@ -30,6 +30,12 @@ class GameDetailViewController: UIViewController {
         return UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showShoppingCart))
     }()
     
+    // MARK: Outlets
+    
+    @IBOutlet private weak var coverImage: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
+    
     // MARK: - Life Cycle
     
     init(game: Game) {
@@ -51,6 +57,12 @@ class GameDetailViewController: UIViewController {
     
     private func setupUI() {
         title = game.platform
+        
+        navigationItem.largeTitleDisplayMode = .never
+        
+        coverImage.load(from: game.image)
+        titleLabel.text = game.title
+        descriptionLabel.text = game.description
     }
     
     private func setupControls() {
