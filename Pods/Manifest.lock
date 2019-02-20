@@ -1,0 +1,90 @@
+PODS:
+  - Alamofire (4.8.1)
+  - Cosmos (18.0.1)
+  - EVReflection/Alamofire (5.9.0):
+    - Alamofire
+    - EVReflection/Core
+  - EVReflection/Core (5.9.0)
+  - EVReflection/Moya (5.9.0):
+    - EVReflection/Alamofire
+    - Moya
+  - EVReflection/MoyaRxSwift (5.9.0):
+    - EVReflection/Moya
+    - Moya/RxSwift
+  - Moya (11.0.2):
+    - Moya/Core (= 11.0.2)
+  - Moya/Core (11.0.2):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - Moya/RxSwift (11.0.2):
+    - Moya/Core
+    - RxSwift (~> 4.0)
+  - NVActivityIndicatorView (4.6.1):
+    - NVActivityIndicatorView/Presenter (= 4.6.1)
+  - NVActivityIndicatorView/Presenter (4.6.1)
+  - Result (3.2.4)
+  - RxAlamofire (4.3.0):
+    - RxAlamofire/Core (= 4.3.0)
+  - RxAlamofire/Core (4.3.0):
+    - Alamofire (~> 4.5)
+    - RxSwift (~> 4)
+  - RxAtomic (4.4.0)
+  - RxBiBinding (0.1.6):
+    - RxCocoa (~> 4.2)
+    - RxSwift (~> 4.2)
+  - RxCocoa (4.4.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.4.0):
+    - RxAtomic (~> 4.4)
+  - SDWebImage (4.4.5):
+    - SDWebImage/Core (= 4.4.5)
+  - SDWebImage/Core (4.4.5)
+  - SwiftKeychainWrapper (3.2.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - Cosmos (~> 18.0)
+  - EVReflection/MoyaRxSwift
+  - Moya/RxSwift (~> 11.0)
+  - NVActivityIndicatorView
+  - RxAlamofire
+  - RxBiBinding
+  - RxCocoa
+  - RxSwift
+  - SDWebImage (~> 4.0)
+  - SwiftKeychainWrapper
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Cosmos
+    - EVReflection
+    - Moya
+    - NVActivityIndicatorView
+    - Result
+    - RxAlamofire
+    - RxAtomic
+    - RxBiBinding
+    - RxCocoa
+    - RxSwift
+    - SDWebImage
+    - SwiftKeychainWrapper
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  Cosmos: 7dfaa3f52584ca5f94ab74b5c2e264019cc9f7f5
+  EVReflection: 52aa00a9035145b1fcf99acae01b782ecc4adad7
+  Moya: a725035953bc1c0eb1be505ab903984501d82440
+  NVActivityIndicatorView: 4ca19fccc84595a78957336a086d00a49be6ce61
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  RxAlamofire: 09624d0f2d48ed8b686e4eb4cf68e28cbd2df556
+  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
+  RxBiBinding: e2a54fdaaf9b6fe66e840cd0980a054830280935
+  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
+  RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
+  SwiftKeychainWrapper: 82c4c02cdc36f9a24f7edfcaab3e336401caa1a1
+
+PODFILE CHECKSUM: 6ef5bb403d29d6cfbf4254f3527978651f61d4c1
+
+COCOAPODS: 1.5.3

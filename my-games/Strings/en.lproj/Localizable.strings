@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+//  my-games
+
+  Created by Caio Cardozo on 05/02/19.
+  Copyright © 2019 CaioCardozo. All rights reserved.
+*/
+
+
+//Commom
+"unknown_error" = "Erro desconhecido";
+"session_error" = "Sessão expirada";
+"error_five_hundred" = "Erro com o servidor.";
+"error_map_response" = "Erro ao mapear os dados.";
+"error" = "Erro";
+"ok" = "Ok";
+"cancel"  = "Cancelar";
+"unavailable_network" = "Rede Indisponível";
+
+//Home
+"home_title" = "Filmes";
+"home_list_games_empty" = "Nenhum game foi carregado.";
+
+//Modal
+"modal_title_error" = "Ops!";
