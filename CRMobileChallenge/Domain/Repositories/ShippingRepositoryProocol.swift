@@ -6,7 +6,7 @@
 //  Copyright © 2019 Adriano Souza Costa. All rights reserved.
 //
 
-import Foundation
+import Shared
 
 public protocol PurchaseRepositoryProtocol {
     

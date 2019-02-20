@@ -6,7 +6,7 @@
 //  Copyright © 2019 Adriano Souza Costa. All rights reserved.
 //
 
-import Foundation
+import Shared
 
 final class Router<EndPoint: EndPointType>: NetworkRouter {
     
@@ -26,20 +26,19 @@ final class Router<EndPoint: EndPointType>: NetworkRouter {
             NetworkLogger.log(request: request)
             
             task = session.dataTask(with: request) { data, response, error in
-                switch self.handleNetworkResponse(response) {
-                case .success:
-                    guard let data = data, !data.isEmpty else { return completion(nil, response, nil) }
-                    
-                    do {
-                        completion(try JSONDecoder().decode(T.self, from: data), response, nil)
-                    } catch {
+                DispatchQueue.main.async {
+                    switch self.handleNetworkResponse(response) {
+                    case .success:
+                        guard let data = data, !data.isEmpty else { return completion(nil, response, nil) }
+                        
+                        do {
+                            completion(try JSONDecoder().decode(T.self, from: data), response, nil)
+                        } catch {
+                            completion(nil, response, error)
+                        }
+                    case .failure(let error):
                         completion(nil, response, error)
                     }
-                case .failure(let error):
-                    completion(nil, response, error)
-                }
-                
-                DispatchQueue.main.async {
                     UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 }
             }

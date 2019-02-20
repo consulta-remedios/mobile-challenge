@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Shared
 
 public class PurchaseRepository: BaseRepository, PurchaseRepositoryProtocol {
     

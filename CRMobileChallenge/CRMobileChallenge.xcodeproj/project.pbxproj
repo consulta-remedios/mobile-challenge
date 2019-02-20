@@ -23,6 +23,8 @@
 		E17AB085221AC9B90096AD76 /* GameDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E17AB084221AC9B90096AD76 /* GameDetailViewController.xib */; };
 		E17AB087221B6A1D0096AD76 /* GameDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17AB086221B6A1D0096AD76 /* GameDetailCoordinator.swift */; };
 		E1C1F7BB221D6E9200F8CA34 /* GameDetailViewModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C1F7BA221D6E9200F8CA34 /* GameDetailViewModelController.swift */; };
+		E1C1F7BD221E082B00F8CA34 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F22750221983C100BEA577 /* Result.swift */; };
+		E1C1F7BE221E08D400F8CA34 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227532219849900BEA577 /* NetworkManager.swift */; };
 		E1C8CB69221AB5FC00DD58EF /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8CB68221AB5FC00DD58EF /* GameDetailViewController.swift */; };
 		E1C8CB6B221AB63900DD58EF /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8CB6A221AB63900DD58EF /* ShoppingCartViewController.swift */; };
 		E1C8CB6D221AB66B00DD58EF /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8CB6C221AB66A00DD58EF /* PurchaseViewController.swift */; };
@@ -68,7 +70,6 @@
 		E1F227182216CDBE00BEA577 /* OrderItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227172216CDBE00BEA577 /* OrderItemTests.swift */; };
 		E1F2271D2217754D00BEA577 /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2271C2217754D00BEA577 /* AddressTests.swift */; };
 		E1F2272122178A8000BEA577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1F2272022178A8000BEA577 /* Assets.xcassets */; };
-		E1F2272822178ADD00BEA577 /* CreditCardFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227032216B05F00BEA577 /* CreditCardFlag.swift */; };
 		E1F2272A22178C6C00BEA577 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2272922178C6C00BEA577 /* String+Regex.swift */; };
 		E1F2272C22178FB300BEA577 /* CreditCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2272B22178FB300BEA577 /* CreditCardTests.swift */; };
 		E1F2272E221799F800BEA577 /* String+Substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2272D221799F800BEA577 /* String+Substring.swift */; };
@@ -82,8 +83,6 @@
 		E1F2274522182F0800BEA577 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2274422182F0800BEA577 /* NetworkLogger.swift */; };
 		E1F2274722182F6B00BEA577 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2274622182F6B00BEA577 /* Router.swift */; };
 		E1F2274D2219819100BEA577 /* NetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2274C2219819100BEA577 /* NetworkEnvironment.swift */; };
-		E1F22751221983C100BEA577 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F22750221983C100BEA577 /* Result.swift */; };
-		E1F227542219849900BEA577 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227532219849900BEA577 /* NetworkManager.swift */; };
 		E1F227562219850E00BEA577 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227552219850E00BEA577 /* NetworkRouter.swift */; };
 		E1F227592219886700BEA577 /* GameAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227582219886700BEA577 /* GameAPI.swift */; };
 		E1F2275F221A05C400BEA577 /* NetworkErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2275E221A05C400BEA577 /* NetworkErrorResponse.swift */; };
@@ -534,6 +533,7 @@
 				E1F227102216BE9400BEA577 /* Extensions */,
 				E1F226DC2215760900BEA577 /* Shared.h */,
 				E1F226DD2215760900BEA577 /* Info.plist */,
+				E1F22750221983C100BEA577 /* Result.swift */,
 				E1F226FC2216ABB500BEA577 /* Entitiy.swift */,
 				E1F2272022178A8000BEA577 /* Assets.xcassets */,
 			);
@@ -623,7 +623,6 @@
 				E1F227392218282600BEA577 /* HTTPTask.swift */,
 				E1F2274C2219819100BEA577 /* NetworkEnvironment.swift */,
 				E1F2274422182F0800BEA577 /* NetworkLogger.swift */,
-				E1F22750221983C100BEA577 /* Result.swift */,
 				E1F227552219850E00BEA577 /* NetworkRouter.swift */,
 				E1F2275E221A05C400BEA577 /* NetworkErrorResponse.swift */,
 			);
@@ -1144,13 +1143,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1C1F7BE221E08D400F8CA34 /* NetworkManager.swift in Sources */,
 				E1F2275F221A05C400BEA577 /* NetworkErrorResponse.swift in Sources */,
 				E1F2274322182C2F00BEA577 /* JSONParameterEncoder.swift in Sources */,
 				E1F2273A2218282600BEA577 /* HTTPTask.swift in Sources */,
 				E1F227012216AFFA00BEA577 /* CreditCard.swift in Sources */,
 				E1F227562219850E00BEA577 /* NetworkRouter.swift in Sources */,
 				E1F227592219886700BEA577 /* GameAPI.swift in Sources */,
-				E1F227542219849900BEA577 /* NetworkManager.swift in Sources */,
 				E1F2274722182F6B00BEA577 /* Router.swift in Sources */,
 				E1F2274D2219819100BEA577 /* NetworkEnvironment.swift in Sources */,
 				E1F227342218268C00BEA577 /* EndPointType.swift in Sources */,
@@ -1166,7 +1165,6 @@
 				E1F22761221A3F3E00BEA577 /* GameRepositoryProtocol.swift in Sources */,
 				E1F2270F2216B60D00BEA577 /* OrderItem.swift in Sources */,
 				E1F227042216B05F00BEA577 /* CreditCardFlag.swift in Sources */,
-				E1F22751221983C100BEA577 /* Result.swift in Sources */,
 				E1F22765221A40C700BEA577 /* GameRepository.swift in Sources */,
 				E1F2274522182F0800BEA577 /* NetworkLogger.swift in Sources */,
 				E1F22769221A415300BEA577 /* BaseRepository.swift in Sources */,
@@ -1191,6 +1189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1F226FD2216ABB500BEA577 /* Entitiy.swift in Sources */,
+				E1C1F7BD221E082B00F8CA34 /* Result.swift in Sources */,
 				E1F227122216BEA800BEA577 /* Double+Formatter.swift in Sources */,
 				E1F2272A22178C6C00BEA577 /* String+Regex.swift in Sources */,
 				E1ECCE33221C25AC00DA6E85 /* GridFlowLayout.swift in Sources */,
@@ -1200,7 +1199,6 @@
 				E1ECCE25221B944000DA6E85 /* UIView+XIB.swift in Sources */,
 				E1ECCE34221CCF1300DA6E85 /* UIImageView+Load.swift in Sources */,
 				E1ECCE29221B9EBD00DA6E85 /* Collection+Safe.swift in Sources */,
-				E1F2272822178ADD00BEA577 /* CreditCardFlag.swift in Sources */,
 				E1ECCE3C221CDC4800DA6E85 /* SearchDisplayItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

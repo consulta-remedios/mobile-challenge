@@ -31,7 +31,7 @@ class GamesListViewController: UIViewController {
     private lazy var searchDisplay: SearchDisplayController<Game> = {
         return SearchDisplayController<Game>(searchItemHandler: { [weak self] (term, searchHandler) in
             self?.searchController.searchResultsController?.view.isHidden = false
-            searchHandler(self?.viewModel.search(with: term) ?? [])
+            self?.viewModel.search(with: term, searchHandler)
         }, didSelectItemHandler: { [weak self] (game) in
             self?.delegate?.gamesListDidSelect(game: game)
         })

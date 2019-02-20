@@ -8,6 +8,7 @@
 
 import Foundation
 import Domain
+import Shared
 
 final class GameListControllerViewModel {
     
@@ -51,10 +52,16 @@ final class GameListControllerViewModel {
         return games[indexPath.row]
     }
     
-    func search(with term: String?) -> [Game] {
-        guard let term = term, !term.isEmpty else { return games }
-        return games.filter {
-            return ($0.name + $0.platform + String(describing: $0.score)).lowercased().contains(term.lowercased())
+    func search(with term: String?, _ completion: @escaping (Result<[Game]>) -> Void) {
+        repository.games { result in
+            switch result {
+            case .success(let games):
+                guard let term = term, !term.isEmpty else { return completion(.success(games)) }
+                let games = games.filter { ($0.name + $0.platform + String(describing: $0.score)).lowercased().contains(term.lowercased()) }
+                completion(.success(games))
+            case .failure(let error):
+                completion(.failure(error))
+            }
         }
     }
     
