@@ -11,6 +11,7 @@ import Shared
 
 public struct Game: Entity, Codable {
     
+    public var id: Int
     public var name: String
     public var platform: String
     public var description: String
@@ -18,7 +19,8 @@ public struct Game: Entity, Codable {
     public var score: Double
     public var image: URL
     
-    public init(name: String, platform: String, description: String, price: Double, score: Double, image: URL) {
+    public init(id: Int, name: String, platform: String, description: String, price: Double, score: Double, image: URL) {
+        self.id = id
         self.name = name
         self.platform = platform
         self.description = description

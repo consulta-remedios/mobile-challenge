@@ -13,11 +13,3 @@ public protocol Entity {
     var id: Int { get }
     
 }
-
-public extension Entity {
-    
-    var id: Int {
-        return UUID().hashValue
-    }
-    
-}

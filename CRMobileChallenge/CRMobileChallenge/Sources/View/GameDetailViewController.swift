@@ -39,7 +39,7 @@ class GameDetailViewController: UIViewController {
     // MARK: - Life Cycle
     
     init(game: Game, gameRepository: GameRepositoryProtocol) {
-        self.viewModel = GameDetailViewModelController(game: game)
+        self.viewModel = GameDetailViewModelController(game: game, repository: gameRepository)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -51,22 +51,41 @@ class GameDetailViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         setupControls()
+        fetch()
     }
     
     // MARK: - Private Methods
     
     private func setupUI() {
         title = viewModel.platform
-        
         navigationItem.largeTitleDisplayMode = .never
-        
-        coverImage.load(from: viewModel.coverURL)
-        titleLabel.text = viewModel.title
-        descriptionLabel.attributedText = viewModel.description
+        setupPartialData()
     }
     
     private func setupControls() {
         navigationItem.rightBarButtonItem = cartButton
+    }
+    
+    private func fetch() {
+        viewModel.fetch() { [weak self] result in
+            switch result {
+            case .success:
+                self?.setupFullData()
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    private func setupPartialData() {
+        coverImage.load(from: viewModel.coverURL)
+    }
+    
+    private func setupFullData() {
+        setupPartialData()
+        
+        titleLabel.text = viewModel.title
+        descriptionLabel.attributedText = viewModel.description
     }
     
     // MARK: Actions

@@ -14,6 +14,7 @@ class OrderItemTests: XCTestCase {
     
     private var game: Game {
         return Game(
+            id: 1,
             name: "Zelda Breath Of The Wild",
             platform: "Switch",
             description: "Melhor Zelda já feito",

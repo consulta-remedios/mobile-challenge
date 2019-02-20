@@ -35,13 +35,11 @@ final class GameListControllerViewModel {
     // MARK: - Public Methods
     
     func fetch(_ completion: @escaping (EmptyResult) -> Void) {
-        repository.games { [weak self] result in
+        search(with: nil) { [weak self] result in
             switch result {
             case .success(let games):
                 self?.games = games
-                DispatchQueue.main.async {
-                    completion(.success)
-                }
+                completion(.success)
             case .failure(let error):
                 completion(.failure(error))
             }

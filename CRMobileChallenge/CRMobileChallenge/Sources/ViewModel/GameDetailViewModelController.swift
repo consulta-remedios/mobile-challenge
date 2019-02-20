@@ -8,18 +8,11 @@
 
 import UIKit
 import Domain
+import Shared
 
 final class GameDetailViewModelController {
     
-    // MARK: - Private Variables
-    
-    private var game: Game
-    
-    // MARK: - Life Cycle
-    
-    init(game: Game) {
-        self.game = game
-    }
+    // MARK: - Public Variables
     
     var title: String {
         return game.title
@@ -37,6 +30,30 @@ final class GameDetailViewModelController {
         return game.image
     }
     
+    // MARK: - Private Variables
+    
+    private var game: Game
+    private var repository: GameRepositoryProtocol
+    
+    // MARK: - Life Cycle
+    
+    init(game: Game, repository: GameRepositoryProtocol) {
+        self.game = game
+        self.repository = repository
+    }
+    
     // MARK: - Public Methods
+    
+    func fetch(_ completion: @escaping (EmptyResult) -> Void) {
+        repository.game(game) { [weak self] result in
+            switch result {
+            case .success(let game):
+                self?.game = game
+                completion(.success)
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
     
 }
