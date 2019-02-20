@@ -38,7 +38,7 @@ class GameDetailViewController: UIViewController {
     
     // MARK: - Life Cycle
     
-    init(game: Game) {
+    init(game: Game, gameRepository: GameRepositoryProtocol) {
         self.viewModel = GameDetailViewModelController(game: game)
         super.init(nibName: nil, bundle: nil)
     }

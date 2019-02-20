@@ -12,20 +12,19 @@ import Domain
 
 final class GameDetailCoordinator {
     
-    // MARK: - Public Variables
-    
-    let purchaseRepository: PurchaseRepositoryProtocol
-    
     // MARK: - Private Variables
     
     private let game: Game
     private let presenter: UINavigationController
+    private let gameRepository: GameRepositoryProtocol
+    private let purchaseRepository: PurchaseRepositoryProtocol
     
     // MARK: - Life Cycle
     
-    init(presenter: UINavigationController, game: Game, purchaseRepository: PurchaseRepositoryProtocol) {
+    init(presenter: UINavigationController, game: Game, gameRepository: GameRepositoryProtocol, purchaseRepository: PurchaseRepositoryProtocol) {
         self.game = game
         self.presenter = presenter
+        self.gameRepository = gameRepository
         self.purchaseRepository = purchaseRepository
     }
     
@@ -34,7 +33,7 @@ final class GameDetailCoordinator {
 extension GameDetailCoordinator: Coordinator {
     
     func start() {
-        let controller = GameDetailViewController(game: game)
+        let controller = GameDetailViewController(game: game, gameRepository: gameRepository)
         controller.delegate = self
         presenter.pushViewController(controller, animated: true)
     }

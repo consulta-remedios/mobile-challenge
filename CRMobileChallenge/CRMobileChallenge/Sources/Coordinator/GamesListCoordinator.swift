@@ -11,14 +11,11 @@ import Domain
 
 final class GamesListCoordinator {
     
-    // MARK: - Public Variables
-    
-    let gameRepository: GameRepositoryProtocol
-    let purchaseRepository: PurchaseRepositoryProtocol
-    
     // MARK: - Private Variables
     
-    fileprivate let presenter: UINavigationController
+    private let gameRepository: GameRepositoryProtocol
+    private let purchaseRepository: PurchaseRepositoryProtocol
+    private let presenter: UINavigationController
     
     // MARK: - Life Cycle
     
@@ -43,7 +40,7 @@ extension GamesListCoordinator: Coordinator {
 extension GamesListCoordinator: GamesListCordinatorDelegate {
     
     func gamesListDidSelect(game: Game) {
-        let coordinator = GameDetailCoordinator(presenter: presenter, game: game, purchaseRepository: purchaseRepository)
+        let coordinator = GameDetailCoordinator(presenter: presenter, game: game, gameRepository: gameRepository, purchaseRepository: purchaseRepository)
         coordinator.start()
     }
     

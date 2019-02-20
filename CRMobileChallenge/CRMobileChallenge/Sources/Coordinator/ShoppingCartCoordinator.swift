@@ -11,12 +11,9 @@ import Domain
 
 final class ShoppingCartCoordinator {
     
-    // MARK: - Public Variables
-    
-    let purchaseRepository: PurchaseRepositoryProtocol
-    
     // MARK: - Private Variables
     
+    private let purchaseRepository: PurchaseRepositoryProtocol
     private let presenter: UIViewController
     private let navigation = UINavigationController()
     
