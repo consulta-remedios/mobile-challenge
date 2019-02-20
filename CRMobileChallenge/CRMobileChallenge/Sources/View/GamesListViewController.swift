@@ -37,6 +37,7 @@ class GamesListViewController: UIViewController {
     private lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: searchDisplay)
         searchController.searchResultsUpdater = self
+        searchController.delegate = self
         searchController.hidesNavigationBarDuringPresentation = true
         searchController.dimsBackgroundDuringPresentation = true
         
@@ -162,6 +163,20 @@ extension GamesListViewController: GridFlowLayoutDelegate {
             return 4
         default:
             return 6
+        }
+    }
+    
+}
+
+extension GamesListViewController: UISearchControllerDelegate {
+    
+    func didPresentSearchController(_ searchController: UISearchController) {
+        let searchView = searchController.searchResultsController?.view
+        searchView?.isHidden = false
+        searchView?.alpha = 0
+        
+        UIView.animate(withDuration: 0.26) {
+            searchView?.alpha = 1
         }
     }
     
