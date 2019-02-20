@@ -11,13 +11,50 @@
 		</dict>
 		<key>Domain.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>8</integer>
 		</dict>
 		<key>Shared.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>9</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>E1F2264A2215745800BEA577</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E1F2265E2215745900BEA577</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E1F226B72215760200BEA577</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E1F226BF2215760200BEA577</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E1F226D92215760900BEA577</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E1F226E12215760900BEA577</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

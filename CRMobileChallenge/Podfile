@@ -3,6 +3,8 @@ platform :ios, '10.3'
 target 'CRMobileChallenge' do
   use_frameworks!
 
+  pod "SkeletonView"
+  
   target 'CRMobileChallengeTests' do
     inherit! :search_paths
     # Pods for testing
@@ -12,8 +14,6 @@ end
 
 target 'Domain' do
   use_frameworks!
-
-  # Pods for Domain
 
   target 'DomainTests' do
     inherit! :search_paths

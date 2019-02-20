@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1010"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8F6EA58A0E28E7881CB3F63D45F6F3C0"
-               BuildableName = "Pods_CRMobileChallenge.framework"
-               BlueprintName = "Pods-CRMobileChallenge"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "E1F226B72215760200BEA577"
+               BuildableName = "Domain.framework"
+               BlueprintName = "Domain"
+               ReferencedContainer = "container:CRMobileChallenge.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,10 +45,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8F6EA58A0E28E7881CB3F63D45F6F3C0"
-            BuildableName = "Pods_CRMobileChallenge.framework"
-            BlueprintName = "Pods-CRMobileChallenge"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            BlueprintIdentifier = "E1F226B72215760200BEA577"
+            BuildableName = "Domain.framework"
+            BlueprintName = "Domain"
+            ReferencedContainer = "container:CRMobileChallenge.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -60,6 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E1F226B72215760200BEA577"
+            BuildableName = "Domain.framework"
+            BlueprintName = "Domain"
+            ReferencedContainer = "container:CRMobileChallenge.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

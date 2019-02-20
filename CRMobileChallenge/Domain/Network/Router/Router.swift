@@ -22,6 +22,7 @@ final class Router<EndPoint: EndPointType>: NetworkRouter {
         do {
             let request = try self.buildRequest(from: route)
             
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
             NetworkLogger.log(request: request)
             
             task = session.dataTask(with: request) { data, response, error in
@@ -36,6 +37,10 @@ final class Router<EndPoint: EndPointType>: NetworkRouter {
                     }
                 case .failure(let error):
                     completion(nil, response, error)
+                }
+                
+                DispatchQueue.main.async {
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 }
             }
         } catch {
