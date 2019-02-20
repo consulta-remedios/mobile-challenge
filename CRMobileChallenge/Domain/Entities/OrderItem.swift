@@ -17,6 +17,10 @@ public struct OrderItem {
 
 public extension OrderItem {
     
+    public var freight: Double {
+        return game.freight
+    }
+    
     public var total: Double {
         guard quantitiy > 0 else { return 0 }
         return Double(quantitiy) * game.price

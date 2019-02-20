@@ -30,3 +30,11 @@ public struct Game: Entity, Codable {
     }
     
 }
+
+public extension Game {
+    
+    public var freight: Double {
+        return 10.0
+    }
+    
+}

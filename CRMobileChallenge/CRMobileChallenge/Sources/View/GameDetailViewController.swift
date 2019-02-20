@@ -35,6 +35,8 @@ class GameDetailViewController: UIViewController {
     @IBOutlet private weak var coverImage: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var priceLabel: UILabel!
+    @IBOutlet private weak var freightLabel: UILabel!
     
     // MARK: - Life Cycle
     
@@ -86,6 +88,8 @@ class GameDetailViewController: UIViewController {
         
         titleLabel.text = viewModel.title
         descriptionLabel.attributedText = viewModel.description
+        priceLabel.text = viewModel.price
+        freightLabel.text = viewModel.freight
     }
     
     // MARK: Actions

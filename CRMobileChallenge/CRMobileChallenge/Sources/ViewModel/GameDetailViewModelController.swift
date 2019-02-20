@@ -30,6 +30,14 @@ final class GameDetailViewModelController {
         return game.image
     }
     
+    var price: String? {
+        return game.price.currencyDescription
+    }
+    
+    var freight: String? {
+        return game.freight.currencyDescription
+    }
+    
     // MARK: - Private Variables
     
     private var game: Game
