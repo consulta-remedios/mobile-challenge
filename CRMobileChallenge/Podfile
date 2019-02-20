@@ -2,8 +2,6 @@ platform :ios, '10.3'
 
 target 'CRMobileChallenge' do
   use_frameworks!
-
-  pod "SkeletonView"
   
   target 'CRMobileChallengeTests' do
     inherit! :search_paths
