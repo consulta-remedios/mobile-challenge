@@ -37,7 +37,6 @@ class GamesListViewController: UIViewController {
     private lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: searchDisplay)
         searchController.searchResultsUpdater = self
-        searchController.delegate = self
         searchController.hidesNavigationBarDuringPresentation = true
         searchController.dimsBackgroundDuringPresentation = true
         
@@ -112,9 +111,12 @@ class GamesListViewController: UIViewController {
     
     private func fetch() {
         viewModel.fetch { [weak self] result in
+            guard let self = self else { return }
+            
             switch result {
             case .success:
-                self?.collectionView.reloadData()
+                self.collectionView.reloadData()
+                self.updateSearchResults(for: self.searchController)
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -168,23 +170,10 @@ extension GamesListViewController: GridFlowLayoutDelegate {
     
 }
 
-extension GamesListViewController: UISearchControllerDelegate {
-    
-    func didPresentSearchController(_ searchController: UISearchController) {
-        let searchView = searchController.searchResultsController?.view
-        searchView?.isHidden = false
-        searchView?.alpha = 0
-        
-        UIView.animate(withDuration: 0.26) {
-            searchView?.alpha = 1
-        }
-    }
-    
-}
-
 extension GamesListViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
+        searchController.searchResultsController?.view.isHidden = false
         let games = viewModel.search(with: searchController.searchBar.text)
         searchDisplay.items = games
     }

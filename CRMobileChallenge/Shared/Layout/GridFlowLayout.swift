@@ -64,9 +64,9 @@ public class GridFlowLayout: UICollectionViewFlowLayout {
         
         var column = 0
         var yOffset = [CGFloat](repeating: 0, count: numberOfColumns)
-        let photoHeight: CGFloat = 240
         
         for item in 0 ..< collectionView.numberOfItems(inSection: 0) {
+            let photoHeight: CGFloat = 240
             let indexPath = IndexPath(item: item, section: 0)    
             let height = cellPadding * 2 + photoHeight
             let frame = CGRect(x: xOffset[column], y: yOffset[column], width: columnWidth, height: height)
