@@ -24,7 +24,7 @@ class GameDetailViewController: UIViewController {
     
     // MARK: - Private Variables
     
-    private let game: Game
+    private let viewModel: GameDetailViewModelController
     
     private lazy var cartButton: UIBarButtonItem = {
         return UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showShoppingCart))
@@ -39,7 +39,7 @@ class GameDetailViewController: UIViewController {
     // MARK: - Life Cycle
     
     init(game: Game) {
-        self.game = game
+        self.viewModel = GameDetailViewModelController(game: game)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -56,13 +56,13 @@ class GameDetailViewController: UIViewController {
     // MARK: - Private Methods
     
     private func setupUI() {
-        title = game.platform
+        title = viewModel.platform
         
         navigationItem.largeTitleDisplayMode = .never
         
-        coverImage.load(from: game.image)
-        titleLabel.text = game.title
-        descriptionLabel.text = game.description
+        coverImage.load(from: viewModel.coverURL)
+        titleLabel.text = viewModel.title
+        descriptionLabel.attributedText = viewModel.description
     }
     
     private func setupControls() {
