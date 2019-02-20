@@ -8,7 +8,10 @@
 
 import UIKit
 
-final public class SearchDisplayController<T: SearchDisplayItem>: UITableViewController {
+final public class SearchDisplayController<T: SearchDisplayItem>: UITableViewController, UISearchResultsUpdating {
+    
+    public typealias SearchItemHandler = (_ term: String?, @escaping (_ items: [T]) -> Void) -> Void
+    public typealias DidSelectItemHandler = (_ item: T) -> Void
     
     // MARK: - Public Variables
     
@@ -18,11 +21,13 @@ final public class SearchDisplayController<T: SearchDisplayItem>: UITableViewCon
     
     // MARK: - Private Variables
     
-    private var didSelectItemHandler: (T) -> Void
+    private var searchItemHandler: SearchItemHandler
+    private var didSelectItemHandler: (_ item: T) -> Void
     
     // MARK: - Life Cycle
     
-    public init(didSelectItemHandler: @escaping (T) -> Void) {
+    public init(searchItemHandler: @escaping SearchItemHandler, didSelectItemHandler: @escaping DidSelectItemHandler) {
+        self.searchItemHandler = searchItemHandler
         self.didSelectItemHandler = didSelectItemHandler
         super.init(style: .plain)
     }
@@ -56,6 +61,12 @@ final public class SearchDisplayController<T: SearchDisplayItem>: UITableViewCon
     
     public override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return UIView()
+    }
+    
+    public func updateSearchResults(for searchController: UISearchController) {
+        searchItemHandler(searchController.searchBar.text) { [weak self] items in
+            self?.items = items
+        }
     }
     
     // MARK: - Private Methods
