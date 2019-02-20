@@ -54,7 +54,7 @@ class GamesListViewController: UIViewController {
     }()
     
     private lazy var cartButton: UIBarButtonItem = {
-        return UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showShoppingCart))
+        return UIBarButtonItem(image: UIImage(named: "icon-cart"), style: .done, target: self, action: #selector(showShoppingCart))
     }()
     
     // MARK: Outlets

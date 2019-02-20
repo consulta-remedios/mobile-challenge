@@ -30,7 +30,7 @@ class ShoppingCartViewController: UIViewController {
     private let repository: PurchaseRepositoryProtocol
     
     private lazy var closeButton: UIBarButtonItem = {
-        return UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(close))
+        return UIBarButtonItem(image: UIImage(named: "icon-close"), style: .done, target: self, action: #selector(close))
     }()
     
     // MARK: - Life Cycle
