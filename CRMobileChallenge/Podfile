@@ -1,4 +1,4 @@
-platform :ios, '10.3'
+platform :ios, '11.4'
 
 target 'CRMobileChallenge' do
   use_frameworks!
@@ -15,9 +15,7 @@ end
 
 target 'Domain' do
   use_frameworks!
-  
-  pod 'Kingfisher'
-  
+
   target 'DomainTests' do
     inherit! :search_paths
   end
