@@ -55,6 +55,10 @@ final class ShoppingCartViewModelController {
         return shoppingCart.order.orderItems[indexPath.row]
     }
     
+    func changeQuantity(to quantity: Int, from orderItem: OrderItem) {
+        shoppingCart.change(quantity: quantity, from: orderItem.game)
+    }
+    
     func checkout(_ completion: @escaping (EmptyResult) -> Void) {
         repository.checkout { [weak self] result in
             switch result {

@@ -44,12 +44,7 @@ class ShoppingCartViewController: UIViewController {
     
     init(shoppingCart: ShoppingCart, repository: PurchaseRepositoryProtocol) {
         self.viewModel = ShoppingCartViewModelController(shoppingCart: shoppingCart, repository: repository)
-        
         super.init(nibName: nil, bundle: nil)
-        
-        self.viewModel.updatedOrderHandler = { [weak self] in
-            self?.setupContent()
-        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -63,6 +58,11 @@ class ShoppingCartViewController: UIViewController {
         setupContent()
         setupTableView()
         showPrinceView()
+        
+        viewModel.updatedOrderHandler = { [weak self] in
+            self?.setupContent()
+            self?.tableView.reloadData()
+        }
     }
     
     // MARK: - Private Methods
@@ -104,6 +104,27 @@ class ShoppingCartViewController: UIViewController {
             self?.priceView.transform = .identity
             self?.priceView.alpha = 1
         })
+    }
+    
+    private func changeQuantity(orderItem: OrderItem) {
+        let alert = UIAlertController(
+            title: "Alterar Quantidade",
+            message: "Informe a nova quantidade de items que gostaria de levar.",
+            preferredStyle: .alert)
+        
+        alert.addTextField(configurationHandler: { textField in
+            textField.text = "\(orderItem.quantity)"
+            textField.keyboardType = .numberPad
+        })
+        
+        alert.addAction(UIAlertAction(title: "Aplicar", style: .default) { [weak self] _ in
+            guard let text = alert.textFields?.first?.text, let value = Int(text) else { return }
+            self?.viewModel.changeQuantity(to: value, from: orderItem)
+        })
+        
+        alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel))
+        
+        present(alert, animated: true)
     }
     
     private func finalizePurchase() {
@@ -169,6 +190,9 @@ extension ShoppingCartViewController: UITableViewDataSource {
         }
         
         cell.setup(with: viewModel.orderItem(at: indexPath))
+        cell.didChangeQuantityHandler = { [weak self] orderItem in
+            self?.changeQuantity(orderItem: orderItem)
+        }
         
         return cell
     }
