@@ -16,6 +16,7 @@
                 <outlet property="descriptionLabel" destination="wsR-oI-Rct" id="mjK-YX-n0I"/>
                 <outlet property="freightLabel" destination="gPg-yQ-HIM" id="Ip7-Wk-VRx"/>
                 <outlet property="priceLabel" destination="Jt4-yY-cST" id="kgI-O3-oHA"/>
+                <outlet property="priceView" destination="NsT-8i-h7A" id="LPH-FE-6w9"/>
                 <outlet property="titleLabel" destination="DQt-Fz-sbt" id="0i8-nc-Wlw"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ws4-DQ-txL"/>
             </connections>

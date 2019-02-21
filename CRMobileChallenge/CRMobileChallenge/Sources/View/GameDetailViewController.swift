@@ -37,6 +37,7 @@ class GameDetailViewController: UIViewController {
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var priceLabel: UILabel!
     @IBOutlet private weak var freightLabel: UILabel!
+    @IBOutlet private weak var priceView: UIView!
     
     // MARK: - Life Cycle
     
@@ -56,40 +57,68 @@ class GameDetailViewController: UIViewController {
         fetch()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        viewModel.cancel()
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        setupContent()
+    }
+    
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.willTransition(to: newCollection, with: coordinator)
+        setupContent()
+    }
+    
     // MARK: - Private Methods
     
     private func setupUI() {
         title = viewModel.platform
         navigationItem.largeTitleDisplayMode = .never
-        setupPartialData()
     }
     
     private func setupControls() {
         navigationItem.rightBarButtonItem = cartButton
     }
     
-    private func fetch() {
-        viewModel.fetch() { [weak self] result in
-            switch result {
-            case .success:
-                self?.setupFullData()
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
-    }
-    
-    private func setupPartialData() {
+    private func setupContent() {
         coverImage.load(from: viewModel.coverURL)
-    }
-    
-    private func setupFullData() {
-        setupPartialData()
         
         titleLabel.text = viewModel.title
         descriptionLabel.attributedText = viewModel.description
         priceLabel.text = viewModel.price
         freightLabel.text = viewModel.freight
+        
+        if viewModel.isPriceHidden {
+            let height: CGFloat = priceView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
+            priceView.transform = CGAffineTransform.init(translationX: 0, y: height)
+            priceView.alpha = 0
+            titleLabel.alpha = 0
+            descriptionLabel.alpha = 0
+        } else {
+            UIView.animate(withDuration: 0.44, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: [], animations: { [weak self] in
+                self?.titleLabel.alpha = 1
+                self?.descriptionLabel.alpha = 1
+            })
+            
+            UIView.animate(withDuration: 0.44, delay: 0.26, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: [], animations: { [weak self] in
+                self?.priceView.transform = .identity
+                self?.priceView.alpha = 1
+            })
+        }
+    }
+    
+    private func fetch() {
+        viewModel.fetch() { [weak self] result in
+            switch result {
+            case .success:
+                self?.setupContent()
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     // MARK: Actions

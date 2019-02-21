@@ -38,10 +38,15 @@ final class GameDetailViewModelController {
         return game.freight.currencyDescription
     }
     
+    var isPriceHidden: Bool {
+        return _isPriceHidden
+    }
+    
     // MARK: - Private Variables
     
     private var game: Game
     private var repository: GameRepositoryProtocol
+    private var _isPriceHidden: Bool = true
     
     // MARK: - Life Cycle
     
@@ -57,11 +62,16 @@ final class GameDetailViewModelController {
             switch result {
             case .success(let game):
                 self?.game = game
+                self?._isPriceHidden = false
                 completion(.success)
             case .failure(let error):
                 completion(.failure(error))
             }
         }
+    }
+    
+    func cancel() {
+        repository.cancel()
     }
     
 }

@@ -8,7 +8,7 @@
 
 import Shared
 
-public protocol PurchaseRepositoryProtocol {
+public protocol PurchaseRepositoryProtocol: RepositoryProtocol {
     
     func checkout(_ completion: @escaping (EmptyResult) -> Void)
     
