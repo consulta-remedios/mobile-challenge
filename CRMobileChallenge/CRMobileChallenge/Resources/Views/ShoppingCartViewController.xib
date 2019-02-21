@@ -24,9 +24,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lD5-Gc-MmW">
+                <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lD5-Gc-MmW">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="separatorColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                 </tableView>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aAC-Oz-IY8">
                     <rect key="frame" x="0.0" y="553" width="375" height="114"/>
@@ -58,6 +60,23 @@
                                             <state key="normal" title="FINALIZAR COMPRA">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                    <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                    <size key="value" width="0.0" height="0.0"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                    <real key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                    <real key="value" value="0.80000000000000004"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="checkout" destination="-1" eventType="touchUpInside" id="fnu-Wl-gYJ"/>
                                             </connections>
@@ -89,11 +108,11 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="lD5-Gc-MmW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ImU-dW-qcU"/>
+                <constraint firstItem="lD5-Gc-MmW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ImU-dW-qcU"/>
                 <constraint firstItem="aAC-Oz-IY8" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="QO7-uK-o2Y"/>
                 <constraint firstItem="aAC-Oz-IY8" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="SgZ-cT-fFB"/>
-                <constraint firstItem="lD5-Gc-MmW" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="T6R-7a-Qse"/>
-                <constraint firstItem="lD5-Gc-MmW" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="V1V-Ix-S7J"/>
+                <constraint firstItem="lD5-Gc-MmW" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="T6R-7a-Qse"/>
+                <constraint firstItem="lD5-Gc-MmW" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="V1V-Ix-S7J"/>
                 <constraint firstItem="aAC-Oz-IY8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kQI-dw-kRu"/>
                 <constraint firstItem="lD5-Gc-MmW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tfh-Wc-VLM"/>
             </constraints>

@@ -94,6 +94,9 @@
 		E1F2276D221A45BD00BEA577 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2276C221A45BD00BEA577 /* RepositoryProtocol.swift */; };
 		E1F260A2221E6F5100446FE7 /* ShoppingCartViewModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F260A1221E6F5100446FE7 /* ShoppingCartViewModelController.swift */; };
 		E1F260A4221E7D3E00446FE7 /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F260A3221E7D3E00446FE7 /* UIViewController+Navigation.swift */; };
+		E1F260A6221E7E9600446FE7 /* GameCartItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1F260A5221E7E9600446FE7 /* GameCartItemCell.xib */; };
+		E1F260A8221E80BB00446FE7 /* GameCartItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F260A7221E80BB00446FE7 /* GameCartItemCell.swift */; };
+		E1F260AA221E891200446FE7 /* UIView+Feattures.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F260A9221E891200446FE7 /* UIView+Feattures.swift */; };
 		E1F9B6AD221E28AE00C5AF39 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F9B6AA221E286000C5AF39 /* ShoppingCart.swift */; };
 		E1F9B6AF221E297F00C5AF39 /* ShoppingCartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F9B6AE221E297F00C5AF39 /* ShoppingCartManager.swift */; };
 		E1F9B6B1221E30A200C5AF39 /* UniqueRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F9B6B0221E30A200C5AF39 /* UniqueRepresentable.swift */; };
@@ -271,6 +274,9 @@
 		E1F2276C221A45BD00BEA577 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		E1F260A1221E6F5100446FE7 /* ShoppingCartViewModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewModelController.swift; sourceTree = "<group>"; };
 		E1F260A3221E7D3E00446FE7 /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
+		E1F260A5221E7E9600446FE7 /* GameCartItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCartItemCell.xib; sourceTree = "<group>"; };
+		E1F260A7221E80BB00446FE7 /* GameCartItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCartItemCell.swift; sourceTree = "<group>"; };
+		E1F260A9221E891200446FE7 /* UIView+Feattures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Feattures.swift"; sourceTree = "<group>"; };
 		E1F9B6AA221E286000C5AF39 /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
 		E1F9B6AE221E297F00C5AF39 /* ShoppingCartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartManager.swift; sourceTree = "<group>"; };
 		E1F9B6B0221E30A200C5AF39 /* UniqueRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueRepresentable.swift; sourceTree = "<group>"; };
@@ -339,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				E16B4088221B8E73006D2934 /* GameListCell.xib */,
+				E1F260A5221E7E9600446FE7 /* GameCartItemCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -347,6 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				E16B4085221B8D57006D2934 /* GameListCell.swift */,
+				E1F260A7221E80BB00446FE7 /* GameCartItemCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -438,6 +446,7 @@
 				E1ECCE39221CD97000DA6E85 /* Game+SearchDisplayItem.swift */,
 				E1F9B6B4221E476C00C5AF39 /* UIViewController+Banner.swift */,
 				E1F260A3221E7D3E00446FE7 /* UIViewController+Navigation.swift */,
+				E1F260A9221E891200446FE7 /* UIView+Feattures.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -944,6 +953,7 @@
 			files = (
 				E16B4089221B8E73006D2934 /* GameListCell.xib in Resources */,
 				E17AB085221AC9B90096AD76 /* GameDetailViewController.xib in Resources */,
+				E1F260A6221E7E9600446FE7 /* GameCartItemCell.xib in Resources */,
 				E17AB081221AC9650096AD76 /* ShoppingCartViewController.xib in Resources */,
 				E1F226F82215764800BEA577 /* Planejamento.rtf in Resources */,
 				E17AB083221AC9800096AD76 /* PurchaseViewController.xib in Resources */,
@@ -1173,8 +1183,10 @@
 				E1C1F7BB221D6E9200F8CA34 /* GameDetailViewModelController.swift in Sources */,
 				E16B4083221B7AA6006D2934 /* PurchaseCoordinator.swift in Sources */,
 				E1C8CB6D221AB66B00DD58EF /* PurchaseViewController.swift in Sources */,
+				E1F260AA221E891200446FE7 /* UIView+Feattures.swift in Sources */,
 				E1C8CB6E221AB80100DD58EF /* ApplicationCoordinator.swift in Sources */,
 				E1C8CB7C221AB9C400DD58EF /* GamesListCoordinator.swift in Sources */,
+				E1F260A8221E80BB00446FE7 /* GameCartItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

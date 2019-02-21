@@ -61,6 +61,7 @@ class ShoppingCartViewController: UIViewController {
         setupUI()
         setupControls()
         setupContent()
+        setupTableView()
         showPrinceView()
     }
     
@@ -84,6 +85,14 @@ class ShoppingCartViewController: UIViewController {
         priceLabel.text = viewModel.price
         checkoutButton.isEnabled = viewModel.isEnableCheckoutButton
         checkoutButton.alpha = viewModel.isEnableCheckoutButton ? 1 : 0.4
+    }
+    
+    private func setupTableView() {
+        tableView.dataSource =  self
+        tableView.register(GameCartItemCell.nib, forCellReuseIdentifier: GameCartItemCell.identifier)
+        tableView.estimatedRowHeight = 44
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.tableFooterView = UIView()
     }
     
     private func showPrinceView() {
@@ -144,6 +153,24 @@ class ShoppingCartViewController: UIViewController {
     
     @IBAction private func close() {
         delegate?.shoppingCardDismiss()
+    }
+    
+}
+
+extension ShoppingCartViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.orderItemsCount
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: GameCartItemCell.identifier, for: indexPath) as? GameCartItemCell else {
+            return UITableViewCell()
+        }
+        
+        cell.setup(with: viewModel.orderItem(at: indexPath))
+        
+        return cell
     }
     
 }

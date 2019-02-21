@@ -29,6 +29,10 @@ final class ShoppingCartViewModelController {
         return shoppingCart.order.count > 0
     }
     
+    var orderItemsCount: Int {
+        return shoppingCart.order.orderItems.count
+    }
+    
     // MARK: - Private Variables
     
     private let repository: PurchaseRepositoryProtocol
@@ -45,6 +49,10 @@ final class ShoppingCartViewModelController {
     
     func cancel() {
         repository.cancel()
+    }
+    
+    func orderItem(at indexPath: IndexPath) -> OrderItem {
+        return shoppingCart.order.orderItems[indexPath.row]
     }
     
     func checkout(_ completion: @escaping (EmptyResult) -> Void) {

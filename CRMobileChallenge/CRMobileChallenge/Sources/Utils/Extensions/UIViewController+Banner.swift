@@ -13,7 +13,7 @@ extension UIViewController {
     
     func showBanner(title: String, body: String = "", style: Theme = .success) {
         let success = MessageView.viewFromNib(layout: .cardView)
-        success.configureTheme(.success)
+        success.configureTheme(backgroundColor: UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1), foregroundColor: .white, iconImage: Icon.success.image)
         success.configureContent(title: title, body: body)
         success.button?.isHidden = true
         
