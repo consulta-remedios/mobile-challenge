@@ -21,10 +21,11 @@ class PurchaseViewController: UIViewController {
     
     var delegate: PurchaseCoordinatorDelegate?
     
-    // MARK: - Life Cycle
+    // MARK: - Private Methods
+    // MARK: Actions
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction private func close() {
+        delegate?.purchaseDismiss()
     }
     
 }

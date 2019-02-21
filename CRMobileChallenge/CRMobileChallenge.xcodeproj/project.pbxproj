@@ -93,6 +93,7 @@
 		E1F2276B221A430B00BEA577 /* PurchaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2276A221A430B00BEA577 /* PurchaseRepository.swift */; };
 		E1F2276D221A45BD00BEA577 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2276C221A45BD00BEA577 /* RepositoryProtocol.swift */; };
 		E1F260A2221E6F5100446FE7 /* ShoppingCartViewModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F260A1221E6F5100446FE7 /* ShoppingCartViewModelController.swift */; };
+		E1F260A4221E7D3E00446FE7 /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F260A3221E7D3E00446FE7 /* UIViewController+Navigation.swift */; };
 		E1F9B6AD221E28AE00C5AF39 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F9B6AA221E286000C5AF39 /* ShoppingCart.swift */; };
 		E1F9B6AF221E297F00C5AF39 /* ShoppingCartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F9B6AE221E297F00C5AF39 /* ShoppingCartManager.swift */; };
 		E1F9B6B1221E30A200C5AF39 /* UniqueRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F9B6B0221E30A200C5AF39 /* UniqueRepresentable.swift */; };
@@ -269,6 +270,7 @@
 		E1F2276A221A430B00BEA577 /* PurchaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseRepository.swift; sourceTree = "<group>"; };
 		E1F2276C221A45BD00BEA577 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		E1F260A1221E6F5100446FE7 /* ShoppingCartViewModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewModelController.swift; sourceTree = "<group>"; };
+		E1F260A3221E7D3E00446FE7 /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
 		E1F9B6AA221E286000C5AF39 /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
 		E1F9B6AE221E297F00C5AF39 /* ShoppingCartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartManager.swift; sourceTree = "<group>"; };
 		E1F9B6B0221E30A200C5AF39 /* UniqueRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueRepresentable.swift; sourceTree = "<group>"; };
@@ -435,6 +437,7 @@
 			children = (
 				E1ECCE39221CD97000DA6E85 /* Game+SearchDisplayItem.swift */,
 				E1F9B6B4221E476C00C5AF39 /* UIViewController+Banner.swift */,
+				E1F260A3221E7D3E00446FE7 /* UIViewController+Navigation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1166,6 +1169,7 @@
 				E1C8CB6B221AB63900DD58EF /* ShoppingCartViewController.swift in Sources */,
 				E17AB087221B6A1D0096AD76 /* GameDetailCoordinator.swift in Sources */,
 				E16B4086221B8D57006D2934 /* GameListCell.swift in Sources */,
+				E1F260A4221E7D3E00446FE7 /* UIViewController+Navigation.swift in Sources */,
 				E1C1F7BB221D6E9200F8CA34 /* GameDetailViewModelController.swift in Sources */,
 				E16B4083221B7AA6006D2934 /* PurchaseCoordinator.swift in Sources */,
 				E1C8CB6D221AB66B00DD58EF /* PurchaseViewController.swift in Sources */,

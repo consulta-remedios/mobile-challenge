@@ -38,7 +38,9 @@ extension PurchaseCoordinator: Coordinator {
 extension PurchaseCoordinator: PurchaseCoordinatorDelegate {
     
     func purchaseDismiss() {
-        navigation.dismiss(animated: true)
+        navigation.dismiss(animated: true) { [weak self] in
+            self?.presenter.popToRootViewController()
+        }
     }
     
 }

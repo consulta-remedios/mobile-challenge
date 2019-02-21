@@ -19,8 +19,61 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="n26-x2-jzo">
+                    <rect key="frame" x="40" y="235.5" width="295" height="196"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CxR-Rg-gVS">
+                            <rect key="frame" x="0.0" y="0.0" width="295" height="150"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k1d-Pk-Rtj">
+                                    <rect key="frame" x="0.0" y="0.0" width="295" height="50"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-box" translatesAutoresizingMaskIntoConstraints="NO" id="W2Y-bH-Y8c">
+                                            <rect key="frame" x="122.5" y="0.0" width="50" height="50"/>
+                                            <color key="tintColor" red="0.29803921570000003" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="79S-86-qUn"/>
+                                                <constraint firstAttribute="width" secondItem="W2Y-bH-Y8c" secondAttribute="height" multiplier="1:1" id="fBX-Gt-Ze8"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                </stackView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AHOOOY!!!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZV-1M-24s">
+                                    <rect key="frame" x="0.0" y="58" width="295" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <color key="textColor" red="0.29803921570000003" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sua compra número 00279 foi concluída com sucesso. Em breve você receberá seus produtos." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SD6-M0-eu8">
+                                    <rect key="frame" x="0.0" y="96" width="295" height="54"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOB-xt-BmX">
+                            <rect key="frame" x="0.0" y="166" width="295" height="30"/>
+                            <state key="normal" title="Continuar comprando"/>
+                            <connections>
+                                <action selector="close" destination="-1" eventType="touchUpInside" id="bB9-Yl-Adu"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="n26-x2-jzo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="5EY-qp-JvF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="n26-x2-jzo" secondAttribute="trailing" constant="40" id="aL6-ER-HKB"/>
+                <constraint firstItem="n26-x2-jzo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cy7-px-vt7"/>
+                <constraint firstItem="n26-x2-jzo" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="hfB-ZF-uot"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>
     </objects>
+    <resources>
+        <image name="icon-box" width="48" height="48"/>
+    </resources>
 </document>
