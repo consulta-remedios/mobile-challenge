@@ -8,6 +8,7 @@
 
 import Foundation
 import Moya
+import SwiftKeychainWrapper
 
 enum GameService {
     case getGames()
@@ -56,6 +57,7 @@ extension GameService: TargetType {
     
     //MARK: - Headers da Requisicao
     var headers: [String : String]? {
-        return ["Content-type": "application/json"]
+        let accessToken = KeychainWrapper.standard.string(forKey: ACCESS_TOKEN)
+        return ["Content-Type": "application/json", "Token" : "\(String(describing: accessToken ?? ""))"]
     }
 }

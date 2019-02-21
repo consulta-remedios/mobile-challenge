@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftKeychainWrapper
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - RootWindow
     func setupRootWindow(){
         self.window = UIWindow(frame: UIScreen.main.bounds);
+        KeychainWrapper.standard.set(VALUE_TOKEN, forKey: ACCESS_TOKEN)
         let loginVC : HomeViewController = HomeViewController()
         let nav = UINavigationController(rootViewController: loginVC)
         nav.navigationBar.backgroundColor = UIColor.appColor(.main)

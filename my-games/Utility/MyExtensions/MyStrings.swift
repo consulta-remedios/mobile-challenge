@@ -26,4 +26,8 @@ extension String: Localizable {
     func isEmpty() -> Bool {
         return self.count == 0
     }
+    
+    var floatValue: Float {
+        return (self as NSString).floatValue
+    }
 }
