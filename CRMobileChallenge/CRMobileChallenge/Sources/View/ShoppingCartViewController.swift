@@ -73,6 +73,7 @@ class ShoppingCartViewController: UIViewController {
         viewModel.updatedOrderHandler = { [weak self] in
             self?.setupContent()
             self?.tableView.reloadData()
+            self?.tableView.reloadEmptyState()
         }
     }
     
