@@ -41,8 +41,8 @@ class GameDetailViewController: UIViewController {
     
     // MARK: - Life Cycle
     
-    init(game: Game, gameRepository: GameRepositoryProtocol) {
-        self.viewModel = GameDetailViewModelController(game: game, repository: gameRepository)
+    init(game: Game, shoppingCart: ShoppingCart, gameRepository: GameRepositoryProtocol) {
+        self.viewModel = GameDetailViewModelController(game: game, shoppingCart: shoppingCart, repository: gameRepository)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -125,6 +125,10 @@ class GameDetailViewController: UIViewController {
     
     @IBAction private func showShoppingCart() {
         delegate?.gameDetailShowShoppingCart()
+    }
+    
+    @IBAction private func addToCart() {
+        viewModel.addToCart()
     }
     
 }

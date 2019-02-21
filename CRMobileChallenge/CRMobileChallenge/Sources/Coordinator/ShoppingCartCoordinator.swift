@@ -13,14 +13,16 @@ final class ShoppingCartCoordinator {
     
     // MARK: - Private Variables
     
+    private let shoppingCart: ShoppingCart
     private let purchaseRepository: PurchaseRepositoryProtocol
     private let presenter: UIViewController
     private let navigation = UINavigationController()
     
     // MARK: - Life Cycle
     
-    init(presenter: UIViewController, purchaseRepository: PurchaseRepositoryProtocol) {
+    init(presenter: UIViewController, shoppingCart: ShoppingCart, purchaseRepository: PurchaseRepositoryProtocol) {
         self.presenter = presenter
+        self.shoppingCart = shoppingCart
         self.purchaseRepository = purchaseRepository
     }
     
@@ -29,7 +31,7 @@ final class ShoppingCartCoordinator {
 extension ShoppingCartCoordinator: Coordinator {
     
     func start() {
-        let controller = ShoppingCartViewController(repository: purchaseRepository)
+        let controller = ShoppingCartViewController(shoppingCart: shoppingCart, repository: purchaseRepository)
         controller.delegate = self
         navigation.setViewControllers([controller], animated: false)
         presenter.present(navigation, animated: true)

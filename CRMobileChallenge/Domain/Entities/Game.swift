@@ -9,7 +9,7 @@
 import Foundation
 import Shared
 
-public struct Game: Entity, Codable {
+public struct Game: Entity, Codable, Equatable {
     
     public var id: Int
     public var name: String

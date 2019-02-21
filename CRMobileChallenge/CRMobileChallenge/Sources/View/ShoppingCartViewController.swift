@@ -28,6 +28,7 @@ class ShoppingCartViewController: UIViewController {
     // MARK: - Private Variables
     
     private let repository: PurchaseRepositoryProtocol
+    private let shoppingCart: ShoppingCart
     
     private lazy var closeButton: UIBarButtonItem = {
         return UIBarButtonItem(image: UIImage(named: "icon-close"), style: .done, target: self, action: #selector(close))
@@ -35,7 +36,8 @@ class ShoppingCartViewController: UIViewController {
     
     // MARK: - Life Cycle
     
-    init(repository: PurchaseRepositoryProtocol) {
+    init(shoppingCart: ShoppingCart, repository: PurchaseRepositoryProtocol) {
+        self.shoppingCart = shoppingCart
         self.repository = repository
         super.init(nibName: nil, bundle: nil)
     }

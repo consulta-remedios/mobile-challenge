@@ -161,6 +161,9 @@
                                     <state key="normal" title="Adicionar ao carrinho">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="addToCart" destination="-1" eventType="touchUpInside" id="0tz-iL-iCw"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>

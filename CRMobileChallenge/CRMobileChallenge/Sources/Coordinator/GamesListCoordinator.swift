@@ -13,6 +13,7 @@ final class GamesListCoordinator {
     
     // MARK: - Private Variables
     
+    private let shoppingCart: ShoppingCart = ShoppingCartManager.instance
     private let gameRepository: GameRepositoryProtocol
     private let purchaseRepository: PurchaseRepositoryProtocol
     private let presenter: UINavigationController
@@ -40,12 +41,12 @@ extension GamesListCoordinator: Coordinator {
 extension GamesListCoordinator: GamesListCordinatorDelegate {
     
     func gamesListDidSelect(game: Game) {
-        let coordinator = GameDetailCoordinator(presenter: presenter, game: game, gameRepository: gameRepository, purchaseRepository: purchaseRepository)
+        let coordinator = GameDetailCoordinator(presenter: presenter, game: game, shoppingCart: shoppingCart, gameRepository: gameRepository, purchaseRepository: purchaseRepository)
         coordinator.start()
     }
     
     func gamesListShowShoppingCart() {
-        let coordinator = ShoppingCartCoordinator(presenter: presenter, purchaseRepository: purchaseRepository)
+        let coordinator = ShoppingCartCoordinator(presenter: presenter, shoppingCart: shoppingCart, purchaseRepository: purchaseRepository)
         coordinator.start()
     }
     

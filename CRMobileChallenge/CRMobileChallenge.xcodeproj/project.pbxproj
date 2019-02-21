@@ -92,6 +92,9 @@
 		E1F22769221A415300BEA577 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F22768221A415300BEA577 /* BaseRepository.swift */; };
 		E1F2276B221A430B00BEA577 /* PurchaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2276A221A430B00BEA577 /* PurchaseRepository.swift */; };
 		E1F2276D221A45BD00BEA577 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2276C221A45BD00BEA577 /* RepositoryProtocol.swift */; };
+		E1F9B6AD221E28AE00C5AF39 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F9B6AA221E286000C5AF39 /* ShoppingCart.swift */; };
+		E1F9B6AF221E297F00C5AF39 /* ShoppingCartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F9B6AE221E297F00C5AF39 /* ShoppingCartManager.swift */; };
+		E1F9B6B1221E30A200C5AF39 /* UniqueRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F9B6B0221E30A200C5AF39 /* UniqueRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -263,6 +266,9 @@
 		E1F22768221A415300BEA577 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
 		E1F2276A221A430B00BEA577 /* PurchaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseRepository.swift; sourceTree = "<group>"; };
 		E1F2276C221A45BD00BEA577 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
+		E1F9B6AA221E286000C5AF39 /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
+		E1F9B6AE221E297F00C5AF39 /* ShoppingCartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartManager.swift; sourceTree = "<group>"; };
+		E1F9B6B0221E30A200C5AF39 /* UniqueRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueRepresentable.swift; sourceTree = "<group>"; };
 		F0EDCBC018B94C40C1EC64BB /* Pods-Shared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared.debug.xcconfig"; path = "Target Support Files/Pods-Shared/Pods-Shared.debug.xcconfig"; sourceTree = "<group>"; };
 		FE1D9456F403FC2F748949FA /* Pods_DomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -443,10 +449,7 @@
 		E1ECCE35221CD64F00DA6E85 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				E1ECCE36221CD66600DA6E85 /* SearchDisplayController.swift */,
-				E1ECCE3B221CDC4800DA6E85 /* SearchDisplayItemCell.swift */,
-				E1ECCE3D221CDC5900DA6E85 /* SearchDisplayItem.swift */,
-				E1ECCE3F221CDD0D00DA6E85 /* SearchDisplayItemCell.xib */,
+				E1F9B6A8221E278D00C5AF39 /* SearchDisplayController */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 		E1F226B92215760200BEA577 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				E1F9B6AC221E289A00C5AF39 /* Manager */,
 				E1F2273022181E9300BEA577 /* Network */,
 				E1F2272F22181C4700BEA577 /* Repositories */,
 				E1F2270B2216B2BB00BEA577 /* ValueObjects */,
@@ -536,6 +540,7 @@
 				E1F22750221983C100BEA577 /* Result.swift */,
 				E1F226FC2216ABB500BEA577 /* Entitiy.swift */,
 				E1F2272022178A8000BEA577 /* Assets.xcassets */,
+				E1F9B6B0221E30A200C5AF39 /* UniqueRepresentable.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -675,6 +680,34 @@
 				E16B4082221B7AA6006D2934 /* PurchaseCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		E1F9B6A8221E278D00C5AF39 /* SearchDisplayController */ = {
+			isa = PBXGroup;
+			children = (
+				E1ECCE36221CD66600DA6E85 /* SearchDisplayController.swift */,
+				E1ECCE3B221CDC4800DA6E85 /* SearchDisplayItemCell.swift */,
+				E1ECCE3D221CDC5900DA6E85 /* SearchDisplayItem.swift */,
+				E1ECCE3F221CDD0D00DA6E85 /* SearchDisplayItemCell.xib */,
+			);
+			path = SearchDisplayController;
+			sourceTree = "<group>";
+		};
+		E1F9B6A9221E27A700C5AF39 /* ShoppingCartManager */ = {
+			isa = PBXGroup;
+			children = (
+				E1F9B6AA221E286000C5AF39 /* ShoppingCart.swift */,
+				E1F9B6AE221E297F00C5AF39 /* ShoppingCartManager.swift */,
+			);
+			path = ShoppingCartManager;
+			sourceTree = "<group>";
+		};
+		E1F9B6AC221E289A00C5AF39 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E1F9B6A9221E27A700C5AF39 /* ShoppingCartManager */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		FCA6E46EA341924F4D54401B /* Pods */ = {
@@ -1158,6 +1191,7 @@
 				E1F227372218277A00BEA577 /* HTTPMethod.swift in Sources */,
 				E1F2276D221A45BD00BEA577 /* RepositoryProtocol.swift in Sources */,
 				E1F2270A2216B28A00BEA577 /* Order.swift in Sources */,
+				E1F9B6AF221E297F00C5AF39 /* ShoppingCartManager.swift in Sources */,
 				E1F226FF2216AEA200BEA577 /* Address.swift in Sources */,
 				E1F2273D221829FD00BEA577 /* ParameterEncoding.swift in Sources */,
 				E1F2274122182BB300BEA577 /* NetworkError.swift in Sources */,
@@ -1170,6 +1204,7 @@
 				E1F22769221A415300BEA577 /* BaseRepository.swift in Sources */,
 				E1F2276B221A430B00BEA577 /* PurchaseRepository.swift in Sources */,
 				E1F226FB2216AB4700BEA577 /* Game.swift in Sources */,
+				E1F9B6AD221E28AE00C5AF39 /* ShoppingCart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1196,6 +1231,7 @@
 				E1ECCE38221CD8BB00DA6E85 /* SearchDisplayController.swift in Sources */,
 				E1ECCE3E221CDC5900DA6E85 /* SearchDisplayItem.swift in Sources */,
 				E1F2272E221799F800BEA577 /* String+Substring.swift in Sources */,
+				E1F9B6B1221E30A200C5AF39 /* UniqueRepresentable.swift in Sources */,
 				E1ECCE25221B944000DA6E85 /* UIView+XIB.swift in Sources */,
 				E1ECCE34221CCF1300DA6E85 /* UIImageView+Load.swift in Sources */,
 				E1ECCE29221B9EBD00DA6E85 /* Collection+Safe.swift in Sources */,
@@ -1404,7 +1440,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = adriano.challenge.CRMobileChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1425,7 +1461,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = adriano.challenge.CRMobileChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

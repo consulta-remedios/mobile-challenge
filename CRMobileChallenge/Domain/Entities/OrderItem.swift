@@ -6,12 +6,21 @@
 //  Copyright © 2019 Adriano Souza Costa. All rights reserved.
 //
 
-import Foundation
+import Shared
 
-public struct OrderItem {
+public class OrderItem: UniqueRepresentable, Equatable {
     
     public var game: Game
-    public var quantitiy: Int
+    public var quantity: Int
+    
+    public init(game: Game, quantity: Int = 1) {
+        self.game = game
+        self.quantity = quantity
+    }
+    
+    public static func == (lhs: OrderItem, rhs: OrderItem) -> Bool {
+        return lhs.uid == rhs.uid
+    }
     
 }
 
@@ -22,8 +31,8 @@ public extension OrderItem {
     }
     
     public var total: Double {
-        guard quantitiy > 0 else { return 0 }
-        return Double(quantitiy) * game.price
+        guard quantity > 0 else { return 0 }
+        return Double(quantity) * game.price
     }
     
 }

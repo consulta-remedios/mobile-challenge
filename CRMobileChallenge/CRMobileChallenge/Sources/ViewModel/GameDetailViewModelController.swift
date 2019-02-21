@@ -44,14 +44,17 @@ final class GameDetailViewModelController {
     
     // MARK: - Private Variables
     
+    private let repository: GameRepositoryProtocol
+    private let shoppingCart: ShoppingCart
+    
     private var game: Game
-    private var repository: GameRepositoryProtocol
     private var _isPriceHidden: Bool = true
     
     // MARK: - Life Cycle
     
-    init(game: Game, repository: GameRepositoryProtocol) {
+    init(game: Game, shoppingCart: ShoppingCart, repository: GameRepositoryProtocol) {
         self.game = game
+        self.shoppingCart = shoppingCart
         self.repository = repository
     }
     
@@ -72,6 +75,10 @@ final class GameDetailViewModelController {
     
     func cancel() {
         repository.cancel()
+    }
+    
+    func addToCart() {
+        shoppingCart.add(game: game)
     }
     
 }

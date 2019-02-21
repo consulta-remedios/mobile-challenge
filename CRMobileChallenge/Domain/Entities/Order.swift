@@ -11,7 +11,7 @@ import Foundation
 public struct Order {
     
     public var orderItems: [OrderItem]
-    public var address: Address
+    public var address: Address?
     public var paymentType: PaymentType
     
 }

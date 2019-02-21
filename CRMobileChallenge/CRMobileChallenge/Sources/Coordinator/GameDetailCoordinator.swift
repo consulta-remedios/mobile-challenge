@@ -16,13 +16,15 @@ final class GameDetailCoordinator {
     
     private let game: Game
     private let presenter: UINavigationController
+    private let shoppingCart: ShoppingCart
     private let gameRepository: GameRepositoryProtocol
     private let purchaseRepository: PurchaseRepositoryProtocol
     
     // MARK: - Life Cycle
     
-    init(presenter: UINavigationController, game: Game, gameRepository: GameRepositoryProtocol, purchaseRepository: PurchaseRepositoryProtocol) {
+    init(presenter: UINavigationController, game: Game, shoppingCart: ShoppingCart, gameRepository: GameRepositoryProtocol, purchaseRepository: PurchaseRepositoryProtocol) {
         self.game = game
+        self.shoppingCart = shoppingCart
         self.presenter = presenter
         self.gameRepository = gameRepository
         self.purchaseRepository = purchaseRepository
@@ -33,7 +35,7 @@ final class GameDetailCoordinator {
 extension GameDetailCoordinator: Coordinator {
     
     func start() {
-        let controller = GameDetailViewController(game: game, gameRepository: gameRepository)
+        let controller = GameDetailViewController(game: game, shoppingCart: shoppingCart, gameRepository: gameRepository)
         controller.delegate = self
         presenter.pushViewController(controller, animated: true)
     }
@@ -43,7 +45,7 @@ extension GameDetailCoordinator: Coordinator {
 extension GameDetailCoordinator: GameDetailCoordinatorDelegate {
     
     func gameDetailShowShoppingCart() {
-        let coordinator = ShoppingCartCoordinator(presenter: presenter, purchaseRepository: purchaseRepository)
+        let coordinator = ShoppingCartCoordinator(presenter: presenter, shoppingCart: shoppingCart, purchaseRepository: purchaseRepository)
         coordinator.start()
     }
     
