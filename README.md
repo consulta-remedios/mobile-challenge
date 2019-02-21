@@ -5,6 +5,9 @@ A arquitetura escolhida foi MVVM sem two way data binding por possibilitar isola
 - SHARED: Compartilha recursos visuais e componentes com qualquer target
 - CRMobileChallenge: Aplicação em si.
 
+### MUITO IMPORTANTE!!!
+Esse projeto possui 3 targets separados com isso o XCode pode em alguns momentos se perder como acontece com diversos outros projetos, então deixo aqui a orientação que a solução e simples, basta dar um clean e em seguinda um run ou no pior caso limpar o derived data.
+
 ### Recursos
 - JGProgessHUD: Load e espera
 - Kingfisher: Load de imagens com cache
