@@ -58,6 +58,16 @@
                ReferencedContainer = "container:CRMobileChallenge.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E150917E221E99E80083B8B0"
+               BuildableName = "EmptyStateTests.xctest"
+               BlueprintName = "EmptyStateTests"
+               ReferencedContainer = "container:CRMobileChallenge.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

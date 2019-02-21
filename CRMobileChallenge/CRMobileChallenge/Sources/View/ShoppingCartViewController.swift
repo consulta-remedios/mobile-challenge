@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Domain
+import Shared
 
 protocol ShoppingCartCoordinatorDelegate {
     
@@ -31,6 +32,13 @@ class ShoppingCartViewController: UIViewController {
     
     private lazy var closeButton: UIBarButtonItem = {
         return UIBarButtonItem(image: UIImage(named: "icon-close"), style: .done, target: self, action: #selector(close))
+    }()
+    
+    private lazy var noItemsEmptyState: EmptyState = {
+        return EmptyState(title: "Nada ainda =(", text: "Você ainda não adicionou nenhum item a seu carrinho.") { [weak self] in
+            guard let self = self else { return false }
+            return self.viewModel.orderItemsCount == 0
+        }
     }()
     
     // MARK: Outlets
@@ -65,6 +73,11 @@ class ShoppingCartViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadEmptyState()
+    }
+    
     // MARK: - Private Methods
     
     private func setupUI() {
@@ -75,6 +88,8 @@ class ShoppingCartViewController: UIViewController {
         priceView.layer.shadowRadius = 6.0
         priceView.layer.shadowOpacity = 0.4
         priceView.layer.masksToBounds = false
+        
+        tableView.emptyStates = [noItemsEmptyState]
     }
     
     private func setupControls() {
