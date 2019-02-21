@@ -56,6 +56,7 @@ class GameDetailViewController: UIViewController {
     @IBOutlet private weak var priceLabel: UILabel!
     @IBOutlet private weak var freightLabel: UILabel!
     @IBOutlet private weak var priceView: UIView!
+    @IBOutlet private weak var loaderView: UIActivityIndicatorView!
     
     // MARK: - Life Cycle
     
@@ -128,6 +129,8 @@ class GameDetailViewController: UIViewController {
     }
     
     private func fetch() {
+        loaderView.startAnimating()
+        
         viewModel.fetch() { [weak self] result in
             switch result {
             case .success:
@@ -136,6 +139,7 @@ class GameDetailViewController: UIViewController {
                 print(error.localizedDescription)
             }
             
+            self?.loaderView.stopAnimating()
             self?.reloadEmptyState()
         }
     }

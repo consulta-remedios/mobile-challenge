@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import Domain
 import Shared
+import JGProgressHUD
 
 protocol ShoppingCartCoordinatorDelegate {
     
@@ -149,13 +150,21 @@ class ShoppingCartViewController: UIViewController {
             preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Sim", style: .default) { [weak self] _ in
-            self?.viewModel.checkout { [weak self] result in
+            guard let self = self else { return }
+            
+            let hud = JGProgressHUD(style: .dark)
+            hud.textLabel.text = "Aguarde um momento"
+            hud.show(in: self.view)
+            
+            self.viewModel.checkout { [weak self] result in
                 switch result {
                 case .success:
                     self?.successPurchase()
                 case .failure(let error):
                     self?.failurePurchase(error: error)
                 }
+                
+                hud.dismiss()
             }
         })
         

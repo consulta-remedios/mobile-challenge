@@ -81,6 +81,7 @@ class GamesListViewController: UIViewController {
     // MARK: Outlets
     
     @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var loaderView: UIActivityIndicatorView!
     
     // MARK: - Life Cycle
     
@@ -133,6 +134,8 @@ class GamesListViewController: UIViewController {
     }
     
     private func fetch() {
+        loaderView.startAnimating()
+        
         viewModel.fetch { [weak self] result in
             guard let self = self else { return }
             
@@ -143,6 +146,7 @@ class GamesListViewController: UIViewController {
                 print(error.localizedDescription)
             }
             
+            self.loaderView.stopAnimating()
             self.collectionView.reloadEmptyState()
         }
     }

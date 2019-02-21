@@ -16,6 +16,7 @@
                 <outlet property="coverImage" destination="RJu-EN-H2D" id="G3D-fz-5Za"/>
                 <outlet property="descriptionLabel" destination="wsR-oI-Rct" id="mjK-YX-n0I"/>
                 <outlet property="freightLabel" destination="gPg-yQ-HIM" id="Ip7-Wk-VRx"/>
+                <outlet property="loaderView" destination="EGy-Ud-Pdo" id="WO5-qP-xDl"/>
                 <outlet property="priceLabel" destination="Jt4-yY-cST" id="kgI-O3-oHA"/>
                 <outlet property="priceView" destination="NsT-8i-h7A" id="LPH-FE-6w9"/>
                 <outlet property="titleLabel" destination="DQt-Fz-sbt" id="0i8-nc-Wlw"/>
@@ -201,9 +202,14 @@
                         <constraint firstItem="QvN-m0-gEB" firstAttribute="top" secondItem="NsT-8i-h7A" secondAttribute="top" constant="16" id="zHe-go-15b"/>
                     </constraints>
                 </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="EGy-Ud-Pdo">
+                    <rect key="frame" x="141.5" y="313.5" width="37" height="37"/>
+                    <color key="color" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="EGy-Ud-Pdo" firstAttribute="bottom" secondItem="KUo-tY-SI0" secondAttribute="bottom" constant="100" id="9WU-jH-bRT"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="X5a-cT-gGf" secondAttribute="trailing" id="9iV-dM-5xN"/>
                 <constraint firstItem="NsT-8i-h7A" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Eah-dt-IY5"/>
                 <constraint firstItem="NsT-8i-h7A" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="Mzr-pc-270"/>
@@ -211,6 +217,7 @@
                 <constraint firstItem="X5a-cT-gGf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Se1-jJ-NwA"/>
                 <constraint firstItem="j7X-7w-rC8" firstAttribute="height" secondItem="NsT-8i-h7A" secondAttribute="height" multiplier="1:0.7" id="TwZ-fh-AQz"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="X5a-cT-gGf" secondAttribute="bottom" id="WIu-u7-1dB"/>
+                <constraint firstItem="EGy-Ud-Pdo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="csP-e2-vAW"/>
                 <constraint firstItem="NsT-8i-h7A" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="r3h-Tq-qeE"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

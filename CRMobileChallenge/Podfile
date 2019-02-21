@@ -4,6 +4,7 @@ target 'CRMobileChallenge' do
   use_frameworks!
   
   pod 'SwiftMessages'
+  pod 'JGProgressHUD'
   
   target 'CRMobileChallengeTests' do
     inherit! :search_paths
