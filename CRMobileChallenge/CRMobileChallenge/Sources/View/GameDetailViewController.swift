@@ -41,8 +41,7 @@ class GameDetailViewController: UIViewController {
             return self.viewModel.hasError
         }
         
-        emptyState.edgeInsets.top = coverContainerView.frame.height
-        emptyState.edgeInsets.bottom = priceView.frame.height
+        emptyState.edgeInsets.top = 400
         
         return emptyState
     }()
