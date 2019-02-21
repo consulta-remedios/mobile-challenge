@@ -13,6 +13,7 @@
 		867481A41427D05CF8B22F2A /* Pods_CRMobileChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C3AFF4B956ADDA4A7660A1 /* Pods_CRMobileChallengeTests.framework */; };
 		8DD406CF3BB7A34FBA0F9677 /* Pods_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 172C4A7B7487E91F57AAEF85 /* Pods_DomainTests.framework */; };
 		B9D11FA9483F98A7C8FAE17A /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944E8B64B5C679F03C672288 /* Pods_Domain.framework */; };
+		E1176918221EC16B00B6350F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227532219849900BEA577 /* NetworkManager.swift */; };
 		E15091AA221E9A410083B8B0 /* EmptyStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E150919A221E9A410083B8B0 /* EmptyStateView.xib */; };
 		E15091AB221E9A410083B8B0 /* EmptyStateActionRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E150919C221E9A410083B8B0 /* EmptyStateActionRepresentable.swift */; };
 		E15091AD221E9A410083B8B0 /* EmptyStateActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E150919E221E9A410083B8B0 /* EmptyStateActions.swift */; };
@@ -35,7 +36,6 @@
 		E17AB087221B6A1D0096AD76 /* GameDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17AB086221B6A1D0096AD76 /* GameDetailCoordinator.swift */; };
 		E1C1F7BB221D6E9200F8CA34 /* GameDetailViewModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C1F7BA221D6E9200F8CA34 /* GameDetailViewModelController.swift */; };
 		E1C1F7BD221E082B00F8CA34 /* ResultValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F22750221983C100BEA577 /* ResultValue.swift */; };
-		E1C1F7BE221E08D400F8CA34 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F227532219849900BEA577 /* NetworkManager.swift */; };
 		E1C8CB69221AB5FC00DD58EF /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8CB68221AB5FC00DD58EF /* GameDetailViewController.swift */; };
 		E1C8CB6B221AB63900DD58EF /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8CB6A221AB63900DD58EF /* ShoppingCartViewController.swift */; };
 		E1C8CB6D221AB66B00DD58EF /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8CB6C221AB66A00DD58EF /* PurchaseViewController.swift */; };
@@ -1317,7 +1317,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1C1F7BE221E08D400F8CA34 /* NetworkManager.swift in Sources */,
 				E1F2275F221A05C400BEA577 /* NetworkErrorResponse.swift in Sources */,
 				E1F2274322182C2F00BEA577 /* JSONParameterEncoder.swift in Sources */,
 				E1F2273A2218282600BEA577 /* HTTPTask.swift in Sources */,
@@ -1332,6 +1331,7 @@
 				E1F227372218277A00BEA577 /* HTTPMethod.swift in Sources */,
 				E1F2276D221A45BD00BEA577 /* RepositoryProtocol.swift in Sources */,
 				E1F2270A2216B28A00BEA577 /* Order.swift in Sources */,
+				E1176918221EC16B00B6350F /* NetworkManager.swift in Sources */,
 				E1F9B6AF221E297F00C5AF39 /* ShoppingCartManager.swift in Sources */,
 				E1F226FF2216AEA200BEA577 /* Address.swift in Sources */,
 				E1F2273D221829FD00BEA577 /* ParameterEncoding.swift in Sources */,
