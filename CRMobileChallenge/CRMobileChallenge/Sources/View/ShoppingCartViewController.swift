@@ -219,6 +219,11 @@ extension ShoppingCartViewController: UITableViewDelegate {
 
 extension ShoppingCartViewController: UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else { return }
+        viewModel.removeOrderItem(at: indexPath)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.orderItemsCount
     }

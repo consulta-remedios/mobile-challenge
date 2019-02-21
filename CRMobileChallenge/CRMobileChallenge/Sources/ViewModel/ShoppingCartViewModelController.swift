@@ -59,6 +59,10 @@ final class ShoppingCartViewModelController {
         return shoppingCart.order.orderItems[indexPath.row]
     }
     
+    func removeOrderItem(at indexPath: IndexPath) {
+        return shoppingCart.remove(game: orderItem(at: indexPath).game)
+    }
+    
     func changeQuantity(to quantity: Int, from orderItem: OrderItem) {
         shoppingCart.change(quantity: quantity, from: orderItem.game)
     }
