@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Shared
 
 public struct Game: Entity, Codable, Equatable {
     

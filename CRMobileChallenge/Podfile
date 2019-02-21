@@ -16,18 +16,9 @@ end
 target 'Domain' do
   use_frameworks!
 
-  target 'DomainTests' do
-    inherit! :search_paths
-  end
-
-end
-
-target 'Shared' do
-  use_frameworks!
-
   pod 'Kingfisher'
-
-  target 'SharedTests' do
+  
+  target 'DomainTests' do
     inherit! :search_paths
   end
 

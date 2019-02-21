@@ -8,7 +8,6 @@
 
 import Foundation
 import Domain
-import Shared
 
 final class GameListControllerViewModel {
     

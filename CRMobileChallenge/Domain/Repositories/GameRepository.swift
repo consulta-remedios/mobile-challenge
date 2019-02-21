@@ -6,8 +6,6 @@
 //  Copyright © 2019 Adriano Souza Costa. All rights reserved.
 //
 
-import Shared
-
 public class GameRepository: BaseRepository, GameRepositoryProtocol {
     
     public func games(_ completion: @escaping (ResultValue<[Game]>) -> Void) {

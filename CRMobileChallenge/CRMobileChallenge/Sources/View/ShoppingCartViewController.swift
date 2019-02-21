@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 import Domain
-import Shared
 import JGProgressHUD
 
 protocol ShoppingCartCoordinatorDelegate {

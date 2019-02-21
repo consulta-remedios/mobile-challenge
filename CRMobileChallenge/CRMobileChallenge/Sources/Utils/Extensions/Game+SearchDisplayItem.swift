@@ -7,7 +7,6 @@
 //
 
 import Domain
-import Shared
 
 extension Game: SearchDisplayItem {
     

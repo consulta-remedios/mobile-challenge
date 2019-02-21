@@ -6,8 +6,6 @@
 //  Copyright © 2019 Adriano Souza Costa. All rights reserved.
 //
 
-import Shared
-
 public protocol PurchaseRepositoryProtocol: RepositoryProtocol {
     
     func checkout(_ completion: @escaping (EmptyResult) -> Void)

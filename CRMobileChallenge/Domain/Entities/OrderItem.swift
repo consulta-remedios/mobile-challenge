@@ -6,8 +6,6 @@
 //  Copyright © 2019 Adriano Souza Costa. All rights reserved.
 //
 
-import Shared
-
 public class OrderItem: UniqueRepresentable, Equatable {
     
     public var game: Game

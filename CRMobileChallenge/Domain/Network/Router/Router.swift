@@ -6,7 +6,6 @@
 //  Copyright © 2019 Adriano Souza Costa. All rights reserved.
 //
 
-import Shared
 
 final class Router<EndPoint: EndPointType>: NetworkRouter {
     
