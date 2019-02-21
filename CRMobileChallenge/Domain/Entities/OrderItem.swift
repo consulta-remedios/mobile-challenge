@@ -27,7 +27,7 @@ public class OrderItem: UniqueRepresentable, Equatable {
 public extension OrderItem {
     
     public var freight: Double {
-        return game.freight
+        return Double(quantity) * game.freight
     }
     
     public var total: Double {

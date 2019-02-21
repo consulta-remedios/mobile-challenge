@@ -11,7 +11,6 @@ import Foundation
 public protocol ShoppingCart: class {
     
     var order: Order { get }
-    var total: Double { get }
     
     func add(game: Game)
     func remove(game: Game)

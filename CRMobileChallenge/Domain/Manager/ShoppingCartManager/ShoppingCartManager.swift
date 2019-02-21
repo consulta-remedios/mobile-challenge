@@ -26,11 +26,9 @@ public class ShoppingCartManager: ShoppingCart {
         return _order
     }
     
-    public var total: Double {
-        return order.total
+    private(set) var orderItems: [OrderItem] = [] {
+        didSet { _order.orderItems = orderItems }
     }
-    
-    private(set) var orderItems: [OrderItem] = []
     
     // MARK: - Private Variables
     
@@ -47,7 +45,12 @@ public class ShoppingCartManager: ShoppingCart {
             orderItems.append(OrderItem(game: game, quantity: 1))
         }
         
-        print(total)
+        print("----")
+        print("game: \(game.name)")
+        print("valor: \(game.price)")
+        print("frete: \(order.freight)")
+        print("total: \(order.total)")
+        print("----")
     }
     
     public func remove(game: Game) {

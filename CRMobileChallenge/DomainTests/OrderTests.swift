@@ -34,12 +34,12 @@ class OrderTests: XCTestCase {
     }
     
     func testeCadaItemDeveAdicionar10ReaisNoValorDoFrete() {
-        var order = Order(orderItems: [OrderItem(game: game, quantitiy: 1)], address: address, paymentType: .paymentSlip)
+        var order = Order(orderItems: [OrderItem(game: game)], address: address, paymentType: .paymentSlip)
         
         XCTAssertEqual(order.freight, 10)
         
         let orderItems = (1...10).map { _ in
-            return OrderItem(game: game, quantitiy: 1)
+            return OrderItem(game: game)
         }
         
         order.orderItems.append(contentsOf: orderItems)
@@ -49,7 +49,7 @@ class OrderTests: XCTestCase {
     
     func testeFreteAcimaDe250DeveSerGratis() {
         let orderItems = (1...100).map { _ in
-            return OrderItem(game: game, quantitiy: 1)
+            return OrderItem(game: game)
         }
         
         let order = Order(orderItems: orderItems, address: address, paymentType: .paymentSlip)
@@ -59,7 +59,7 @@ class OrderTests: XCTestCase {
     
     func testeFreteAbaixoDe250NaoDeveSerGratis() {
         let orderItems = (1...5).map { _ in
-            return OrderItem(game: game, quantitiy: 1)
+            return OrderItem(game: game)
         }
         
         let order = Order(orderItems: orderItems, address: address, paymentType: .paymentSlip)
@@ -69,7 +69,7 @@ class OrderTests: XCTestCase {
     
     func testeFreteIgualA250NaoDeveSerGratis() {
         let orderItems = (1...25).map { _ in
-            return OrderItem(game: game, quantitiy: 1)
+            return OrderItem(game: game)
         }
         
         let order = Order(orderItems: orderItems, address: address, paymentType: .paymentSlip)
@@ -79,7 +79,7 @@ class OrderTests: XCTestCase {
     
     func testeValorTotalDoPedidoDeveSerQuantidadeDeItemsPedidoVezesSeuValorTotalMaisFrete() {
         let orderItems = (0...2).map { _ in
-            return OrderItem(game: game, quantitiy: 1)
+            return OrderItem(game: game, quantity: 1)
         }
         
         let order = Order(orderItems: orderItems, address: address, paymentType: .paymentSlip)

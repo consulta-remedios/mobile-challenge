@@ -24,12 +24,12 @@ class OrderItemTests: XCTestCase {
     }
     
     func testeValorTotalDoItemDeveSerQuantidadeVezesSeuValor() {
-        let orderItem = OrderItem(game: game, quantitiy: 10)
+        let orderItem = OrderItem(game: game, quantity: 10)
         XCTAssertEqual(orderItem.total, 2500)
     }
     
     func testeQuantidadeNegativasNaoPodeGerarValorNegativoESimZero() {
-        let orderItem = OrderItem(game: game, quantitiy: -10)
+        let orderItem = OrderItem(game: game, quantity: -10)
         XCTAssertEqual(orderItem.total, 0)
     }
 

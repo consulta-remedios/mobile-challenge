@@ -19,7 +19,7 @@ public struct Order {
 public extension Order {
     
     public var freight: Double {
-        let total = Double(orderItems.map { $0.freight }.reduce(0, +))
+        let total = orderItems.map { $0.freight }.reduce(0, +)
         guard total <= 250 else { return 0 }
         return total
     }
