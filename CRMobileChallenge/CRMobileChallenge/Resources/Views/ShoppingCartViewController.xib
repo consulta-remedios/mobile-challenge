@@ -13,6 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShoppingCartViewController" customModule="CRMobileChallenge" customModuleProvider="target">
             <connections>
                 <outlet property="checkoutButton" destination="Ac7-YW-wJQ" id="Tp3-pO-Cwx"/>
+                <outlet property="freightLabel" destination="Egt-bA-YVn" id="E7w-Ae-Aap"/>
+                <outlet property="iconImage" destination="sHK-6b-cIn" id="2xD-je-n2c"/>
                 <outlet property="priceLabel" destination="hwa-wx-am4" id="aid-Ev-dvv"/>
                 <outlet property="priceView" destination="aAC-Oz-IY8" id="2xv-jk-OYu"/>
                 <outlet property="tableView" destination="lD5-Gc-MmW" id="Lsl-02-XZS"/>
@@ -31,33 +33,57 @@
                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                 </tableView>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aAC-Oz-IY8">
-                    <rect key="frame" x="0.0" y="553" width="375" height="114"/>
+                    <rect key="frame" x="0.0" y="550.5" width="375" height="116.5"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5fh-A1-ZMJ">
-                            <rect key="frame" x="16" y="16" width="343" height="82"/>
+                            <rect key="frame" x="16" y="16" width="343" height="84.5"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Wyc-kF-UfE">
-                                    <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="46.5"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="vLx-8f-XY1">
-                                            <rect key="frame" x="0.0" y="0.0" width="162.5" height="44"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vLx-8f-XY1">
+                                            <rect key="frame" x="0.0" y="0.0" width="162.5" height="46.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwa-wx-am4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="56" height="26.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="162.5" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
                                                     <color key="textColor" red="0.019607843140000001" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Frete" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfQ-PV-muK">
-                                                    <rect key="frame" x="0.0" y="26.5" width="29.5" height="17.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="XKR-9J-dbf">
+                                                    <rect key="frame" x="0.0" y="26.5" width="162.5" height="20"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-frete" translatesAutoresizingMaskIntoConstraints="NO" id="sHK-6b-cIn">
+                                                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                            <color key="tintColor" red="0.29803921570000003" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="DVM-ol-ogg"/>
+                                                                <constraint firstAttribute="width" constant="20" id="Vt4-oE-bc4"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Zyw-uZ-b0o">
+                                                            <rect key="frame" x="24" y="0.0" width="138.5" height="20"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Frete:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6v-vo-3BF">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="36" height="20"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                                    <color key="textColor" red="0.29803921570000003" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Valor Frete" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egt-bA-YVn">
+                                                                    <rect key="frame" x="38" y="0.0" width="100.5" height="20"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                         </stackView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ac7-YW-wJQ">
-                                            <rect key="frame" x="174.5" y="0.0" width="168.5" height="44"/>
+                                            <rect key="frame" x="174.5" y="0.0" width="168.5" height="46.5"/>
                                             <color key="backgroundColor" red="0.29803921570000003" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="ECa-2d-cAc"/>
@@ -93,7 +119,7 @@
                                     </constraints>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fb-Oe-8AA">
-                                    <rect key="frame" x="0.0" y="52" width="343" height="30"/>
+                                    <rect key="frame" x="0.0" y="54.5" width="343" height="30"/>
                                     <state key="normal" title="Continuar comprando"/>
                                     <connections>
                                         <action selector="close" destination="-1" eventType="touchUpInside" id="OkL-H4-UlW"/>
@@ -126,4 +152,7 @@
             <point key="canvasLocation" x="133.59999999999999" y="154.27286356821591"/>
         </view>
     </objects>
+    <resources>
+        <image name="icon-frete" width="24" height="24"/>
+    </resources>
 </document>
