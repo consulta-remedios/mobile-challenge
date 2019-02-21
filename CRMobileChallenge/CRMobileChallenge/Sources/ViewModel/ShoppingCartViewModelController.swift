@@ -25,6 +25,10 @@ final class ShoppingCartViewModelController {
         return shoppingCart.order.total.currencyDescription
     }
     
+    var freight: String? {
+        return shoppingCart.order.freight.currencyDescription
+    }
+    
     var isEnableCheckoutButton: Bool {
         return shoppingCart.order.count > 0
     }

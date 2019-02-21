@@ -46,6 +46,7 @@ class ShoppingCartViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var priceLabel: UILabel!
+    @IBOutlet private weak var freightLabel: UILabel!
     @IBOutlet private weak var priceView: UIView!
     @IBOutlet private weak var checkoutButton: UIButton!
     
@@ -99,11 +100,13 @@ class ShoppingCartViewController: UIViewController {
     
     private func setupContent() {
         priceLabel.text = viewModel.price
+        freightLabel.text = viewModel.freight
         checkoutButton.isEnabled = viewModel.isEnableCheckoutButton
         checkoutButton.alpha = viewModel.isEnableCheckoutButton ? 1 : 0.4
     }
     
     private func setupTableView() {
+        tableView.delegate = self
         tableView.dataSource =  self
         tableView.register(GameCartItemCell.nib, forCellReuseIdentifier: GameCartItemCell.identifier)
         tableView.estimatedRowHeight = 44
@@ -198,6 +201,14 @@ class ShoppingCartViewController: UIViewController {
     
     @IBAction private func close() {
         delegate?.shoppingCardDismiss()
+    }
+    
+}
+
+extension ShoppingCartViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 100))
     }
     
 }
