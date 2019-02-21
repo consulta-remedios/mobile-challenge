@@ -18,6 +18,10 @@ public struct Order {
 
 public extension Order {
     
+    public var count: Int {
+        return orderItems.map { $0.quantity }.reduce(0, +)
+    }
+    
     public var freight: Double {
         let total = orderItems.map { $0.freight }.reduce(0, +)
         guard total <= 250 else { return 0 }

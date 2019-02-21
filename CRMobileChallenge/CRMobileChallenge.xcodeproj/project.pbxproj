@@ -95,6 +95,7 @@
 		E1F9B6AD221E28AE00C5AF39 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F9B6AA221E286000C5AF39 /* ShoppingCart.swift */; };
 		E1F9B6AF221E297F00C5AF39 /* ShoppingCartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F9B6AE221E297F00C5AF39 /* ShoppingCartManager.swift */; };
 		E1F9B6B1221E30A200C5AF39 /* UniqueRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F9B6B0221E30A200C5AF39 /* UniqueRepresentable.swift */; };
+		E1F9B6B3221E404900C5AF39 /* UIBarButtomItem+Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F9B6B2221E404900C5AF39 /* UIBarButtomItem+Badge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -269,6 +270,7 @@
 		E1F9B6AA221E286000C5AF39 /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
 		E1F9B6AE221E297F00C5AF39 /* ShoppingCartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartManager.swift; sourceTree = "<group>"; };
 		E1F9B6B0221E30A200C5AF39 /* UniqueRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueRepresentable.swift; sourceTree = "<group>"; };
+		E1F9B6B2221E404900C5AF39 /* UIBarButtomItem+Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtomItem+Badge.swift"; sourceTree = "<group>"; };
 		F0EDCBC018B94C40C1EC64BB /* Pods-Shared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared.debug.xcconfig"; path = "Target Support Files/Pods-Shared/Pods-Shared.debug.xcconfig"; sourceTree = "<group>"; };
 		FE1D9456F403FC2F748949FA /* Pods_DomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -591,6 +593,7 @@
 				E1F2272D221799F800BEA577 /* String+Substring.swift */,
 				E1ECCE24221B944000DA6E85 /* UIView+XIB.swift */,
 				E1ECCE28221B9EBD00DA6E85 /* Collection+Safe.swift */,
+				E1F9B6B2221E404900C5AF39 /* UIBarButtomItem+Badge.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1228,6 +1231,7 @@
 				E1F227122216BEA800BEA577 /* Double+Formatter.swift in Sources */,
 				E1F2272A22178C6C00BEA577 /* String+Regex.swift in Sources */,
 				E1ECCE33221C25AC00DA6E85 /* GridFlowLayout.swift in Sources */,
+				E1F9B6B3221E404900C5AF39 /* UIBarButtomItem+Badge.swift in Sources */,
 				E1ECCE38221CD8BB00DA6E85 /* SearchDisplayController.swift in Sources */,
 				E1ECCE3E221CDC5900DA6E85 /* SearchDisplayItem.swift in Sources */,
 				E1F2272E221799F800BEA577 /* String+Substring.swift in Sources */,

@@ -14,6 +14,13 @@ final class GameDetailViewModelController {
     
     // MARK: - Public Variables
     
+    var updatedOrderHandler: (() -> Void)? {
+        didSet {
+            guard let handler = updatedOrderHandler else { return }
+            shoppingCart.addOrderUpdatedHandler(handler)
+        }
+    }
+    
     var title: String {
         return game.title
     }
@@ -40,6 +47,10 @@ final class GameDetailViewModelController {
     
     var isPriceHidden: Bool {
         return _isPriceHidden
+    }
+    
+    var totalItemsInCart: Int {
+        return shoppingCart.order.count
     }
     
     // MARK: - Private Variables

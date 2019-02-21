@@ -32,11 +32,17 @@ public class ShoppingCartManager: ShoppingCart {
     
     // MARK: - Private Variables
     
+    private var updatedOrderHandlers: [(() -> Void)] = []
+    
     private lazy var _order: Order = {
         return Order(orderItems: orderItems, address: nil, paymentType: paymentType)
     }()
     
     // MARK: - Public Methods
+    
+    public func addOrderUpdatedHandler(_ handler: @escaping () -> Void) {
+        updatedOrderHandlers.append(handler)
+    }
     
     public func add(game: Game) {
         if let orderItem = orderItem(at: game) {
@@ -45,26 +51,24 @@ public class ShoppingCartManager: ShoppingCart {
             orderItems.append(OrderItem(game: game, quantity: 1))
         }
         
-        print("----")
-        print("game: \(game.name)")
-        print("valor: \(game.price)")
-        print("frete: \(order.freight)")
-        print("total: \(order.total)")
-        print("----")
+        callUpdatedHandler()
     }
     
     public func remove(game: Game) {
         guard let index = orderItemIndex(at: game) else { return }
         orderItems.remove(at: index)
+        callUpdatedHandler()
     }
     
     public func change(quantity: Int, from game: Game) {
         guard let orderItem = orderItem(at: game) else { return }
         orderItem.quantity = quantity
+        callUpdatedHandler()
     }
     
     public func clear() {
         orderItems.removeAll()
+        callUpdatedHandler()
     }
     
     // MARK: - Private Methods
@@ -75,6 +79,10 @@ public class ShoppingCartManager: ShoppingCart {
     
     private func orderItemIndex(at game: Game) -> Int? {
         return orderItems.lastIndex(where: { $0.game == game })
+    }
+    
+    private func callUpdatedHandler() {
+        updatedOrderHandlers.forEach { $0() }
     }
     
 }

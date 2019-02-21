@@ -54,7 +54,13 @@ class GameDetailViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         setupControls()
+        setupActions()
         fetch()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        updateBadge()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -81,6 +87,18 @@ class GameDetailViewController: UIViewController {
     
     private func setupControls() {
         navigationItem.rightBarButtonItem = cartButton
+    }
+    
+    private func setupActions() {
+        viewModel.updatedOrderHandler = { [weak self] in
+            self?.updateBadge()
+        }
+    }
+    
+    private func updateBadge() {
+        let count = viewModel.totalItemsInCart
+        guard count > 0 else { return }
+        cartButton.updateBadge(number: count)
     }
     
     private func setupContent() {

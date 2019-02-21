@@ -15,5 +15,6 @@ public protocol ShoppingCart: class {
     func add(game: Game)
     func remove(game: Game)
     func change(quantity: Int, from game: Game)
+    func addOrderUpdatedHandler(_ handler: @escaping () -> Void)
     
 }
