@@ -92,6 +92,7 @@
 		E1F22769221A415300BEA577 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F22768221A415300BEA577 /* BaseRepository.swift */; };
 		E1F2276B221A430B00BEA577 /* PurchaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2276A221A430B00BEA577 /* PurchaseRepository.swift */; };
 		E1F2276D221A45BD00BEA577 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2276C221A45BD00BEA577 /* RepositoryProtocol.swift */; };
+		E1F260A2221E6F5100446FE7 /* ShoppingCartViewModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F260A1221E6F5100446FE7 /* ShoppingCartViewModelController.swift */; };
 		E1F9B6AD221E28AE00C5AF39 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F9B6AA221E286000C5AF39 /* ShoppingCart.swift */; };
 		E1F9B6AF221E297F00C5AF39 /* ShoppingCartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F9B6AE221E297F00C5AF39 /* ShoppingCartManager.swift */; };
 		E1F9B6B1221E30A200C5AF39 /* UniqueRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F9B6B0221E30A200C5AF39 /* UniqueRepresentable.swift */; };
@@ -267,6 +268,7 @@
 		E1F22768221A415300BEA577 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
 		E1F2276A221A430B00BEA577 /* PurchaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseRepository.swift; sourceTree = "<group>"; };
 		E1F2276C221A45BD00BEA577 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
+		E1F260A1221E6F5100446FE7 /* ShoppingCartViewModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewModelController.swift; sourceTree = "<group>"; };
 		E1F9B6AA221E286000C5AF39 /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
 		E1F9B6AE221E297F00C5AF39 /* ShoppingCartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartManager.swift; sourceTree = "<group>"; };
 		E1F9B6B0221E30A200C5AF39 /* UniqueRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueRepresentable.swift; sourceTree = "<group>"; };
@@ -395,6 +397,7 @@
 			children = (
 				E1ECCE26221B9CAD00DA6E85 /* GameListControllerViewModel.swift */,
 				E1C1F7BA221D6E9200F8CA34 /* GameDetailViewModelController.swift */,
+				E1F260A1221E6F5100446FE7 /* ShoppingCartViewModelController.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1153,6 +1156,7 @@
 			files = (
 				E16B4081221B7782006D2934 /* ShoppingCartCoordinator.swift in Sources */,
 				E17AB07F221AC6B20096AD76 /* GamesListViewController.swift in Sources */,
+				E1F260A2221E6F5100446FE7 /* ShoppingCartViewModelController.swift in Sources */,
 				E1C8CB6F221AB80400DD58EF /* Coordinator.swift in Sources */,
 				E1C8CB69221AB5FC00DD58EF /* GameDetailViewController.swift in Sources */,
 				E1ECCE27221B9CAD00DA6E85 /* GameListControllerViewModel.swift in Sources */,

@@ -54,8 +54,14 @@ extension ShoppingCartCoordinator: ShoppingCartCoordinatorDelegate {
     }
     
     func shoppingCardPurchaseCompleted() {
-        let coordinator = PurchaseCoordinator(presenter: navigation)
-        coordinator.start()
+        navigation.dismiss(animated: true) { [weak self] in
+            guard let self = self else { return }
+            
+            let coordinator = PurchaseCoordinator(presenter: self.presenter)
+            coordinator.start()
+            
+            self.presenter.navigationController?.popToRootViewController(animated: true)
+        }
     }
     
 }
