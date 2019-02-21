@@ -14,6 +14,8 @@ final class GameDetailViewModelController {
     
     // MARK: - Public Variables
     
+    private(set) var hasError: Bool = false
+    
     var updatedOrderHandler: (() -> Void)? {
         didSet {
             guard let handler = updatedOrderHandler else { return }
@@ -68,6 +70,8 @@ final class GameDetailViewModelController {
     // MARK: - Public Methods
     
     func fetch(_ completion: @escaping (EmptyResult) -> Void) {
+        hasError = false
+        
         repository.game(game) { [weak self] result in
             switch result {
             case .success(let game):
@@ -75,6 +79,7 @@ final class GameDetailViewModelController {
                 self?._isPriceHidden = false
                 completion(.success)
             case .failure(let error):
+                self?.hasError = true
                 completion(.failure(error))
             }
         }

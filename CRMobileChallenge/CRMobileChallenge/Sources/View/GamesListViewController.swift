@@ -60,6 +60,24 @@ class GamesListViewController: UIViewController {
         return UIBarButtonItem(image: UIImage(named: "icon-cart"), style: .done, target: self, action: #selector(showShoppingCart))
     }()
     
+    private lazy var noItemsEmptyState: EmptyState = {
+        return EmptyState(title: "Nada ainda =(", text: "Não temos nenhum jogo para você agora, volte mais tarde por favor.") { [weak self] in
+            guard let self = self else { return false }
+            return self.viewModel.isEmpty && !self.viewModel.hasError
+        }
+    }()
+    
+    private lazy var errorEmptyState: EmptyState = {
+        let action = EmptyStateAction(title: "Tentar novamente") { [weak self] in
+            self?.fetch()
+        }
+        
+        return EmptyState(title: "Aconteceu um erro =(", text: "Não foi possível carregar o jogos, tente mais tarde por favor.", action: action) { [weak self] in
+            guard let self = self else { return false }
+            return self.viewModel.hasError
+        }
+    }()
+    
     // MARK: Outlets
     
     @IBOutlet private weak var collectionView: UICollectionView!
@@ -93,6 +111,8 @@ class GamesListViewController: UIViewController {
     
     private func setupUI() {
         title = "Games"
+        
+        collectionView.emptyStates = [noItemsEmptyState, errorEmptyState]
     }
     
     private func setupControls() {
@@ -122,6 +142,8 @@ class GamesListViewController: UIViewController {
             case .failure(let error):
                 print(error.localizedDescription)
             }
+            
+            self.collectionView.reloadEmptyState()
         }
     }
     

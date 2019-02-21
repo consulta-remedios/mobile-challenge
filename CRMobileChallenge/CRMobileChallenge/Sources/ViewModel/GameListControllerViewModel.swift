@@ -16,6 +16,13 @@ final class GameListControllerViewModel {
     
     // MARK: - Public Variables
     
+    private(set) var hasError: Bool = false
+    private(set) var isLoading: Bool = true
+    
+    var isEmpty: Bool {
+        return games.count == 0 && !isLoading
+    }
+    
     var itemsCount: Int {
         return games.count
     }
@@ -51,13 +58,19 @@ final class GameListControllerViewModel {
     }
     
     func search(with term: String?, _ completion: @escaping (ResultValue<[Game]>) -> Void) {
-        repository.games { result in
+        isLoading = true
+        hasError = false
+        
+        repository.games { [weak self] result in
+            self?.isLoading = false
+            
             switch result {
             case .success(let games):
                 guard let term = term, !term.isEmpty else { return completion(.success(games)) }
                 let games = games.filter { ($0.name + $0.platform + String(describing: $0.score)).lowercased().contains(term.lowercased()) }
                 completion(.success(games))
             case .failure(let error):
+                self?.hasError = true
                 completion(.failure(error))
             }
         }

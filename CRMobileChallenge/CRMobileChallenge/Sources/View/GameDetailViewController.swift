@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Domain
+import Shared
 
 protocol GameDetailCoordinatorDelegate {
     
@@ -30,9 +31,26 @@ class GameDetailViewController: UIViewController {
         return UIBarButtonItem(image: UIImage(named: "icon-cart"), style: .done, target: self, action: #selector(showShoppingCart))
     }()
     
+    private lazy var errorEmptyState: EmptyState = {
+        let action = EmptyStateAction(title: "Tentar novamente") { [weak self] in
+            self?.fetch()
+        }
+        
+        let emptyState = EmptyState(title: "Aconteceu um erro =(", text: "Não foi possível carregar as informações do game, tente mais tarde por favor.", action: action) { [weak self] in
+            guard let self = self else { return false }
+            return self.viewModel.hasError
+        }
+        
+        emptyState.edgeInsets.top = coverContainerView.frame.height
+        emptyState.edgeInsets.bottom = priceView.frame.height
+        
+        return emptyState
+    }()
+    
     // MARK: Outlets
     
     @IBOutlet private weak var coverImage: UIImageView!
+    @IBOutlet private weak var coverContainerView: UIView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var priceLabel: UILabel!
@@ -74,6 +92,8 @@ class GameDetailViewController: UIViewController {
         priceView.layer.shadowRadius = 6.0
         priceView.layer.shadowOpacity = 0.4
         priceView.layer.masksToBounds = false
+        
+        view.emptyStates = [errorEmptyState]
     }
     
     private func setupControls() {
@@ -115,6 +135,8 @@ class GameDetailViewController: UIViewController {
             case .failure(let error):
                 print(error.localizedDescription)
             }
+            
+            self?.reloadEmptyState()
         }
     }
     
