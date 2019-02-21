@@ -27,7 +27,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lD5-Gc-MmW">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="550.5"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -143,8 +143,8 @@
                 <constraint firstItem="lD5-Gc-MmW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ImU-dW-qcU"/>
                 <constraint firstItem="aAC-Oz-IY8" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="QO7-uK-o2Y"/>
                 <constraint firstItem="aAC-Oz-IY8" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="SgZ-cT-fFB"/>
-                <constraint firstItem="lD5-Gc-MmW" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="T6R-7a-Qse"/>
                 <constraint firstItem="lD5-Gc-MmW" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="V1V-Ix-S7J"/>
+                <constraint firstItem="aAC-Oz-IY8" firstAttribute="top" secondItem="lD5-Gc-MmW" secondAttribute="bottom" id="bSH-bo-bff"/>
                 <constraint firstItem="aAC-Oz-IY8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kQI-dw-kRu"/>
                 <constraint firstItem="lD5-Gc-MmW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tfh-Wc-VLM"/>
             </constraints>
