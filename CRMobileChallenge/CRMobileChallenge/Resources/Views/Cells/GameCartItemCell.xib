@@ -131,6 +131,7 @@
                     <constraint firstItem="DBH-N8-ftB" firstAttribute="top" secondItem="cQR-8g-xX7" secondAttribute="top" constant="12" id="zF1-Ol-EYM"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <connections>
                 <outlet property="gameCoverImage" destination="DBH-N8-ftB" id="sSd-oz-lNi"/>
                 <outlet property="nameLabel" destination="Nyg-aH-HM1" id="tix-Bg-uXX"/>
