@@ -57,6 +57,7 @@ class GameDetailViewController: UIViewController {
     @IBOutlet private weak var freightLabel: UILabel!
     @IBOutlet private weak var priceView: UIView!
     @IBOutlet private weak var loaderView: UIActivityIndicatorView!
+    @IBOutlet private weak var iconImage: UIImageView!
     
     // MARK: - Life Cycle
     
@@ -93,6 +94,9 @@ class GameDetailViewController: UIViewController {
         priceView.layer.shadowRadius = 6.0
         priceView.layer.shadowOpacity = 0.4
         priceView.layer.masksToBounds = false
+        
+        iconImage.image = UIImage(named: "icon-frete")?.withRenderingMode(.alwaysTemplate)
+        iconImage.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
         
         view.emptyStates = [errorEmptyState]
     }
