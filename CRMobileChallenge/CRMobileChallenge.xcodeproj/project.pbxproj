@@ -43,6 +43,7 @@
 		E1C8CB6F221AB80400DD58EF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8CB5D221A4D8F00DD58EF /* Coordinator.swift */; };
 		E1C8CB7C221AB9C400DD58EF /* GamesListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8CB7B221AB9C400DD58EF /* GamesListCoordinator.swift */; };
 		E1C8CB80221AC53100DD58EF /* GamesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C8CB7F221AC53100DD58EF /* GamesListViewController.xib */; };
+		E1DA7BFC221EA7AD0008C1B5 /* ShoppingCartManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA7BFB221EA7AD0008C1B5 /* ShoppingCartManagerTests.swift */; };
 		E1ECCE25221B944000DA6E85 /* UIView+XIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECCE24221B944000DA6E85 /* UIView+XIB.swift */; };
 		E1ECCE27221B9CAD00DA6E85 /* GameListControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECCE26221B9CAD00DA6E85 /* GameListControllerViewModel.swift */; };
 		E1ECCE29221B9EBD00DA6E85 /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECCE28221B9EBD00DA6E85 /* Collection+Safe.swift */; };
@@ -231,6 +232,7 @@
 		E1C8CB6C221AB66A00DD58EF /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 		E1C8CB7B221AB9C400DD58EF /* GamesListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListCoordinator.swift; sourceTree = "<group>"; };
 		E1C8CB7F221AC53100DD58EF /* GamesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GamesListViewController.xib; sourceTree = "<group>"; };
+		E1DA7BFB221EA7AD0008C1B5 /* ShoppingCartManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartManagerTests.swift; sourceTree = "<group>"; };
 		E1ECCE24221B944000DA6E85 /* UIView+XIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+XIB.swift"; sourceTree = "<group>"; };
 		E1ECCE26221B9CAD00DA6E85 /* GameListControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListControllerViewModel.swift; sourceTree = "<group>"; };
 		E1ECCE28221B9EBD00DA6E85 /* Collection+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
@@ -638,6 +640,7 @@
 				E1F227172216CDBE00BEA577 /* OrderItemTests.swift */,
 				E1F2271C2217754D00BEA577 /* AddressTests.swift */,
 				E1F2272B22178FB300BEA577 /* CreditCardTests.swift */,
+				E1DA7BFB221EA7AD0008C1B5 /* ShoppingCartManagerTests.swift */,
 			);
 			path = DomainTests;
 			sourceTree = "<group>";
@@ -1352,6 +1355,7 @@
 			files = (
 				E1F2272C22178FB300BEA577 /* CreditCardTests.swift in Sources */,
 				E1F227182216CDBE00BEA577 /* OrderItemTests.swift in Sources */,
+				E1DA7BFC221EA7AD0008C1B5 /* ShoppingCartManagerTests.swift in Sources */,
 				E1F227162216C44900BEA577 /* OrderTests.swift in Sources */,
 				E1F2271D2217754D00BEA577 /* AddressTests.swift in Sources */,
 			);
