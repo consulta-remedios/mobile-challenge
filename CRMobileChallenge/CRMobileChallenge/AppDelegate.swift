@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         applicationCoordinator = ApplicationCoordinator(window: window)
         applicationCoordinator?.start()
+        StyleSheet.setup()
         return true
     }
 

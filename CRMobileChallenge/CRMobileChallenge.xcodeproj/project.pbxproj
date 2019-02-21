@@ -97,6 +97,7 @@
 		E1F260A6221E7E9600446FE7 /* GameCartItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1F260A5221E7E9600446FE7 /* GameCartItemCell.xib */; };
 		E1F260A8221E80BB00446FE7 /* GameCartItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F260A7221E80BB00446FE7 /* GameCartItemCell.swift */; };
 		E1F260AA221E891200446FE7 /* UIView+Feattures.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F260A9221E891200446FE7 /* UIView+Feattures.swift */; };
+		E1F260AC221E8D7400446FE7 /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F260AB221E8D7400446FE7 /* StyleSheet.swift */; };
 		E1F9B6AD221E28AE00C5AF39 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F9B6AA221E286000C5AF39 /* ShoppingCart.swift */; };
 		E1F9B6AF221E297F00C5AF39 /* ShoppingCartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F9B6AE221E297F00C5AF39 /* ShoppingCartManager.swift */; };
 		E1F9B6B1221E30A200C5AF39 /* UniqueRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F9B6B0221E30A200C5AF39 /* UniqueRepresentable.swift */; };
@@ -277,6 +278,7 @@
 		E1F260A5221E7E9600446FE7 /* GameCartItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCartItemCell.xib; sourceTree = "<group>"; };
 		E1F260A7221E80BB00446FE7 /* GameCartItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCartItemCell.swift; sourceTree = "<group>"; };
 		E1F260A9221E891200446FE7 /* UIView+Feattures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Feattures.swift"; sourceTree = "<group>"; };
+		E1F260AB221E8D7400446FE7 /* StyleSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSheet.swift; sourceTree = "<group>"; };
 		E1F9B6AA221E286000C5AF39 /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
 		E1F9B6AE221E297F00C5AF39 /* ShoppingCartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartManager.swift; sourceTree = "<group>"; };
 		E1F9B6B0221E30A200C5AF39 /* UniqueRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueRepresentable.swift; sourceTree = "<group>"; };
@@ -428,6 +430,7 @@
 			isa = PBXGroup;
 			children = (
 				E1ECCE30221C1A4700DA6E85 /* Extensions */,
+				E1F260AB221E8D7400446FE7 /* StyleSheet.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1187,6 +1190,7 @@
 				E1C8CB6E221AB80100DD58EF /* ApplicationCoordinator.swift in Sources */,
 				E1C8CB7C221AB9C400DD58EF /* GamesListCoordinator.swift in Sources */,
 				E1F260A8221E80BB00446FE7 /* GameCartItemCell.swift in Sources */,
+				E1F260AC221E8D7400446FE7 /* StyleSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
