@@ -3,6 +3,8 @@ platform :ios, '10.3'
 target 'CRMobileChallenge' do
   use_frameworks!
   
+  pod 'SwiftMessages'
+  
   target 'CRMobileChallengeTests' do
     inherit! :search_paths
     # Pods for testing

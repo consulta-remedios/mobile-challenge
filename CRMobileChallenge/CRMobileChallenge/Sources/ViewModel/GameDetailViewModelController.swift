@@ -49,10 +49,6 @@ final class GameDetailViewModelController {
         return _isPriceHidden
     }
     
-    var totalItemsInCart: Int {
-        return shoppingCart.order.count
-    }
-    
     // MARK: - Private Variables
     
     private let repository: GameRepositoryProtocol
