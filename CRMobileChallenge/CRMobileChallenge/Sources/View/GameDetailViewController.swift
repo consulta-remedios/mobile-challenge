@@ -77,6 +77,12 @@ class GameDetailViewController: UIViewController {
     private func setupUI() {
         title = viewModel.platform
         navigationItem.largeTitleDisplayMode = .never
+        
+        priceView.layer.shadowColor = UIColor.black.cgColor
+        priceView.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        priceView.layer.shadowRadius = 6.0
+        priceView.layer.shadowOpacity = 0.4
+        priceView.layer.masksToBounds = false
     }
     
     private func setupControls() {

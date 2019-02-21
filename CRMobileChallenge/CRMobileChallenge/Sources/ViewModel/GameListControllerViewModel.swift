@@ -50,7 +50,7 @@ final class GameListControllerViewModel {
         return games[indexPath.row]
     }
     
-    func search(with term: String?, _ completion: @escaping (Result<[Game]>) -> Void) {
+    func search(with term: String?, _ completion: @escaping (ResultValue<[Game]>) -> Void) {
         repository.games { result in
             switch result {
             case .success(let games):

@@ -10,11 +10,11 @@ import Shared
 
 public class GameRepository: BaseRepository, GameRepositoryProtocol {
     
-    public func games(_ completion: @escaping (Result<[Game]>) -> Void) {
+    public func games(_ completion: @escaping (ResultValue<[Game]>) -> Void) {
         manager.games(completion)
     }
     
-    public func game(_ game: Game, _ completion: @escaping (Result<Game>) -> Void) {
+    public func game(_ game: Game, _ completion: @escaping (ResultValue<Game>) -> Void) {
         manager.game(id: game.id, completion)
     }
     

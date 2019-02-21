@@ -14,7 +14,7 @@ end
 
 target 'Domain' do
   use_frameworks!
-
+  
   target 'DomainTests' do
     inherit! :search_paths
   end

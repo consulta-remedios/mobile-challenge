@@ -11,7 +11,7 @@ import Shared
 
 public protocol GameRepositoryProtocol: RepositoryProtocol {
     
-    func games(_ completion: @escaping (Result<[Game]>) -> Void)
-    func game(_ game: Game, _ completion: @escaping (Result<Game>) -> Void)
+    func games(_ completion: @escaping (ResultValue<[Game]>) -> Void)
+    func game(_ game: Game, _ completion: @escaping (ResultValue<Game>) -> Void)
     
 }

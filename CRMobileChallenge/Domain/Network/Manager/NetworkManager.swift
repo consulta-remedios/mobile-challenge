@@ -21,7 +21,7 @@ struct NetworkManager {
     
     // MARK: - Methods
     
-    func games(_ completion: @escaping (Result<[Game]>) -> Void) {
+    func games(_ completion: @escaping (ResultValue<[Game]>) -> Void) {
         router.request(.games) { (data: [Game]?, _, error: Error?) in
             if let error = error {
                 return completion(.failure(error))
@@ -33,7 +33,7 @@ struct NetworkManager {
         }
     }
     
-    func game(id: Int, _ completion: @escaping (Result<Game>) -> Void) {
+    func game(id: Int, _ completion: @escaping (ResultValue<Game>) -> Void) {
         router.request(.game(id: id)) { (data: Game?, _, error: Error?) in
             if let error = error {
                 return completion(.failure(error))

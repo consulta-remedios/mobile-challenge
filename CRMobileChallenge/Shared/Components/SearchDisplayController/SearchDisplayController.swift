@@ -10,7 +10,7 @@ import UIKit
 
 final public class SearchDisplayController<T: SearchDisplayItem>: UITableViewController, UISearchResultsUpdating {
     
-    public typealias SearchItemHandler = (_ term: String?, @escaping (_ searchHandler: Result<[T]>) -> Void) -> Void
+    public typealias SearchItemHandler = (_ term: String?, @escaping (_ searchHandler: ResultValue<[T]>) -> Void) -> Void
     public typealias DidSelectItemHandler = (_ item: T) -> Void
     
     // MARK: - Public Variables
