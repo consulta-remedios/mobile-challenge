@@ -39,6 +39,8 @@
 		4CE39AD3220A509200EF3B6C /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE39AD2220A509200EF3B6C /* MyTableViewController.swift */; };
 		4CEDA9CB2211131700D84EE6 /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEDA9C92211131700D84EE6 /* EmptyTableViewCell.swift */; };
 		4CEDA9CC2211131700D84EE6 /* EmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CEDA9CA2211131700D84EE6 /* EmptyTableViewCell.xib */; };
+		4CF4A243221E16FA00DEAA63 /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF4A241221E16FA00DEAA63 /* GameCollectionViewCell.swift */; };
+		4CF4A244221E16FA00DEAA63 /* GameCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CF4A242221E16FA00DEAA63 /* GameCollectionViewCell.xib */; };
 		B363D8A77D3F7BA099D7B912 /* Pods_my_games.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F1F5C2382A3CC7E245EB765 /* Pods_my_games.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +82,8 @@
 		4CE39AD2220A509200EF3B6C /* MyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
 		4CEDA9C92211131700D84EE6 /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
 		4CEDA9CA2211131700D84EE6 /* EmptyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyTableViewCell.xib; sourceTree = "<group>"; };
+		4CF4A241221E16FA00DEAA63 /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
+		4CF4A242221E16FA00DEAA63 /* GameCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCollectionViewCell.xib; sourceTree = "<group>"; };
 		8017341D5443CE214FDD6E3C /* Pods-my-games.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-my-games.debug.xcconfig"; path = "Pods/Target Support Files/Pods-my-games/Pods-my-games.debug.xcconfig"; sourceTree = "<group>"; };
 		A29C98B7B5CC5E3DC394EA7D /* Pods_my_movies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_my_movies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A90E669D11B840BFF8F54025 /* Pods-my-movies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-my-movies.release.xcconfig"; path = "Pods/Target Support Files/Pods-my-movies/Pods-my-movies.release.xcconfig"; sourceTree = "<group>"; };
@@ -321,6 +325,8 @@
 			children = (
 				4CEDA9C92211131700D84EE6 /* EmptyTableViewCell.swift */,
 				4CEDA9CA2211131700D84EE6 /* EmptyTableViewCell.xib */,
+				4CF4A241221E16FA00DEAA63 /* GameCollectionViewCell.swift */,
+				4CF4A242221E16FA00DEAA63 /* GameCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -417,6 +423,7 @@
 				4CEDA9CC2211131700D84EE6 /* EmptyTableViewCell.xib in Resources */,
 				4CD99EB72208E19E0072AF5D /* LaunchScreen.storyboard in Resources */,
 				4CD99EB42208E19E0072AF5D /* Assets.xcassets in Resources */,
+				4CF4A244221E16FA00DEAA63 /* GameCollectionViewCell.xib in Resources */,
 				4CE39AC6220A3BE200EF3B6C /* Localizable.strings in Resources */,
 				4CD99EEE2208F7490072AF5D /* HomeViewController.xib in Resources */,
 				4CD99EDF2208F1380072AF5D /* ModalViewController.xib in Resources */,
@@ -506,6 +513,7 @@
 				4CB93841220BCA4500070A42 /* ModalViewModel.swift in Sources */,
 				4CEDA9CB2211131700D84EE6 /* EmptyTableViewCell.swift in Sources */,
 				4CD99EE62208F1A90072AF5D /* HomeViewModel.swift in Sources */,
+				4CF4A243221E16FA00DEAA63 /* GameCollectionViewCell.swift in Sources */,
 				4CD99EAD2208E19C0072AF5D /* AppDelegate.swift in Sources */,
 				4CD99ECB2208E63F0072AF5D /* MyImageView.swift in Sources */,
 				4CB31F54221CDFF100D76CD1 /* GameRepository.swift in Sources */,

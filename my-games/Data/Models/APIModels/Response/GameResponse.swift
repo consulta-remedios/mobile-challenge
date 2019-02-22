@@ -9,5 +9,17 @@
 import Foundation
 
 class GameResponse: MyModel {
+    var id: NSNumber?
+    var name: String?
+    var desc: String?
+    var price: NSNumber?
+    var score: NSNumber?
+    var platform: String?
+    var image: String?
     
+    override public func propertyMapping() -> [(keyInObject: String?, keyInResource: String?)] {
+        return [(keyInObject: "desc",keyInResource: "description")]
+    }
 }
+
+

@@ -1,26 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="my_games" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="l0u-Mf-Vee" id="OhK-NC-fok"/>
+                <outlet property="searchTextView" destination="ct7-aa-yFN" id="s37-ly-rej"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ct7-aa-yFN">
+                    <rect key="frame" x="16" y="68" width="303" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-cart" translatesAutoresizingMaskIntoConstraints="NO" id="5dY-cI-Mnb">
+                    <rect key="frame" x="327" y="67" width="32" height="32"/>
+                    <color key="tintColor" red="0.10980392160000001" green="0.28235294119999998" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="XUK-1x-jfS"/>
+                        <constraint firstAttribute="width" constant="32" id="ov5-VB-PrB"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLV-kE-rU3">
+                    <rect key="frame" x="16" y="114" width="343" height="36"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <color key="textColor" name="MainColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="l0u-Mf-Vee">
+                    <rect key="frame" x="16" y="166" width="343" height="604"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xy7-Rz-qR0">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="l0u-Mf-Vee" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="1ID-KN-2zh"/>
+                <constraint firstItem="ct7-aa-yFN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="CQX-ZJ-RRO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gLV-kE-rU3" secondAttribute="trailing" constant="16" id="K3I-pJ-GNj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="l0u-Mf-Vee" secondAttribute="trailing" constant="16" id="M8r-C8-nK7"/>
+                <constraint firstItem="l0u-Mf-Vee" firstAttribute="top" secondItem="gLV-kE-rU3" secondAttribute="bottom" constant="16" id="N5y-GL-iXB"/>
+                <constraint firstItem="gLV-kE-rU3" firstAttribute="top" secondItem="ct7-aa-yFN" secondAttribute="bottom" constant="16" id="RHn-LP-FUC"/>
+                <constraint firstItem="gLV-kE-rU3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="bDB-TI-0n7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5dY-cI-Mnb" secondAttribute="trailing" constant="16" id="fcB-vj-dwI"/>
+                <constraint firstItem="ct7-aa-yFN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="jfF-xz-idu"/>
+                <constraint firstItem="5dY-cI-Mnb" firstAttribute="centerY" secondItem="ct7-aa-yFN" secondAttribute="centerY" id="oYo-rg-GiR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="l0u-Mf-Vee" secondAttribute="bottom" constant="8" id="uGu-Xp-dN2"/>
+                <constraint firstItem="5dY-cI-Mnb" firstAttribute="leading" secondItem="ct7-aa-yFN" secondAttribute="trailing" constant="8" id="zmc-ih-38G"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138.40000000000001" y="152.47376311844079"/>
         </view>
     </objects>
+    <resources>
+        <image name="icon-cart" width="28" height="28"/>
+        <namedColor name="MainColor">
+            <color red="0.082352941176470587" green="0.49411764705882355" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

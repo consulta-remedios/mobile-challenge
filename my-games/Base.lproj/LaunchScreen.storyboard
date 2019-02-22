@@ -19,18 +19,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="oTR-gj-Gnt">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="tru-59-Jc1">
                                 <rect key="frame" x="67.5" y="223.5" width="240" height="240"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="dJM-Xh-hy3"/>
-                                    <constraint firstAttribute="height" constant="240" id="jeN-jg-sQO"/>
+                                    <constraint firstAttribute="width" constant="240" id="XT1-e9-hIE"/>
+                                    <constraint firstAttribute="height" constant="240" id="pgh-hF-NXK"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" name="MainColor"/>
                         <constraints>
-                            <constraint firstItem="oTR-gj-Gnt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1Wu-oE-WD5"/>
-                            <constraint firstItem="oTR-gj-Gnt" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="uw5-W6-SbM"/>
+                            <constraint firstItem="tru-59-Jc1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dHh-P1-ads"/>
+                            <constraint firstItem="tru-59-Jc1" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="sZv-2A-whc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -43,7 +43,7 @@
     <resources>
         <image name="ic_logo" width="512" height="512"/>
         <namedColor name="MainColor">
-            <color red="0.54509803921568623" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.082352941176470587" green="0.49411764705882355" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

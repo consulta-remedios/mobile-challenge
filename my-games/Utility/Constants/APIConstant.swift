@@ -12,3 +12,5 @@ import Foundation
 let GAME_URL_BASE  = "https://game-checkout.herokuapp.com/"
 let GAME_ALL = "game"
 let GAME_DETAIL = "game/"
+
+
