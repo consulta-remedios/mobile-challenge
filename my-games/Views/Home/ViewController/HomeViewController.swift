@@ -56,7 +56,6 @@ class HomeViewController: UIViewController {
         }) { (message) in
                 self.hideLoader()
                 self.showModalDefault(title:"modal_title_error".localized, message: message, textButton: "Ok".localized)
-    
         }
     }
 }
@@ -70,5 +69,10 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let viewController = GameDetailViewController(with: self.viewModel.getIdGameSelected(index: indexPath.row))
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

@@ -23,3 +23,6 @@
 
 //Modal
 "modal_title_error" = "Ops!";
+
+//DETAIL
+"game_detail_title" = "Detalhe do Game";
