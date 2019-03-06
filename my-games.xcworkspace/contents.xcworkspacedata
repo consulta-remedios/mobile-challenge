@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:CartViewModel.swift">
+   </FileRef>
+   <FileRef
       location = "group:my-games.xcodeproj">
    </FileRef>
    <FileRef

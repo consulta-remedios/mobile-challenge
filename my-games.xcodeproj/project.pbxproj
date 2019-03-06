@@ -18,6 +18,8 @@
 		4CB31F56221CE01600D76CD1 /* GameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB31F55221CE01600D76CD1 /* GameResponse.swift */; };
 		4CB9383E220B82C300070A42 /* MyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9383D220B82C300070A42 /* MyResponse.swift */; };
 		4CB93841220BCA4500070A42 /* ModalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB93840220BCA4500070A42 /* ModalViewModel.swift */; };
+		4CD71FDC2227679B00932D62 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD71FDA2227679B00932D62 /* CartViewController.swift */; };
+		4CD71FDD2227679B00932D62 /* CartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD71FDB2227679B00932D62 /* CartViewController.xib */; };
 		4CD99EAD2208E19C0072AF5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD99EAC2208E19C0072AF5D /* AppDelegate.swift */; };
 		4CD99EB42208E19E0072AF5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD99EB32208E19E0072AF5D /* Assets.xcassets */; };
 		4CD99EB72208E19E0072AF5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD99EB52208E19E0072AF5D /* LaunchScreen.storyboard */; };
@@ -60,6 +62,8 @@
 		4CB31F55221CE01600D76CD1 /* GameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResponse.swift; sourceTree = "<group>"; };
 		4CB9383D220B82C300070A42 /* MyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyResponse.swift; sourceTree = "<group>"; };
 		4CB93840220BCA4500070A42 /* ModalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewModel.swift; sourceTree = "<group>"; };
+		4CD71FDA2227679B00932D62 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		4CD71FDB2227679B00932D62 /* CartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartViewController.xib; sourceTree = "<group>"; };
 		4CD99EA92208E19C0072AF5D /* my-games.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "my-games.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD99EAC2208E19C0072AF5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CD99EB32208E19E0072AF5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -172,6 +176,31 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		4CD71FD72227668F00932D62 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				4CD71FD92227678000932D62 /* ViewModel */,
+				4CD71FD82227677800932D62 /* ViewController */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		4CD71FD82227677800932D62 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4CD71FDA2227679B00932D62 /* CartViewController.swift */,
+				4CD71FDB2227679B00932D62 /* CartViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4CD71FD92227678000932D62 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		4CD99EA02208E19C0072AF5D = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +248,8 @@
 		4CD99EBF2208E3C10072AF5D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4C381FED221F8CA300C3378F /* GameDetail */,
+				4CD71FD72227668F00932D62 /* Cart */,
 				4CD99EDB2208F1170072AF5D /* Modal */,
 				4CD99ED32208EE070072AF5D /* Home */,
 			);
@@ -346,7 +377,6 @@
 		4CD99EDB2208F1170072AF5D /* Modal */ = {
 			isa = PBXGroup;
 			children = (
-				4C381FED221F8CA300C3378F /* GameDetail */,
 				4CB93842220BD2D600070A42 /* ViewController */,
 				4CB9383F220BCA3400070A42 /* ViewModel */,
 			);
@@ -454,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CEDA9CC2211131700D84EE6 /* EmptyTableViewCell.xib in Resources */,
+				4CD71FDD2227679B00932D62 /* CartViewController.xib in Resources */,
 				4C381FF3221F8CEE00C3378F /* GameDetailViewController.xib in Resources */,
 				4CD99EB72208E19E0072AF5D /* LaunchScreen.storyboard in Resources */,
 				4CD99EB42208E19E0072AF5D /* Assets.xcassets in Resources */,
@@ -564,6 +595,7 @@
 				4CD99ED22208E7960072AF5D /* MyViewController.swift in Sources */,
 				4CE39AD1220A4FE600EF3B6C /* MyTableView.swift in Sources */,
 				4CB31F56221CE01600D76CD1 /* GameResponse.swift in Sources */,
+				4CD71FDC2227679B00932D62 /* CartViewController.swift in Sources */,
 				4C381FF2221F8CEE00C3378F /* GameDetailViewController.swift in Sources */,
 				4CE39ACF220A4C0E00EF3B6C /* MyView.swift in Sources */,
 				4CE39AD3220A509200EF3B6C /* MyTableViewController.swift in Sources */,
