@@ -19,15 +19,14 @@ class HomeViewModel {
     let gamesResponse = BehaviorRelay<[GameResponse]>(value: [])
     private let GAME_COLLECTION_VIEW_CELL = "GameCollectionViewCell"
     
-    //MARK: - Variables
-    var localDataExist = false
-    
     //MARK: - Getters
     func getCellCollectionIdentifier() -> String {return self.GAME_COLLECTION_VIEW_CELL}
     
     func getTitle() -> String {
         return self.title
     }
+    
+    func getIdGameSelected(index: Int) -> String { return self.gamesResponse.value[index].id?.stringValue ?? "" }
     
     //MARK: - Setters
    
