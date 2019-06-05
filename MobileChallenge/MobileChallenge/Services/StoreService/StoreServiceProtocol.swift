@@ -20,5 +20,10 @@ protocol StoreServiceProtocol {
     // MARK: Imperatives
 
     /// Fetches the items from the store, and, in case of success, head the results to the callback closure.
-    func fetchItems(_ completionHandler: @escaping (Data?, URLSessionTask.TaskError?) -> Void)
+    /// - Parameter completionHandler: the handler called when the request finishes.
+    func requestItems(_ completionHandler: @escaping (Data?, URLSessionTask.TaskError?) -> Void)
+
+    /// Fetches the details of an specific item by passing its id.
+    /// - Parameter completionHandler: the handler called when the request finishes.
+    func requestItemDetails(usingId id: String, andCompletionHandler handler: @escaping (Date?, URLSessionTask.TaskError?) -> Void)
 }

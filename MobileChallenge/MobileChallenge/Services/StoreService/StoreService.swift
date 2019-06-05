@@ -20,7 +20,7 @@ struct StoreService: StoreServiceProtocol {
 
     // MARK: Imperatives
 
-    func fetchItems(_ completionHandler: @escaping (Data?, URLSessionTask.TaskError?) -> Void) {
+    func requestItems(_ completionHandler: @escaping (Data?, URLSessionTask.TaskError?) -> Void) {
         guard let gamesUrl = URL(string: "/game", relativeTo: baseUrl) else {
             preconditionFailure("The URL must be properly configured.")
         }
@@ -36,6 +36,25 @@ struct StoreService: StoreServiceProtocol {
             }
 
 
+            // Get the results.
+            completionHandler(data, nil)
+        }
+
+        fetchTask.resume()
+    }
+
+    func requestItemDetails(usingId id: String, andCompletionHandler handler: @escaping (Date?, URLSessionTask.TaskError?) -> Void) {
+        let detailsUrl = baseUrl.appendingPathComponent("game").appendingPathComponent(id)
+
+        // Configure the data task.
+        let fetchTask = apiClient.makeConfiguredGETTask(forResourceAtUrl: detailsUrl) { data, error in
+            print(data)
+            print(error)
+
+            if let data = data {
+                let jsonText = String(data: data, encoding: .utf8)
+                print(jsonText ?? "None returned.")
+            }
             // Get the results.
             // Call the callback.
         }

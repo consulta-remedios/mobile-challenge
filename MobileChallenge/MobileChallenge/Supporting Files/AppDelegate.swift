@@ -16,8 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let service = StoreService(apiClient: APIClient(session: .shared))
-        service.fetchItems { data, error in
-            
+        service.requestItems { data, error in
+            service.requestItemDetails(usingId: "312") { data, error in
+
+            }
         }
 
         // Override point for customization after application launch.
