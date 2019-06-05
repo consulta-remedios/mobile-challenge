@@ -10,7 +10,7 @@ import UIKit
 
 protocol GameCellPresenterView: AnyObject {
     func displayView(name: String)
-    func displayView(price: Double)
+    func displayView(price: String)
     func displayView(platform: String)
     func displayView(image: String)
 }

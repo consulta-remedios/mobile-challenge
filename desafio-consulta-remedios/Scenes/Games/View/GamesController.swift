@@ -31,25 +31,30 @@ class GamesController: UIViewController {
         controller.setBackground(.mainGraySearchBar)
         return controller
     }()
+    var presenter: GamesPresenter?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.titleView = searchController.searchBar
         navigationController?.navigationBar.hideHairline()
+        presenter?.present()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {}
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        presenter?.prepare(for: segue, sender: sender)
+    }
 }
 
 extension GamesController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return presenter?.games.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: GameCell.identifier,
             for: indexPath) as? GameCell else { return UICollectionViewCell() }
+        presenter?.configure(for: indexPath.row, cell)
         return cell
     }
     
@@ -59,5 +64,25 @@ extension GamesController: UICollectionViewDelegate, UICollectionViewDataSource 
 }
 
 extension GamesController: GamesPresenterView {
+    func startLoading(text: String, backgroundColor: UIColor) {
+        view.displayLoadingIndicator(text: text, backgroundColor: backgroundColor)
+    }
     
+    func stopLoading() {
+        view.dismissLoadingIndicator()
+    }
+    
+    func reloadData() {
+        collectionView.reloadData()
+    }
+    
+    func showMessage(icon: Icon, text: String, sizeIcon: Int, backgroundColor: UIColor, isButton: Bool, titleButton: String) {
+        view.displayMessageView(icon: icon, text: text, sizeIcon: sizeIcon, backgroundColor: backgroundColor, isButton: isButton, titleButton: titleButton) { [weak self] in
+            self?.presenter?.present()
+        }
+    }
+    
+    func hideMessage() {
+        view.dismissMessageView()
+    }
 }

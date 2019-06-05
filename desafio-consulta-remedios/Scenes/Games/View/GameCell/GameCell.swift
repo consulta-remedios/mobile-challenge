@@ -27,8 +27,8 @@ extension GameCell: GameCellPresenterView {
         nameLabel.text = name
     }
     
-    func displayView(price: Double) {
-        priceLabel.text = "R$ " + String(price)
+    func displayView(price: String) {
+        priceLabel.text = price
     }
     
     func displayView(platform: String) {

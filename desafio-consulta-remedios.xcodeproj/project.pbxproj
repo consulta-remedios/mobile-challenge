@@ -26,6 +26,14 @@
 		8EE2F48122A877B200B41744 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2F48022A877B200B41744 /* Game.swift */; };
 		8EE2F48422A8781000B41744 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2F48322A8781000B41744 /* GameService.swift */; };
 		8EE2F48722A8793E00B41744 /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2F48622A8793E00B41744 /* GameRepository.swift */; };
+		8EE2F48A22A87AED00B41744 /* GamesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2F48922A87AED00B41744 /* GamesPresenter.swift */; };
+		8EE2F48C22A87B0C00B41744 /* GamesPresenterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2F48B22A87B0C00B41744 /* GamesPresenterRouter.swift */; };
+		8EE2F49122A87B9900B41744 /* LoadingViewOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EE2F48F22A87B9900B41744 /* LoadingViewOverlay.xib */; };
+		8EE2F49222A87B9900B41744 /* LoadingViewOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2F49022A87B9900B41744 /* LoadingViewOverlay.swift */; };
+		8EE2F49422A87BB200B41744 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2F49322A87BB200B41744 /* UIView+Extension.swift */; };
+		8EE2F49722A87C5E00B41744 /* ARMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2F49622A87C5E00B41744 /* ARMessageView.swift */; };
+		8EE2F49922A87CC500B41744 /* SwinjectStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2F49822A87CC500B41744 /* SwinjectStoryboard+Extension.swift */; };
+		8EE2F49B22A87F0900B41744 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2F49A22A87F0800B41744 /* Double+Extension.swift */; };
 		BED17E64F60EFE9E36161BED /* Pods_desafio_consulta_remediosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38805798E66215C268A74F44 /* Pods_desafio_consulta_remediosUITests.framework */; };
 		F32BA080C62C9270542D1E38 /* Pods_desafio_consulta_remediosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6483AA9199CB257D92C026B1 /* Pods_desafio_consulta_remediosTests.framework */; };
 /* End PBXBuildFile section */
@@ -78,6 +86,14 @@
 		8EE2F48022A877B200B41744 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		8EE2F48322A8781000B41744 /* GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
 		8EE2F48622A8793E00B41744 /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
+		8EE2F48922A87AED00B41744 /* GamesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesPresenter.swift; sourceTree = "<group>"; };
+		8EE2F48B22A87B0C00B41744 /* GamesPresenterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesPresenterRouter.swift; sourceTree = "<group>"; };
+		8EE2F48F22A87B9900B41744 /* LoadingViewOverlay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingViewOverlay.xib; sourceTree = "<group>"; };
+		8EE2F49022A87B9900B41744 /* LoadingViewOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewOverlay.swift; sourceTree = "<group>"; };
+		8EE2F49322A87BB200B41744 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		8EE2F49622A87C5E00B41744 /* ARMessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARMessageView.swift; sourceTree = "<group>"; };
+		8EE2F49822A87CC500B41744 /* SwinjectStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		8EE2F49A22A87F0800B41744 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		BFD776F31D67C179585719F8 /* Pods_desafio_consulta_remedios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafio_consulta_remedios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2EAEF703F0B88B2DD4F5313 /* Pods-desafio-consulta-remediosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-consulta-remediosTests.debug.xcconfig"; path = "Target Support Files/Pods-desafio-consulta-remediosTests/Pods-desafio-consulta-remediosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F344D864E821FD69CA30676A /* Pods-desafio-consulta-remedios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-consulta-remedios.debug.xcconfig"; path = "Target Support Files/Pods-desafio-consulta-remedios/Pods-desafio-consulta-remedios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -199,6 +215,7 @@
 		8EE2F45E22A86F2200B41744 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				8EE2F48822A87AD200B41744 /* Presenter */,
 				8EE2F45F22A86F2800B41744 /* View */,
 			);
 			path = Games;
@@ -237,6 +254,7 @@
 		8EE2F47422A8726000B41744 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8EE2F48D22A87B9000B41744 /* Views */,
 				8EE2F47522A8726800B41744 /* Extensions */,
 			);
 			path = Common;
@@ -248,6 +266,9 @@
 				8EE2F47622A8727A00B41744 /* UIColor+Extension.swift */,
 				8EE2F47722A8727A00B41744 /* UINavigationBar+Extension.swift */,
 				8EE2F47822A8727A00B41744 /* UISearchController+Extension.swift */,
+				8EE2F49322A87BB200B41744 /* UIView+Extension.swift */,
+				8EE2F49822A87CC500B41744 /* SwinjectStoryboard+Extension.swift */,
+				8EE2F49A22A87F0800B41744 /* Double+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -284,6 +305,41 @@
 				8EE2F48622A8793E00B41744 /* GameRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		8EE2F48822A87AD200B41744 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8EE2F48922A87AED00B41744 /* GamesPresenter.swift */,
+				8EE2F48B22A87B0C00B41744 /* GamesPresenterRouter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8EE2F48D22A87B9000B41744 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8EE2F49522A87C5E00B41744 /* ARMessageView */,
+				8EE2F48E22A87B9900B41744 /* Loading */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8EE2F48E22A87B9900B41744 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				8EE2F48F22A87B9900B41744 /* LoadingViewOverlay.xib */,
+				8EE2F49022A87B9900B41744 /* LoadingViewOverlay.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		8EE2F49522A87C5E00B41744 /* ARMessageView */ = {
+			isa = PBXGroup;
+			children = (
+				8EE2F49622A87C5E00B41744 /* ARMessageView.swift */,
+			);
+			path = ARMessageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,6 +451,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EE2F46122A86F3B00B41744 /* Games.storyboard in Resources */,
+				8EE2F49122A87B9900B41744 /* LoadingViewOverlay.xib in Resources */,
 				8EE2F47122A8711D00B41744 /* GameCell.xib in Resources */,
 				8E0C6F3F22A5EC0700D93EE5 /* LaunchScreen.storyboard in Resources */,
 				8E0C6F3C22A5EC0700D93EE5 /* Assets.xcassets in Resources */,
@@ -524,13 +581,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EE2F48422A8781000B41744 /* GameService.swift in Sources */,
+				8EE2F48C22A87B0C00B41744 /* GamesPresenterRouter.swift in Sources */,
+				8EE2F49422A87BB200B41744 /* UIView+Extension.swift in Sources */,
 				8EE2F47922A8727A00B41744 /* UIColor+Extension.swift in Sources */,
+				8EE2F49722A87C5E00B41744 /* ARMessageView.swift in Sources */,
 				8EE2F48122A877B200B41744 /* Game.swift in Sources */,
 				8E0C6F3522A5EC0600D93EE5 /* AppDelegate.swift in Sources */,
 				8EE2F47222A8711D00B41744 /* GameCellPresenterView.swift in Sources */,
 				8EE2F47B22A8727A00B41744 /* UISearchController+Extension.swift in Sources */,
+				8EE2F49922A87CC500B41744 /* SwinjectStoryboard+Extension.swift in Sources */,
 				8EE2F47322A8711D00B41744 /* GamesViewFlowLayout.swift in Sources */,
+				8EE2F49B22A87F0900B41744 /* Double+Extension.swift in Sources */,
 				8EE2F46322A86FB000B41744 /* GamesController.swift in Sources */,
+				8EE2F48A22A87AED00B41744 /* GamesPresenter.swift in Sources */,
+				8EE2F49222A87B9900B41744 /* LoadingViewOverlay.swift in Sources */,
 				8EE2F47A22A8727A00B41744 /* UINavigationBar+Extension.swift in Sources */,
 				8EE2F48722A8793E00B41744 /* GameRepository.swift in Sources */,
 				8EE2F47022A8711D00B41744 /* GameCell.swift in Sources */,
@@ -703,7 +767,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DZ369WUPH8;
+				DEVELOPMENT_TEAM = FV334A5ZR5;
 				INFOPLIST_FILE = "desafio-consulta-remedios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -722,7 +786,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DZ369WUPH8;
+				DEVELOPMENT_TEAM = FV334A5ZR5;
 				INFOPLIST_FILE = "desafio-consulta-remedios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
