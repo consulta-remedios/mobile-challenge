@@ -25,5 +25,8 @@ protocol StoreServiceProtocol {
 
     /// Fetches the details of an specific item by passing its id.
     /// - Parameter completionHandler: the handler called when the request finishes.
-    func requestItemDetails(usingId id: String, andCompletionHandler handler: @escaping (Data?, URLSessionTask.TaskError?) -> Void)
+    func requestItemDetails(
+        usingId identifier: String,
+        andCompletionHandler handler: @escaping (Data?, URLSessionTask.TaskError?) -> Void
+    )
 }
