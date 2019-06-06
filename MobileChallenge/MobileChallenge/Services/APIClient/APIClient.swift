@@ -15,10 +15,13 @@ struct APIClient: APIClientProtocol {
 
     var session: URLSession
 
+    var headers: [(key: String, value: String)]
+
     // MARK: Initializers
 
-    init(session: URLSession) {
+    init(session: URLSession, headers: [(key: String, value: String)]) {
         self.session = session
+        self.headers = headers
     }
 
     // MARK: Imperatives
@@ -27,11 +30,7 @@ struct APIClient: APIClientProtocol {
         forResourceAtUrl url: URL,
         withCompletionHandler handler: @escaping (Data?, URLSessionTask.TaskError?) -> Void
         ) -> URLSessionDataTask {
-
-        var request = URLRequest(url: url)
-        request.addValue("QceNFo1gHd09MJDzyswNqzStlxYGBzUG", forHTTPHeaderField: "Token")
-
-        return session.dataTask(with: request) { data, response, error in
+        return session.dataTask(with: makeBaseRequest(url: url)) { data, response, error in
             guard error == nil, data != nil else {
                 handler(nil, .connection)
                 return
@@ -52,4 +51,16 @@ struct APIClient: APIClientProtocol {
     }
 
     // TODO: Add post task factory method.
+
+    /// Builds a configured URLRequest with the provided HTTP headers.
+    /// - Parameter url: the url of the resource.
+    private func makeBaseRequest(url: URL) -> URLRequest {
+        var request = URLRequest(url: url)
+
+        headers.forEach {
+            request.setValue($0.value, forHTTPHeaderField: $0.key)
+        }
+
+        return request
+    }
 }

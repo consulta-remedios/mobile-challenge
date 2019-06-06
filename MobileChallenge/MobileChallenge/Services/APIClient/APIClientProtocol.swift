@@ -16,9 +16,13 @@ protocol APIClientProtocol {
     /// The URLSession used to create the tasks.
     var session: URLSession { get }
 
+    /// The header values that should go in every session tasks.
+    var headers: [(key: String, value: String)] { get set }
+
     // MARK: Initializers
 
-    init(session: URLSession)
+    /// Given a session and any headers that might go into the data tasks, builds an APIClient.
+    init(session: URLSession, headers: [(key: String, value: String)])
 
     // MARK: Imperatives
 
