@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47CCFB3622A748FA0024D50E /* StoreService+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CCFB3522A748FA0024D50E /* StoreService+Constants.swift */; };
 		47F9D61222A605100069FECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9D61122A605100069FECA /* AppDelegate.swift */; };
 		47F9D61722A605100069FECA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47F9D61522A605100069FECA /* Main.storyboard */; };
 		47F9D61C22A605160069FECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47F9D61B22A605160069FECA /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		47CCFB3522A748FA0024D50E /* StoreService+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoreService+Constants.swift"; sourceTree = "<group>"; };
 		47F9D60E22A605100069FECA /* MobileChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47F9D61122A605100069FECA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47F9D61622A605100069FECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -137,19 +139,19 @@
 		47F9D63822A605970069FECA /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				47F9D63922A607F90069FECA /* APIClient */,
 				47F9D63E22A608C20069FECA /* StoreService */,
-				47F9D63922A607F90069FECA /* APIService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		47F9D63922A607F90069FECA /* APIService */ = {
+		47F9D63922A607F90069FECA /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
 				47F9D63A22A608300069FECA /* APIClient.swift */,
 				47F9D63B22A608300069FECA /* APIClientProtocol.swift */,
 			);
-			path = APIService;
+			path = APIClient;
 			sourceTree = "<group>";
 		};
 		47F9D63E22A608C20069FECA /* StoreService */ = {
@@ -157,6 +159,7 @@
 			children = (
 				47F9D63F22A608F10069FECA /* StoreServiceProtocol.swift */,
 				47F9D64122A60CF40069FECA /* StoreService.swift */,
+				47CCFB3522A748FA0024D50E /* StoreService+Constants.swift */,
 			);
 			path = StoreService;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				47F9D63C22A608300069FECA /* APIClient.swift in Sources */,
 				47F9D63D22A608300069FECA /* APIClientProtocol.swift in Sources */,
 				47F9D64222A60CF40069FECA /* StoreService.swift in Sources */,
+				47CCFB3622A748FA0024D50E /* StoreService+Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
