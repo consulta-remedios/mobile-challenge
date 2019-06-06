@@ -45,6 +45,10 @@ class GamesPresenter {
         cell.displayView(image: games[row].image)
     }
     
+    func onDidSelect(for row: Int) {
+        router.onDetails(game: games[row])
+    }
+    
     func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         router.prepare(for: segue, sender: sender)
     }

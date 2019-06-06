@@ -48,11 +48,20 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="fWQ-3W-oPS" id="T2B-L3-dPY"/>
+                        <segue destination="0hf-ta-2Ew" kind="show" identifier="gameDetailsSegue" id="ETT-wB-izH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CTd-i7-dVx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="981.60000000000002" y="48.125937031484263"/>
+        </scene>
+        <!--GameDetails-->
+        <scene sceneID="Ubm-9h-Oom">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GameDetails" id="0hf-ta-2Ew" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="laa-cU-4IP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1596" y="48"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kjd-B2-bCj">

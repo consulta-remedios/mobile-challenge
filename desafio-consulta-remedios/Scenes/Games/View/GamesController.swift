@@ -59,7 +59,7 @@ extension GamesController: UICollectionViewDelegate, UICollectionViewDataSource 
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.row)
+        presenter?.onDidSelect(for: indexPath.row)
     }
 }
 

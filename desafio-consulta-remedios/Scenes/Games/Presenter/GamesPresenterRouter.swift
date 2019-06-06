@@ -11,7 +11,7 @@ import UIKit
 class GamesPresenterRouter {
     struct Constants {
         struct Segue {
-            static let ShowDetail = "gameDetailSegue"
+            static let ShowDetail = "gameDetailsSegue"
             static let ShowShoppingCart = "shoppingCartSegue"
         }
     }
@@ -20,6 +20,10 @@ class GamesPresenterRouter {
     
     init(viewController: GamesController) {
         self.viewController = viewController
+    }
+    
+    func onDetails(game: Game) {
+        viewController?.performSegue(withIdentifier: Constants.Segue.ShowDetail, sender: game)
     }
     
     func prepare(for segue: UIStoryboardSegue, sender: Any?) { }

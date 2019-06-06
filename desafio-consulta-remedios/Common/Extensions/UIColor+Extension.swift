@@ -26,4 +26,6 @@ extension UIColor {
     }
     
     static let mainGraySearchBar = UIColor(hexString: "E0E0E1")!
+    static let mainGreen = UIColor(hexString: "4CD964")!
+    static let mainBlue = UIColor(hexString: "3395FF")!
 }
