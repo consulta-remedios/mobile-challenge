@@ -10,7 +10,7 @@ import Moya
 
 protocol GameRepositoryProtocol {
     func fetchAll(response: @escaping ([Game]?, String) -> Void)
-    func fetchId(id: NSInteger, response: @escaping (Game?, String) -> Void)
+    func fetchId(id: NSInteger, response: @escaping (GameDetail?, String) -> Void)
 }
 
 struct GameRepository: GameRepositoryProtocol {
@@ -37,14 +37,14 @@ struct GameRepository: GameRepositoryProtocol {
         }
     }
     
-    func fetchId(id: NSInteger, response: @escaping (Game?, String) -> Void) {
+    func fetchId(id: NSInteger, response: @escaping (GameDetail?, String) -> Void) {
         provider.request(.getGameDetail(id: id)) { (result) in
             switch result {
             case .success(let res):
                 let decoder = JSONDecoder()
                 do {
-                    let games = try decoder.decode(Game.self, from: res.data)
-                    response(games, "Success! We were able to decode an answer!")
+                    let game = try decoder.decode(GameDetail.self, from: res.data)
+                    response(game, "Success! We were able to decode an answer!")
                 } catch {
                     response(nil, "We could not decode the response!")
                 }

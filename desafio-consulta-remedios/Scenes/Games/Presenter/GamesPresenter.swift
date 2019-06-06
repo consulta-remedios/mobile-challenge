@@ -9,12 +9,9 @@
 import UIKit
 
 class GamesPresenter {
-    
     private(set) weak var view: GamesPresenterView?
     private(set) var router: GamesPresenterRouter
-    
     var gamesRepository: GameRepositoryProtocol?
-    
     var games: [Game] = []
     
     init(view: GamesPresenterView, router: GamesPresenterRouter) {
@@ -30,7 +27,12 @@ class GamesPresenter {
             self?.view?.stopLoading()
             self?.view?.hideMessage()
             guard let games = response else {
-                self?.view?.showMessage(icon: .notFound, text: message, sizeIcon: 100, backgroundColor: .white, isButton: true, titleButton: "RELOAD")
+                self?.view?.showMessage(icon: .notFound,
+                                        text: message,
+                                        sizeIcon: 100,
+                                        backgroundColor: .white,
+                                        isButton: true,
+                                        titleButton: "RELOAD")
                 return
             }
             self?.games = games

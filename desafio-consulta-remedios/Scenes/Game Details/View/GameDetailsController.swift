@@ -27,42 +27,45 @@ class GameDetailsController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var freightLabel: UILabel!
+    
+    var presenter: GameDetailsPresenter?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        descriptionLabel.addTrailing(with: "\n", moreText: "Leia mais", moreTextColor: .mainBlue)
         descriptionLabel.addTapGestureRecognizer { [weak self] in
-            self?.moreTapped()
+            self?.presenter?.onMoreDescriptionTapped()
         }
-        freightLabel.addColor(with: "Frete:", color: .mainGreen)
+        presenter?.present()
     }
     
-    func moreTapped() {
-        descriptionLabel.text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-    }
-    
-    @IBAction func addInShoppingCartButtonTapped(_ sender: UIButton) {
-        print("ADD ITEM IN SHOPPING CART")
+    @IBAction func addGameInShoppingCartButtonTapped(_ sender: UIButton) {
+        presenter?.onAddGameInShoppingCartButtonTapped()
     }
     
     @IBAction func closeButtonTapped(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        presenter?.onCloseButtonTapped()
     }
     
     @IBAction func showShoppingCartButtonTapped(_ sender: UIBarButtonItem) {
-        print("SHOW SHOPPING CART")
+        presenter?.onShowShoppingCartButtonTapped()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        presenter?.prepare(for: segue, sender: sender)
     }
 }
 
 extension GameDetailsController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return presenter?.images.count ?? 0
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: PageCell.identifier,
             for: indexPath) as? PageCell else { return UICollectionViewCell() }
+        presenter?.configure(for: indexPath.row, cell)
         return cell
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -72,5 +75,70 @@ extension GameDetailsController: UICollectionViewDelegate, UICollectionViewDataS
         if let newPage = collectionView.indexPathForItem(at: center) {
             pageControl.currentPage = newPage.row
         }
+    }
+}
+
+extension GameDetailsController: GameDetailsPresenterView {
+    func startLoading(text: String, backgroundColor: UIColor) {
+        view.displayLoadingIndicator(text: text, backgroundColor: backgroundColor)
+    }
+    
+    func stopLoading() {
+        view.dismissLoadingIndicator()
+    }
+    
+    func reloadData() {
+        collectionView.reloadData()
+    }
+    
+    func showMessage(icon: Icon,
+                     text: String,
+                     sizeIcon: Int,
+                     backgroundColor: UIColor,
+                     isButton: Bool,
+                     titleButton: String) {
+        view.displayMessageView(icon: icon,
+                                text: text,
+                                sizeIcon: sizeIcon,
+                                backgroundColor: backgroundColor,
+                                isButton: isButton,
+                                titleButton: titleButton) { [weak self] in
+            self?.presenter?.present()
+        }
+    }
+    
+    func hideMessage() {
+        view.dismissMessageView()
+    }
+    
+    func displayView(numberPages: Int) {
+        pageControl.numberOfPages = numberPages
+    }
+    
+    func displayView(price: String) {
+        priceLabel.text = price
+    }
+    
+    func displayView(title: String) {
+        self.title = title
+    }
+    
+    func displayView(description: String, isMore: Bool) {
+        descriptionLabel.text = description
+        if isMore {
+            descriptionLabel.addTrailing(
+                with: "\n",
+                moreText: "Leia mais",
+                moreTextColor: .mainBlue)
+        }
+    }
+    
+    func displayView(name: String) {
+        nameLabel.text = name
+    }
+    
+    func displayView(freight: String) {
+        freightLabel.text = freight
+        freightLabel.addColor(with: "Frete:", color: .mainGreen)
     }
 }

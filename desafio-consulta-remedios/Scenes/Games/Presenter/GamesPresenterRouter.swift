@@ -26,5 +26,12 @@ class GamesPresenterRouter {
         viewController?.performSegue(withIdentifier: Constants.Segue.ShowDetail, sender: game)
     }
     
-    func prepare(for segue: UIStoryboardSegue, sender: Any?) { }
+    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.Segue.ShowDetail,
+            let destinationNavigationController = segue.destination as? UINavigationController,
+            let destination = destinationNavigationController.topViewController as? GameDetailsController,
+            let game = sender as? Game {
+            destination.presenter?.game = game
+        }
+    }
 }

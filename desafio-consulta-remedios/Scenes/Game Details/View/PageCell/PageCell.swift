@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PageCell: UICollectionViewCell {
     class var identifier: String { return String(describing: type(of: PageCell.self)) }
@@ -15,5 +16,12 @@ class PageCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+}
+
+extension PageCell: PageCellPresenterView {
+    func displayView(image: String) {
+        guard let url = URL(string: image) else { return }
+        gameImageView.kf.setImage(with: url)
     }
 }

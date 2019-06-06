@@ -20,5 +20,10 @@ extension SwinjectStoryboard {
             presenter.gamesRepository = resolver.resolve(GameRepositoryProtocol.self)
             controller.presenter = presenter
         }
+        defaultContainer.storyboardInitCompleted(GameDetailsController.self) { resolver, controller in
+            let presenter = GameDetailsPresenter(view: controller.self, router: GameDetailsPresenterRouter(viewController: controller.self))
+            presenter.gamesRepository = resolver.resolve(GameRepositoryProtocol.self)
+            controller.presenter = presenter
+        }
     }
 }
