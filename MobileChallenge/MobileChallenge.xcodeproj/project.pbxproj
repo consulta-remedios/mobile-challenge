@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47CCFB3622A748FA0024D50E /* StoreService+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CCFB3522A748FA0024D50E /* StoreService+Constants.swift */; };
 		47F9D61222A605100069FECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9D61122A605100069FECA /* AppDelegate.swift */; };
 		47F9D61722A605100069FECA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47F9D61522A605100069FECA /* Main.storyboard */; };
 		47F9D61C22A605160069FECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47F9D61B22A605160069FECA /* Assets.xcassets */; };
 		47F9D61F22A605170069FECA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47F9D61D22A605160069FECA /* LaunchScreen.storyboard */; };
 		47F9D62A22A605170069FECA /* MobileChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9D62922A605170069FECA /* MobileChallengeTests.swift */; };
+		47F9D63C22A608300069FECA /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9D63A22A608300069FECA /* APIClient.swift */; };
+		47F9D63D22A608300069FECA /* APIClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9D63B22A608300069FECA /* APIClientProtocol.swift */; };
+		47F9D64022A608F10069FECA /* StoreServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9D63F22A608F10069FECA /* StoreServiceProtocol.swift */; };
+		47F9D64222A60CF40069FECA /* StoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9D64122A60CF40069FECA /* StoreService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		47CCFB3522A748FA0024D50E /* StoreService+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoreService+Constants.swift"; sourceTree = "<group>"; };
 		47F9D60E22A605100069FECA /* MobileChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47F9D61122A605100069FECA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47F9D61622A605100069FECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -34,6 +40,10 @@
 		47F9D62522A605170069FECA /* MobileChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47F9D62922A605170069FECA /* MobileChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileChallengeTests.swift; sourceTree = "<group>"; };
 		47F9D62B22A605170069FECA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47F9D63A22A608300069FECA /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		47F9D63B22A608300069FECA /* APIClientProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClientProtocol.swift; sourceTree = "<group>"; };
+		47F9D63F22A608F10069FECA /* StoreServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreServiceProtocol.swift; sourceTree = "<group>"; };
+		47F9D64122A60CF40069FECA /* StoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,8 +139,29 @@
 		47F9D63822A605970069FECA /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				47F9D63922A607F90069FECA /* APIClient */,
+				47F9D63E22A608C20069FECA /* StoreService */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		47F9D63922A607F90069FECA /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				47F9D63A22A608300069FECA /* APIClient.swift */,
+				47F9D63B22A608300069FECA /* APIClientProtocol.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		47F9D63E22A608C20069FECA /* StoreService */ = {
+			isa = PBXGroup;
+			children = (
+				47F9D63F22A608F10069FECA /* StoreServiceProtocol.swift */,
+				47F9D64122A60CF40069FECA /* StoreService.swift */,
+				47CCFB3522A748FA0024D50E /* StoreService+Constants.swift */,
+			);
+			path = StoreService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +266,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				47F9D61222A605100069FECA /* AppDelegate.swift in Sources */,
+				47F9D64022A608F10069FECA /* StoreServiceProtocol.swift in Sources */,
+				47F9D63C22A608300069FECA /* APIClient.swift in Sources */,
+				47F9D63D22A608300069FECA /* APIClientProtocol.swift in Sources */,
+				47F9D64222A60CF40069FECA /* StoreService.swift in Sources */,
+				47CCFB3622A748FA0024D50E /* StoreService+Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +435,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79964U8894;
 				INFOPLIST_FILE = MobileChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -417,6 +454,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79964U8894;
 				INFOPLIST_FILE = MobileChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
