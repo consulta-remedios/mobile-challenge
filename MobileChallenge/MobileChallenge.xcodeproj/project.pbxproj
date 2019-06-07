@@ -19,6 +19,7 @@
 		47F19C6E22AAD80A005A4DEC /* ShoppingCartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C6D22AAD80A005A4DEC /* ShoppingCartTableViewController.swift */; };
 		47F19C7222AAD95E005A4DEC /* GameShoppingCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C7122AAD95E005A4DEC /* GameShoppingCartTableViewCell.swift */; };
 		47F19C7422AAD981005A4DEC /* InformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C7322AAD981005A4DEC /* InformationTableViewCell.swift */; };
+		47F19C7622AADE5E005A4DEC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C7522AADE5E005A4DEC /* User.swift */; };
 		47F9D61222A605100069FECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9D61122A605100069FECA /* AppDelegate.swift */; };
 		47F9D61722A605100069FECA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47F9D61522A605100069FECA /* Main.storyboard */; };
 		47F9D61C22A605160069FECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47F9D61B22A605160069FECA /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 		47F19C6D22AAD80A005A4DEC /* ShoppingCartTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartTableViewController.swift; sourceTree = "<group>"; };
 		47F19C7122AAD95E005A4DEC /* GameShoppingCartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameShoppingCartTableViewCell.swift; sourceTree = "<group>"; };
 		47F19C7322AAD981005A4DEC /* InformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTableViewCell.swift; sourceTree = "<group>"; };
+		47F19C7522AADE5E005A4DEC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		47F9D60E22A605100069FECA /* MobileChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47F9D61122A605100069FECA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47F9D61622A605100069FECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			children = (
 				47F19C3E22A8AF6B005A4DEC /* Item.swift */,
 				47F19C4022A8B16E005A4DEC /* ShoppingCart.swift */,
+				47F19C7522AADE5E005A4DEC /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				47F19C6822AA90DB005A4DEC /* UIViewController+Alerts.swift in Sources */,
 				47F19C6B22AAACDB005A4DEC /* GameDetailsViewController.swift in Sources */,
 				47F19C7222AAD95E005A4DEC /* GameShoppingCartTableViewCell.swift in Sources */,
+				47F19C7622AADE5E005A4DEC /* User.swift in Sources */,
 				47F9D64022A608F10069FECA /* StoreServiceProtocol.swift in Sources */,
 				47F9D63C22A608300069FECA /* APIClient.swift in Sources */,
 				47F9D63D22A608300069FECA /* APIClientProtocol.swift in Sources */,

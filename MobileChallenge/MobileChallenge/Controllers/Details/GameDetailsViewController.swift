@@ -17,6 +17,9 @@ class GameDetailsViewController: UIViewController {
     /// The service used to request the details of an item from the server.
     var storeService: StoreServiceProtocol!
 
+    /// The user of the application.
+    var user: User!
+
     /// The item being displayed.
     var item: Item!
 
@@ -47,6 +50,10 @@ class GameDetailsViewController: UIViewController {
             preconditionFailure("The store service must be injected.")
         }
 
+        guard user != nil else {
+            preconditionFailure("The user must be injected.")
+        }
+
         guard item != nil else {
             preconditionFailure("The item must be injected.")
         }
@@ -69,7 +76,12 @@ class GameDetailsViewController: UIViewController {
     // MARK: Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // TODO:
+        guard let shoppingCartController = segue.destination as? ShoppingCartTableViewController else {
+            preconditionFailure("The controller must be the shopping cart one.")
+        }
+
+        shoppingCartController.storeService = storeService
+        shoppingCartController.user = user
     }
 
     // MARK: Imperatives

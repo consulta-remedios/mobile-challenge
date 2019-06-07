@@ -13,10 +13,17 @@ class ShoppingCartTableViewController: UITableViewController {
 
     // MARK: Properties
 
+    /// The reuse identifier of the game cells.
+    fileprivate let gameCellReuseIdentifier = "Game Cell"
+
+    /// The reuse identifier of the information cells.
+    fileprivate let infoCellReuseIdentifier = "Info Cell"
+
     /// The store service used to finish the purchase.
     var storeService: StoreServiceProtocol!
 
-    // TODO: Inject the user with the shopping cart.
+    /// The user of the application, with its shopping cart.
+    var user: User!
 
     @IBOutlet weak var totalPriceLabel: UILabel!
 
@@ -27,6 +34,10 @@ class ShoppingCartTableViewController: UITableViewController {
 
         guard storeService != nil else {
             preconditionFailure("The store service must be injected.")
+        }
+
+        guard user != nil else {
+            preconditionFailure("The user must be injected.")
         }
     }
 
@@ -52,23 +63,61 @@ class ShoppingCartTableViewController: UITableViewController {
 
 extension ShoppingCartTableViewController {
 
-    // MARK: - Table view data source
+    // MARK: Sections
+
+    private enum Section: Int, CaseIterable {
+        case games
+        case informations
+    }
+
+    // MARK: Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return Section.allCases.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        guard let section = Section(rawValue: section) else {
+            preconditionFailure("The section case should be correclty instantiated.")
+        }
+
+        switch section {
+        case .games:
+            return user.shoppingCart.items.count
+        case .informations:
+            return 3 // Address, freight and payment.
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
+        // TODO: Configure the cell...
 
         return cell
     }
+
+    // MARK: Cell Factories
+
+    /// Creates the game cell to display the games in the shopping cart.
+    /// - Parameters:
+    ///     - tableView: the table view used to dequeue the cells.
+    ///     - indexPath: the index path used to get the related game.
+    /// - Returns: the created game cell.
+//    private func makeGameCell(
+//        usingTableView tableView: UITableView,
+//        andIndexPath indexPath: IndexPath) -> GameShoppingCartTableViewCell {
+//
+//    }
+
+    /// Creates the information cell to display the additional details of the purchase.
+    /// - Parameters:
+    ///     - tableView: the table view used to dequeue the cells.
+    ///     - indexPath: the index path used to get the related information.
+    /// - Returns: the created information cell.
+//    private func makeInformationCell(
+//        usingTableView tableView: UITableView,
+//        andIndexPath indexPath: IndexPath) -> InformationTableViewCell {
+//
+//    }
 }

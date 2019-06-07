@@ -20,6 +20,9 @@ class GamesCollectionViewController: UICollectionViewController {
     /// The service used to request any items to be displayed by this controller.
     var storeService: StoreServiceProtocol!
 
+    /// The user of the application.
+    var user: User!
+
     /// The items being displayed.
     fileprivate var items: [Item]? {
         didSet {
@@ -40,6 +43,10 @@ class GamesCollectionViewController: UICollectionViewController {
         guard storeService != nil else {
             preconditionFailure("The store service must be injected.")
         }
+
+        guard user != nil else {
+            preconditionFailure("The user must be injected.")
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -51,6 +58,12 @@ class GamesCollectionViewController: UICollectionViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Show Cart" {
+            guard let shoppingCartController = segue.destination as? ShoppingCartTableViewController else {
+                preconditionFailure("The controller must be the shpping cart one.")
+            }
+
+            shoppingCartController.user = user
+            shoppingCartController.storeService = storeService
 
         } else {
             guard let detailsController = segue.destination as? GameDetailsViewController else {
@@ -66,6 +79,7 @@ class GamesCollectionViewController: UICollectionViewController {
             }
 
             detailsController.storeService = storeService
+            detailsController.user = user
             detailsController.item = item
         }
     }

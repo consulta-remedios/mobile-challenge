@@ -220,7 +220,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="124" id="zQZ-ho-5Kx" customClass="GameShoppingCartTableViewCell" customModule="MobileChallenge" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Game Cell" rowHeight="124" id="zQZ-ho-5Kx" customClass="GameShoppingCartTableViewCell" customModule="MobileChallenge" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="124"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zQZ-ho-5Kx" id="8hR-kQ-1NA">
@@ -302,7 +302,7 @@
                                     <outlet property="priceLabel" destination="f3H-El-SgA" id="rZR-9S-XyU"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="104" id="mHB-dB-onB" customClass="InformationTableViewCell" customModule="MobileChallenge" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Info Cell" rowHeight="104" id="mHB-dB-onB" customClass="InformationTableViewCell" customModule="MobileChallenge" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="152" width="375" height="104"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mHB-dB-onB" id="Q09-HL-6oG">
