@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 /// Controller responsible for displaying the games of the store in a grid.
 class GamesCollectionViewController: UICollectionViewController {
@@ -67,14 +68,13 @@ class GamesCollectionViewController: UICollectionViewController {
         return items != nil ? 1 : 0
     }
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView,
+                                 numberOfItemsInSection section: Int) -> Int {
         return items?.count ?? 0
     }
 
-    override func collectionView(
-        _ collectionView: UICollectionView,
-        cellForItemAt indexPath: IndexPath
-        ) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView,
+                                 cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let game = items?[indexPath.item] else {
             preconditionFailure("The game must be available at this point.")
         }
@@ -86,6 +86,9 @@ class GamesCollectionViewController: UICollectionViewController {
         }
 
         // TODO: Display the game's image.
+        if let URL = URL(string: game.imagePath) {
+            gameCell.gameImageView.kf.setImage(with: URL)
+        }
         gameCell.platformLabel.text = game.platform
         gameCell.gameNameLabel.text = game.name
         gameCell.priceLabel.text = "R$ \(game.price)"
