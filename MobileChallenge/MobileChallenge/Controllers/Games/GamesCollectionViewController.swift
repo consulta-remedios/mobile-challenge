@@ -29,6 +29,9 @@ class GamesCollectionViewController: UICollectionViewController {
         }
     }
 
+    /// The view displaying if the items are being loaded or not.
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+
     // MARK: Life Cycle
 
     override func viewDidLoad() {
@@ -41,23 +44,56 @@ class GamesCollectionViewController: UICollectionViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
-        storeService.requestItems { [weak self] items, error in
-            DispatchQueue.main.async {
-                if let items = items {
-                    self?.items = items
-                } else if let error = error {
-                    // TODO: Display the error in an alert.
-                    // TODO: Add an extension to display errors.
-                }
-            }
-        }
+        fetchItems()
     }
 
-    // MARK: - Navigation
+    // MARK: Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // TODO: Pass the selected game to the details controller.
+    }
+
+    // MARK: Imperatives
+
+    /// Request the items from the server, and displays them.
+    private func fetchItems() {
+        self.activityIndicator.startAnimating()
+
+        storeService.requestItems { [weak self] items, error in
+            DispatchQueue.main.async {
+                self?.activityIndicator.stopAnimating()
+
+                if let items = items {
+                    self?.items = items
+                } else if let error = error {
+                    var message: String!
+
+                    switch error {
+                    case .connection:
+                        message = NSLocalizedString(
+                            "Por favor, verifique a sua conexão com a Internet, e tente novamente.",
+                            comment: ""
+                        )
+                    case .serverResponse:
+                        print("Response error")
+                        message = NSLocalizedString(
+                            "A busca pelos items não pôde ser completada.",
+                            comment: ""
+                        )
+                    case .unexpectedDataContent:
+                        message = NSLocalizedString(
+                            "Houve um erro com a leitura dos dados. Por favor, contate o desenvolvedor.",
+                            comment: ""
+                        )
+                    }
+
+                    self?.present(
+                        self!.makeErrorAlertController(withMessage: message),
+                        animated: true
+                    )
+                }
+            }
+        }
     }
 }
 
