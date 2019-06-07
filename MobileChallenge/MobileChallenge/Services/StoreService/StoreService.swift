@@ -16,13 +16,20 @@ struct StoreService: StoreServiceProtocol {
 
     // MARK: Imperatives
 
-    func requestItems(usingCompletionHandler handler: @escaping (Data?, URLSessionTask.TaskError?) -> Void) {
+    func requestItems(usingCompletionHandler handler: @escaping ([Item]?, URLSessionTask.TaskError?) -> Void) {
 
         let fetchTask = apiClient.makeConfiguredGETTask(
             forResourceAtUrl: getBaseURL().appendingPathComponent("game")
         ) { data, error in
+            let decoder = JSONDecoder()
+
             if let data = data {
-                handler(data, nil)
+                do {
+                    let items = try decoder.decode(Array<Item>.self, from: data)
+                    handler(items, nil)
+                } catch {
+                    handler(nil, .unexpectedDataContent)
+                }
             } else {
                 handler(nil, error!)
             }
@@ -33,13 +40,20 @@ struct StoreService: StoreServiceProtocol {
 
     func requestItemDetails(
         usingId identifier: String,
-        andCompletionHandler handler: @escaping (Data?, URLSessionTask.TaskError?) -> Void
+        andCompletionHandler handler: @escaping (Item?, URLSessionTask.TaskError?) -> Void
     ) {
         let detailsUrl = getBaseURL().appendingPathComponent("game").appendingPathComponent(identifier)
         let fetchTask = apiClient.makeConfiguredGETTask(forResourceAtUrl: detailsUrl) { data, error in
+            let decoder = JSONDecoder()
 
             if let data = data {
-                handler(data, nil)
+                do {
+                    let item = try decoder.decode(Item.self, from: data)
+                    handler(item, nil)
+                } catch {
+                    handler(nil, .unexpectedDataContent)
+                }
+
             } else {
                 handler(nil, error!)
             }

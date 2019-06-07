@@ -21,12 +21,12 @@ protocol StoreServiceProtocol {
 
     /// Fetches the items from the store, and, in case of success, head the results to the callback closure.
     /// - Parameter completionHandler: the handler called when the request finishes.
-    func requestItems(usingCompletionHandler handler: @escaping (Data?, URLSessionTask.TaskError?) -> Void)
+    func requestItems(usingCompletionHandler handler: @escaping ([Item]?, URLSessionTask.TaskError?) -> Void)
 
     /// Fetches the details of an specific item by passing its id.
     /// - Parameter completionHandler: the handler called when the request finishes.
     func requestItemDetails(
         usingId identifier: String,
-        andCompletionHandler handler: @escaping (Data?, URLSessionTask.TaskError?) -> Void
+        andCompletionHandler handler: @escaping (Item?, URLSessionTask.TaskError?) -> Void
     )
 }
