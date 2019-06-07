@@ -435,7 +435,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcM-gE-sOq">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="503"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XYP-R2-P9c" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
@@ -531,7 +531,7 @@
                                     <constraint firstAttribute="trailing" secondItem="XYP-R2-P9c" secondAttribute="trailing" id="RcD-bT-ZjG"/>
                                     <constraint firstItem="XYP-R2-P9c" firstAttribute="leading" secondItem="kcM-gE-sOq" secondAttribute="leading" id="sav-5g-3rE"/>
                                 </constraints>
-                                <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="100"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="20"/>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rux-NS-mBd" userLabel="Price Container View">
                                 <rect key="frame" x="0.0" y="567" width="375" height="100"/>
@@ -624,9 +624,9 @@
                             <constraint firstItem="XYP-R2-P9c" firstAttribute="height" secondItem="4QY-ox-8nn" secondAttribute="height" priority="250" id="2Gf-rQ-esn"/>
                             <constraint firstItem="4QY-ox-8nn" firstAttribute="bottom" secondItem="Rux-NS-mBd" secondAttribute="bottom" id="Y5w-mC-wFH"/>
                             <constraint firstItem="XYP-R2-P9c" firstAttribute="width" secondItem="oeC-v7-Phr" secondAttribute="width" id="YyD-Gq-42k"/>
+                            <constraint firstItem="Rux-NS-mBd" firstAttribute="top" secondItem="kcM-gE-sOq" secondAttribute="bottom" id="cnm-mG-ILB"/>
                             <constraint firstItem="kcM-gE-sOq" firstAttribute="top" secondItem="4QY-ox-8nn" secondAttribute="top" id="fkE-19-JUN"/>
                             <constraint firstItem="4QY-ox-8nn" firstAttribute="trailing" secondItem="kcM-gE-sOq" secondAttribute="trailing" id="fxt-Y8-Hv5"/>
-                            <constraint firstItem="4QY-ox-8nn" firstAttribute="bottom" secondItem="kcM-gE-sOq" secondAttribute="bottom" id="luW-Tk-9lZ"/>
                             <constraint firstItem="kcM-gE-sOq" firstAttribute="leading" secondItem="4QY-ox-8nn" secondAttribute="leading" id="msH-kd-PSF"/>
                             <constraint firstItem="Rux-NS-mBd" firstAttribute="leading" secondItem="4QY-ox-8nn" secondAttribute="leading" id="s6E-w9-yAh"/>
                             <constraint firstItem="4QY-ox-8nn" firstAttribute="trailing" secondItem="Rux-NS-mBd" secondAttribute="trailing" id="z5x-2Q-Ent"/>
