@@ -56,4 +56,10 @@ struct ShoppingCart {
 
         return item
     }
+
+    /// Clears the shopping cart. This is tipically done after a purchase.
+    mutating func clear() {
+        items = []
+        totalPrice = 0
+    }
 }

@@ -98,12 +98,17 @@ class GameDetailsViewController: UIViewController {
 
     /// Requests the details of the item to the server.
     private func getItemDetails() {
+        guard item.description == nil else {
+            return
+        }
+
         activityIndicator.startAnimating()
         storeService.requestItemDetails(usingId: "\(item.identifier)") { [weak self] item, error in
             DispatchQueue.main.async {
                 self?.activityIndicator.stopAnimating()
 
                 if let item = item {
+                    self?.item = item
                     self?.gameDescriptionLabel.text = item.description ?? ""
                 } else if let error = error {
                     var message: String!

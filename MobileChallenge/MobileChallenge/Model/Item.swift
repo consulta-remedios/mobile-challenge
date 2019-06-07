@@ -29,7 +29,23 @@ struct Item: Codable, Equatable {
     let imagePath: String
 
     /// The text description of the item.
-    let description: String?
+    var description: String?
+
+    // MARK: Initalizers
+
+    init(identifier: Int,
+         name: String,
+         price: Double,
+         platform: String,
+         imagePath: String,
+         description: String? = nil) {
+        self.identifier = identifier
+        self.name = name
+        self.price = price
+        self.platform = platform
+        self.imagePath = imagePath
+        self.description = description
+    }
 
     // MARK: Coding keys
 
