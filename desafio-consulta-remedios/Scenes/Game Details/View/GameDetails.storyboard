@@ -68,7 +68,7 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJR-Sr-LVd">
                                         <rect key="frame" x="20" y="354.5" width="335" height="200.5"/>
-                                        <mutableString key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</mutableString>
+                                        <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -206,11 +206,20 @@
                         <outlet property="nameLabel" destination="ZdU-jg-jHJ" id="anI-hD-yAi"/>
                         <outlet property="pageControl" destination="vm1-Ae-MdE" id="gDT-sA-4gH"/>
                         <outlet property="priceLabel" destination="O7G-be-Lx4" id="8BT-3u-pLa"/>
+                        <segue destination="5Ws-qb-y9o" kind="show" identifier="shoppingCartSegue" id="Mou-WZ-YWf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0db-zX-kY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="932" y="177.66116941529236"/>
+        </scene>
+        <!--ShoppingCart-->
+        <scene sceneID="6Gt-mx-IJW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ShoppingCart" id="5Ws-qb-y9o" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mhT-Gj-C32" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1504" y="177"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2K9-l1-pYd">

@@ -40,6 +40,10 @@ class GamesController: UIViewController {
         presenter?.present()
     }
     
+    @IBAction func showShoppingCartButtonTapped(_ sender: Any) {
+        presenter?.onShowShoppingCartButtonTapped()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         presenter?.prepare(for: segue, sender: sender)
     }

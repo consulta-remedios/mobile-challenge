@@ -22,8 +22,12 @@ class GamesPresenterRouter {
         self.viewController = viewController
     }
     
-    func onDetails(game: Game) {
+    func onShowDetails(game: Game) {
         viewController?.performSegue(withIdentifier: Constants.Segue.ShowDetail, sender: game)
+    }
+    
+    func onShowShoppingCart() {
+        viewController?.performSegue(withIdentifier: Constants.Segue.ShowShoppingCart, sender: nil)
     }
     
     func prepare(for segue: UIStoryboardSegue, sender: Any?) {

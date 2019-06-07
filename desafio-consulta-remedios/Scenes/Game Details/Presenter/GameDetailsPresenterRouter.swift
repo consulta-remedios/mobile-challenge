@@ -25,5 +25,9 @@ class GameDetailsPresenterRouter {
         viewController?.dismiss(animated: true, completion: nil)
     }
     
+    func onShowShoppingCart() {
+        viewController?.performSegue(withIdentifier: Constants.Segue.ShowShoppingCart, sender: nil)
+    }
+    
     func prepare(for segue: UIStoryboardSegue, sender: Any?) {}
 }

@@ -48,7 +48,11 @@ class GamesPresenter {
     }
     
     func onDidSelect(for row: Int) {
-        router.onDetails(game: games[row])
+        router.onShowDetails(game: games[row])
+    }
+    
+    func onShowShoppingCartButtonTapped() {
+        router.onShowShoppingCart()
     }
     
     func prepare(for segue: UIStoryboardSegue, sender: Any?) {

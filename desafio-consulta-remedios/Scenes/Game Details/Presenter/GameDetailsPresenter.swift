@@ -67,7 +67,7 @@ class GameDetailsPresenter {
     }
     
     func onShowShoppingCartButtonTapped() {
-        print("SHOW SHOPPING CART")
+        router.onShowShoppingCart()
     }
     
     func prepare(for segue: UIStoryboardSegue, sender: Any?) {

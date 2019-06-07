@@ -13,6 +13,11 @@
 		8E0C6F3F22A5EC0700D93EE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E0C6F3D22A5EC0700D93EE5 /* LaunchScreen.storyboard */; };
 		8E0C6F4A22A5EC0700D93EE5 /* desafio_consulta_remediosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C6F4922A5EC0700D93EE5 /* desafio_consulta_remediosTests.swift */; };
 		8E0C6F5522A5EC0700D93EE5 /* desafio_consulta_remediosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C6F5422A5EC0700D93EE5 /* desafio_consulta_remediosUITests.swift */; };
+		8E9CAA6D22A9CA4600821688 /* ShoppingCart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9CAA6C22A9CA4600821688 /* ShoppingCart.storyboard */; };
+		8E9CAA7122A9CB6B00821688 /* ShoppingCartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CAA6F22A9CB6B00821688 /* ShoppingCartCell.swift */; };
+		8E9CAA7222A9CB6B00821688 /* ShoppingCartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E9CAA7022A9CB6B00821688 /* ShoppingCartCell.xib */; };
+		8E9CAA7422A9DABD00821688 /* ShoppingCartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CAA7322A9DABD00821688 /* ShoppingCartController.swift */; };
+		8E9CAA7622A9E14300821688 /* ShoppingCartCellPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CAA7522A9E14300821688 /* ShoppingCartCellPresenterView.swift */; };
 		8EE2F46122A86F3B00B41744 /* Games.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EE2F46022A86F3B00B41744 /* Games.storyboard */; };
 		8EE2F46322A86FB000B41744 /* GamesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2F46222A86FAF00B41744 /* GamesController.swift */; };
 		8EE2F47022A8711D00B41744 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2F46922A8711D00B41744 /* GameCell.swift */; };
@@ -87,6 +92,11 @@
 		8E0C6F5022A5EC0700D93EE5 /* desafio-consulta-remediosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "desafio-consulta-remediosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E0C6F5422A5EC0700D93EE5 /* desafio_consulta_remediosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafio_consulta_remediosUITests.swift; sourceTree = "<group>"; };
 		8E0C6F5622A5EC0700D93EE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E9CAA6C22A9CA4600821688 /* ShoppingCart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShoppingCart.storyboard; sourceTree = "<group>"; };
+		8E9CAA6F22A9CB6B00821688 /* ShoppingCartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartCell.swift; sourceTree = "<group>"; };
+		8E9CAA7022A9CB6B00821688 /* ShoppingCartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingCartCell.xib; sourceTree = "<group>"; };
+		8E9CAA7322A9DABD00821688 /* ShoppingCartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartController.swift; sourceTree = "<group>"; };
+		8E9CAA7522A9E14300821688 /* ShoppingCartCellPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartCellPresenterView.swift; sourceTree = "<group>"; };
 		8EE2F46022A86F3B00B41744 /* Games.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Games.storyboard; sourceTree = "<group>"; };
 		8EE2F46222A86FAF00B41744 /* GamesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesController.swift; sourceTree = "<group>"; };
 		8EE2F46922A8711D00B41744 /* GameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
@@ -232,9 +242,38 @@
 			path = "desafio-consulta-remediosUITests";
 			sourceTree = "<group>";
 		};
+		8E9CAA6A22A9CA1C00821688 /* Shopping Cart */ = {
+			isa = PBXGroup;
+			children = (
+				8E9CAA6B22A9CA2E00821688 /* View */,
+			);
+			path = "Shopping Cart";
+			sourceTree = "<group>";
+		};
+		8E9CAA6B22A9CA2E00821688 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E9CAA6E22A9CB4B00821688 /* ShoppingCartCell */,
+				8E9CAA6C22A9CA4600821688 /* ShoppingCart.storyboard */,
+				8E9CAA7322A9DABD00821688 /* ShoppingCartController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E9CAA6E22A9CB4B00821688 /* ShoppingCartCell */ = {
+			isa = PBXGroup;
+			children = (
+				8E9CAA6F22A9CB6B00821688 /* ShoppingCartCell.swift */,
+				8E9CAA7022A9CB6B00821688 /* ShoppingCartCell.xib */,
+				8E9CAA7522A9E14300821688 /* ShoppingCartCellPresenterView.swift */,
+			);
+			path = ShoppingCartCell;
+			sourceTree = "<group>";
+		};
 		8EE2F45D22A86EFD00B41744 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8E9CAA6A22A9CA1C00821688 /* Shopping Cart */,
 				8EE2F49C22A8846800B41744 /* Game Details */,
 				8EE2F45E22A86F2200B41744 /* Games */,
 			);
@@ -540,9 +579,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E9CAA6D22A9CA4600821688 /* ShoppingCart.storyboard in Resources */,
 				8EE2F46122A86F3B00B41744 /* Games.storyboard in Resources */,
 				8EE2F49E22A8849200B41744 /* GameDetails.storyboard in Resources */,
 				8EE2F4AF22A895B100B41744 /* PageCell.xib in Resources */,
+				8E9CAA7222A9CB6B00821688 /* ShoppingCartCell.xib in Resources */,
 				8EE2F49122A87B9900B41744 /* LoadingViewOverlay.xib in Resources */,
 				8EE2F47122A8711D00B41744 /* GameCell.xib in Resources */,
 				8E0C6F3F22A5EC0700D93EE5 /* LaunchScreen.storyboard in Resources */,
@@ -675,11 +716,13 @@
 				8EE2F48422A8781000B41744 /* GameService.swift in Sources */,
 				8EE2F48C22A87B0C00B41744 /* GamesPresenterRouter.swift in Sources */,
 				8EE2F49422A87BB200B41744 /* UIView+Extension.swift in Sources */,
+				8E9CAA7122A9CB6B00821688 /* ShoppingCartCell.swift in Sources */,
 				8EE2F47922A8727A00B41744 /* UIColor+Extension.swift in Sources */,
 				8EE2F4BB22A8B75700B41744 /* GameDetail.swift in Sources */,
 				8EE2F49722A87C5E00B41744 /* ARMessageView.swift in Sources */,
 				8EE2F48122A877B200B41744 /* Game.swift in Sources */,
 				8EE2F4B522A8AC7D00B41744 /* GameDetailsPresenter.swift in Sources */,
+				8E9CAA7622A9E14300821688 /* ShoppingCartCellPresenterView.swift in Sources */,
 				8EE2F4AE22A895B100B41744 /* PageCell.swift in Sources */,
 				8E0C6F3522A5EC0600D93EE5 /* AppDelegate.swift in Sources */,
 				8EE2F47222A8711D00B41744 /* GameCellPresenterView.swift in Sources */,
@@ -687,6 +730,7 @@
 				8EE2F4BD22A8BAF500B41744 /* PageCellPresenterView.swift in Sources */,
 				8EE2F47B22A8727A00B41744 /* UISearchController+Extension.swift in Sources */,
 				8EE2F4B222A8971500B41744 /* GameDetailsViewFlowLayout.swift in Sources */,
+				8E9CAA7422A9DABD00821688 /* ShoppingCartController.swift in Sources */,
 				8EE2F4B922A8AD1A00B41744 /* GameDetailsPresenterView.swift in Sources */,
 				8EE2F49922A87CC500B41744 /* SwinjectStoryboard+Extension.swift in Sources */,
 				8EE2F4A122A8852100B41744 /* GameDetailsController.swift in Sources */,

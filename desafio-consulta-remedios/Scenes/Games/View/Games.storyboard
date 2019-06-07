@@ -44,16 +44,29 @@
                         <viewLayoutGuide key="safeArea" id="T05-UY-cPh"/>
                     </view>
                     <navigationItem key="navigationItem" title="Games" id="q08-Xu-0wM">
-                        <barButtonItem key="rightBarButtonItem" image="icon-cart" id="b5F-tW-Ks6"/>
+                        <barButtonItem key="rightBarButtonItem" image="icon-cart" id="b5F-tW-Ks6">
+                            <connections>
+                                <action selector="showShoppingCartButtonTapped:" destination="Kac-tS-LVq" id="hYu-Mm-Ydz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="fWQ-3W-oPS" id="T2B-L3-dPY"/>
                         <segue destination="0hf-ta-2Ew" kind="show" identifier="gameDetailsSegue" id="ETT-wB-izH"/>
+                        <segue destination="mbU-bg-b2e" kind="show" identifier="shoppingCartSegue" id="eWF-tF-f2X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CTd-i7-dVx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="981.60000000000002" y="48.125937031484263"/>
+        </scene>
+        <!--ShoppingCart-->
+        <scene sceneID="JXW-hI-HEg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ShoppingCart" id="mbU-bg-b2e" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KCA-yo-kds" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1582" y="16"/>
         </scene>
         <!--GameDetails-->
         <scene sceneID="Ubm-9h-Oom">
@@ -61,7 +74,7 @@
                 <viewControllerPlaceholder storyboardName="GameDetails" id="0hf-ta-2Ew" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="laa-cU-4IP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1596" y="48"/>
+            <point key="canvasLocation" x="1577" y="93"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kjd-B2-bCj">

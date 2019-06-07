@@ -32,6 +32,7 @@ class GameDetailsController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.hideHairline(isTransparent: true)
         descriptionLabel.addTapGestureRecognizer { [weak self] in
             self?.presenter?.onMoreDescriptionTapped()
         }
