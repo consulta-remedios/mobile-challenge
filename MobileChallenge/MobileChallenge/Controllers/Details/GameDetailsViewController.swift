@@ -35,6 +35,9 @@ class GameDetailsViewController: UIViewController {
     /// The label displaying the freight associated to the game.
     @IBOutlet weak var freightLabel: UILabel!
 
+    /// The view informing the user that the details are loading.
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+
     // MARK: Properties
 
     override func viewDidLoad() {
@@ -73,8 +76,11 @@ class GameDetailsViewController: UIViewController {
 
     /// Requests the details of the item to the server.
     private func getItemDetails() {
+        activityIndicator.startAnimating()
         storeService.requestItemDetails(usingId: "\(item.identifier)") { [weak self] item, error in
             DispatchQueue.main.async {
+                self?.activityIndicator.stopAnimating()
+
                 if let item = item {
                     self?.gameDescriptionLabel.text = item.description ?? ""
                 } else if let error = error {

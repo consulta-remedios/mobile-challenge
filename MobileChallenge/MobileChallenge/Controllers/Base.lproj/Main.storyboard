@@ -198,12 +198,20 @@
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
+                                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="5QJ-w1-8UT">
+                                                                <rect key="frame" x="169" y="95" width="37" height="37"/>
+                                                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </activityIndicatorView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
+                                                            <constraint firstItem="5QJ-w1-8UT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ne6-eC-2sm" secondAttribute="top" priority="250" constant="100" id="A7n-Bb-65N"/>
+                                                            <constraint firstItem="5QJ-w1-8UT" firstAttribute="centerX" secondItem="Ne6-eC-2sm" secondAttribute="centerX" id="DfP-F2-WEw"/>
                                                             <constraint firstAttribute="bottom" secondItem="c0T-0Y-NUR" secondAttribute="bottom" constant="20" id="LiH-pK-IQk"/>
                                                             <constraint firstItem="c0T-0Y-NUR" firstAttribute="top" secondItem="Ne6-eC-2sm" secondAttribute="top" constant="20" id="Vwd-Rz-zlg"/>
                                                             <constraint firstItem="c0T-0Y-NUR" firstAttribute="leading" secondItem="Ne6-eC-2sm" secondAttribute="leading" constant="16" id="WMM-c9-jVt"/>
+                                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="5QJ-w1-8UT" secondAttribute="bottom" priority="250" constant="50" id="hVU-Rv-68i"/>
+                                                            <constraint firstItem="5QJ-w1-8UT" firstAttribute="centerY" secondItem="Ne6-eC-2sm" secondAttribute="centerY" id="oJj-P2-kRb"/>
                                                             <constraint firstAttribute="trailing" secondItem="c0T-0Y-NUR" secondAttribute="trailing" constant="16" id="xtA-Q8-79f"/>
                                                         </constraints>
                                                     </view>
@@ -330,6 +338,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Item Details" largeTitleDisplayMode="never" id="ElN-4x-5Nh"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="5QJ-w1-8UT" id="qya-Lk-map"/>
                         <outlet property="freightLabel" destination="1kJ-sh-dAf" id="PF0-Uk-qyf"/>
                         <outlet property="gameDescriptionLabel" destination="3C1-cz-CI4" id="3wx-l0-78h"/>
                         <outlet property="gameImageView" destination="qEa-Wz-t0d" id="jTN-MN-MT8"/>
