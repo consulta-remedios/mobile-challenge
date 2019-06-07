@@ -141,7 +141,7 @@
         <!--Carrinho de Compras-->
         <scene sceneID="k3j-CU-It0">
             <objects>
-                <tableViewController title="Carrinho de Compras" id="0sP-tD-lNu" sceneMemberID="viewController">
+                <tableViewController title="Carrinho de Compras" id="0sP-tD-lNu" customClass="ShoppingCartTableViewController" customModule="MobileChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eDW-FI-f5u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -179,6 +179,9 @@
                                                             <integer key="value" value="3"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="finishPurchase:" destination="0sP-tD-lNu" eventType="touchUpInside" id="2Wg-tH-51u"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -191,6 +194,9 @@
                                             <state key="normal" title="Continuar comprando">
                                                 <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="continueBuying:" destination="0sP-tD-lNu" eventType="touchUpInside" id="cWU-6q-B9k"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
@@ -214,7 +220,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="124" id="zQZ-ho-5Kx">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="124" id="zQZ-ho-5Kx" customClass="GameShoppingCartTableViewCell" customModule="MobileChallenge" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="124"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zQZ-ho-5Kx" id="8hR-kQ-1NA">
@@ -289,8 +295,14 @@
                                         <constraint firstItem="3vc-D3-sts" firstAttribute="leading" secondItem="8hR-kQ-1NA" secondAttribute="leading" constant="16" id="mJz-lL-yvT"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="gameCoverImageView" destination="Go9-LI-Dia" id="9bO-U0-4OE"/>
+                                    <outlet property="gameNameLabel" destination="MCE-lm-ojK" id="b2U-TX-wTB"/>
+                                    <outlet property="itemsCountLabel" destination="5Og-Jm-o2g" id="A4g-eZ-FcQ"/>
+                                    <outlet property="priceLabel" destination="f3H-El-SgA" id="rZR-9S-XyU"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="104" id="mHB-dB-onB">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="104" id="mHB-dB-onB" customClass="InformationTableViewCell" customModule="MobileChallenge" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="152" width="375" height="104"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mHB-dB-onB" id="Q09-HL-6oG">
@@ -323,6 +335,10 @@
                                         <constraint firstItem="22F-E5-iTr" firstAttribute="leading" secondItem="Q09-HL-6oG" secondAttribute="leading" constant="16" id="xk2-NF-dFa"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="informationTitleLabel" destination="PXo-j1-YHa" id="voG-MX-Rpe"/>
+                                    <outlet property="valueTitleLabel" destination="BNE-0E-WaN" id="48x-wm-txe"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -331,6 +347,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Carrinho de Compras" largeTitleDisplayMode="never" id="CGR-p0-vy5"/>
+                    <connections>
+                        <outlet property="totalPriceLabel" destination="fgG-ni-VAL" id="7Gy-cc-2j9"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mg3-U7-3sE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
