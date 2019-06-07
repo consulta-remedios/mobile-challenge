@@ -9,6 +9,9 @@
 import UIKit
 import Kingfisher
 
+/// The segue identifier to the controller showing that the purchase has finished.
+fileprivate let purchaseFinishedSegueId = "Show success"
+
 /// The view controller displaying the shopping cart of the user.
 class ShoppingCartTableViewController: UITableViewController {
 
@@ -54,13 +57,6 @@ class ShoppingCartTableViewController: UITableViewController {
         totalPriceLabel.text = "R$ \(user.shoppingCart.totalPrice)"
     }
 
-    // MARK: Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // TODO:
-    }
-
     // MARK: Actions
 
     /// Finishes the purchase, posting the purchase data to the server.
@@ -76,9 +72,7 @@ class ShoppingCartTableViewController: UITableViewController {
                 self?.continueBuyingButton.isEnabled = true
 
                 if wasSuccessful {
-                    // TODO: Go to the next controller.
-                    // For now, only pop it.
-                    self?.navigationController?.popToRootViewController(animated: true)
+                    self?.performSegue(withIdentifier: purchaseFinishedSegueId, sender: self)
                 } else if let error = error {
                     var message: String!
 
