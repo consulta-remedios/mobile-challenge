@@ -62,3 +62,36 @@ extension UIViewController {
         return UIAlertController(title: title, message: message, preferredStyle: .alert)
     }
 }
+
+extension UIViewController {
+
+    // MARK: Error Messages
+
+    /// Describes the constants containing the error messages used in the app.
+    enum ErrorMessages {
+
+        static let noInternetConnection = NSLocalizedString(
+            "Por favor, verifique a sua conexão com a Internet, e tente novamente.",
+            comment: "Message displayed when there's no internet connection."
+        )
+
+        static let readData = NSLocalizedString(
+            "Houve um erro com a leitura dos dados. Por favor, contate o desenvolvedor.",
+            comment: "Message displayed when the app weren't able to parse the response data."
+        )
+
+        static let gamesErrorResponse = NSLocalizedString(
+            "A busca pelos items não pôde ser completada.",
+            comment: "Message displayed when the server returns an error."
+        )
+    }
+
+    /// Describes the constants containing the button titles used in the app's alerts.
+    enum AlertButtonTitles {
+
+        static let tryAgain = NSLocalizedString(
+            "Tentar novamente",
+            comment: "Title of the try again error alert button"
+        )
+    }
+}

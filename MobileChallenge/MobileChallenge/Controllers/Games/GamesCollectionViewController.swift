@@ -70,27 +70,19 @@ class GamesCollectionViewController: UICollectionViewController {
 
                     switch error {
                     case .connection:
-                        message = NSLocalizedString(
-                            "Por favor, verifique a sua conexão com a Internet, e tente novamente.",
-                            comment: ""
-                        )
+                        message = ErrorMessages.noInternetConnection
                     case .serverResponse:
-                        print("Response error")
-                        message = NSLocalizedString(
-                            "A busca pelos items não pôde ser completada.",
-                            comment: ""
-                        )
+                        message = ErrorMessages.gamesErrorResponse
                     case .unexpectedDataContent:
-                        message = NSLocalizedString(
-                            "Houve um erro com a leitura dos dados. Por favor, contate o desenvolvedor.",
-                            comment: ""
-                        )
+                        message = ErrorMessages.readData
                     }
 
-                    self?.present(
-                        self!.makeErrorAlertController(withMessage: message),
-                        animated: true
-                    )
+                    let alert = self!.makeErrorAlertController(withMessage: message)
+                    alert.addAction(UIAlertAction(title: AlertButtonTitles.tryAgain, style: .default) { _ in
+                        self?.fetchItems()
+                    })
+
+                    self?.present(alert, animated: true)
                 }
             }
         }
