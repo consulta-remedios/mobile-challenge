@@ -32,7 +32,7 @@ protocol APIClientProtocol {
     ///     - handler: the handler called when the task finishes.
     /// - Returns: the configure GET task.
     func makeConfiguredGETTask(
-        forResourceAtUrl url: URL,
+        forResourceAtUrl URL: URL,
         withCompletionHandler handler: @escaping (Data?, URLSessionTask.TaskError?) -> Void
         ) -> URLSessionDataTask
 

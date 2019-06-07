@@ -27,10 +27,10 @@ struct APIClient: APIClientProtocol {
     // MARK: Imperatives
 
     func makeConfiguredGETTask(
-        forResourceAtUrl url: URL,
+        forResourceAtUrl URL: URL,
         withCompletionHandler handler: @escaping (Data?, URLSessionTask.TaskError?) -> Void
         ) -> URLSessionDataTask {
-        return session.dataTask(with: makeBaseRequest(url: url)) { data, response, error in
+        return session.dataTask(with: makeBaseRequest(URL: URL)) { data, response, error in
             guard error == nil, data != nil else {
                 handler(nil, .connection)
                 return
@@ -54,8 +54,8 @@ struct APIClient: APIClientProtocol {
 
     /// Builds a configured URLRequest with the provided HTTP headers.
     /// - Parameter url: the url of the resource.
-    private func makeBaseRequest(url: URL) -> URLRequest {
-        var request = URLRequest(url: url)
+    private func makeBaseRequest(URL: URL) -> URLRequest {
+        var request = URLRequest(url: URL)
 
         headers.forEach {
             request.setValue($0.value, forHTTPHeaderField: $0.key)

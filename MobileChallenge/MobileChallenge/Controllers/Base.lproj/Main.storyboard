@@ -1,28 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mDh-eH-BgU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="BLW-sH-Lon">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <navigationController id="mDh-eH-BgU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="9FF-jO-5bn">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xAG-m6-hhy" kind="relationship" relationship="rootViewController" id="7WB-R5-Sa4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Xy-wf-1kb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1547" y="129"/>
+        </scene>
+        <!--Games-->
+        <scene sceneID="dQo-xP-pZR">
+            <objects>
+                <collectionViewController id="xAG-m6-hhy" customClass="GamesCollectionViewController" customModule="MobileChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Cy6-LX-tIg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yil-7l-zBT">
+                            <size key="itemSize" width="168" height="245"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="oaQ-6f-DQT">
+                            <rect key="frame" x="0.0" y="-116" width="375" height="667"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </activityIndicatorView>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="game collection cell" id="DTh-XH-ztT" customClass="GameCollectionViewCell" customModule="MobileChallenge" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="168" height="245"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="168" height="245"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D4r-wt-Dee" userLabel="Image container">
+                                            <rect key="frame" x="0.0" y="0.0" width="168" height="143"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game-mortal-kombat-xl" translatesAutoresizingMaskIntoConstraints="NO" id="cQk-h3-D1c" userLabel="Game Image View">
+                                                    <rect key="frame" x="10" y="10" width="148" height="123"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="cQk-h3-D1c" firstAttribute="top" secondItem="D4r-wt-Dee" secondAttribute="top" constant="10" id="0LJ-hn-xXB"/>
+                                                <constraint firstAttribute="bottom" secondItem="cQk-h3-D1c" secondAttribute="bottom" constant="10" id="g9O-NR-dmJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="cQk-h3-D1c" secondAttribute="trailing" constant="10" id="hox-PZ-zc7"/>
+                                                <constraint firstItem="cQk-h3-D1c" firstAttribute="leading" secondItem="D4r-wt-Dee" secondAttribute="leading" constant="10" id="nuj-hB-Ley"/>
+                                                <constraint firstAttribute="height" constant="143" id="qRN-uE-BxE"/>
+                                            </constraints>
+                                        </view>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jh4-So-xvt">
+                                            <rect key="frame" x="18" y="148" width="132" height="79"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="PS4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="gXX-gb-Naz" userLabel="Platform label">
+                                                    <rect key="frame" x="54.5" y="0.0" width="23" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Super Mario Odissey" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="KB6-KN-KzI" userLabel="Name label">
+                                                    <rect key="frame" x="25" y="21" width="82.5" height="33.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 197,99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="GRJ-D9-FPn" userLabel="Price label">
+                                                    <rect key="frame" x="28.5" y="59.5" width="75" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottomMargin" secondItem="jh4-So-xvt" secondAttribute="bottom" constant="10" id="0PJ-ki-PdC"/>
+                                    <constraint firstItem="jh4-So-xvt" firstAttribute="top" secondItem="D4r-wt-Dee" secondAttribute="bottom" constant="5" id="8OI-v4-GRs"/>
+                                    <constraint firstItem="jh4-So-xvt" firstAttribute="leading" secondItem="DTh-XH-ztT" secondAttribute="leadingMargin" constant="10" id="IEv-gf-Kvd"/>
+                                    <constraint firstItem="D4r-wt-Dee" firstAttribute="top" secondItem="DTh-XH-ztT" secondAttribute="top" id="Iie-bi-29j"/>
+                                    <constraint firstItem="D4r-wt-Dee" firstAttribute="leading" secondItem="DTh-XH-ztT" secondAttribute="leading" id="ano-Qb-K9T"/>
+                                    <constraint firstAttribute="trailing" secondItem="D4r-wt-Dee" secondAttribute="trailing" id="m9E-cI-gbF"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="jh4-So-xvt" secondAttribute="trailing" constant="10" id="zgB-il-DBO"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="gameImageView" destination="cQk-h3-D1c" id="6GI-qX-r3h"/>
+                                    <outlet property="gameNameLabel" destination="KB6-KN-KzI" id="liU-It-snw"/>
+                                    <outlet property="platformLabel" destination="gXX-gb-Naz" id="XxN-T5-qcN"/>
+                                    <outlet property="priceLabel" destination="GRJ-D9-FPn" id="2Kc-Eo-WYa"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="xAG-m6-hhy" id="Egh-P8-mPU"/>
+                            <outlet property="delegate" destination="xAG-m6-hhy" id="VcQ-ch-IEq"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Games" id="JAj-Un-cOt"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="oaQ-6f-DQT" id="W4N-RF-VEg"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lKV-tt-AGm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-679.20000000000005" y="127.28635682158921"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="game-mortal-kombat-xl" width="180" height="180"/>
+    </resources>
 </document>

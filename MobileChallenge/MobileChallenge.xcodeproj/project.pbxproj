@@ -12,6 +12,9 @@
 		47F19C3F22A8AF6B005A4DEC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C3E22A8AF6B005A4DEC /* Item.swift */; };
 		47F19C4122A8B16E005A4DEC /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C4022A8B16E005A4DEC /* ShoppingCart.swift */; };
 		47F19C6122A9E48E005A4DEC /* ShoppingCartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C6022A9E48E005A4DEC /* ShoppingCartTests.swift */; };
+		47F19C6422AA0FAE005A4DEC /* GamesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C6322AA0FAE005A4DEC /* GamesCollectionViewController.swift */; };
+		47F19C6622AA19CE005A4DEC /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C6522AA19CE005A4DEC /* GameCollectionViewCell.swift */; };
+		47F19C6822AA90DB005A4DEC /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C6722AA90DB005A4DEC /* UIViewController+Alerts.swift */; };
 		47F9D61222A605100069FECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9D61122A605100069FECA /* AppDelegate.swift */; };
 		47F9D61722A605100069FECA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47F9D61522A605100069FECA /* Main.storyboard */; };
 		47F9D61C22A605160069FECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47F9D61B22A605160069FECA /* Assets.xcassets */; };
@@ -42,6 +45,9 @@
 		47F19C4022A8B16E005A4DEC /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
 		47F19C5F22A9E48D005A4DEC /* MobileChallengeTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MobileChallengeTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		47F19C6022A9E48E005A4DEC /* ShoppingCartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartTests.swift; sourceTree = "<group>"; };
+		47F19C6322AA0FAE005A4DEC /* GamesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCollectionViewController.swift; sourceTree = "<group>"; };
+		47F19C6522AA19CE005A4DEC /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
+		47F19C6722AA90DB005A4DEC /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		47F9D60E22A605100069FECA /* MobileChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47F9D61122A605100069FECA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47F9D61622A605100069FECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -79,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47F19C6222AA0F89005A4DEC /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				47F19C6322AA0FAE005A4DEC /* GamesCollectionViewController.swift */,
+				47F19C6722AA90DB005A4DEC /* UIViewController+Alerts.swift */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
 		47F9D60522A605100069FECA = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				47F9D61522A605100069FECA /* Main.storyboard */,
+				47F19C6222AA0F89005A4DEC /* Games */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -143,6 +159,7 @@
 		47F9D63622A6056D0069FECA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				47F19C6522AA19CE005A4DEC /* GameCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,6 +233,7 @@
 				47F9D60B22A605100069FECA /* Frameworks */,
 				47F9D60C22A605100069FECA /* Resources */,
 				47CCFB6222A8A8E50024D50E /* ShellScript */,
+				CBA7AD8E881CE16493D99B27 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -344,6 +362,28 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
+		CBA7AD8E881CE16493D99B27 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MobileChallenge/Pods-MobileChallenge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MobileChallenge/Pods-MobileChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D0CD2AF73C19493303C32F4E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -374,10 +414,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				47F9D61222A605100069FECA /* AppDelegate.swift in Sources */,
+				47F19C6822AA90DB005A4DEC /* UIViewController+Alerts.swift in Sources */,
 				47F9D64022A608F10069FECA /* StoreServiceProtocol.swift in Sources */,
 				47F9D63C22A608300069FECA /* APIClient.swift in Sources */,
 				47F9D63D22A608300069FECA /* APIClientProtocol.swift in Sources */,
 				47F19C3F22A8AF6B005A4DEC /* Item.swift in Sources */,
+				47F19C6422AA0FAE005A4DEC /* GamesCollectionViewController.swift in Sources */,
+				47F19C6622AA19CE005A4DEC /* GameCollectionViewCell.swift in Sources */,
 				47F9D64222A60CF40069FECA /* StoreService.swift in Sources */,
 				47CCFB3622A748FA0024D50E /* StoreService+Constants.swift in Sources */,
 				47F19C4122A8B16E005A4DEC /* ShoppingCart.swift in Sources */,

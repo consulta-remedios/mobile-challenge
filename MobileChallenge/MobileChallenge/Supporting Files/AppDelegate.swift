@@ -22,15 +22,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
         ) -> Bool {
-//        let apiClient = APIClient(session: .shared, headers: [
-//            (key: "Token", value: "QceNFo1gHd09MJDzyswNqzStlxYGBzUG")
-//            ])
-//        let service = StoreService(apiClient: apiClient)
-//        service.requestItems { items, error in
-//            service.requestItemDetails(usingId: "\(items!.first!.identifier)", andCompletionHandler: { item, error in
-//                print(item)
-//            })
-//        }
+
+        // Inject the StoreService into the main games controller.
+        guard let navigationController = window?.rootViewController as? UINavigationController else {
+            preconditionFailure("The root vc should be a navigation controller.")
+        }
+
+        guard let gamesController = navigationController.topViewController
+            as? GamesCollectionViewController else {
+            preconditionFailure("The navigation's root vc should be the games controller.")
+        }
+
+        let apiClient = APIClient(session: .shared, headers: [
+            (key: "Token", value: "QceNFo1gHd09MJDzyswNqzStlxYGBzUG")
+            ])
+        let service = StoreService(apiClient: apiClient)
+
+        gamesController.storeService = service
 
         return true
     }
