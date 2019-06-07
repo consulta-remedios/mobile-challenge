@@ -29,4 +29,10 @@ protocol StoreServiceProtocol {
         usingId identifier: String,
         andCompletionHandler handler: @escaping (Item?, URLSessionTask.TaskError?) -> Void
     )
+
+    /// Makes a request to finish the purchase of the selected items in the shopping cart.
+    /// - Parameter completionHandler: the handler called when the request finishes.
+    func finishPurchase(
+        usingCompletionHandler handler: @escaping (Bool, URLSessionTask.TaskError?) -> Void
+    )
 }

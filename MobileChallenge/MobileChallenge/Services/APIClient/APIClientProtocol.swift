@@ -36,7 +36,19 @@ protocol APIClientProtocol {
         withCompletionHandler handler: @escaping (Data?, URLSessionTask.TaskError?) -> Void
         ) -> URLSessionDataTask
 
-    // TODO: Add the factory method for post tasks.
+    /// Makes a configured POST task for the specified resource.
+    /// - Parameters:
+    ///     - path: The URL of the desired resource.
+    ///     - parameters: The parameters to be sent with the request.
+    ///     - jsonBody: The json data parameters to be sent with the request.
+    ///     - completionHandler: The completion handler called when the task finishes loading.
+    /// - Returns: The configured data task associated with the passed arguments.
+    func makeConfiguredPOSTTask(
+        forResourceAtUrl URL: URL,
+        parameters: [String: String]?,
+        jsonBody: Data?,
+        andCompletionHandler handler: @escaping (Bool, URLSessionTask.TaskError?) -> Void
+        ) -> URLSessionDataTask
 }
 
 extension URLSessionTask {

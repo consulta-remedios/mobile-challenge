@@ -117,12 +117,14 @@ class GameDetailsViewController: UIViewController {
                         message = ErrorMessages.readData
                     }
 
-                    let alert = self!.makeErrorAlertController(withMessage: message)
-                    alert.addAction(UIAlertAction(title: AlertButtonTitles.tryAgain, style: .default) { _ in
+                    let alert = self?.makeErrorAlertController(withMessage: message)
+                    alert?.addAction(UIAlertAction(title: AlertButtonTitles.tryAgain, style: .default) { _ in
                         self?.getItemDetails()
                     })
 
-                    self?.present(alert, animated: true)
+                    if let alert = alert {
+                        self?.present(alert, animated: true)
+                    }
                 }
             }
         }

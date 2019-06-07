@@ -54,8 +54,39 @@ class ShoppingCartTableViewController: UITableViewController {
     // MARK: Actions
 
     /// Finishes the purchase, posting the purchase data to the server.
-    @IBAction func finishPurchase(_ sender: UIButton) {
+    @IBAction func finishPurchase(_ sender: UIButton? = nil) {
+        // TODO: Show the loading indicator.
+        storeService.finishPurchase { [weak self] wasSuccessful, error in
+            DispatchQueue.main.async {
+                // TODO: Hide the loading indicator.
 
+                if wasSuccessful {
+                    // TODO: Go to the next controller.
+                    // For now, only pop it.
+                    self?.navigationController?.popToRootViewController(animated: true)
+                } else if let error = error {
+                    var message: String!
+
+                    switch error {
+                    case .connection:
+                        message = ErrorMessages.noInternetConnection
+                    case .serverResponse:
+                        message = ErrorMessages.gamesDetailsErrorResponse
+                    case .unexpectedDataContent:
+                        message = ErrorMessages.readData
+                    }
+
+                    let alert = self?.makeErrorAlertController(withMessage: message)
+                    alert?.addAction(UIAlertAction(title: AlertButtonTitles.tryAgain, style: .default) { _ in
+                        self?.finishPurchase()
+                    })
+
+                    if let alert = alert {
+                        self?.present(alert, animated: true)
+                    }
+                }
+            }
+        }
     }
 
     /// Takes the user back to the game listing controller.
@@ -177,8 +208,7 @@ extension ShoppingCartTableViewController {
             )
             let freight = user.shoppingCart.freight
             information = freight == 0 ?
-                NSLocalizedString("Grátis", comment: "") :
-            "Transportadora: R$ \(freight)"
+                NSLocalizedString("Grátis", comment: "") : "Transportadora: R$ \(freight)"
 
         case .payment:
             title = NSLocalizedString(

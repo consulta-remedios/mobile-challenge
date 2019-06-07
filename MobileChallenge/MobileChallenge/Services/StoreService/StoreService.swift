@@ -44,7 +44,8 @@ struct StoreService: StoreServiceProtocol {
         usingId identifier: String,
         andCompletionHandler handler: @escaping (Item?, URLSessionTask.TaskError?) -> Void
     ) {
-        let detailsUrl = getBaseURL().appendingPathComponent("game").appendingPathComponent(identifier)
+        let detailsUrl = getBaseURL().appendingPathComponent(Endpoints.games)
+            .appendingPathComponent(identifier)
         let fetchTask = apiClient.makeConfiguredGETTask(forResourceAtUrl: detailsUrl) { data, error in
             let decoder = JSONDecoder()
 
@@ -62,5 +63,19 @@ struct StoreService: StoreServiceProtocol {
         }
 
         fetchTask.resume()
+    }
+
+    func finishPurchase(
+        usingCompletionHandler handler: @escaping (Bool, URLSessionTask.TaskError?) -> Void
+        ) {
+        let finishPurchaseURL = getBaseURL().appendingPathComponent(Endpoints.endPurchase)
+        let postTask = apiClient.makeConfiguredPOSTTask(
+            forResourceAtUrl: finishPurchaseURL,
+            parameters: nil,
+            jsonBody: nil) { isSuccessful, error in
+                handler(isSuccessful, error)
+        }
+
+        postTask.resume()
     }
 }
