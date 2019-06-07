@@ -88,6 +88,12 @@ class GamesCollectionViewController: UICollectionViewController {
 
     /// Request the items from the server, and displays them.
     private func fetchItems() {
+        // It's better to make the user pull to refresh,
+        // intead of refreshing automatically after every appear event.
+        guard items?.isEmpty ?? true else {
+            return
+        }
+
         self.activityIndicator.startAnimating()
 
         storeService.requestItems { [weak self] items, error in
