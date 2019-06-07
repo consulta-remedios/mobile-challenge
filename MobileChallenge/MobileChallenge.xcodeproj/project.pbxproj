@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		26F8C831E040A79000995AAD /* Pods_MobileChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B58444D78377570BC1F2724 /* Pods_MobileChallenge.framework */; };
 		47CCFB3622A748FA0024D50E /* StoreService+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CCFB3522A748FA0024D50E /* StoreService+Constants.swift */; };
+		47F19C3F22A8AF6B005A4DEC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C3E22A8AF6B005A4DEC /* Item.swift */; };
+		47F19C4122A8B16E005A4DEC /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C4022A8B16E005A4DEC /* Cart.swift */; };
 		47F9D61222A605100069FECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9D61122A605100069FECA /* AppDelegate.swift */; };
 		47F9D61722A605100069FECA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47F9D61522A605100069FECA /* Main.storyboard */; };
 		47F9D61C22A605160069FECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47F9D61B22A605160069FECA /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 		161A8825A705F577EFBE760C /* Pods-MobileChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileChallenge.debug.xcconfig"; path = "Target Support Files/Pods-MobileChallenge/Pods-MobileChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		41AA1CF37D3CD6D25DF2A255 /* Pods_MobileChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47CCFB3522A748FA0024D50E /* StoreService+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoreService+Constants.swift"; sourceTree = "<group>"; };
+		47F19C3E22A8AF6B005A4DEC /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		47F19C4022A8B16E005A4DEC /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		47F9D60E22A605100069FECA /* MobileChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47F9D61122A605100069FECA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47F9D61622A605100069FECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 		47F9D63722A605740069FECA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				47F19C3E22A8AF6B005A4DEC /* Item.swift */,
+				47F19C4022A8B16E005A4DEC /* Cart.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -368,8 +374,10 @@
 				47F9D64022A608F10069FECA /* StoreServiceProtocol.swift in Sources */,
 				47F9D63C22A608300069FECA /* APIClient.swift in Sources */,
 				47F9D63D22A608300069FECA /* APIClientProtocol.swift in Sources */,
+				47F19C3F22A8AF6B005A4DEC /* Item.swift in Sources */,
 				47F9D64222A60CF40069FECA /* StoreService.swift in Sources */,
 				47CCFB3622A748FA0024D50E /* StoreService+Constants.swift in Sources */,
+				47F19C4122A8B16E005A4DEC /* Cart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
