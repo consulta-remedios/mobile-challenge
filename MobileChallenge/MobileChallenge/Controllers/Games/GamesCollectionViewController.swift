@@ -14,7 +14,7 @@ class GamesCollectionViewController: UICollectionViewController {
     // MARK: Properties
 
     /// The cell reuse identifier.
-    private let reuseIdentifier = "Cell"
+    private let reuseIdentifier = "game collection cell"
 
     /// The service used to request any items to be displayed by this controller.
     var storeService: StoreServiceProtocol!
@@ -33,8 +33,6 @@ class GamesCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
         guard storeService != nil else {
             preconditionFailure("The store service must be injected.")
         }
@@ -47,6 +45,8 @@ class GamesCollectionViewController: UICollectionViewController {
             DispatchQueue.main.async {
                 if let items = items {
                     self?.items = items
+
+                    print(items.first!)
                 } else if let error = error {
                     // TODO: Display the error in an alert.
                     // TODO: Add an extension to display errors.
@@ -75,10 +75,21 @@ class GamesCollectionViewController: UICollectionViewController {
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
         ) -> UICollectionViewCell {
+        guard let game = items?[indexPath.item] else {
+            preconditionFailure("The game must be available at this point.")
+        }
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        cell.backgroundColor = .red
-        // TODO: Configure the cell
+
+        guard let gameCell = cell as? GameCollectionViewCell else {
+            preconditionFailure("The cell is to be a GameCollectionViewCell.")
+        }
+
+        // TODO: Display the game's image.
+        gameCell.platformLabel.text = game.platform
+        gameCell.gameNameLabel.text = game.name
+        gameCell.priceLabel.text = "R$ \(game.price)"
+
         return cell
     }
 }

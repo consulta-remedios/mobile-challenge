@@ -13,6 +13,7 @@
 		47F19C4122A8B16E005A4DEC /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C4022A8B16E005A4DEC /* ShoppingCart.swift */; };
 		47F19C6122A9E48E005A4DEC /* ShoppingCartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C6022A9E48E005A4DEC /* ShoppingCartTests.swift */; };
 		47F19C6422AA0FAE005A4DEC /* GamesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C6322AA0FAE005A4DEC /* GamesCollectionViewController.swift */; };
+		47F19C6622AA19CE005A4DEC /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C6522AA19CE005A4DEC /* GameCollectionViewCell.swift */; };
 		47F9D61222A605100069FECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9D61122A605100069FECA /* AppDelegate.swift */; };
 		47F9D61722A605100069FECA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47F9D61522A605100069FECA /* Main.storyboard */; };
 		47F9D61C22A605160069FECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47F9D61B22A605160069FECA /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		47F19C5F22A9E48D005A4DEC /* MobileChallengeTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MobileChallengeTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		47F19C6022A9E48E005A4DEC /* ShoppingCartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartTests.swift; sourceTree = "<group>"; };
 		47F19C6322AA0FAE005A4DEC /* GamesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCollectionViewController.swift; sourceTree = "<group>"; };
+		47F19C6522AA19CE005A4DEC /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
 		47F9D60E22A605100069FECA /* MobileChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47F9D61122A605100069FECA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47F9D61622A605100069FECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		47F9D63622A6056D0069FECA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				47F19C6522AA19CE005A4DEC /* GameCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				47F9D63D22A608300069FECA /* APIClientProtocol.swift in Sources */,
 				47F19C3F22A8AF6B005A4DEC /* Item.swift in Sources */,
 				47F19C6422AA0FAE005A4DEC /* GamesCollectionViewController.swift in Sources */,
+				47F19C6622AA19CE005A4DEC /* GameCollectionViewCell.swift in Sources */,
 				47F9D64222A60CF40069FECA /* StoreService.swift in Sources */,
 				47CCFB3622A748FA0024D50E /* StoreService+Constants.swift in Sources */,
 				47F19C4122A8B16E005A4DEC /* ShoppingCart.swift in Sources */,
