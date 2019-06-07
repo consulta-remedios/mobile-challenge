@@ -40,6 +40,8 @@ class ShoppingCartTableViewController: UITableViewController {
         guard user != nil else {
             preconditionFailure("The user must be injected.")
         }
+
+        totalPriceLabel.text = "R$ \(user.shoppingCart.totalPrice)"
     }
 
     // MARK: Navigation
@@ -173,7 +175,10 @@ extension ShoppingCartTableViewController {
                 "Frete",
                 comment: "The title of a field in the shopping cart controller."
             )
-            information = "Transportadora: R$ 12,90"
+            let freight = user.shoppingCart.freight
+            information = freight == 0 ?
+                NSLocalizedString("Grátis", comment: "") :
+            "Transportadora: R$ \(freight)"
 
         case .payment:
             title = NSLocalizedString(
