@@ -42,15 +42,28 @@ class GamesCollectionViewController: UICollectionViewController {
         }
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         fetchItems()
     }
 
     // MARK: Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // TODO: Pass the selected game to the details controller.
+        guard let detailsController = segue.destination as? ItemDetailsViewController else {
+            preconditionFailure("The controller must be an instance of the details vc.")
+        }
+
+        guard let selectedIndexPath = collectionView.indexPathsForSelectedItems?.first else {
+            preconditionFailure("The item must be selected to proceed.")
+        }
+
+        guard let item = items?[selectedIndexPath.item] else {
+            preconditionFailure("The index path must be related to an item.")
+        }
+
+        detailsController.storeService = storeService
+        detailsController.item = item
     }
 
     // MARK: Imperatives

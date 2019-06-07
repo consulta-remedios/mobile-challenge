@@ -15,6 +15,7 @@
 		47F19C6422AA0FAE005A4DEC /* GamesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C6322AA0FAE005A4DEC /* GamesCollectionViewController.swift */; };
 		47F19C6622AA19CE005A4DEC /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C6522AA19CE005A4DEC /* GameCollectionViewCell.swift */; };
 		47F19C6822AA90DB005A4DEC /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C6722AA90DB005A4DEC /* UIViewController+Alerts.swift */; };
+		47F19C6B22AAACDB005A4DEC /* ItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C6A22AAACDB005A4DEC /* ItemDetailsViewController.swift */; };
 		47F9D61222A605100069FECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9D61122A605100069FECA /* AppDelegate.swift */; };
 		47F9D61722A605100069FECA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47F9D61522A605100069FECA /* Main.storyboard */; };
 		47F9D61C22A605160069FECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47F9D61B22A605160069FECA /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		47F19C6322AA0FAE005A4DEC /* GamesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCollectionViewController.swift; sourceTree = "<group>"; };
 		47F19C6522AA19CE005A4DEC /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
 		47F19C6722AA90DB005A4DEC /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
+		47F19C6A22AAACDB005A4DEC /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
 		47F9D60E22A605100069FECA /* MobileChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47F9D61122A605100069FECA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47F9D61622A605100069FECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 				47F19C6722AA90DB005A4DEC /* UIViewController+Alerts.swift */,
 			);
 			path = Games;
+			sourceTree = "<group>";
+		};
+		47F19C6922AAACB8005A4DEC /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				47F19C6A22AAACDB005A4DEC /* ItemDetailsViewController.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		47F9D60522A605100069FECA = {
@@ -152,6 +162,7 @@
 			children = (
 				47F9D61522A605100069FECA /* Main.storyboard */,
 				47F19C6222AA0F89005A4DEC /* Games */,
+				47F19C6922AAACB8005A4DEC /* Details */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -415,6 +426,7 @@
 			files = (
 				47F9D61222A605100069FECA /* AppDelegate.swift in Sources */,
 				47F19C6822AA90DB005A4DEC /* UIViewController+Alerts.swift in Sources */,
+				47F19C6B22AAACDB005A4DEC /* ItemDetailsViewController.swift in Sources */,
 				47F9D64022A608F10069FECA /* StoreServiceProtocol.swift in Sources */,
 				47F9D63C22A608300069FECA /* APIClient.swift in Sources */,
 				47F9D63D22A608300069FECA /* APIClientProtocol.swift in Sources */,
