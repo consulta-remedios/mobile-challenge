@@ -30,10 +30,10 @@ extension StoreService {
         components.scheme = API.scheme
         components.host = API.host
 
-        guard let url = components.url else {
+        guard let URL = components.url else {
             preconditionFailure("The base store URL must be properly configured.")
         }
 
-        return url
+        return URL
     }
 }

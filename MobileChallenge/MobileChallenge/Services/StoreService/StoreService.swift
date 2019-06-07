@@ -16,7 +16,9 @@ struct StoreService: StoreServiceProtocol {
 
     // MARK: Imperatives
 
-    func requestItems(usingCompletionHandler handler: @escaping ([Item]?, URLSessionTask.TaskError?) -> Void) {
+    func requestItems(
+        usingCompletionHandler handler: @escaping ([Item]?, URLSessionTask.TaskError?
+        ) -> Void) {
 
         let fetchTask = apiClient.makeConfiguredGETTask(
             forResourceAtUrl: getBaseURL().appendingPathComponent("game")

@@ -28,7 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             preconditionFailure("The root vc should be a navigation controller.")
         }
 
-        guard let gamesController = navigationController.topViewController as? GamesCollectionViewController else {
+        guard let gamesController = navigationController.topViewController
+            as? GamesCollectionViewController else {
             preconditionFailure("The navigation's root vc should be the games controller.")
         }
 
