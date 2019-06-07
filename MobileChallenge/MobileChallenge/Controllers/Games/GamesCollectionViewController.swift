@@ -50,7 +50,7 @@ class GamesCollectionViewController: UICollectionViewController {
     // MARK: Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let detailsController = segue.destination as? ItemDetailsViewController else {
+        guard let detailsController = segue.destination as? GameDetailsViewController else {
             preconditionFailure("The controller must be an instance of the details vc.")
         }
 

@@ -28,6 +28,9 @@ struct Item: Codable, Equatable {
     /// The path of the cover image in the server.
     let imagePath: String
 
+    /// The text description of the item.
+    let description: String?
+
     // MARK: Coding keys
 
     enum CodingKeys: String, CodingKey {
@@ -35,6 +38,7 @@ struct Item: Codable, Equatable {
         case name
         case price
         case platform
+        case description
         case imagePath = "image"
     }
 }

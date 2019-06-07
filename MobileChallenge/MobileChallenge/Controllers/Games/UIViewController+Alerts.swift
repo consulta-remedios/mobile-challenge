@@ -82,7 +82,12 @@ extension UIViewController {
 
         static let gamesErrorResponse = NSLocalizedString(
             "A busca pelos items não pôde ser completada.",
-            comment: "Message displayed when the server returns an error."
+            comment: "Message displayed when the server returns an error in the game's fetch."
+        )
+
+        static let gamesDetailsErrorResponse = NSLocalizedString(
+            "A exibição dos detalhes não pôde ser completada.",
+            comment: "Message displayed when the server returns an error in the details' fetch."
         )
     }
 

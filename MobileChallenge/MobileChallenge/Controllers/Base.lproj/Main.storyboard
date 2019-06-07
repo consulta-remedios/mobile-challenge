@@ -135,7 +135,7 @@
         <!--Item Details-->
         <scene sceneID="gH7-EX-kWN">
             <objects>
-                <viewController title="Item Details" id="L8P-EY-6Kd" customClass="ItemDetailsViewController" customModule="MobileChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Item Details" id="L8P-EY-6Kd" customClass="GameDetailsViewController" customModule="MobileChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oeC-v7-Phr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,6 +192,9 @@
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <color key="textColor" red="0.26120567646596876" green="0.266251162610248" blue="0.28540378599549077" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value=""/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
@@ -326,6 +329,13 @@
                         <viewLayoutGuide key="safeArea" id="4QY-ox-8nn"/>
                     </view>
                     <navigationItem key="navigationItem" title="Item Details" largeTitleDisplayMode="never" id="ElN-4x-5Nh"/>
+                    <connections>
+                        <outlet property="freightLabel" destination="1kJ-sh-dAf" id="PF0-Uk-qyf"/>
+                        <outlet property="gameDescriptionLabel" destination="3C1-cz-CI4" id="3wx-l0-78h"/>
+                        <outlet property="gameImageView" destination="qEa-Wz-t0d" id="jTN-MN-MT8"/>
+                        <outlet property="gameTitleLabel" destination="DHw-XB-ziN" id="WLE-XP-svf"/>
+                        <outlet property="priceLabel" destination="QBK-Ef-2Wc" id="mAq-X6-ZLp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vki-lK-2Qe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
