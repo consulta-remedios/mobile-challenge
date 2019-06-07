@@ -10,12 +10,12 @@
 		26F8C831E040A79000995AAD /* Pods_MobileChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B58444D78377570BC1F2724 /* Pods_MobileChallenge.framework */; };
 		47CCFB3622A748FA0024D50E /* StoreService+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CCFB3522A748FA0024D50E /* StoreService+Constants.swift */; };
 		47F19C3F22A8AF6B005A4DEC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C3E22A8AF6B005A4DEC /* Item.swift */; };
-		47F19C4122A8B16E005A4DEC /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C4022A8B16E005A4DEC /* Cart.swift */; };
+		47F19C4122A8B16E005A4DEC /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C4022A8B16E005A4DEC /* ShoppingCart.swift */; };
+		47F19C6122A9E48E005A4DEC /* ShoppingCartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C6022A9E48E005A4DEC /* ShoppingCartTests.swift */; };
 		47F9D61222A605100069FECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9D61122A605100069FECA /* AppDelegate.swift */; };
 		47F9D61722A605100069FECA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47F9D61522A605100069FECA /* Main.storyboard */; };
 		47F9D61C22A605160069FECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47F9D61B22A605160069FECA /* Assets.xcassets */; };
 		47F9D61F22A605170069FECA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47F9D61D22A605160069FECA /* LaunchScreen.storyboard */; };
-		47F9D62A22A605170069FECA /* MobileChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9D62922A605170069FECA /* MobileChallengeTests.swift */; };
 		47F9D63C22A608300069FECA /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9D63A22A608300069FECA /* APIClient.swift */; };
 		47F9D63D22A608300069FECA /* APIClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9D63B22A608300069FECA /* APIClientProtocol.swift */; };
 		47F9D64022A608F10069FECA /* StoreServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F9D63F22A608F10069FECA /* StoreServiceProtocol.swift */; };
@@ -39,7 +39,9 @@
 		41AA1CF37D3CD6D25DF2A255 /* Pods_MobileChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47CCFB3522A748FA0024D50E /* StoreService+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoreService+Constants.swift"; sourceTree = "<group>"; };
 		47F19C3E22A8AF6B005A4DEC /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		47F19C4022A8B16E005A4DEC /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		47F19C4022A8B16E005A4DEC /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
+		47F19C5F22A9E48D005A4DEC /* MobileChallengeTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MobileChallengeTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		47F19C6022A9E48E005A4DEC /* ShoppingCartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartTests.swift; sourceTree = "<group>"; };
 		47F9D60E22A605100069FECA /* MobileChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47F9D61122A605100069FECA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47F9D61622A605100069FECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,7 +49,6 @@
 		47F9D61E22A605160069FECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47F9D62022A605170069FECA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47F9D62522A605170069FECA /* MobileChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		47F9D62922A605170069FECA /* MobileChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileChallengeTests.swift; sourceTree = "<group>"; };
 		47F9D62B22A605170069FECA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47F9D63A22A608300069FECA /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		47F9D63B22A608300069FECA /* APIClientProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClientProtocol.swift; sourceTree = "<group>"; };
@@ -114,8 +115,9 @@
 		47F9D62822A605170069FECA /* MobileChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				47F9D62922A605170069FECA /* MobileChallengeTests.swift */,
 				47F9D62B22A605170069FECA /* Info.plist */,
+				47F19C6022A9E48E005A4DEC /* ShoppingCartTests.swift */,
+				47F19C5F22A9E48D005A4DEC /* MobileChallengeTests-Bridging-Header.h */,
 			);
 			path = MobileChallengeTests;
 			sourceTree = "<group>";
@@ -149,7 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				47F19C3E22A8AF6B005A4DEC /* Item.swift */,
-				47F19C4022A8B16E005A4DEC /* Cart.swift */,
+				47F19C4022A8B16E005A4DEC /* ShoppingCart.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -258,6 +260,7 @@
 					};
 					47F9D62422A605170069FECA = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = 47F9D60D22A605100069FECA;
 					};
 				};
@@ -377,7 +380,7 @@
 				47F19C3F22A8AF6B005A4DEC /* Item.swift in Sources */,
 				47F9D64222A60CF40069FECA /* StoreService.swift in Sources */,
 				47CCFB3622A748FA0024D50E /* StoreService+Constants.swift in Sources */,
-				47F19C4122A8B16E005A4DEC /* Cart.swift in Sources */,
+				47F19C4122A8B16E005A4DEC /* ShoppingCart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47F9D62A22A605170069FECA /* MobileChallengeTests.swift in Sources */,
+				47F19C6122A9E48E005A4DEC /* ShoppingCartTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +584,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79964U8894;
 				INFOPLIST_FILE = MobileChallengeTests/Info.plist;
@@ -591,6 +595,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tiago.maia.MobileChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MobileChallengeTests/MobileChallengeTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileChallenge.app/MobileChallenge";
@@ -603,6 +609,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79964U8894;
 				INFOPLIST_FILE = MobileChallengeTests/Info.plist;
@@ -613,6 +620,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tiago.maia.MobileChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MobileChallengeTests/MobileChallengeTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileChallenge.app/MobileChallenge";

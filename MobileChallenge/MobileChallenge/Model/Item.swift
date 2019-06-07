@@ -9,7 +9,7 @@
 import Foundation
 
 /// An item from the store.
-struct Item: Codable {
+struct Item: Codable, Equatable {
 
     // MARK: Parameters
 
