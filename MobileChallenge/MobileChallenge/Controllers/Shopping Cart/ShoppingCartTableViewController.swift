@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 
 /// The segue identifier to the controller showing that the purchase has finished.
-fileprivate let purchaseFinishedSegueId = "Show success"
+private let purchaseFinishedSegueId = "Show success"
 
 /// The view controller displaying the shopping cart of the user.
 class ShoppingCartTableViewController: UITableViewController {
@@ -72,6 +72,7 @@ class ShoppingCartTableViewController: UITableViewController {
                 self?.continueBuyingButton.isEnabled = true
 
                 if wasSuccessful {
+                    self?.user.shoppingCart.clear()
                     self?.performSegue(withIdentifier: purchaseFinishedSegueId, sender: self)
                 } else if let error = error {
                     var message: String!

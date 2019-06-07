@@ -134,4 +134,22 @@ class ShoppingCartTests: XCTestCase {
 
         XCTAssertEqual(cart.freight, 0)
     }
+
+    func testClearingShoppingCartRemovesAllItems() {
+        var cart = ShoppingCart(items: (0..<5).map {
+            Item(
+                identifier: $0,
+                name: "\($0)",
+                price: 51,
+                platform: "XBox",
+                imagePath: ""
+            )
+        })
+
+        cart.clear()
+
+        XCTAssertEqual(cart.items.count, 0)
+        XCTAssertEqual(cart.totalPrice, 0)
+        XCTAssertEqual(cart.freight, 0)
+    }
 }
