@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 /// The view controller displaying the shopping cart of the user.
 class ShoppingCartTableViewController: UITableViewController {
@@ -57,7 +58,7 @@ class ShoppingCartTableViewController: UITableViewController {
 
     /// Takes the user back to the game listing controller.
     @IBAction func continueBuying(_ sender: UIButton) {
-
+        navigationController?.popToRootViewController(animated: true)
     }
 }
 
@@ -70,6 +71,12 @@ extension ShoppingCartTableViewController {
         case informations
     }
 
+    private enum InformationRow: Int, CaseIterable {
+        case address
+        case freight
+        case payment
+    }
+
     // MARK: Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -78,23 +85,28 @@ extension ShoppingCartTableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let section = Section(rawValue: section) else {
-            preconditionFailure("The section case should be correclty instantiated.")
+            preconditionFailure("The section should be correclty instantiated.")
         }
 
         switch section {
         case .games:
             return user.shoppingCart.items.count
         case .informations:
-            return 3 // Address, freight and payment.
+            return InformationRow.allCases.count
         }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        guard let section = Section(rawValue: indexPath.section) else {
+            preconditionFailure("The section should be correclty instantiated.")
+        }
 
-        // TODO: Configure the cell...
-
-        return cell
+        switch section {
+        case .games:
+            return makeGameCell(usingTableView: tableView, andIndexPath: indexPath)
+        case .informations:
+            return makeInformationCell(usingTableView: tableView, andIndexPath: indexPath)
+        }
     }
 
     // MARK: Cell Factories
@@ -104,20 +116,76 @@ extension ShoppingCartTableViewController {
     ///     - tableView: the table view used to dequeue the cells.
     ///     - indexPath: the index path used to get the related game.
     /// - Returns: the created game cell.
-//    private func makeGameCell(
-//        usingTableView tableView: UITableView,
-//        andIndexPath indexPath: IndexPath) -> GameShoppingCartTableViewCell {
-//
-//    }
+    private func makeGameCell(
+        usingTableView tableView: UITableView,
+        andIndexPath indexPath: IndexPath) -> GameShoppingCartTableViewCell {
+
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: gameCellReuseIdentifier, for: indexPath
+            ) as? GameShoppingCartTableViewCell else {
+            preconditionFailure("The cell should be of the GameShoppingCartTableViewCell type.")
+        }
+
+        let game = user.shoppingCart.items[indexPath.row]
+
+        if let URL = URL(string: game.imagePath) {
+            cell.gameCoverImageView.kf.setImage(with: URL)
+        }
+        cell.gameNameLabel.text = game.name
+        cell.priceLabel.text = "R$ \(game.price)"
+        cell.itemsCountLabel.text = "1" // TODO: Make this show the real number of items to be purchased.
+
+        return cell
+    }
 
     /// Creates the information cell to display the additional details of the purchase.
     /// - Parameters:
     ///     - tableView: the table view used to dequeue the cells.
     ///     - indexPath: the index path used to get the related information.
     /// - Returns: the created information cell.
-//    private func makeInformationCell(
-//        usingTableView tableView: UITableView,
-//        andIndexPath indexPath: IndexPath) -> InformationTableViewCell {
-//
-//    }
+    private func makeInformationCell(
+        usingTableView tableView: UITableView,
+        andIndexPath indexPath: IndexPath) -> InformationTableViewCell {
+
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: infoCellReuseIdentifier, for: indexPath
+            ) as? InformationTableViewCell else {
+                preconditionFailure("The cell should be of the InformationTableViewCell type.")
+        }
+
+        guard let informationRow = InformationRow(rawValue: indexPath.row) else {
+            preconditionFailure("The row must have a compatible enum value.")
+        }
+
+        var title: String!
+        var information: String!
+
+        switch informationRow {
+        case .address:
+            title = NSLocalizedString(
+                "Endereço de entrega",
+                comment: "The title of a field in the shopping cart controller."
+            )
+            information = "80510-342 Rua Desembargador Vieira Cavalcanti, 703 Curitiba - Paraná"
+
+        case .freight:
+            title = NSLocalizedString(
+                "Frete",
+                comment: "The title of a field in the shopping cart controller."
+            )
+            information = "Transportadora: R$ 12,90"
+
+        case .payment:
+            title = NSLocalizedString(
+                "Pagamento",
+                comment: "The title of a field in the shopping cart controller."
+            )
+            information = "5678 **** **** 4536 visa"
+        }
+
+        cell.informationTitleLabel.text = title
+        cell.valueTitleLabel.text = information
+
+        return cell
+    }
 }
