@@ -39,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let service = StoreService(apiClient: apiClient)
 
         gamesController.storeService = service
+        gamesController.user = User.shared
 
         return true
     }

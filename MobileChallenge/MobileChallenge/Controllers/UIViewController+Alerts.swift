@@ -89,6 +89,11 @@ extension UIViewController {
             "A exibição dos detalhes não pôde ser completada.",
             comment: "Message displayed when the server returns an error in the details' fetch."
         )
+
+        static let purchaseErrorResponse = NSLocalizedString(
+            "A compra não pôde ser completada.",
+            comment: "Message displayed when the server returns an error in the purchase checkout."
+        )
     }
 
     /// Describes the constants containing the button titles used in the app's alerts.

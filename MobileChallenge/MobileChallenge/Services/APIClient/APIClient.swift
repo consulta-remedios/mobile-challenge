@@ -50,7 +50,40 @@ struct APIClient: APIClientProtocol {
         }
     }
 
-    // TODO: Add post task factory method.
+    func makeConfiguredPOSTTask(
+        forResourceAtUrl URL: URL,
+        parameters: [String: String]?,
+        jsonBody: Data?,
+        andCompletionHandler handler: @escaping (Bool, URLSessionTask.TaskError?) -> Void
+        ) -> URLSessionDataTask {
+
+        var request = makeBaseRequest(URL: URL)
+        request.httpMethod = "POST"
+        request.httpBody = jsonBody
+
+        parameters?.forEach {
+            request.setValue($0.value, forHTTPHeaderField: $0.key)
+        }
+
+        return session.dataTask(with: request) { data, response, error in
+            guard error == nil, data != nil else {
+                handler(false, .connection)
+                return
+            }
+
+            guard let httpResponse = response as? HTTPURLResponse else {
+                handler(false, .connection)
+                return
+            }
+
+            guard (200...299).contains(httpResponse.statusCode) else {
+                handler(false, .serverResponse(statusCode: httpResponse.statusCode))
+                return
+            }
+
+            handler(true, nil)
+        }
+    }
 
     /// Builds a configured URLRequest with the provided HTTP headers.
     /// - Parameter url: the url of the resource.

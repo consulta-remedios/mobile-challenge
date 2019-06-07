@@ -20,6 +20,9 @@ class GamesCollectionViewController: UICollectionViewController {
     /// The service used to request any items to be displayed by this controller.
     var storeService: StoreServiceProtocol!
 
+    /// The user of the application.
+    var user: User!
+
     /// The items being displayed.
     fileprivate var items: [Item]? {
         didSet {
@@ -40,6 +43,10 @@ class GamesCollectionViewController: UICollectionViewController {
         guard storeService != nil else {
             preconditionFailure("The store service must be injected.")
         }
+
+        guard user != nil else {
+            preconditionFailure("The user must be injected.")
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -50,20 +57,31 @@ class GamesCollectionViewController: UICollectionViewController {
     // MARK: Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let detailsController = segue.destination as? GameDetailsViewController else {
-            preconditionFailure("The controller must be an instance of the details vc.")
-        }
+        if segue.identifier == "Show Cart" {
+            guard let shoppingCartController = segue.destination as? ShoppingCartTableViewController else {
+                preconditionFailure("The controller must be the shpping cart one.")
+            }
 
-        guard let selectedIndexPath = collectionView.indexPathsForSelectedItems?.first else {
-            preconditionFailure("The item must be selected to proceed.")
-        }
+            shoppingCartController.user = user
+            shoppingCartController.storeService = storeService
 
-        guard let item = items?[selectedIndexPath.item] else {
-            preconditionFailure("The index path must be related to an item.")
-        }
+        } else {
+            guard let detailsController = segue.destination as? GameDetailsViewController else {
+                preconditionFailure("The controller must be an instance of the details vc.")
+            }
 
-        detailsController.storeService = storeService
-        detailsController.item = item
+            guard let selectedIndexPath = collectionView.indexPathsForSelectedItems?.first else {
+                preconditionFailure("The item must be selected to proceed.")
+            }
+
+            guard let item = items?[selectedIndexPath.item] else {
+                preconditionFailure("The index path must be related to an item.")
+            }
+
+            detailsController.storeService = storeService
+            detailsController.user = user
+            detailsController.item = item
+        }
     }
 
     // MARK: Imperatives

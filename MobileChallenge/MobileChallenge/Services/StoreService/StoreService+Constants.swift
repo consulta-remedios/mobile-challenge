@@ -19,6 +19,7 @@ extension StoreService {
     /// The endpoints of the api.
     enum Endpoints {
         static let games = "game"
+        static let endPurchase = "checkout"
     }
 
     // MARK: Imperatives

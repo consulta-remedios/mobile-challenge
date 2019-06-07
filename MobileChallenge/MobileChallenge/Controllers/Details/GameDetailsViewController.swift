@@ -14,8 +14,14 @@ class GameDetailsViewController: UIViewController {
 
     // MARK: Properties
 
+    /// The segue identifier of the shopping cart.
+    private let segueIdentifier = "Show shopping cart"
+
     /// The service used to request the details of an item from the server.
     var storeService: StoreServiceProtocol!
+
+    /// The user of the application.
+    var user: User!
 
     /// The item being displayed.
     var item: Item!
@@ -47,6 +53,10 @@ class GameDetailsViewController: UIViewController {
             preconditionFailure("The store service must be injected.")
         }
 
+        guard user != nil else {
+            preconditionFailure("The user must be injected.")
+        }
+
         guard item != nil else {
             preconditionFailure("The item must be injected.")
         }
@@ -69,7 +79,19 @@ class GameDetailsViewController: UIViewController {
     // MARK: Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // TODO:
+        guard let shoppingCartController = segue.destination as? ShoppingCartTableViewController else {
+            preconditionFailure("The controller must be the shopping cart one.")
+        }
+
+        shoppingCartController.storeService = storeService
+        shoppingCartController.user = user
+    }
+
+    // MARK: Actions
+
+    @IBAction func addToShoppingCart(_ sender: UIButton) {
+        user.shoppingCart.addItem(item)
+        performSegue(withIdentifier: segueIdentifier, sender: self)
     }
 
     // MARK: Imperatives
@@ -95,12 +117,14 @@ class GameDetailsViewController: UIViewController {
                         message = ErrorMessages.readData
                     }
 
-                    let alert = self!.makeErrorAlertController(withMessage: message)
-                    alert.addAction(UIAlertAction(title: AlertButtonTitles.tryAgain, style: .default) { _ in
+                    let alert = self?.makeErrorAlertController(withMessage: message)
+                    alert?.addAction(UIAlertAction(title: AlertButtonTitles.tryAgain, style: .default) { _ in
                         self?.getItemDetails()
                     })
 
-                    self?.present(alert, animated: true)
+                    if let alert = alert {
+                        self?.present(alert, animated: true)
+                    }
                 }
             }
         }
