@@ -358,11 +358,73 @@
                         <outlet property="continueBuyingButton" destination="GMx-RG-ya8" id="OlR-vV-cac"/>
                         <outlet property="finishPurchaseButton" destination="Zls-8o-Hid" id="Mc7-B0-dxG"/>
                         <outlet property="totalPriceLabel" destination="fgG-ni-VAL" id="7Gy-cc-2j9"/>
+                        <segue destination="QNn-1J-zbq" kind="show" id="HZQ-2D-avY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mg3-U7-3sE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="957.60000000000002" y="-600.44977511244383"/>
+        </scene>
+        <!--Compra concluída-->
+        <scene sceneID="yn7-e1-Ad3">
+            <objects>
+                <viewController title="Compra concluída" id="QNn-1J-zbq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TZd-C4-jcg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="b0z-Nf-KAf">
+                                <rect key="frame" x="19" y="236.5" width="337.5" height="194"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-box" translatesAutoresizingMaskIntoConstraints="NO" id="2y3-hW-Wc6">
+                                        <rect key="frame" x="138.5" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="2y3-hW-Wc6" secondAttribute="height" multiplier="1:1" id="dIL-wA-pOz"/>
+                                            <constraint firstAttribute="width" constant="60" id="gkq-Aa-3hJ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="YCh-JX-NLL">
+                                        <rect key="frame" x="7" y="87" width="323.5" height="107"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AHOOOY!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Jd-Ws-pjP">
+                                                <rect key="frame" x="118.5" y="0.0" width="86.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" red="0.45169923639999998" green="0.78008952249999997" blue="0.43305881130000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sua compra n• 00279 foi concluída com sucesso. Em breve você receberá seus produtos." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0r-kj-5ID">
+                                                <rect key="frame" x="0.0" y="32.5" width="323.5" height="33.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JzW-n4-iSy">
+                                                <rect key="frame" x="91" y="78" width="141" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <state key="normal" title="Continuar comprando">
+                                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="continueBuying:" destination="0sP-tD-lNu" eventType="touchUpInside" id="xCM-xH-WHq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="b0z-Nf-KAf" firstAttribute="width" secondItem="TZd-C4-jcg" secondAttribute="width" multiplier="0.9" id="DmB-2G-gqf"/>
+                            <constraint firstItem="b0z-Nf-KAf" firstAttribute="centerY" secondItem="TZd-C4-jcg" secondAttribute="centerY" id="eSq-mw-KR3"/>
+                            <constraint firstItem="b0z-Nf-KAf" firstAttribute="centerX" secondItem="TZd-C4-jcg" secondAttribute="centerX" id="z6q-lG-eio"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PeP-wc-fb3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PPl-91-lQX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1761" y="-600"/>
         </scene>
         <!--Item Details-->
         <scene sceneID="gH7-EX-kWN">
@@ -594,6 +656,7 @@
     </scenes>
     <resources>
         <image name="game-mortal-kombat-xl" width="180" height="180"/>
+        <image name="icon-box" width="48" height="48"/>
         <image name="icon-cart" width="28" height="28"/>
         <image name="icon-freight" width="24" height="24"/>
     </resources>
