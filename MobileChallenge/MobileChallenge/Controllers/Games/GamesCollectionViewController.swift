@@ -15,13 +15,13 @@ class GamesCollectionViewController: UICollectionViewController {
     // MARK: Properties
 
     /// The cell reuse identifier.
-    private let reuseIdentifier = "game collection cell"
+    fileprivate let reuseIdentifier = "game collection cell"
 
     /// The service used to request any items to be displayed by this controller.
     var storeService: StoreServiceProtocol!
 
     /// The items being displayed.
-    private var items: [Item]? {
+    fileprivate var items: [Item]? {
         didSet {
             if items != nil {
                 self.collectionView?.reloadData()
@@ -46,8 +46,6 @@ class GamesCollectionViewController: UICollectionViewController {
             DispatchQueue.main.async {
                 if let items = items {
                     self?.items = items
-
-                    print(items.first!)
                 } else if let error = error {
                     // TODO: Display the error in an alert.
                     // TODO: Add an extension to display errors.
@@ -61,6 +59,9 @@ class GamesCollectionViewController: UICollectionViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // TODO: Pass the selected game to the details controller.
     }
+}
+
+extension GamesCollectionViewController: UICollectionViewDelegateFlowLayout {
 
     // MARK: UICollectionViewDataSource
 
@@ -85,7 +86,6 @@ class GamesCollectionViewController: UICollectionViewController {
             preconditionFailure("The cell is to be a GameCollectionViewCell.")
         }
 
-        // TODO: Display the game's image.
         if let URL = URL(string: game.imagePath) {
             gameCell.gameImageView.kf.setImage(with: URL)
         }
@@ -94,5 +94,28 @@ class GamesCollectionViewController: UICollectionViewController {
         gameCell.priceLabel.text = "R$ \(game.price)"
 
         return cell
+    }
+
+    // MARK: UICollectionViewDelegateFlowLayout Methods
+
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: (collectionView.frame.size.width / 2) - 25, height: 250)
+    }
+
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
+
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
     }
 }
