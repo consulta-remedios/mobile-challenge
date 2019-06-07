@@ -26,7 +26,17 @@ class ShoppingCartTableViewController: UITableViewController {
     /// The user of the application, with its shopping cart.
     var user: User!
 
+    /// The label displaying the total price of the shopping cart.
     @IBOutlet weak var totalPriceLabel: UILabel!
+
+    /// The button used to complete the purchase.
+    @IBOutlet weak var finishPurchaseButton: UIButton!
+
+    /// The button used to take the user to the games listing.
+    @IBOutlet weak var continueBuyingButton: UIButton!
+
+    /// The activity indicator showing that the request is in progress.
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     // MARK: Life Cycle
 
@@ -55,10 +65,15 @@ class ShoppingCartTableViewController: UITableViewController {
 
     /// Finishes the purchase, posting the purchase data to the server.
     @IBAction func finishPurchase(_ sender: UIButton? = nil) {
-        // TODO: Show the loading indicator.
+        activityIndicator.startAnimating()
+        finishPurchaseButton.isEnabled = false
+        continueBuyingButton.isEnabled = false
+
         storeService.finishPurchase { [weak self] wasSuccessful, error in
             DispatchQueue.main.async {
-                // TODO: Hide the loading indicator.
+                self?.activityIndicator.stopAnimating()
+                self?.finishPurchaseButton.isEnabled = true
+                self?.continueBuyingButton.isEnabled = true
 
                 if wasSuccessful {
                     // TODO: Go to the next controller.

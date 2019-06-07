@@ -207,11 +207,17 @@
                                         <constraint firstAttribute="height" constant="1" id="h4i-bC-xzv"/>
                                     </constraints>
                                 </view>
+                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="qcz-pT-zn1" userLabel="Activity indicator">
+                                    <rect key="frame" x="169" y="35.5" width="37" height="37"/>
+                                    <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </activityIndicatorView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="8cN-Sh-DzC" secondAttribute="trailing" constant="16" id="61q-xz-M4m"/>
+                                <constraint firstItem="qcz-pT-zn1" firstAttribute="centerY" secondItem="LpR-xo-y4P" secondAttribute="centerY" id="MJL-GX-t3h"/>
                                 <constraint firstAttribute="bottom" secondItem="8cN-Sh-DzC" secondAttribute="bottom" constant="15" id="RwE-t8-RV0"/>
+                                <constraint firstItem="qcz-pT-zn1" firstAttribute="centerX" secondItem="LpR-xo-y4P" secondAttribute="centerX" id="Yzd-cH-AIo"/>
                                 <constraint firstAttribute="trailing" secondItem="3SD-yM-NfN" secondAttribute="trailing" id="ag7-eQ-hnY"/>
                                 <constraint firstItem="3SD-yM-NfN" firstAttribute="leading" secondItem="LpR-xo-y4P" secondAttribute="leading" id="bSd-at-BaW"/>
                                 <constraint firstItem="3SD-yM-NfN" firstAttribute="top" secondItem="LpR-xo-y4P" secondAttribute="top" id="hEb-ct-gT1"/>
@@ -348,6 +354,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Carrinho de Compras" largeTitleDisplayMode="never" id="CGR-p0-vy5"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="qcz-pT-zn1" id="dIp-o3-ZHC"/>
+                        <outlet property="continueBuyingButton" destination="GMx-RG-ya8" id="OlR-vV-cac"/>
+                        <outlet property="finishPurchaseButton" destination="Zls-8o-Hid" id="Mc7-B0-dxG"/>
                         <outlet property="totalPriceLabel" destination="fgG-ni-VAL" id="7Gy-cc-2j9"/>
                     </connections>
                 </tableViewController>
