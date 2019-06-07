@@ -14,7 +14,7 @@ class User {
     // MARK: Properties
 
     /// The user's shopping cart.
-    private(set) var shoppingCart = ShoppingCart()
+    var shoppingCart = ShoppingCart()
 
     // MARK: Singleton
 

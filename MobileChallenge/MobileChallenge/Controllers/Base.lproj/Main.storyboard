@@ -529,7 +529,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="0sP-tD-lNu" kind="show" id="8QY-hD-Vof"/>
+                                                    <action selector="addToShoppingCart:" destination="L8P-EY-6Kd" eventType="touchUpInside" id="ITG-SV-C8D"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -565,7 +565,7 @@
                     <navigationItem key="navigationItem" title="Item Details" largeTitleDisplayMode="never" id="ElN-4x-5Nh">
                         <barButtonItem key="rightBarButtonItem" title="Cart" image="icon-cart" id="2b8-dS-3hd">
                             <connections>
-                                <segue destination="0sP-tD-lNu" kind="show" id="PK8-YR-nHs"/>
+                                <segue destination="0sP-tD-lNu" kind="show" identifier="Show shopping cart" id="PK8-YR-nHs"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -14,6 +14,9 @@ class GameDetailsViewController: UIViewController {
 
     // MARK: Properties
 
+    /// The segue identifier of the shopping cart.
+    private let segueIdentifier = "Show shopping cart"
+
     /// The service used to request the details of an item from the server.
     var storeService: StoreServiceProtocol!
 
@@ -82,6 +85,13 @@ class GameDetailsViewController: UIViewController {
 
         shoppingCartController.storeService = storeService
         shoppingCartController.user = user
+    }
+
+    // MARK: Actions
+
+    @IBAction func addToShoppingCart(_ sender: UIButton) {
+        user.shoppingCart.addItem(item)
+        performSegue(withIdentifier: segueIdentifier, sender: self)
     }
 
     // MARK: Imperatives
