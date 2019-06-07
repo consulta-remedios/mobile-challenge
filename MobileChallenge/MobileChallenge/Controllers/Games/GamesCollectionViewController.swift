@@ -50,20 +50,24 @@ class GamesCollectionViewController: UICollectionViewController {
     // MARK: Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let detailsController = segue.destination as? GameDetailsViewController else {
-            preconditionFailure("The controller must be an instance of the details vc.")
-        }
+        if segue.identifier == "Show Cart" {
 
-        guard let selectedIndexPath = collectionView.indexPathsForSelectedItems?.first else {
-            preconditionFailure("The item must be selected to proceed.")
-        }
+        } else {
+            guard let detailsController = segue.destination as? GameDetailsViewController else {
+                preconditionFailure("The controller must be an instance of the details vc.")
+            }
 
-        guard let item = items?[selectedIndexPath.item] else {
-            preconditionFailure("The index path must be related to an item.")
-        }
+            guard let selectedIndexPath = collectionView.indexPathsForSelectedItems?.first else {
+                preconditionFailure("The item must be selected to proceed.")
+            }
 
-        detailsController.storeService = storeService
-        detailsController.item = item
+            guard let item = items?[selectedIndexPath.item] else {
+                preconditionFailure("The index path must be related to an item.")
+            }
+
+            detailsController.storeService = storeService
+            detailsController.item = item
+        }
     }
 
     // MARK: Imperatives
