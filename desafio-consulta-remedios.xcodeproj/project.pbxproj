@@ -13,11 +13,18 @@
 		8E0C6F3F22A5EC0700D93EE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E0C6F3D22A5EC0700D93EE5 /* LaunchScreen.storyboard */; };
 		8E0C6F4A22A5EC0700D93EE5 /* desafio_consulta_remediosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C6F4922A5EC0700D93EE5 /* desafio_consulta_remediosTests.swift */; };
 		8E0C6F5522A5EC0700D93EE5 /* desafio_consulta_remediosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C6F5422A5EC0700D93EE5 /* desafio_consulta_remediosUITests.swift */; };
+		8E64F36C22AC10A200D8A68F /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64F36B22AC10A200D8A68F /* Enums.swift */; };
 		8E9CAA6D22A9CA4600821688 /* ShoppingCart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9CAA6C22A9CA4600821688 /* ShoppingCart.storyboard */; };
 		8E9CAA7122A9CB6B00821688 /* ShoppingCartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CAA6F22A9CB6B00821688 /* ShoppingCartCell.swift */; };
 		8E9CAA7222A9CB6B00821688 /* ShoppingCartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E9CAA7022A9CB6B00821688 /* ShoppingCartCell.xib */; };
 		8E9CAA7422A9DABD00821688 /* ShoppingCartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CAA7322A9DABD00821688 /* ShoppingCartController.swift */; };
 		8E9CAA7622A9E14300821688 /* ShoppingCartCellPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CAA7522A9E14300821688 /* ShoppingCartCellPresenterView.swift */; };
+		8E9CAA7922A9E50100821688 /* ShoppingCartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CAA7822A9E50100821688 /* ShoppingCartPresenter.swift */; };
+		8E9CAA7B22A9E52000821688 /* ShoppingCartPresenterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CAA7A22A9E52000821688 /* ShoppingCartPresenterRouter.swift */; };
+		8E9CAA7D22A9E57300821688 /* ShoppingCartPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CAA7C22A9E57300821688 /* ShoppingCartPresenterView.swift */; };
+		8E9CAA8022A9F0D600821688 /* CartSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CAA7F22A9F0D600821688 /* CartSingleton.swift */; };
+		8E9CAA8222A9F15C00821688 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CAA8122A9F15C00821688 /* CartItem.swift */; };
+		8E9CAA8422AA040000821688 /* CartRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CAA8322AA040000821688 /* CartRepository.swift */; };
 		8EE2F46122A86F3B00B41744 /* Games.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EE2F46022A86F3B00B41744 /* Games.storyboard */; };
 		8EE2F46322A86FB000B41744 /* GamesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2F46222A86FAF00B41744 /* GamesController.swift */; };
 		8EE2F47022A8711D00B41744 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2F46922A8711D00B41744 /* GameCell.swift */; };
@@ -92,11 +99,18 @@
 		8E0C6F5022A5EC0700D93EE5 /* desafio-consulta-remediosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "desafio-consulta-remediosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E0C6F5422A5EC0700D93EE5 /* desafio_consulta_remediosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafio_consulta_remediosUITests.swift; sourceTree = "<group>"; };
 		8E0C6F5622A5EC0700D93EE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E64F36B22AC10A200D8A68F /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		8E9CAA6C22A9CA4600821688 /* ShoppingCart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShoppingCart.storyboard; sourceTree = "<group>"; };
 		8E9CAA6F22A9CB6B00821688 /* ShoppingCartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartCell.swift; sourceTree = "<group>"; };
 		8E9CAA7022A9CB6B00821688 /* ShoppingCartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingCartCell.xib; sourceTree = "<group>"; };
 		8E9CAA7322A9DABD00821688 /* ShoppingCartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartController.swift; sourceTree = "<group>"; };
 		8E9CAA7522A9E14300821688 /* ShoppingCartCellPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartCellPresenterView.swift; sourceTree = "<group>"; };
+		8E9CAA7822A9E50100821688 /* ShoppingCartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartPresenter.swift; sourceTree = "<group>"; };
+		8E9CAA7A22A9E52000821688 /* ShoppingCartPresenterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartPresenterRouter.swift; sourceTree = "<group>"; };
+		8E9CAA7C22A9E57300821688 /* ShoppingCartPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartPresenterView.swift; sourceTree = "<group>"; };
+		8E9CAA7F22A9F0D600821688 /* CartSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartSingleton.swift; sourceTree = "<group>"; };
+		8E9CAA8122A9F15C00821688 /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
+		8E9CAA8322AA040000821688 /* CartRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRepository.swift; sourceTree = "<group>"; };
 		8EE2F46022A86F3B00B41744 /* Games.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Games.storyboard; sourceTree = "<group>"; };
 		8EE2F46222A86FAF00B41744 /* GamesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesController.swift; sourceTree = "<group>"; };
 		8EE2F46922A8711D00B41744 /* GameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
@@ -245,6 +259,7 @@
 		8E9CAA6A22A9CA1C00821688 /* Shopping Cart */ = {
 			isa = PBXGroup;
 			children = (
+				8E9CAA7722A9E4E500821688 /* Presenter */,
 				8E9CAA6B22A9CA2E00821688 /* View */,
 			);
 			path = "Shopping Cart";
@@ -256,6 +271,7 @@
 				8E9CAA6E22A9CB4B00821688 /* ShoppingCartCell */,
 				8E9CAA6C22A9CA4600821688 /* ShoppingCart.storyboard */,
 				8E9CAA7322A9DABD00821688 /* ShoppingCartController.swift */,
+				8E9CAA7C22A9E57300821688 /* ShoppingCartPresenterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -268,6 +284,23 @@
 				8E9CAA7522A9E14300821688 /* ShoppingCartCellPresenterView.swift */,
 			);
 			path = ShoppingCartCell;
+			sourceTree = "<group>";
+		};
+		8E9CAA7722A9E4E500821688 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8E9CAA7822A9E50100821688 /* ShoppingCartPresenter.swift */,
+				8E9CAA7A22A9E52000821688 /* ShoppingCartPresenterRouter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8E9CAA7E22A9F0BC00821688 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				8E9CAA7F22A9F0D600821688 /* CartSingleton.swift */,
+			);
+			path = Singletons;
 			sourceTree = "<group>";
 		};
 		8EE2F45D22A86EFD00B41744 /* Scenes */ = {
@@ -324,6 +357,7 @@
 			children = (
 				8EE2F48D22A87B9000B41744 /* Views */,
 				8EE2F47522A8726800B41744 /* Extensions */,
+				8E64F36B22AC10A200D8A68F /* Enums.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -345,6 +379,7 @@
 		8EE2F47E22A8778800B41744 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				8E9CAA7E22A9F0BC00821688 /* Singletons */,
 				8EE2F48522A8791C00B41744 /* Repositories */,
 				8EE2F48222A877ED00B41744 /* Services */,
 				8EE2F47F22A877A200B41744 /* Models */,
@@ -357,6 +392,7 @@
 			children = (
 				8EE2F48022A877B200B41744 /* Game.swift */,
 				8EE2F4BA22A8B75700B41744 /* GameDetail.swift */,
+				8E9CAA8122A9F15C00821688 /* CartItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -373,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				8EE2F48622A8793E00B41744 /* GameRepository.swift */,
+				8E9CAA8322AA040000821688 /* CartRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -713,18 +750,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E64F36C22AC10A200D8A68F /* Enums.swift in Sources */,
 				8EE2F48422A8781000B41744 /* GameService.swift in Sources */,
 				8EE2F48C22A87B0C00B41744 /* GamesPresenterRouter.swift in Sources */,
 				8EE2F49422A87BB200B41744 /* UIView+Extension.swift in Sources */,
 				8E9CAA7122A9CB6B00821688 /* ShoppingCartCell.swift in Sources */,
 				8EE2F47922A8727A00B41744 /* UIColor+Extension.swift in Sources */,
 				8EE2F4BB22A8B75700B41744 /* GameDetail.swift in Sources */,
+				8E9CAA7922A9E50100821688 /* ShoppingCartPresenter.swift in Sources */,
 				8EE2F49722A87C5E00B41744 /* ARMessageView.swift in Sources */,
 				8EE2F48122A877B200B41744 /* Game.swift in Sources */,
 				8EE2F4B522A8AC7D00B41744 /* GameDetailsPresenter.swift in Sources */,
 				8E9CAA7622A9E14300821688 /* ShoppingCartCellPresenterView.swift in Sources */,
 				8EE2F4AE22A895B100B41744 /* PageCell.swift in Sources */,
 				8E0C6F3522A5EC0600D93EE5 /* AppDelegate.swift in Sources */,
+				8E9CAA7D22A9E57300821688 /* ShoppingCartPresenterView.swift in Sources */,
 				8EE2F47222A8711D00B41744 /* GameCellPresenterView.swift in Sources */,
 				8EE2F4AA22A88EFA00B41744 /* UILabel+Extension.swift in Sources */,
 				8EE2F4BD22A8BAF500B41744 /* PageCellPresenterView.swift in Sources */,
@@ -744,8 +784,12 @@
 				8EE2F4A822A88BEB00B41744 /* UIShadowedRadiusButton.swift in Sources */,
 				8EE2F4A622A88B3E00B41744 /* UITintedImageView.swift in Sources */,
 				8EE2F4B722A8AC9E00B41744 /* GameDetailsPresenterRouter.swift in Sources */,
+				8E9CAA8422AA040000821688 /* CartRepository.swift in Sources */,
 				8EE2F48722A8793E00B41744 /* GameRepository.swift in Sources */,
+				8E9CAA7B22A9E52000821688 /* ShoppingCartPresenterRouter.swift in Sources */,
+				8E9CAA8022A9F0D600821688 /* CartSingleton.swift in Sources */,
 				8EE2F47022A8711D00B41744 /* GameCell.swift in Sources */,
+				8E9CAA8222A9F15C00821688 /* CartItem.swift in Sources */,
 				8EE2F47D22A875D800B41744 /* GamesPresenterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

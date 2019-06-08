@@ -11,6 +11,6 @@ import UIKit
 extension UINavigationBar {
     func hideHairline(isTransparent: Bool = false) {
         shadowImage = UIImage()
-        if isTransparent {setBackgroundImage(UIImage(), for: .default)}
+        if isTransparent { setBackgroundImage(UIImage(), for: .default) }
     }
 }

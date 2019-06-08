@@ -21,6 +21,7 @@ class GameDetailsViewFlowLayout: UICollectionViewFlowLayout {
         }
         return collectionView.bounds.height
     }
+    
     override func prepare() {
         super.prepare()
         minimumInteritemSpacing = 0
@@ -28,6 +29,7 @@ class GameDetailsViewFlowLayout: UICollectionViewFlowLayout {
         scrollDirection = .horizontal
         sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
+    
     override var itemSize: CGSize {
         set { }
         get {

@@ -12,9 +12,8 @@ extension UIColor {
     public convenience init?(hexString: String) {
         let alpha: Float = 1.0
         let scanner = Scanner(string:hexString)
-        var color:UInt32 = 0;
+        var color: UInt32 = 0;
         scanner.scanHexInt32(&color)
-        
         let mask = 0x000000FF
         let r = CGFloat(Float(Int(color >> 16) & mask)/255.0)
         let g = CGFloat(Float(Int(color >> 8) & mask)/255.0)
@@ -24,7 +23,6 @@ extension UIColor {
         
         return
     }
-    
     static let mainGraySearchBar = UIColor(hexString: "E0E0E1")!
     static let mainGreen = UIColor(hexString: "4CD964")!
     static let mainBlue = UIColor(hexString: "3395FF")!

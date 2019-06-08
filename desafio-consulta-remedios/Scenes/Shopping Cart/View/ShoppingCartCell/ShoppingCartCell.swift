@@ -10,7 +10,6 @@ import UIKit
 
 class ShoppingCartCell: UITableViewCell {
     class var identifier: String { return String(describing: type(of: ShoppingCartCell.self)) }
-
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var platformLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -43,6 +42,4 @@ extension ShoppingCartCell: ShoppingCartCellPresenterView {
     func displayView(quantity: String) {
         quantityLabel.text = quantity
     }
-    
-    
 }

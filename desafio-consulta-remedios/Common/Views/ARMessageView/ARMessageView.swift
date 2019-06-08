@@ -31,7 +31,7 @@ class ARMessageView: UIView {
         label.backgroundColor = .clear
         label.textAlignment = .center
         label.numberOfLines = 0
-        label.font = UIFont(name: "ProximaNova-Light", size: 15.0)
+        label.font = UIFont.systemFont(ofSize: 15)
         label.textColor = .lightGray
         return label
     }()
@@ -46,7 +46,8 @@ class ARMessageView: UIView {
         btn.setTitle("LOGIN", for: .normal)
         btn.backgroundColor = .clear
         btn.layer.cornerRadius = 5
-        btn.setTitleColor(.mainGraySearchBar, for: .normal)
+        btn.setTitleColor(.mainBlue, for: .normal)
+        btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 13)
         btn.addTarget(self, action: #selector(touchUpInsideButton), for: .touchUpInside)
         return btn
     }()
@@ -110,10 +111,12 @@ class ARMessageView: UIView {
 enum Icon {
     case notFound
     case logo
+    case completed
     var image: UIImage {
         switch self {
         case .notFound: return #imageLiteral(resourceName: "logo")
         case .logo: return #imageLiteral(resourceName: "logo")
+        case .completed: return #imageLiteral(resourceName: "ahoooy")
         }
     }
 }

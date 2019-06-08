@@ -27,7 +27,7 @@ extension UIView {
         viewWithTag(kLoadingViewTag)?.removeFromSuperview()
     }
     
-    func addContainerView(_ containerView:UIView, onTop:Bool = false) {
+    func addContainerView(_ containerView: UIView, onTop: Bool = false) {
         addSubview(containerView)
         
         if onTop {
@@ -37,7 +37,7 @@ extension UIView {
         tightConstrain(containerView)
     }
     
-    func tightConstrain(_ containerView:UIView) {
+    func tightConstrain(_ containerView: UIView) {
         containerView.translatesAutoresizingMaskIntoConstraints = false
         
         containerView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
@@ -48,7 +48,7 @@ extension UIView {
         containerView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
     }
     
-    func addWindowView(_ containerView:UIView, onTop:Bool = false){
+    func addWindowView(_ containerView: UIView, onTop: Bool = false){
         if let window = UIApplication.shared.keyWindow {
             window.addSubview(containerView)
             tightWindowConstrain(containerView, window)
@@ -56,15 +56,13 @@ extension UIView {
         }else{
             addSubview(containerView)
         }
-        
         if onTop {
             bringSubviewToFront(containerView)
         }
-        
         tightConstrain(containerView)
     }
     
-    func tightWindowConstrain(_ containerView:UIView, _ window:UIWindow){
+    func tightWindowConstrain(_ containerView: UIView, _ window: UIWindow){
         containerView.translatesAutoresizingMaskIntoConstraints = false
         containerView.leftAnchor.constraint(equalTo: window.leftAnchor).isActive = true
         containerView.rightAnchor.constraint(equalTo: window.rightAnchor).isActive = true

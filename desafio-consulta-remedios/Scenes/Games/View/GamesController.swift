@@ -14,7 +14,6 @@ class GamesController: UIViewController {
             static let GameCell = "GameCell"
         }
     }
-    
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
             collectionView.register(
@@ -43,6 +42,8 @@ class GamesController: UIViewController {
     @IBAction func showShoppingCartButtonTapped(_ sender: Any) {
         presenter?.onShowShoppingCartButtonTapped()
     }
+    
+    @IBAction func unwindToGames(segue:UIStoryboardSegue) { }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         presenter?.prepare(for: segue, sender: sender)
@@ -81,7 +82,12 @@ extension GamesController: GamesPresenterView {
     }
     
     func showMessage(icon: Icon, text: String, sizeIcon: Int, backgroundColor: UIColor, isButton: Bool, titleButton: String) {
-        view.displayMessageView(icon: icon, text: text, sizeIcon: sizeIcon, backgroundColor: backgroundColor, isButton: isButton, titleButton: titleButton) { [weak self] in
+        view.displayMessageView(icon: icon,
+                                text: text,
+                                sizeIcon: sizeIcon,
+                                backgroundColor: backgroundColor,
+                                isButton: isButton,
+                                titleButton: titleButton) { [weak self] in
             self?.presenter?.present()
         }
     }

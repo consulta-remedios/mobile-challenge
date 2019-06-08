@@ -192,6 +192,9 @@
                                                 <state key="normal" title="FINALIZAR COMPRA">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="finalizePurchaseButtonTapped:" destination="lGD-t5-Lo4" eventType="touchUpInside" id="344-Xd-ENy"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cda-S3-Y2x">
                                                 <rect key="frame" x="10" y="75" width="394" height="30"/>
@@ -200,6 +203,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" title="Continuar comprando"/>
+                                                <connections>
+                                                    <action selector="continueBuyingButtonTapped:" destination="lGD-t5-Lo4" eventType="touchUpInside" id="gWe-BH-R5v"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -270,9 +276,12 @@
                         <outlet property="freightPriceLabel" destination="mwu-C2-2nf" id="bUr-yJ-oTM"/>
                         <outlet property="tableView" destination="uJ9-ak-A8y" id="cQi-DL-RZy"/>
                         <outlet property="tableViewHeightLayoutConstraint" destination="ohF-C8-V3D" id="CtE-Dr-gzQ"/>
+                        <outlet property="totalLabel" destination="Mdb-N3-1v4" id="Ugi-8p-Eiw"/>
+                        <segue destination="C2I-Dj-ej0" kind="unwind" identifier="unwindSegueToGames" unwindAction="unwindToGamesWithSegue:" id="afo-78-QaN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kp1-Sb-pDO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="C2I-Dj-ej0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1144.9275362318842" y="211.95652173913044"/>
         </scene>

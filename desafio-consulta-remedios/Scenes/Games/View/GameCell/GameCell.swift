@@ -11,7 +11,6 @@ import Kingfisher
 
 class GameCell: UICollectionViewCell {
     class var identifier: String { return String(describing: type(of: GameCell.self)) }
-    
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var platformLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!

@@ -15,7 +15,6 @@ class GamesPresenterRouter {
             static let ShowShoppingCart = "shoppingCartSegue"
         }
     }
-    
     private weak var viewController: GamesController?
     
     init(viewController: GamesController) {

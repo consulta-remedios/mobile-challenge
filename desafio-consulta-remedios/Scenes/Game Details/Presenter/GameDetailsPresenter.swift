@@ -36,7 +36,7 @@ class GameDetailsPresenter {
                                         sizeIcon: 100,
                                         backgroundColor: .white,
                                         isButton: true,
-                                        titleButton: "RELOAD")
+                                        titleButton: "TENTAR NOVAMENTE")
                 return
             }
             self?.gameDetail = gameDetail
@@ -63,11 +63,13 @@ class GameDetailsPresenter {
     }
     
     func onAddGameInShoppingCartButtonTapped() {
-        print("ADD ITEM IN SHOPPING CART")
+        guard let game = self.game else { return }
+        CartSingleton.shared.add(value: game)
+        router.onShowShoppingCart(rootController: .gameDetail)
     }
     
     func onShowShoppingCartButtonTapped() {
-        router.onShowShoppingCart()
+        router.onShowShoppingCart(rootController: .games)
     }
     
     func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -17,6 +17,7 @@ class GamesViewFlowLayout: UICollectionViewFlowLayout {
         }
         return (collectionView.bounds.width / CGFloat(numberOfColumns)) - cellPadding * 1.5
     }
+    
     override func prepare() {
         super.prepare()
         minimumInteritemSpacing = 1
@@ -24,6 +25,7 @@ class GamesViewFlowLayout: UICollectionViewFlowLayout {
         sectionInset = UIEdgeInsets(top: 10, left: cellPadding, bottom: cellPadding * 2, right: cellPadding)
         scrollDirection = .vertical
     }
+    
     override var itemSize: CGSize {
         set { }
         get {

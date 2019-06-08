@@ -11,7 +11,6 @@ import Kingfisher
 
 class PageCell: UICollectionViewCell {
     class var identifier: String { return String(describing: type(of: PageCell.self)) }
-    
     @IBOutlet weak var gameImageView: UIImageView!
     
     override func awakeFromNib() {
