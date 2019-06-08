@@ -178,6 +178,24 @@ extension ShoppingCartTableViewController {
         cell.priceLabel.text = "R$ \(game.price)"
         cell.itemsCountLabel.text = "1" // TODO: Make this show the real number of items to be purchased.
 
+        cell.removalHandler = { [unowned self] in
+            let title = NSLocalizedString("Remover", comment: "The title of an alert.")
+            let message = NSLocalizedString(
+                "Tem certeza de que deseja remover este item?",
+                comment: "The message of the item removal alert."
+            )
+            let alert = self.makeAlertController(withTitle: title, andMessage: message)
+            alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel))
+            alert.addAction(UIAlertAction(title: title, style: .default) { _ in
+                // Remove the game from the cart.
+                _ = self.user.shoppingCart.removeItem(at: indexPath.row)
+                // TODO: Make this update animated.
+                self.tableView.reloadData()
+            })
+
+            self.present(alert, animated: true)
+        }
+
         return cell
     }
 
