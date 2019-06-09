@@ -22,7 +22,7 @@ class UIShadowedRadiusButton: UIButton {
     override func awakeFromNib() {
         titleLabel?.numberOfLines = 0
         titleLabel?.textAlignment = .center
-        imageEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0);
-        titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10);
+        imageEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
+        titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
     }
 }

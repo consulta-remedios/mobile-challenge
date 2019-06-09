@@ -12,7 +12,13 @@ protocol GameDetailsPresenterView: AnyObject {
     func startLoading(text: String, backgroundColor: UIColor)
     func stopLoading()
     func reloadData()
-    func showMessage(icon: Icon, text: String, sizeIcon: Int, backgroundColor: UIColor, isButton: Bool, titleButton: String)
+    func showMessage(
+        icon: Icon,
+        text: String,
+        sizeIcon: Int,
+        backgroundColor: UIColor,
+        isButton: Bool,
+        titleButton: String)
     func hideMessage()
     func displayView(numberPages: Int)
     func displayView(name: String)

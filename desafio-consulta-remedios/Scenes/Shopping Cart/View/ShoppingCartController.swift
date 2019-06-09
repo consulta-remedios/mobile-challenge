@@ -16,7 +16,11 @@ class ShoppingCartController: UIViewController {
     }
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-            tableView.register(UINib(nibName: Constants.Nib.ShoppingCartCell, bundle: .main), forCellReuseIdentifier: ShoppingCartCell.identifier)
+            tableView.register(
+                UINib(
+                    nibName: Constants.Nib.ShoppingCartCell,
+                    bundle: .main),
+                forCellReuseIdentifier: ShoppingCartCell.identifier)
             tableView.rowHeight = UITableView.automaticDimension
             tableView.estimatedRowHeight = 148
         }
@@ -64,7 +68,9 @@ extension ShoppingCartController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ShoppingCartCell.identifier, for: indexPath) as? ShoppingCartCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: ShoppingCartCell.identifier,
+            for: indexPath) as? ShoppingCartCell else { return UITableViewCell() }
         presenter?.configure(for: indexPath.row, cell)
         return cell
     }
@@ -85,15 +91,24 @@ extension ShoppingCartController: ShoppingCartPresenterView {
         freightPriceLabel.addColor(with: "Transportadora:", color: .black)
     }
     
-    func showMessage(icon: Icon, text: String, sizeIcon: Int, backgroundColor: UIColor, isButton: Bool, titleButton: String, completion: @escaping (() -> Void)) {
-        view.displayMessageView(icon: icon, text: text, sizeIcon: sizeIcon, backgroundColor: backgroundColor, isButton: isButton, titleButton: titleButton, completion: completion)
+    func showMessage(
+        icon: Icon,
+        text: String,
+        sizeIcon: Int,
+        backgroundColor: UIColor,
+        isButton: Bool,
+        titleButton: String,
+        completion: @escaping (() -> Void)) {
+        view.displayMessageView(
+            icon: icon,
+            text: text,
+            sizeIcon: sizeIcon,
+            backgroundColor:
+            backgroundColor,
+            isButton: isButton,
+            titleButton: titleButton,
+            completion: completion)
     }
-    
-//    func showMessage(icon: Icon, text: String, sizeIcon: Int, backgroundColor: UIColor, isButton: Bool, titleButton: String) {
-//        view.displayMessageView(icon: icon, text: text, sizeIcon: sizeIcon, backgroundColor: backgroundColor, isButton: isButton, titleButton: titleButton) { [weak self] in
-//            self?.presenter?.dismiss()
-//        }
-//    }
     
     func hideMessage() {
         view.dismissMessageView()

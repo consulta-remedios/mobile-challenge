@@ -47,14 +47,14 @@ extension GameService: TargetType {
         switch self {
         case .getGames:
             return .requestPlain
-        case .getGameDetail(_ ):
+        case .getGameDetail( _):
             return .requestPlain
         case .purchase:
             return .requestPlain
         }
     }
     
-    var headers: [String : String]? {
+    var headers: [String: String]? {
         return ["TOKEN": "QceNFo1gHd09MJDzyswNqzStlxYGBzUG"]
     }
 }

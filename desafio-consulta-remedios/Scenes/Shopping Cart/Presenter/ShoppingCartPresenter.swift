@@ -17,7 +17,13 @@ class ShoppingCartPresenter {
     var items: [CartItem] = [] {
         didSet {
             guard items.count == 0 else { return }
-            view?.showMessage(icon: .logo, text: "O seu carrinho está vazio.\nTe esperamos com muitos produtos!", sizeIcon: 100, backgroundColor: .white, isButton: true, titleButton: "BORA COMPRAR?", completion: { [weak self] in
+            view?.showMessage(
+                icon: .logo, text: "O seu carrinho está vazio.\nTe esperamos com muitos produtos!",
+                sizeIcon: 100,
+                backgroundColor: .white,
+                isButton: true,
+                titleButton: "BORA COMPRAR?",
+                completion: { [weak self] in
                 self?.dismiss()
             })
         }
@@ -30,7 +36,8 @@ class ShoppingCartPresenter {
     }
     var freight: Double = 0.0 {
         didSet {
-            view?.display(freight: freight == 0.0 ? "Transportadora: Grátis" : "Transportadora: " + freight.formattedCurrency())
+            view?.display(
+                freight: freight == 0.0 ? "Transportadora: Grátis" : "Transportadora: " + freight.formattedCurrency())
         }
     }
     
@@ -76,13 +83,27 @@ class ShoppingCartPresenter {
             self?.view?.stopLoading()
             self?.view?.hideMessage()
             guard response else {
-                self?.view?.showMessage(icon: .logo, text: message, sizeIcon: 100, backgroundColor: .white, isButton: true, titleButton: "TENTAR NOVAMENTE", completion: { [weak self] in
+                self?.view?.showMessage(
+                    icon: .logo,
+                    text: message,
+                    sizeIcon: 100,
+                    backgroundColor: .white,
+                    isButton: true,
+                    titleButton: "TENTAR NOVAMENTE",
+                    completion: { [weak self] in
                     self?.onFinalizePurchase()
                 })
                 return }
             self?.view?.displayView(title: "Compra concluída")
             self?.cartRepository?.removeAll()
-            self?.view?.showMessage(icon: .completed, text: "Sua compra N 00279 foi concluída com sucesso.\nEm breve você receberá seus produtos.", sizeIcon: 100, backgroundColor: .white, isButton: true, titleButton: "Continuar comprando", completion: { [weak self] in
+            self?.view?.showMessage(
+                icon: .completed,
+                text: "Sua compra N 00279 foi concluída com sucesso.\nEm breve você receberá seus produtos.",
+                sizeIcon: 100,
+                backgroundColor: .white,
+                isButton: true,
+                titleButton: "Continuar comprando",
+                completion: { [weak self] in
                 self?.dismiss()
             })
         })

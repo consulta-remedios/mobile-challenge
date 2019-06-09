@@ -1,0 +1,8 @@
+disabled_rules:
+ - trailing_whitespace
+ - identifier_name
+ - empty_enum_arguments
+ - function_parameter_count
+ - unused_setter_value
+excluded:
+  - Pods

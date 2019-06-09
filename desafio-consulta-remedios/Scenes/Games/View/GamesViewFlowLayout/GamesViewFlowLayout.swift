@@ -27,7 +27,7 @@ class GamesViewFlowLayout: UICollectionViewFlowLayout {
     }
     
     override var itemSize: CGSize {
-        set { }
+        set {}
         get {
             return CGSize(width: Int(contentWidth), height: 260)
         }

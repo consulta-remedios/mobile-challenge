@@ -48,12 +48,12 @@ extension UIView {
         containerView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
     }
     
-    func addWindowView(_ containerView: UIView, onTop: Bool = false){
+    func addWindowView(_ containerView: UIView, onTop: Bool = false) {
         if let window = UIApplication.shared.keyWindow {
             window.addSubview(containerView)
             tightWindowConstrain(containerView, window)
             return
-        }else{
+        } else {
             addSubview(containerView)
         }
         if onTop {
@@ -62,7 +62,7 @@ extension UIView {
         tightConstrain(containerView)
     }
     
-    func tightWindowConstrain(_ containerView: UIView, _ window: UIWindow){
+    func tightWindowConstrain(_ containerView: UIView, _ window: UIWindow) {
         containerView.translatesAutoresizingMaskIntoConstraints = false
         containerView.leftAnchor.constraint(equalTo: window.leftAnchor).isActive = true
         containerView.rightAnchor.constraint(equalTo: window.rightAnchor).isActive = true
@@ -83,11 +83,14 @@ extension UIView {
     fileprivate var tapGestureRecognizerAction: Action? {
         set {
             if let newValue = newValue {
-                objc_setAssociatedObject(self, &AssociatedObjectKeys.tapGestureRecognizer, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
+                objc_setAssociatedObject(
+                    self, &AssociatedObjectKeys.tapGestureRecognizer,
+                    newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
             }
         }
         get {
-            let tapGestureRecognizerActionInstance = objc_getAssociatedObject(self, &AssociatedObjectKeys.tapGestureRecognizer) as? Action
+            let tapGestureRecognizerActionInstance = objc_getAssociatedObject(
+                self, &AssociatedObjectKeys.tapGestureRecognizer) as? Action
             return tapGestureRecognizerActionInstance
         }
     }

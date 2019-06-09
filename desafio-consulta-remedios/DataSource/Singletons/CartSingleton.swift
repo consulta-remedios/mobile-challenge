@@ -13,24 +13,20 @@ class CartSingleton {
     
     var items: [CartItem] = []
     var subTotal: Double {
-        get { return items.reduce(0.0) { value, item in
+        return items.reduce(0.0) { value, item in
             value + item.subTotal
-            }
         }
     }
     var totalQuantity: Int {
-        get { return items.reduce(0) { value, item in
+        return items.reduce(0) { value, item in
             value + item.quantity
-            }
         }
     }
     var freight: Double {
-        get {
-            return subTotal > 250 ? 0.0 : Double(totalQuantity * 10)
-        }
+        return subTotal > 250 ? 0.0 : Double(totalQuantity * 10)
     }
     var total: Double {
-        get { return subTotal + freight }
+        return subTotal + freight
     }
     
     func add(value: Game) {

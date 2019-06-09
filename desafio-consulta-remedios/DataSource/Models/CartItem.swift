@@ -9,10 +9,11 @@
 import Foundation
 
 class CartItem {
-    var quantity : Int = 1
-    var game : Game
-    
-    var subTotal : Double { get { return game.price * Double(quantity) } }
+    var quantity: Int = 1
+    var game: Game
+    var subTotal: Double {
+        return game.price * Double(quantity)
+    }
     
     init(game: Game) {
         self.game = game

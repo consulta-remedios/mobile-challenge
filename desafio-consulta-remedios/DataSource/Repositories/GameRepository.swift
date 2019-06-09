@@ -38,7 +38,9 @@ struct GameRepository: GameRepositoryProtocol {
         }
     }
     
-    func fetchId(id: NSInteger, response: @escaping (GameDetail?, String) -> Void) {
+    func fetchId(
+        id: NSInteger,
+        response: @escaping (GameDetail?, String) -> Void) {
         provider.request(.getGameDetail(id: id)) { (result) in
             switch result {
             case .success(let res):
@@ -58,7 +60,7 @@ struct GameRepository: GameRepositoryProtocol {
     func purchase(response: @escaping (Bool, String) -> Void) {
         provider.request(.purchase) { (result) in
             switch result {
-            case .success( _):
+            case .success:
                 response(true, "Approved purchase!")
             case .failure(let err):
                 response(false, err.localizedDescription)

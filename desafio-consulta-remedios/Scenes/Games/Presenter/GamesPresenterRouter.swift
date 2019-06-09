@@ -9,7 +9,7 @@
 import UIKit
 
 class GamesPresenterRouter {
-    struct Constants {
+    struct Constants { // swiftlint:disable nesting
         struct Segue {
             static let ShowDetail = "gameDetailsSegue"
             static let ShowShoppingCart = "shoppingCartSegue"

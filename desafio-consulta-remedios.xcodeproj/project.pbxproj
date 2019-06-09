@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B7CD42334C0963FE65F5BF0 /* Pods_desafio_consulta_remediosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20F0507C27E1BB710FDC58E /* Pods_desafio_consulta_remediosTests.framework */; };
 		1A681A70DA2C0182EAB125BB /* Pods_desafio_consulta_remedios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD776F31D67C179585719F8 /* Pods_desafio_consulta_remedios.framework */; };
 		3B0F366B983DA0E07505F30F /* Pods_desafio_consulta_remedios_desafio_consulta_remediosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F095BCD8AB5029310392292 /* Pods_desafio_consulta_remedios_desafio_consulta_remediosUITests.framework */; };
+		4D8CF668BFA8D98612972C6A /* Pods_desafio_consulta_remediosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56325B427A36FA29A9E24B9B /* Pods_desafio_consulta_remediosTests.framework */; };
 		8E0C6F3522A5EC0600D93EE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C6F3422A5EC0600D93EE5 /* AppDelegate.swift */; };
 		8E0C6F3C22A5EC0700D93EE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E0C6F3B22A5EC0700D93EE5 /* Assets.xcassets */; };
 		8E0C6F3F22A5EC0700D93EE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E0C6F3D22A5EC0700D93EE5 /* LaunchScreen.storyboard */; };
@@ -72,7 +72,6 @@
 		8EE2F4B922A8AD1A00B41744 /* GameDetailsPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2F4B822A8AD1A00B41744 /* GameDetailsPresenterView.swift */; };
 		8EE2F4BB22A8B75700B41744 /* GameDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2F4BA22A8B75700B41744 /* GameDetail.swift */; };
 		8EE2F4BD22A8BAF500B41744 /* PageCellPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2F4BC22A8BAF500B41744 /* PageCellPresenterView.swift */; };
-		91059842E81DB0F823FBB046 /* Pods_desafio_consulta_remediosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DECF056597CE314452F9659 /* Pods_desafio_consulta_remediosUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,9 +96,9 @@
 		27487E9D4C597C0E9F032215 /* Pods-desafio-consulta-remedios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-consulta-remedios.release.xcconfig"; path = "Target Support Files/Pods-desafio-consulta-remedios/Pods-desafio-consulta-remedios.release.xcconfig"; sourceTree = "<group>"; };
 		3B4FEA8E93E2DFFF1479CBCC /* Pods-desafio-consulta-remedios-desafio-consulta-remediosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-consulta-remedios-desafio-consulta-remediosUITests.release.xcconfig"; path = "Target Support Files/Pods-desafio-consulta-remedios-desafio-consulta-remediosUITests/Pods-desafio-consulta-remedios-desafio-consulta-remediosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4779443A5630D898C956DCB6 /* Pods-desafio-consulta-remedios-desafio-consulta-remediosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-consulta-remedios-desafio-consulta-remediosUITests.debug.xcconfig"; path = "Target Support Files/Pods-desafio-consulta-remedios-desafio-consulta-remediosUITests/Pods-desafio-consulta-remedios-desafio-consulta-remediosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		56325B427A36FA29A9E24B9B /* Pods_desafio_consulta_remediosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafio_consulta_remediosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EDF4A1463E842B52735979B /* Pods-desafio-consulta-remediosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-consulta-remediosTests.debug.xcconfig"; path = "Target Support Files/Pods-desafio-consulta-remediosTests/Pods-desafio-consulta-remediosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7F095BCD8AB5029310392292 /* Pods_desafio_consulta_remedios_desafio_consulta_remediosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafio_consulta_remedios_desafio_consulta_remediosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DECF056597CE314452F9659 /* Pods_desafio_consulta_remediosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafio_consulta_remediosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E0C6F3122A5EC0600D93EE5 /* desafio-consulta-remedios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desafio-consulta-remedios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E0C6F3422A5EC0600D93EE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E0C6F3B22A5EC0700D93EE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -162,7 +161,6 @@
 		8EE2F4BA22A8B75700B41744 /* GameDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetail.swift; sourceTree = "<group>"; };
 		8EE2F4BC22A8BAF500B41744 /* PageCellPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCellPresenterView.swift; sourceTree = "<group>"; };
 		BFD776F31D67C179585719F8 /* Pods_desafio_consulta_remedios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafio_consulta_remedios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D20F0507C27E1BB710FDC58E /* Pods_desafio_consulta_remediosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafio_consulta_remediosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A5B5155013EF6A99D90DDA /* Pods-desafio-consulta-remediosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-consulta-remediosUITests.release.xcconfig"; path = "Target Support Files/Pods-desafio-consulta-remediosUITests/Pods-desafio-consulta-remediosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F344D864E821FD69CA30676A /* Pods-desafio-consulta-remedios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-consulta-remedios.debug.xcconfig"; path = "Target Support Files/Pods-desafio-consulta-remedios/Pods-desafio-consulta-remedios.debug.xcconfig"; sourceTree = "<group>"; };
 		F5CB276A0E5CF14E98283C21 /* Pods-desafio-consulta-remediosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-consulta-remediosUITests.debug.xcconfig"; path = "Target Support Files/Pods-desafio-consulta-remediosUITests/Pods-desafio-consulta-remediosUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -181,7 +179,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B7CD42334C0963FE65F5BF0 /* Pods_desafio_consulta_remediosTests.framework in Frameworks */,
+				4D8CF668BFA8D98612972C6A /* Pods_desafio_consulta_remediosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,7 +187,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91059842E81DB0F823FBB046 /* Pods_desafio_consulta_remediosUITests.framework in Frameworks */,
 				3B0F366B983DA0E07505F30F /* Pods_desafio_consulta_remedios_desafio_consulta_remediosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,9 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				BFD776F31D67C179585719F8 /* Pods_desafio_consulta_remedios.framework */,
-				D20F0507C27E1BB710FDC58E /* Pods_desafio_consulta_remediosTests.framework */,
-				8DECF056597CE314452F9659 /* Pods_desafio_consulta_remediosUITests.framework */,
 				7F095BCD8AB5029310392292 /* Pods_desafio_consulta_remedios_desafio_consulta_remediosUITests.framework */,
+				56325B427A36FA29A9E24B9B /* Pods_desafio_consulta_remediosTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -552,6 +548,7 @@
 				8E0C6F2E22A5EC0600D93EE5 /* Frameworks */,
 				8E0C6F2F22A5EC0600D93EE5 /* Resources */,
 				9F3115BBA7CBFEFB70C59255 /* [CP] Embed Pods Frameworks */,
+				8E59A96822ADAA8D007ABD0D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -589,7 +586,7 @@
 				8E0C6F4C22A5EC0700D93EE5 /* Sources */,
 				8E0C6F4D22A5EC0700D93EE5 /* Frameworks */,
 				8E0C6F4E22A5EC0700D93EE5 /* Resources */,
-				119CCBB647C010D767ABEB6B /* [CP] Embed Pods Frameworks */,
+				5961E949C9FBE05BEF9B5423 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -702,7 +699,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		119CCBB647C010D767ABEB6B /* [CP] Embed Pods Frameworks */ = {
+		5961E949C9FBE05BEF9B5423 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -755,6 +752,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		8E59A96822ADAA8D007ABD0D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		9F3115BBA7CBFEFB70C59255 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1036,6 +1050,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FV334A5ZR5;
 				INFOPLIST_FILE = "desafio-consulta-remedios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1055,6 +1070,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FV334A5ZR5;
 				INFOPLIST_FILE = "desafio-consulta-remedios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

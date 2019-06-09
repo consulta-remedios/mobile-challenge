@@ -23,7 +23,7 @@ class GamesController: UIViewController {
         }
     }
     
-    lazy var searchController : UISearchController = {
+    lazy var searchController: UISearchController = {
         let controller = UISearchController(searchResultsController: nil)
         controller.searchBar.placeholder = "Search"
         controller.hidesNavigationBarDuringPresentation = false
@@ -43,7 +43,7 @@ class GamesController: UIViewController {
         presenter?.onShowShoppingCartButtonTapped()
     }
     
-    @IBAction func unwindToGames(segue:UIStoryboardSegue) { }
+    @IBAction func unwindToGames(segue:UIStoryboardSegue) {}
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         presenter?.prepare(for: segue, sender: sender)
@@ -55,7 +55,9 @@ extension GamesController: UICollectionViewDelegate, UICollectionViewDataSource 
         return presenter?.games.count ?? 0
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: GameCell.identifier,
             for: indexPath) as? GameCell else { return UICollectionViewCell() }
@@ -81,7 +83,13 @@ extension GamesController: GamesPresenterView {
         collectionView.reloadData()
     }
     
-    func showMessage(icon: Icon, text: String, sizeIcon: Int, backgroundColor: UIColor, isButton: Bool, titleButton: String) {
+    func showMessage(
+        icon: Icon,
+        text: String,
+        sizeIcon: Int,
+        backgroundColor: UIColor,
+        isButton: Bool,
+        titleButton: String) {
         view.displayMessageView(icon: icon,
                                 text: text,
                                 sizeIcon: sizeIcon,

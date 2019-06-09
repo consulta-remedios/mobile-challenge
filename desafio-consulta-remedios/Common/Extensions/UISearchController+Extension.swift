@@ -10,12 +10,9 @@ import UIKit
 
 extension UISearchController {
     func setBackground(_ color: UIColor) {
-        for subView in self.searchBar.subviews
-        {
-            for subView1 in subView.subviews
-            {
-                if subView1.isKind(of: UITextField.self)
-                {
+        for subView in self.searchBar.subviews {
+            for subView1 in subView.subviews {
+                if subView1.isKind(of: UITextField.self) {
                     subView1.backgroundColor = color
                 }
             }
