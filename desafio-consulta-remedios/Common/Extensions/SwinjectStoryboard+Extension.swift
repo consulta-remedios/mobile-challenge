@@ -30,6 +30,7 @@ extension SwinjectStoryboard {
         defaultContainer.storyboardInitCompleted(ShoppingCartController.self) { resolver, controller in
             let presenter = ShoppingCartPresenter(view: controller.self, router: ShoppingCartPresenterRouter(viewController: controller.self))
             presenter.cartRepository = resolver.resolve(CartRepositoryProtocol.self)
+            presenter.gamesRepository = resolver.resolve(GameRepositoryProtocol.self)
             controller.presenter = presenter
         }
     }

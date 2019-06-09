@@ -85,11 +85,15 @@ extension ShoppingCartController: ShoppingCartPresenterView {
         freightPriceLabel.addColor(with: "Transportadora:", color: .black)
     }
     
-    func showMessage(icon: Icon, text: String, sizeIcon: Int, backgroundColor: UIColor, isButton: Bool, titleButton: String) {
-        view.displayMessageView(icon: icon, text: text, sizeIcon: sizeIcon, backgroundColor: backgroundColor, isButton: isButton, titleButton: titleButton) { [weak self] in
-            self?.presenter?.dismiss()
-        }
+    func showMessage(icon: Icon, text: String, sizeIcon: Int, backgroundColor: UIColor, isButton: Bool, titleButton: String, completion: @escaping (() -> Void)) {
+        view.displayMessageView(icon: icon, text: text, sizeIcon: sizeIcon, backgroundColor: backgroundColor, isButton: isButton, titleButton: titleButton, completion: completion)
     }
+    
+//    func showMessage(icon: Icon, text: String, sizeIcon: Int, backgroundColor: UIColor, isButton: Bool, titleButton: String) {
+//        view.displayMessageView(icon: icon, text: text, sizeIcon: sizeIcon, backgroundColor: backgroundColor, isButton: isButton, titleButton: titleButton) { [weak self] in
+//            self?.presenter?.dismiss()
+//        }
+//    }
     
     func hideMessage() {
         view.dismissMessageView()

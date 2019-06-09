@@ -13,7 +13,7 @@ protocol ShoppingCartPresenterView: AnyObject {
     func displayView(total: String)
     func displayView(title: String)
     func display(freight: String)
-    func showMessage(icon: Icon, text: String, sizeIcon: Int, backgroundColor: UIColor, isButton: Bool, titleButton: String)
+    func showMessage(icon: Icon, text: String, sizeIcon: Int, backgroundColor: UIColor, isButton: Bool, titleButton: String, completion: @escaping (() -> Void))
     func hideMessage()
     func startLoading(text: String, backgroundColor: UIColor)
     func stopLoading()

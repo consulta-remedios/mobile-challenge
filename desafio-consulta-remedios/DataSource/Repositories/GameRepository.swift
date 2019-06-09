@@ -11,6 +11,7 @@ import Moya
 protocol GameRepositoryProtocol {
     func fetchAll(response: @escaping ([Game]?, String) -> Void)
     func fetchId(id: NSInteger, response: @escaping (GameDetail?, String) -> Void)
+    func purchase(response: @escaping (Bool, String) -> Void)
 }
 
 struct GameRepository: GameRepositoryProtocol {
@@ -50,6 +51,17 @@ struct GameRepository: GameRepositoryProtocol {
                 }
             case .failure(let err):
                 response(nil, err.localizedDescription)
+            }
+        }
+    }
+    
+    func purchase(response: @escaping (Bool, String) -> Void) {
+        provider.request(.purchase) { (result) in
+            switch result {
+            case .success( _):
+                response(true, "Approved purchase!")
+            case .failure(let err):
+                response(false, err.localizedDescription)
             }
         }
     }
