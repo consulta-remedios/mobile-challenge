@@ -9,26 +9,63 @@
 import XCTest
 
 class desafio_consulta_remediosUITests: XCTestCase {
-
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+    override func tearDown() {}
 
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testNavigateToGameDetails() {
+        let app = XCUIApplication()
+        app.collectionViews.cells["gameCell"].firstMatch.tap()
+        app.navigationBars["navigationGameDetails"].buttons["closeButton"].tap()
     }
-
+    
+    func testNavigateToCart() {
+        let app = XCUIApplication()
+        app.navigationBars["navigationGames"].buttons["cartButton"].tap()
+        app.buttons["BORA COMPRAR?"].tap()
+    }
+    
+    func testNavigateToCartIntoGameDetails() {
+        let app = XCUIApplication()
+        app.collectionViews.cells["gameCell"].firstMatch.tap()
+        app.navigationBars["navigationGameDetails"].buttons["cartButton"].tap()
+        app.navigationBars["Carrinho de Compras"].children(matching: .button).element.tap()
+    }
+    
+    func testTapReadMoreIntoGameDetails() {
+        let app = XCUIApplication()
+        app.collectionViews.cells["gameCell"].firstMatch.tap()
+        app/*@START_MENU_TOKEN@*/.collectionViews/*[[".scrollViews.collectionViews",".collectionViews"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.cells.children(matching: .other).element.swipeUp()
+        app/*@START_MENU_TOKEN@*/.staticTexts["descriptionGameDetail"]/*[[".scrollViews",".staticTexts[\"Lorem ipsum dolor sit amet, Super Mario Odyssey, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis purus sit amet volutpat. Fringilla est ullamco\\nLeia mais\"]",".staticTexts[\"descriptionGameDetail\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app/*@START_MENU_TOKEN@*/.collectionViews/*[[".scrollViews.collectionViews",".collectionViews"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.cells.children(matching: .other).element.swipeUp()
+    }
+    
+    func testPageImagesIntoGameDetails() {
+        let app = XCUIApplication()
+        app.collectionViews.cells["gameCell"].firstMatch.tap()
+        let element = app/*@START_MENU_TOKEN@*/.collectionViews/*[[".scrollViews.collectionViews",".collectionViews"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.cells.children(matching: .other).element
+        element.swipeLeft()
+        element.swipeLeft()
+        element.swipeRight()
+    }
+    
+    func testAddGameIntoShoppingCart() {
+        let app = XCUIApplication()
+        app.collectionViews.cells["gameCell"].firstMatch.tap()
+        app.buttons["Adicionar ao Carrinho"].tap()
+        app.scrollViews.otherElements.containing(.staticText, identifier:"Frete").element.swipeUp()
+    }
+    
+    func testFinalizePurchase() {
+        let app = XCUIApplication()
+        app.collectionViews.cells["gameCell"].firstMatch.tap()
+        app.buttons["Adicionar ao Carrinho"].tap()
+        let scrollViewsQuery = app.scrollViews
+        scrollViewsQuery.children(matching: .other).element(boundBy: 0).children(matching: .other).element(boundBy: 1).swipeUp()
+        scrollViewsQuery.otherElements.buttons["FINALIZAR COMPRA"].tap()
+        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element(boundBy: 1).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.buttons["Continuar comprando"].tap()
+    }
 }

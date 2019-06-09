@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B7CD42334C0963FE65F5BF0 /* Pods_desafio_consulta_remediosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20F0507C27E1BB710FDC58E /* Pods_desafio_consulta_remediosTests.framework */; };
 		1A681A70DA2C0182EAB125BB /* Pods_desafio_consulta_remedios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD776F31D67C179585719F8 /* Pods_desafio_consulta_remedios.framework */; };
+		3B0F366B983DA0E07505F30F /* Pods_desafio_consulta_remedios_desafio_consulta_remediosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F095BCD8AB5029310392292 /* Pods_desafio_consulta_remedios_desafio_consulta_remediosUITests.framework */; };
 		8E0C6F3522A5EC0600D93EE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C6F3422A5EC0600D93EE5 /* AppDelegate.swift */; };
 		8E0C6F3C22A5EC0700D93EE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E0C6F3B22A5EC0700D93EE5 /* Assets.xcassets */; };
 		8E0C6F3F22A5EC0700D93EE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E0C6F3D22A5EC0700D93EE5 /* LaunchScreen.storyboard */; };
-		8E0C6F4A22A5EC0700D93EE5 /* desafio_consulta_remediosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C6F4922A5EC0700D93EE5 /* desafio_consulta_remediosTests.swift */; };
 		8E0C6F5522A5EC0700D93EE5 /* desafio_consulta_remediosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C6F5422A5EC0700D93EE5 /* desafio_consulta_remediosUITests.swift */; };
 		8E64F36C22AC10A200D8A68F /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64F36B22AC10A200D8A68F /* Enums.swift */; };
 		8E6AAA1D22AC88A70000525B /* CartSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CAA7F22A9F0D600821688 /* CartSingleton.swift */; };
@@ -71,8 +72,7 @@
 		8EE2F4B922A8AD1A00B41744 /* GameDetailsPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2F4B822A8AD1A00B41744 /* GameDetailsPresenterView.swift */; };
 		8EE2F4BB22A8B75700B41744 /* GameDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2F4BA22A8B75700B41744 /* GameDetail.swift */; };
 		8EE2F4BD22A8BAF500B41744 /* PageCellPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2F4BC22A8BAF500B41744 /* PageCellPresenterView.swift */; };
-		BED17E64F60EFE9E36161BED /* Pods_desafio_consulta_remediosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38805798E66215C268A74F44 /* Pods_desafio_consulta_remediosUITests.framework */; };
-		F32BA080C62C9270542D1E38 /* Pods_desafio_consulta_remediosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6483AA9199CB257D92C026B1 /* Pods_desafio_consulta_remediosTests.framework */; };
+		91059842E81DB0F823FBB046 /* Pods_desafio_consulta_remediosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DECF056597CE314452F9659 /* Pods_desafio_consulta_remediosUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,19 +93,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B9BD1EF79486C79C469FB85 /* Pods-desafio-consulta-remediosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-consulta-remediosTests.release.xcconfig"; path = "Target Support Files/Pods-desafio-consulta-remediosTests/Pods-desafio-consulta-remediosTests.release.xcconfig"; sourceTree = "<group>"; };
 		27487E9D4C597C0E9F032215 /* Pods-desafio-consulta-remedios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-consulta-remedios.release.xcconfig"; path = "Target Support Files/Pods-desafio-consulta-remedios/Pods-desafio-consulta-remedios.release.xcconfig"; sourceTree = "<group>"; };
-		33C7367402BE2A5028FA2A65 /* Pods-desafio-consulta-remediosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-consulta-remediosUITests.debug.xcconfig"; path = "Target Support Files/Pods-desafio-consulta-remediosUITests/Pods-desafio-consulta-remediosUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		38805798E66215C268A74F44 /* Pods_desafio_consulta_remediosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafio_consulta_remediosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6483AA9199CB257D92C026B1 /* Pods_desafio_consulta_remediosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafio_consulta_remediosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6BADC3C5F6172E1AA8C30049 /* Pods-desafio-consulta-remediosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-consulta-remediosUITests.release.xcconfig"; path = "Target Support Files/Pods-desafio-consulta-remediosUITests/Pods-desafio-consulta-remediosUITests.release.xcconfig"; sourceTree = "<group>"; };
-		711A018B4164B99263B7BF57 /* Pods-desafio-consulta-remediosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-consulta-remediosTests.release.xcconfig"; path = "Target Support Files/Pods-desafio-consulta-remediosTests/Pods-desafio-consulta-remediosTests.release.xcconfig"; sourceTree = "<group>"; };
+		3B4FEA8E93E2DFFF1479CBCC /* Pods-desafio-consulta-remedios-desafio-consulta-remediosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-consulta-remedios-desafio-consulta-remediosUITests.release.xcconfig"; path = "Target Support Files/Pods-desafio-consulta-remedios-desafio-consulta-remediosUITests/Pods-desafio-consulta-remedios-desafio-consulta-remediosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4779443A5630D898C956DCB6 /* Pods-desafio-consulta-remedios-desafio-consulta-remediosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-consulta-remedios-desafio-consulta-remediosUITests.debug.xcconfig"; path = "Target Support Files/Pods-desafio-consulta-remedios-desafio-consulta-remediosUITests/Pods-desafio-consulta-remedios-desafio-consulta-remediosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6EDF4A1463E842B52735979B /* Pods-desafio-consulta-remediosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-consulta-remediosTests.debug.xcconfig"; path = "Target Support Files/Pods-desafio-consulta-remediosTests/Pods-desafio-consulta-remediosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7F095BCD8AB5029310392292 /* Pods_desafio_consulta_remedios_desafio_consulta_remediosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafio_consulta_remedios_desafio_consulta_remediosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DECF056597CE314452F9659 /* Pods_desafio_consulta_remediosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafio_consulta_remediosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E0C6F3122A5EC0600D93EE5 /* desafio-consulta-remedios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desafio-consulta-remedios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E0C6F3422A5EC0600D93EE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E0C6F3B22A5EC0700D93EE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E0C6F3E22A5EC0700D93EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E0C6F4022A5EC0700D93EE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E0C6F4522A5EC0700D93EE5 /* desafio-consulta-remediosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "desafio-consulta-remediosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E0C6F4922A5EC0700D93EE5 /* desafio_consulta_remediosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafio_consulta_remediosTests.swift; sourceTree = "<group>"; };
 		8E0C6F4B22A5EC0700D93EE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E0C6F5022A5EC0700D93EE5 /* desafio-consulta-remediosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "desafio-consulta-remediosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E0C6F5422A5EC0700D93EE5 /* desafio_consulta_remediosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafio_consulta_remediosUITests.swift; sourceTree = "<group>"; };
@@ -162,8 +162,10 @@
 		8EE2F4BA22A8B75700B41744 /* GameDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetail.swift; sourceTree = "<group>"; };
 		8EE2F4BC22A8BAF500B41744 /* PageCellPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCellPresenterView.swift; sourceTree = "<group>"; };
 		BFD776F31D67C179585719F8 /* Pods_desafio_consulta_remedios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafio_consulta_remedios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2EAEF703F0B88B2DD4F5313 /* Pods-desafio-consulta-remediosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-consulta-remediosTests.debug.xcconfig"; path = "Target Support Files/Pods-desafio-consulta-remediosTests/Pods-desafio-consulta-remediosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D20F0507C27E1BB710FDC58E /* Pods_desafio_consulta_remediosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafio_consulta_remediosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3A5B5155013EF6A99D90DDA /* Pods-desafio-consulta-remediosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-consulta-remediosUITests.release.xcconfig"; path = "Target Support Files/Pods-desafio-consulta-remediosUITests/Pods-desafio-consulta-remediosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F344D864E821FD69CA30676A /* Pods-desafio-consulta-remedios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-consulta-remedios.debug.xcconfig"; path = "Target Support Files/Pods-desafio-consulta-remedios/Pods-desafio-consulta-remedios.debug.xcconfig"; sourceTree = "<group>"; };
+		F5CB276A0E5CF14E98283C21 /* Pods-desafio-consulta-remediosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-consulta-remediosUITests.debug.xcconfig"; path = "Target Support Files/Pods-desafio-consulta-remediosUITests/Pods-desafio-consulta-remediosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,7 +181,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F32BA080C62C9270542D1E38 /* Pods_desafio_consulta_remediosTests.framework in Frameworks */,
+				0B7CD42334C0963FE65F5BF0 /* Pods_desafio_consulta_remediosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,7 +189,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BED17E64F60EFE9E36161BED /* Pods_desafio_consulta_remediosUITests.framework in Frameworks */,
+				91059842E81DB0F823FBB046 /* Pods_desafio_consulta_remediosUITests.framework in Frameworks */,
+				3B0F366B983DA0E07505F30F /* Pods_desafio_consulta_remedios_desafio_consulta_remediosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,8 +201,9 @@
 			isa = PBXGroup;
 			children = (
 				BFD776F31D67C179585719F8 /* Pods_desafio_consulta_remedios.framework */,
-				6483AA9199CB257D92C026B1 /* Pods_desafio_consulta_remediosTests.framework */,
-				38805798E66215C268A74F44 /* Pods_desafio_consulta_remediosUITests.framework */,
+				D20F0507C27E1BB710FDC58E /* Pods_desafio_consulta_remediosTests.framework */,
+				8DECF056597CE314452F9659 /* Pods_desafio_consulta_remediosUITests.framework */,
+				7F095BCD8AB5029310392292 /* Pods_desafio_consulta_remedios_desafio_consulta_remediosUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -209,10 +213,12 @@
 			children = (
 				F344D864E821FD69CA30676A /* Pods-desafio-consulta-remedios.debug.xcconfig */,
 				27487E9D4C597C0E9F032215 /* Pods-desafio-consulta-remedios.release.xcconfig */,
-				F2EAEF703F0B88B2DD4F5313 /* Pods-desafio-consulta-remediosTests.debug.xcconfig */,
-				711A018B4164B99263B7BF57 /* Pods-desafio-consulta-remediosTests.release.xcconfig */,
-				33C7367402BE2A5028FA2A65 /* Pods-desafio-consulta-remediosUITests.debug.xcconfig */,
-				6BADC3C5F6172E1AA8C30049 /* Pods-desafio-consulta-remediosUITests.release.xcconfig */,
+				6EDF4A1463E842B52735979B /* Pods-desafio-consulta-remediosTests.debug.xcconfig */,
+				0B9BD1EF79486C79C469FB85 /* Pods-desafio-consulta-remediosTests.release.xcconfig */,
+				F5CB276A0E5CF14E98283C21 /* Pods-desafio-consulta-remediosUITests.debug.xcconfig */,
+				D3A5B5155013EF6A99D90DDA /* Pods-desafio-consulta-remediosUITests.release.xcconfig */,
+				4779443A5630D898C956DCB6 /* Pods-desafio-consulta-remedios-desafio-consulta-remediosUITests.debug.xcconfig */,
+				3B4FEA8E93E2DFFF1479CBCC /* Pods-desafio-consulta-remedios-desafio-consulta-remediosUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -259,7 +265,6 @@
 				8E6AAA2622AC8B8E0000525B /* Data */,
 				8E6AAA2B22AC8EF00000525B /* ShoppingCartTests.swift */,
 				8E6AAA2322AC890C0000525B /* SimulatedNetworkTests.swift */,
-				8E0C6F4922A5EC0700D93EE5 /* desafio_consulta_remediosTests.swift */,
 				8E0C6F4B22A5EC0700D93EE5 /* Info.plist */,
 			);
 			path = "desafio-consulta-remediosTests";
@@ -561,7 +566,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E0C6F5C22A5EC0700D93EE5 /* Build configuration list for PBXNativeTarget "desafio-consulta-remediosTests" */;
 			buildPhases = (
-				DAE5FB77C5AE0C0F1C670918 /* [CP] Check Pods Manifest.lock */,
+				777BF7B5A0BF8C97B69955DB /* [CP] Check Pods Manifest.lock */,
 				8E0C6F4122A5EC0700D93EE5 /* Sources */,
 				8E0C6F4222A5EC0700D93EE5 /* Frameworks */,
 				8E0C6F4322A5EC0700D93EE5 /* Resources */,
@@ -580,10 +585,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E0C6F5F22A5EC0700D93EE5 /* Build configuration list for PBXNativeTarget "desafio-consulta-remediosUITests" */;
 			buildPhases = (
-				0E5FC92E5ACA02FF3A5E6EB3 /* [CP] Check Pods Manifest.lock */,
+				FFAD3AB806DF29B224D80AE7 /* [CP] Check Pods Manifest.lock */,
 				8E0C6F4C22A5EC0700D93EE5 /* Sources */,
 				8E0C6F4D22A5EC0700D93EE5 /* Frameworks */,
 				8E0C6F4E22A5EC0700D93EE5 /* Resources */,
+				119CCBB647C010D767ABEB6B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -696,7 +702,39 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		0E5FC92E5ACA02FF3A5E6EB3 /* [CP] Check Pods Manifest.lock */ = {
+		119CCBB647C010D767ABEB6B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-desafio-consulta-remedios-desafio-consulta-remediosUITests/Pods-desafio-consulta-remedios-desafio-consulta-remediosUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-desafio-consulta-remedios-desafio-consulta-remediosUITests/Pods-desafio-consulta-remedios-desafio-consulta-remediosUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		777BF7B5A0BF8C97B69955DB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -711,7 +749,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-desafio-consulta-remediosUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-desafio-consulta-remediosTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -750,7 +788,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-desafio-consulta-remedios/Pods-desafio-consulta-remedios-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DAE5FB77C5AE0C0F1C670918 /* [CP] Check Pods Manifest.lock */ = {
+		FFAD3AB806DF29B224D80AE7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -765,7 +803,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-desafio-consulta-remediosTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-desafio-consulta-remedios-desafio-consulta-remediosUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -833,7 +871,6 @@
 				8E6AAA1F22AC88AC0000525B /* CartRepository.swift in Sources */,
 				8E6AAA2522AC8A960000525B /* GameService.swift in Sources */,
 				8E6AAA2422AC890C0000525B /* SimulatedNetworkTests.swift in Sources */,
-				8E0C6F4A22A5EC0700D93EE5 /* desafio_consulta_remediosTests.swift in Sources */,
 				8E6AAA2122AC88B80000525B /* GameDetail.swift in Sources */,
 				8E6AAA1D22AC88A70000525B /* CartSingleton.swift in Sources */,
 				8E6AAA2222AC88BB0000525B /* CartItem.swift in Sources */,
@@ -1031,7 +1068,7 @@
 		};
 		8E0C6F5D22A5EC0700D93EE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2EAEF703F0B88B2DD4F5313 /* Pods-desafio-consulta-remediosTests.debug.xcconfig */;
+			baseConfigurationReference = 6EDF4A1463E842B52735979B /* Pods-desafio-consulta-remediosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1053,7 +1090,7 @@
 		};
 		8E0C6F5E22A5EC0700D93EE5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 711A018B4164B99263B7BF57 /* Pods-desafio-consulta-remediosTests.release.xcconfig */;
+			baseConfigurationReference = 0B9BD1EF79486C79C469FB85 /* Pods-desafio-consulta-remediosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1075,7 +1112,7 @@
 		};
 		8E0C6F6022A5EC0700D93EE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33C7367402BE2A5028FA2A65 /* Pods-desafio-consulta-remediosUITests.debug.xcconfig */;
+			baseConfigurationReference = 4779443A5630D898C956DCB6 /* Pods-desafio-consulta-remedios-desafio-consulta-remediosUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1096,7 +1133,7 @@
 		};
 		8E0C6F6122A5EC0700D93EE5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6BADC3C5F6172E1AA8C30049 /* Pods-desafio-consulta-remediosUITests.release.xcconfig */;
+			baseConfigurationReference = 3B4FEA8E93E2DFFF1479CBCC /* Pods-desafio-consulta-remedios-desafio-consulta-remediosUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

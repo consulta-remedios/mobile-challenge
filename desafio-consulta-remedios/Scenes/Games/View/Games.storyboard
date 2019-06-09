@@ -45,6 +45,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Games" id="q08-Xu-0wM">
                         <barButtonItem key="rightBarButtonItem" image="icon-cart" id="b5F-tW-Ks6">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="cartButton"/>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="showShoppingCartButtonTapped:" destination="Kac-tS-LVq" id="hYu-Mm-Ydz"/>
                             </connections>
@@ -91,6 +94,9 @@
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" red="0.20000000000000001" green="0.58431372550000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="navigationGames"/>
+                        </userDefinedRuntimeAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

@@ -22,7 +22,7 @@ class ShoppingCartTests: XCTestCase {
             let cart = resolver.resolve(CartSingleton.self)!
             return CartRepository(cart: cart)
         }
-        container.register(Game.self) { _ in Game(id: 1, name: "The Last of Us", price: 100.00, platform: "PS$", image: "")}
+        container.register(Game.self) { _ in Game(id: 1, name: "The Last of Us", price: 100.00, platform: "PS4", image: "")}
         repository = container.resolve(CartSingleton.self)!
     }
 
