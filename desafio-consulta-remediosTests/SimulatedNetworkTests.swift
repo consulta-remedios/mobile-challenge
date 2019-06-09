@@ -42,10 +42,10 @@ class SimulatedNetworkTests: XCTestCase {
         }
     }
     
-    func testPurchase() {
+    func testPurchaseConfirmedSuccessfully() {
         let repository = container.resolve(GameRepository.self)!
         repository.purchase { (response, _) in
-            XCTAssert(response)
+            XCTAssertTrue(response)
         }
     }
 }
