@@ -14,6 +14,16 @@
 		8E0C6F4A22A5EC0700D93EE5 /* desafio_consulta_remediosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C6F4922A5EC0700D93EE5 /* desafio_consulta_remediosTests.swift */; };
 		8E0C6F5522A5EC0700D93EE5 /* desafio_consulta_remediosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C6F5422A5EC0700D93EE5 /* desafio_consulta_remediosUITests.swift */; };
 		8E64F36C22AC10A200D8A68F /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64F36B22AC10A200D8A68F /* Enums.swift */; };
+		8E6AAA1D22AC88A70000525B /* CartSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CAA7F22A9F0D600821688 /* CartSingleton.swift */; };
+		8E6AAA1E22AC88AA0000525B /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2F48622A8793E00B41744 /* GameRepository.swift */; };
+		8E6AAA1F22AC88AC0000525B /* CartRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CAA8322AA040000821688 /* CartRepository.swift */; };
+		8E6AAA2022AC88B60000525B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2F48022A877B200B41744 /* Game.swift */; };
+		8E6AAA2122AC88B80000525B /* GameDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2F4BA22A8B75700B41744 /* GameDetail.swift */; };
+		8E6AAA2222AC88BB0000525B /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CAA8122A9F15C00821688 /* CartItem.swift */; };
+		8E6AAA2422AC890C0000525B /* SimulatedNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6AAA2322AC890C0000525B /* SimulatedNetworkTests.swift */; };
+		8E6AAA2522AC8A960000525B /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2F48322A8781000B41744 /* GameService.swift */; };
+		8E6AAA2822AC8B9D0000525B /* games.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E6AAA2722AC8B9D0000525B /* games.json */; };
+		8E6AAA2A22AC8BA80000525B /* game.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E6AAA2922AC8BA80000525B /* game.json */; };
 		8E9CAA6D22A9CA4600821688 /* ShoppingCart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9CAA6C22A9CA4600821688 /* ShoppingCart.storyboard */; };
 		8E9CAA7122A9CB6B00821688 /* ShoppingCartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CAA6F22A9CB6B00821688 /* ShoppingCartCell.swift */; };
 		8E9CAA7222A9CB6B00821688 /* ShoppingCartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E9CAA7022A9CB6B00821688 /* ShoppingCartCell.xib */; };
@@ -100,6 +110,9 @@
 		8E0C6F5422A5EC0700D93EE5 /* desafio_consulta_remediosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafio_consulta_remediosUITests.swift; sourceTree = "<group>"; };
 		8E0C6F5622A5EC0700D93EE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E64F36B22AC10A200D8A68F /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		8E6AAA2322AC890C0000525B /* SimulatedNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatedNetworkTests.swift; sourceTree = "<group>"; };
+		8E6AAA2722AC8B9D0000525B /* games.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = games.json; sourceTree = "<group>"; };
+		8E6AAA2922AC8BA80000525B /* game.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = game.json; sourceTree = "<group>"; };
 		8E9CAA6C22A9CA4600821688 /* ShoppingCart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShoppingCart.storyboard; sourceTree = "<group>"; };
 		8E9CAA6F22A9CB6B00821688 /* ShoppingCartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartCell.swift; sourceTree = "<group>"; };
 		8E9CAA7022A9CB6B00821688 /* ShoppingCartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingCartCell.xib; sourceTree = "<group>"; };
@@ -241,6 +254,8 @@
 		8E0C6F4822A5EC0700D93EE5 /* desafio-consulta-remediosTests */ = {
 			isa = PBXGroup;
 			children = (
+				8E6AAA2622AC8B8E0000525B /* Data */,
+				8E6AAA2322AC890C0000525B /* SimulatedNetworkTests.swift */,
 				8E0C6F4922A5EC0700D93EE5 /* desafio_consulta_remediosTests.swift */,
 				8E0C6F4B22A5EC0700D93EE5 /* Info.plist */,
 			);
@@ -254,6 +269,15 @@
 				8E0C6F5622A5EC0700D93EE5 /* Info.plist */,
 			);
 			path = "desafio-consulta-remediosUITests";
+			sourceTree = "<group>";
+		};
+		8E6AAA2622AC8B8E0000525B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8E6AAA2722AC8B9D0000525B /* games.json */,
+				8E6AAA2922AC8BA80000525B /* game.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		8E9CAA6A22A9CA1C00821688 /* Shopping Cart */ = {
@@ -632,6 +656,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E6AAA2822AC8B9D0000525B /* games.json in Resources */,
+				8E6AAA2A22AC8BA80000525B /* game.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,7 +824,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E6AAA1E22AC88AA0000525B /* GameRepository.swift in Sources */,
+				8E6AAA2022AC88B60000525B /* Game.swift in Sources */,
+				8E6AAA1F22AC88AC0000525B /* CartRepository.swift in Sources */,
+				8E6AAA2522AC8A960000525B /* GameService.swift in Sources */,
+				8E6AAA2422AC890C0000525B /* SimulatedNetworkTests.swift in Sources */,
 				8E0C6F4A22A5EC0700D93EE5 /* desafio_consulta_remediosTests.swift in Sources */,
+				8E6AAA2122AC88B80000525B /* GameDetail.swift in Sources */,
+				8E6AAA1D22AC88A70000525B /* CartSingleton.swift in Sources */,
+				8E6AAA2222AC88BB0000525B /* CartItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

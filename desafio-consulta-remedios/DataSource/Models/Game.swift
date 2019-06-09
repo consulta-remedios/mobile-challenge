@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Game: Codable {
+struct Game: Codable {
     var id: NSInteger
     var name: String
     var price: Double

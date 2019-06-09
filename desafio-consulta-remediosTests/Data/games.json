@@ -1,0 +1,65 @@
+[
+    {
+        "id": 312,
+        "name": "Super Mario Odyssey",
+        "price": 197.88,
+        "platform": "Switch",
+        "image": "https://raw.githubusercontent.com/ConsultaRemedios/frontend-challenge/master/assets/super-mario-odyssey.png"
+    },
+    {
+        "id": 201,
+        "name": "Call Of Duty Infinite Warfare",
+        "price": 49.99,
+        "platform": "PS4",
+        "image": "https://raw.githubusercontent.com/ConsultaRemedios/frontend-challenge/master/assets/call-of-duty-infinite-warfare.png"
+    },
+    {
+        "id": 102,
+        "name": "The Witcher III Wild Hunt",
+        "price": 119.5,
+        "platform": "PS4",
+        "image": "https://raw.githubusercontent.com/ConsultaRemedios/frontend-challenge/master/assets/the-witcher-iii-wild-hunt.png"
+    },
+    {
+        "id": 99,
+        "name": "Call Of Duty WWII",
+        "price": 249.99,
+        "platform": "PS4",
+        "image": "https://raw.githubusercontent.com/ConsultaRemedios/frontend-challenge/master/assets/call-of-duty-wwii.png"
+    },
+    {
+        "id": 12,
+        "name": "Mortal Kombat XL",
+        "price": 69.99,
+        "platform": "PS4",
+        "image": "https://raw.githubusercontent.com/ConsultaRemedios/frontend-challenge/master/assets/mortal-kombat-xl.png"
+    },
+    {
+        "id": 74,
+        "name": "Shards of Darkness",
+        "price": 71.94,
+        "platform": "PS4",
+        "image": "https://raw.githubusercontent.com/ConsultaRemedios/frontend-challenge/master/assets/shards-of-darkness.png"
+    },
+    {
+        "id": 31,
+        "name": "Terra Média: Sombras de Mordor",
+        "price": 79.99,
+        "platform": "PS4",
+        "image": "https://raw.githubusercontent.com/ConsultaRemedios/frontend-challenge/master/assets/terra-media-sombras-de-mordor.png"
+    },
+    {
+        "id": 420,
+        "name": "FIFA 18",
+        "price": 195.39,
+        "platform": "PS4",
+        "image": "https://raw.githubusercontent.com/ConsultaRemedios/frontend-challenge/master/assets/fifa-18.png"
+    },
+    {
+        "id": 501,
+        "name": "Horizon Zero Dawn",
+        "price": 115.8,
+        "platform": "PS4",
+        "image": "https://raw.githubusercontent.com/ConsultaRemedios/frontend-challenge/master/assets/horizon-zero-dawn.png"
+    }
+]
