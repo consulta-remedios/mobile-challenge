@@ -9,7 +9,6 @@
 import XCTest
 import Moya
 import Swinject
-import SwinjectStoryboard
 
 @testable import desafio_consulta_remedios
 

@@ -24,6 +24,7 @@
 		8E6AAA2522AC8A960000525B /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2F48322A8781000B41744 /* GameService.swift */; };
 		8E6AAA2822AC8B9D0000525B /* games.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E6AAA2722AC8B9D0000525B /* games.json */; };
 		8E6AAA2A22AC8BA80000525B /* game.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E6AAA2922AC8BA80000525B /* game.json */; };
+		8E6AAA2C22AC8EF00000525B /* ShoppingCartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6AAA2B22AC8EF00000525B /* ShoppingCartTests.swift */; };
 		8E9CAA6D22A9CA4600821688 /* ShoppingCart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9CAA6C22A9CA4600821688 /* ShoppingCart.storyboard */; };
 		8E9CAA7122A9CB6B00821688 /* ShoppingCartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CAA6F22A9CB6B00821688 /* ShoppingCartCell.swift */; };
 		8E9CAA7222A9CB6B00821688 /* ShoppingCartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E9CAA7022A9CB6B00821688 /* ShoppingCartCell.xib */; };
@@ -113,6 +114,7 @@
 		8E6AAA2322AC890C0000525B /* SimulatedNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatedNetworkTests.swift; sourceTree = "<group>"; };
 		8E6AAA2722AC8B9D0000525B /* games.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = games.json; sourceTree = "<group>"; };
 		8E6AAA2922AC8BA80000525B /* game.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = game.json; sourceTree = "<group>"; };
+		8E6AAA2B22AC8EF00000525B /* ShoppingCartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartTests.swift; sourceTree = "<group>"; };
 		8E9CAA6C22A9CA4600821688 /* ShoppingCart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShoppingCart.storyboard; sourceTree = "<group>"; };
 		8E9CAA6F22A9CB6B00821688 /* ShoppingCartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartCell.swift; sourceTree = "<group>"; };
 		8E9CAA7022A9CB6B00821688 /* ShoppingCartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingCartCell.xib; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				8E6AAA2622AC8B8E0000525B /* Data */,
+				8E6AAA2B22AC8EF00000525B /* ShoppingCartTests.swift */,
 				8E6AAA2322AC890C0000525B /* SimulatedNetworkTests.swift */,
 				8E0C6F4922A5EC0700D93EE5 /* desafio_consulta_remediosTests.swift */,
 				8E0C6F4B22A5EC0700D93EE5 /* Info.plist */,
@@ -825,6 +828,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E6AAA1E22AC88AA0000525B /* GameRepository.swift in Sources */,
+				8E6AAA2C22AC8EF00000525B /* ShoppingCartTests.swift in Sources */,
 				8E6AAA2022AC88B60000525B /* Game.swift in Sources */,
 				8E6AAA1F22AC88AC0000525B /* CartRepository.swift in Sources */,
 				8E6AAA2522AC8A960000525B /* GameService.swift in Sources */,
