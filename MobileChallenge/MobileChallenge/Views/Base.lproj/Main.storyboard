@@ -32,6 +32,97 @@
             </objects>
             <point key="canvasLocation" x="-1547" y="129"/>
         </scene>
+        <!--Busca-->
+        <scene sceneID="Xro-iF-O88">
+            <objects>
+                <collectionViewController storyboardIdentifier="GamesSearchCollectionViewController" id="GbX-zW-YJ3" customClass="GamesSearchCollectionViewController" customModule="MobileChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="pdm-HQ-m3o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ePW-Q7-LUQ">
+                            <size key="itemSize" width="168" height="245"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="game collection cell" id="hRX-SA-1NJ" customClass="GameCollectionViewCell" customModule="MobileChallenge" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="168" height="245"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="168" height="245"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D31-Vz-zIk" userLabel="Image container">
+                                            <rect key="frame" x="0.0" y="0.0" width="168" height="143"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game-mortal-kombat-xl" translatesAutoresizingMaskIntoConstraints="NO" id="lGq-7O-4ii" userLabel="Game Image View">
+                                                    <rect key="frame" x="10" y="10" width="148" height="123"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="lGq-7O-4ii" firstAttribute="top" secondItem="D31-Vz-zIk" secondAttribute="top" constant="10" id="7Sh-Ry-hdY"/>
+                                                <constraint firstItem="lGq-7O-4ii" firstAttribute="leading" secondItem="D31-Vz-zIk" secondAttribute="leading" constant="10" id="AEg-Jd-8XM"/>
+                                                <constraint firstAttribute="bottom" secondItem="lGq-7O-4ii" secondAttribute="bottom" constant="10" id="O0U-e5-gbj"/>
+                                                <constraint firstAttribute="height" constant="143" id="idi-C9-836"/>
+                                                <constraint firstAttribute="trailing" secondItem="lGq-7O-4ii" secondAttribute="trailing" constant="10" id="jkI-TW-4iI"/>
+                                            </constraints>
+                                        </view>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="81i-r2-bdb">
+                                            <rect key="frame" x="18" y="148" width="132" height="79"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="PS4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ys0-W5-ixT" userLabel="Platform label">
+                                                    <rect key="frame" x="54.5" y="0.0" width="23" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mortal Kombat XL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Yjq-UE-y9E" userLabel="Name label">
+                                                    <rect key="frame" x="8" y="28.5" width="116.5" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 197,99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="p40-6B-gEw" userLabel="Price label">
+                                                    <rect key="frame" x="28.5" y="59.5" width="75" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottomMargin" secondItem="81i-r2-bdb" secondAttribute="bottom" constant="10" id="FFz-Wb-1Ul"/>
+                                    <constraint firstItem="81i-r2-bdb" firstAttribute="top" secondItem="D31-Vz-zIk" secondAttribute="bottom" constant="5" id="FJv-vZ-mvL"/>
+                                    <constraint firstAttribute="trailing" secondItem="D31-Vz-zIk" secondAttribute="trailing" id="Hci-mv-aUx"/>
+                                    <constraint firstItem="81i-r2-bdb" firstAttribute="leading" secondItem="hRX-SA-1NJ" secondAttribute="leadingMargin" constant="10" id="RVV-8h-5sG"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="81i-r2-bdb" secondAttribute="trailing" constant="10" id="ZdK-U2-y5n"/>
+                                    <constraint firstItem="D31-Vz-zIk" firstAttribute="leading" secondItem="hRX-SA-1NJ" secondAttribute="leading" id="arn-z0-Xty"/>
+                                    <constraint firstItem="D31-Vz-zIk" firstAttribute="top" secondItem="hRX-SA-1NJ" secondAttribute="top" id="w91-FX-BZm"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="gameImageView" destination="lGq-7O-4ii" id="SzM-6I-wyH"/>
+                                    <outlet property="gameNameLabel" destination="Yjq-UE-y9E" id="Obm-TB-sSd"/>
+                                    <outlet property="platformLabel" destination="Ys0-W5-ixT" id="3UG-km-3IZ"/>
+                                    <outlet property="priceLabel" destination="p40-6B-gEw" id="Nij-rQ-6UU"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="GbX-zW-YJ3" id="Hhp-vn-7Tm"/>
+                            <outlet property="delegate" destination="GbX-zW-YJ3" id="z40-xn-X1t"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Busca" largeTitleDisplayMode="never" id="mk5-Om-kEV"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UQm-Rg-8Bk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-679" y="857"/>
+        </scene>
         <!--Games-->
         <scene sceneID="dQo-xP-pZR">
             <objects>
@@ -114,7 +205,7 @@
                                     <outlet property="gameNameLabel" destination="KB6-KN-KzI" id="liU-It-snw"/>
                                     <outlet property="platformLabel" destination="gXX-gb-Naz" id="XxN-T5-qcN"/>
                                     <outlet property="priceLabel" destination="GRJ-D9-FPn" id="2Kc-Eo-WYa"/>
-                                    <segue destination="L8P-EY-6Kd" kind="show" id="5Hp-qC-3Ej"/>
+                                    <segue destination="L8P-EY-6Kd" kind="show" identifier="show game details" id="5Hp-qC-3Ej"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -132,6 +223,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="oaQ-6f-DQT" id="W4N-RF-VEg"/>
+                        <segue destination="GbX-zW-YJ3" kind="show" identifier="show search" id="jgk-jo-fOT"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lKV-tt-AGm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -679,6 +771,6 @@
         <image name="icon-freight" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PK8-YR-nHs"/>
+        <segue reference="5WM-sX-9IQ"/>
     </inferredMetricsTieBreakers>
 </document>
