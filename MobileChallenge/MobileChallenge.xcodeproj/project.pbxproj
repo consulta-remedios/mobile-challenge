@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		26F8C831E040A79000995AAD /* Pods_MobileChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B58444D78377570BC1F2724 /* Pods_MobileChallenge.framework */; };
 		47CCFB3622A748FA0024D50E /* StoreService+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CCFB3522A748FA0024D50E /* StoreService+Constants.swift */; };
+		47CF1CA422AFAE8100FC3997 /* GamesSearchCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF1CA322AFAE8100FC3997 /* GamesSearchCollectionViewController.swift */; };
 		47D6DDB922AC71CF00C86DA4 /* EmptyCartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47D6DDB822AC71CF00C86DA4 /* EmptyCartView.xib */; };
 		47D6DDBC22AC722A00C86DA4 /* EmptyCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D6DDBB22AC722A00C86DA4 /* EmptyCartView.swift */; };
 		47F19C3F22A8AF6B005A4DEC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C3E22A8AF6B005A4DEC /* Item.swift */; };
@@ -49,6 +50,7 @@
 		161A8825A705F577EFBE760C /* Pods-MobileChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileChallenge.debug.xcconfig"; path = "Target Support Files/Pods-MobileChallenge/Pods-MobileChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		41AA1CF37D3CD6D25DF2A255 /* Pods_MobileChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47CCFB3522A748FA0024D50E /* StoreService+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoreService+Constants.swift"; sourceTree = "<group>"; };
+		47CF1CA322AFAE8100FC3997 /* GamesSearchCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesSearchCollectionViewController.swift; sourceTree = "<group>"; };
 		47D6DDB822AC71CF00C86DA4 /* EmptyCartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyCartView.xib; sourceTree = "<group>"; };
 		47D6DDBB22AC722A00C86DA4 /* EmptyCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCartView.swift; sourceTree = "<group>"; };
 		47F19C3E22A8AF6B005A4DEC /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				47F19C6322AA0FAE005A4DEC /* GamesCollectionViewController.swift */,
+				47CF1CA322AFAE8100FC3997 /* GamesSearchCollectionViewController.swift */,
 			);
 			path = Games;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 			files = (
 				47F9D61222A605100069FECA /* AppDelegate.swift in Sources */,
 				47F19C6822AA90DB005A4DEC /* UIViewController+Alerts.swift in Sources */,
+				47CF1CA422AFAE8100FC3997 /* GamesSearchCollectionViewController.swift in Sources */,
 				47F19C6B22AAACDB005A4DEC /* GameDetailsViewController.swift in Sources */,
 				47F19C7222AAD95E005A4DEC /* GameShoppingCartTableViewCell.swift in Sources */,
 				47F19C7622AADE5E005A4DEC /* User.swift in Sources */,

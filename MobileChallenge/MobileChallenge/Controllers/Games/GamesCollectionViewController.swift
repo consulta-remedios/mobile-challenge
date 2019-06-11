@@ -17,11 +17,35 @@ class GamesCollectionViewController: UICollectionViewController {
     /// The cell reuse identifier.
     fileprivate let reuseIdentifier = "game collection cell"
 
+    /// The segue identifier of the details controller.
+    private let detailsSegueId = "show game details"
+
     /// The service used to request any items to be displayed by this controller.
     var storeService: StoreServiceProtocol!
 
     /// The user of the application.
     var user: User!
+
+    /// The selected game from the search results.
+    private var selectedGame: Item?
+
+    /// The controller displaying the user's search.
+    private lazy var searchResultsController: GamesSearchCollectionViewController! = {
+        guard let searchResultsController = storyboard?.instantiateViewController(
+            withIdentifier: "GamesSearchCollectionViewController"
+            ) as? GamesSearchCollectionViewController else {
+                preconditionFailure("The controller to search for songs must be set.")
+        }
+        searchResultsController.selectionHandler = { [unowned self] game in
+            self.selectedGame = game
+            self.performSegue(withIdentifier: self.detailsSegueId, sender: self)
+        }
+
+        return searchResultsController
+    }()
+
+    /// The controller handling the user's search.
+    private var searchController: UISearchController!
 
     /// The items being displayed.
     fileprivate var items: [Item]? {
@@ -47,11 +71,24 @@ class GamesCollectionViewController: UICollectionViewController {
         guard user != nil else {
             preconditionFailure("The user must be injected.")
         }
+
+        definesPresentationContext = true
+        setupSearch()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         fetchItems()
+    }
+
+    // MARK: Setup
+
+    /// Configures the search bar.
+    private func setupSearch() {
+        searchController = UISearchController(searchResultsController: searchResultsController)
+        searchController.searchResultsUpdater = searchResultsController
+        searchController.hidesNavigationBarDuringPresentation = false
+        navigationItem.searchController = searchController
     }
 
     // MARK: Navigation
@@ -70,12 +107,19 @@ class GamesCollectionViewController: UICollectionViewController {
                 preconditionFailure("The controller must be an instance of the details vc.")
             }
 
-            guard let selectedIndexPath = collectionView.indexPathsForSelectedItems?.first else {
-                preconditionFailure("The item must be selected to proceed.")
-            }
+            var item: Item!
 
-            guard let item = items?[selectedIndexPath.item] else {
-                preconditionFailure("The index path must be related to an item.")
+            if let game = selectedGame {
+                item = game
+            } else {
+                guard let selectedIndexPath = collectionView.indexPathsForSelectedItems?.first else {
+                    preconditionFailure("The item must be selected to proceed.")
+                }
+
+                guard let itemAtPath = items?[selectedIndexPath.item] else {
+                    preconditionFailure("The index path must be related to an item.")
+                }
+                item = itemAtPath
             }
 
             detailsController.storeService = storeService
@@ -102,6 +146,7 @@ class GamesCollectionViewController: UICollectionViewController {
 
                 if let items = items {
                     self?.items = items
+                    self?.searchResultsController.games = items
                 } else if let error = error {
                     var message: String!
 
