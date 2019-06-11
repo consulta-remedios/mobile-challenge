@@ -68,6 +68,7 @@ class ShoppingCartTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        tableView.reloadData()
         totalPriceLabel.text = "R$ \(user.shoppingCart.totalPrice)"
         displayEmptyCartIfNeeded()
     }
@@ -123,7 +124,7 @@ class ShoppingCartTableViewController: UITableViewController {
 
     /// Displays the empty cart view, if needed.
     private func displayEmptyCartIfNeeded() {
-        if user.shoppingCart.items.isEmpty {
+        if user.shoppingCart.isEmpty {
             tableView.tableFooterView = UIView()
             tableView.backgroundView = shoppingCartEmptyView
         }

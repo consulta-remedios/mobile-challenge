@@ -22,6 +22,11 @@ struct ShoppingCart {
         return totalPrice > 250 ? 0 : Double(items.count * 10)
     }
 
+    /// Informs if the cart is empty or not.
+    var isEmpty: Bool {
+        return items.isEmpty
+    }
+
     // MARK: Initializers
 
     init(items: [Item] = []) {
