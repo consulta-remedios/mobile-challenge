@@ -12,25 +12,25 @@ import Foundation
 struct ShoppingCart {
 
     /// The items currently in the cart.
-    private(set) var items: [Item] = []
+    private(set) var mappedItems: [(Item, amount: Int)] = []
 
     /// The total price of the shopping cart.
     var totalPrice: Double = 0
 
     /// The freight of the shopping cart.
     var freight: Double {
-        return totalPrice > 250 ? 0 : Double(items.count * 10)
+        return totalPrice > 250 ? 0 : Double(mappedItems.count * 10)
     }
 
     /// Informs if the cart is empty or not.
     var isEmpty: Bool {
-        return items.isEmpty
+        return mappedItems.isEmpty
     }
 
     // MARK: Initializers
 
     init(items: [Item] = []) {
-        self.items = items
+        mappedItems = items.reduce([(Item, amount: Int)](), appendItemIntoMapped)
         totalPrice = items.reduce(0) { $0 + $1.price }
     }
 
@@ -39,20 +39,56 @@ struct ShoppingCart {
     /// Given an item, add it to the shopping cart.
     /// - Parameter item: the item to be added.
     mutating func addItem(_ item: Item) {
-        items.append(item)
+        mappedItems = appendItemIntoMapped(mappedItems, item)
         totalPrice += item.price
+    }
+
+    /// Given a mapped array of items (containing the item and its quantity), and an item,
+    /// appends the item into the mapped array of items.
+    /// - Parameters:
+    ///     - mapped: an array containing the items with their respective amount in the list.
+    ///     - item: an item to be appended into the mapped items.
+    /// - Returns: the mapped array of items with the item appended into it.
+    private func appendItemIntoMapped(
+        _ mapped: [(Item, amount: Int)],
+        _ item: Item
+        ) -> [(Item, amount: Int)] {
+
+        var mappedItems = mapped
+        var wasFound = false
+
+        for (index, mappedItem) in mappedItems.enumerated() where mappedItem.0 == item {
+            wasFound = true
+            mappedItems[index].amount += 1
+        }
+
+        if !wasFound {
+            mappedItems.append((item, amount: 1))
+        }
+
+        return mappedItems
     }
 
     /// Given the index of an item in the shopping cart, removes it.
     /// - Parameter index: the index of the item to be removed, if not specified, the last item is removed.
     /// - Returns: the removed item.
     mutating func removeItem(at index: Int? = nil) -> Item? {
-        var item: Item?
+        let index = index ?? mappedItems.count - 1
 
-        if let index = index, index <= items.count - 1 {
-            item = items.remove(at: index)
+        guard !isEmpty,
+            index >= 0,
+            index < mappedItems.count else {
+            return nil
+        }
+
+        var item: Item!
+
+        if mappedItems[index].amount == 1 {
+            let mappedItem = mappedItems.remove(at: index)
+            item = mappedItem.0
         } else {
-            item = items.popLast()
+            mappedItems[index].amount -= 1
+            item = mappedItems[index].0
         }
 
         if let item = item {
@@ -64,7 +100,7 @@ struct ShoppingCart {
 
     /// Clears the shopping cart. This is tipically done after a purchase.
     mutating func clear() {
-        items = []
+        mappedItems = []
         totalPrice = 0
     }
 }

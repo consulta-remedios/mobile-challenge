@@ -57,4 +57,10 @@ struct Item: Codable, Equatable {
         case description
         case imagePath = "image"
     }
+
+    // MARK: Equatable
+
+    public static func == (lhs: Item, rhs: Item) -> Bool {
+        return lhs.identifier == rhs.identifier
+    }
 }

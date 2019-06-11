@@ -48,4 +48,6 @@ identifier_name:
     - URL
     - GlobalAPIKey
     - API
+    - lhs
+    - rhs
 reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji, sonarqube, markdown)
