@@ -149,7 +149,7 @@ extension ShoppingCartTableViewController {
     // MARK: Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        if user.shoppingCart.items.isEmpty {
+        if user.shoppingCart.mappedItems.isEmpty {
             return 0
         } else {
             return Section.allCases.count
@@ -163,7 +163,7 @@ extension ShoppingCartTableViewController {
 
         switch section {
         case .games:
-            return user.shoppingCart.items.count
+            return user.shoppingCart.mappedItems.count
         case .informations:
             return InformationRow.allCases.count
         }
@@ -199,7 +199,7 @@ extension ShoppingCartTableViewController {
             preconditionFailure("The cell should be of the GameShoppingCartTableViewCell type.")
         }
 
-        let game = user.shoppingCart.items[indexPath.row]
+        let game = user.shoppingCart.mappedItems[indexPath.row].0
 
         if let URL = URL(string: game.imagePath) {
             cell.gameCoverImageView.kf.setImage(with: URL)

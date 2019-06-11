@@ -30,7 +30,7 @@ class ShoppingCartTests: XCTestCase {
 
         cart.addItem(item)
 
-        guard let cartItem = cart.items.first else {
+        guard let cartItem = cart.mappedItems.first?.0 else {
             XCTFail("An item should've been added.")
             return
         }
@@ -148,7 +148,7 @@ class ShoppingCartTests: XCTestCase {
 
         cart.clear()
 
-        XCTAssertEqual(cart.items.count, 0)
+        XCTAssertEqual(cart.mappedItems.count, 0)
         XCTAssertEqual(cart.totalPrice, 0)
         XCTAssertEqual(cart.freight, 0)
     }
@@ -165,6 +165,39 @@ class ShoppingCartTests: XCTestCase {
         XCTAssertFalse(cart.isEmpty)
 
         cart.clear()
+
+        XCTAssertTrue(cart.isEmpty)
+    }
+
+    func testShoppingCartInitialItemCountIsOne() {
+        let cart = ShoppingCart(items: [
+            Item(identifier: 0, name: "0", price: 50, platform: "ps3", imagePath: "")
+            ])
+
+        XCTAssertEqual(cart.mappedItems[0].amount, 1)
+    }
+
+    func testShoppingCartCountsEqualItems() {
+        let item = Item(identifier: 0, name: "0", price: 50, platform: "ps3", imagePath: "")
+        var cart = ShoppingCart(items: [item])
+        cart.addItem(item)
+
+        XCTAssertEqual(cart.mappedItems[0].amount, 2)
+    }
+
+    func testRemovingItemDecreasesTheAmount() {
+        let item = Item(identifier: 0, name: "0", price: 50, platform: "ps3", imagePath: "")
+        var cart = ShoppingCart(items: [item])
+        cart.addItem(item)
+        _ = cart.removeItem(at: 0)
+
+        XCTAssertEqual(cart.mappedItems[0].amount, 1)
+    }
+
+    func testRemovingOnlyItemAlsoRemovesItFromMap() {
+        let item = Item(identifier: 0, name: "0", price: 50, platform: "ps3", imagePath: "")
+        var cart = ShoppingCart(items: [item])
+        _ = cart.removeItem(at: 0)
 
         XCTAssertTrue(cart.isEmpty)
     }
