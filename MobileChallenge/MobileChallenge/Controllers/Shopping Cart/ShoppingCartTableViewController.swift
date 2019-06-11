@@ -41,6 +41,16 @@ class ShoppingCartTableViewController: UITableViewController {
     /// The activity indicator showing that the request is in progress.
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
+    private lazy var shoppingCartEmptyView: EmptyCartView = {
+        guard let emptyView = Bundle.main.loadNibNamed(
+            "EmptyCartView",
+            owner: self,
+            options: nil)?.first as? EmptyCartView else {
+                preconditionFailure("The empty cart view must be instantiated.")
+        }
+        return emptyView
+    }()
+
     // MARK: Life Cycle
 
     override func viewDidLoad() {
@@ -53,8 +63,14 @@ class ShoppingCartTableViewController: UITableViewController {
         guard user != nil else {
             preconditionFailure("The user must be injected.")
         }
+    }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        tableView.reloadData()
         totalPriceLabel.text = "R$ \(user.shoppingCart.totalPrice)"
+        displayEmptyCartIfNeeded()
     }
 
     // MARK: Actions
@@ -103,6 +119,16 @@ class ShoppingCartTableViewController: UITableViewController {
     @IBAction func continueBuying(_ sender: UIButton) {
         navigationController?.popToRootViewController(animated: true)
     }
+
+    // MARK: Imperatives
+
+    /// Displays the empty cart view, if needed.
+    private func displayEmptyCartIfNeeded() {
+        if user.shoppingCart.isEmpty {
+            tableView.tableFooterView = UIView()
+            tableView.backgroundView = shoppingCartEmptyView
+        }
+    }
 }
 
 extension ShoppingCartTableViewController {
@@ -123,7 +149,11 @@ extension ShoppingCartTableViewController {
     // MARK: Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return Section.allCases.count
+        if user.shoppingCart.items.isEmpty {
+            return 0
+        } else {
+            return Section.allCases.count
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -191,6 +221,7 @@ extension ShoppingCartTableViewController {
                 _ = self.user.shoppingCart.removeItem(at: indexPath.row)
                 // TODO: Make this update animated.
                 self.tableView.reloadData()
+                self.displayEmptyCartIfNeeded()
             })
 
             self.present(alert, animated: true)

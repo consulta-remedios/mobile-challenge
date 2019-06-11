@@ -152,4 +152,20 @@ class ShoppingCartTests: XCTestCase {
         XCTAssertEqual(cart.totalPrice, 0)
         XCTAssertEqual(cart.freight, 0)
     }
+
+    func testShoppingCartHasAnIsEmptyMethod() {
+        var cart = ShoppingCart(items:
+            [Item(identifier: 1,
+                  name: "1",
+                  price: 51,
+                  platform: "XBox",
+                  imagePath: "")
+            ])
+
+        XCTAssertFalse(cart.isEmpty)
+
+        cart.clear()
+
+        XCTAssertTrue(cart.isEmpty)
+    }
 }

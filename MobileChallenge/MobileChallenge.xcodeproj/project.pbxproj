@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		26F8C831E040A79000995AAD /* Pods_MobileChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B58444D78377570BC1F2724 /* Pods_MobileChallenge.framework */; };
 		47CCFB3622A748FA0024D50E /* StoreService+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CCFB3522A748FA0024D50E /* StoreService+Constants.swift */; };
+		47D6DDB922AC71CF00C86DA4 /* EmptyCartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47D6DDB822AC71CF00C86DA4 /* EmptyCartView.xib */; };
+		47D6DDBC22AC722A00C86DA4 /* EmptyCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D6DDBB22AC722A00C86DA4 /* EmptyCartView.swift */; };
 		47F19C3F22A8AF6B005A4DEC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C3E22A8AF6B005A4DEC /* Item.swift */; };
 		47F19C4122A8B16E005A4DEC /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C4022A8B16E005A4DEC /* ShoppingCart.swift */; };
 		47F19C6122A9E48E005A4DEC /* ShoppingCartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F19C6022A9E48E005A4DEC /* ShoppingCartTests.swift */; };
@@ -47,6 +49,8 @@
 		161A8825A705F577EFBE760C /* Pods-MobileChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileChallenge.debug.xcconfig"; path = "Target Support Files/Pods-MobileChallenge/Pods-MobileChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		41AA1CF37D3CD6D25DF2A255 /* Pods_MobileChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47CCFB3522A748FA0024D50E /* StoreService+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoreService+Constants.swift"; sourceTree = "<group>"; };
+		47D6DDB822AC71CF00C86DA4 /* EmptyCartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyCartView.xib; sourceTree = "<group>"; };
+		47D6DDBB22AC722A00C86DA4 /* EmptyCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCartView.swift; sourceTree = "<group>"; };
 		47F19C3E22A8AF6B005A4DEC /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		47F19C4022A8B16E005A4DEC /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
 		47F19C5F22A9E48D005A4DEC /* MobileChallengeTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MobileChallengeTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -97,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47D6DDBA22AC71D900C86DA4 /* EmptyCartView */ = {
+			isa = PBXGroup;
+			children = (
+				47D6DDB822AC71CF00C86DA4 /* EmptyCartView.xib */,
+				47D6DDBB22AC722A00C86DA4 /* EmptyCartView.swift */,
+			);
+			path = EmptyCartView;
+			sourceTree = "<group>";
+		};
 		47F19C6222AA0F89005A4DEC /* Games */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +147,7 @@
 			children = (
 				47F19C7122AAD95E005A4DEC /* GameShoppingCartTableViewCell.swift */,
 				47F19C7322AAD981005A4DEC /* InformationTableViewCell.swift */,
+				47D6DDBA22AC71D900C86DA4 /* EmptyCartView */,
 			);
 			path = "Shopping Cart";
 			sourceTree = "<group>";
@@ -202,7 +216,6 @@
 		47F9D63522A605670069FECA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				47F9D61522A605100069FECA /* Main.storyboard */,
 				47F19C6722AA90DB005A4DEC /* UIViewController+Alerts.swift */,
 				47F19C6222AA0F89005A4DEC /* Games */,
 				47F19C6922AAACB8005A4DEC /* Details */,
@@ -215,6 +228,7 @@
 		47F9D63622A6056D0069FECA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				47F9D61522A605100069FECA /* Main.storyboard */,
 				47F19C6F22AAD903005A4DEC /* Games */,
 				47F19C7022AAD90C005A4DEC /* Shopping Cart */,
 			);
@@ -367,6 +381,7 @@
 			files = (
 				47F9D61F22A605170069FECA /* LaunchScreen.storyboard in Resources */,
 				47F9D61C22A605160069FECA /* Assets.xcassets in Resources */,
+				47D6DDB922AC71CF00C86DA4 /* EmptyCartView.xib in Resources */,
 				47F9D61722A605100069FECA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,6 +496,7 @@
 				47F19C7922AB02A7005A4DEC /* FinishedPurchaseViewController.swift in Sources */,
 				47F9D63D22A608300069FECA /* APIClientProtocol.swift in Sources */,
 				47F19C3F22A8AF6B005A4DEC /* Item.swift in Sources */,
+				47D6DDBC22AC722A00C86DA4 /* EmptyCartView.swift in Sources */,
 				47F19C6422AA0FAE005A4DEC /* GamesCollectionViewController.swift in Sources */,
 				47F19C6622AA19CE005A4DEC /* GameCollectionViewCell.swift in Sources */,
 				47F9D64222A60CF40069FECA /* StoreService.swift in Sources */,
