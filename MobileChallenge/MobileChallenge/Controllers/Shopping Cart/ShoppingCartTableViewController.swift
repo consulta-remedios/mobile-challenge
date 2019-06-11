@@ -199,14 +199,14 @@ extension ShoppingCartTableViewController {
             preconditionFailure("The cell should be of the GameShoppingCartTableViewCell type.")
         }
 
-        let game = user.shoppingCart.mappedItems[indexPath.row].0
+        let (game, quantity) = user.shoppingCart.mappedItems[indexPath.row]
 
         if let URL = URL(string: game.imagePath) {
             cell.gameCoverImageView.kf.setImage(with: URL)
         }
         cell.gameNameLabel.text = game.name
         cell.priceLabel.text = "R$ \(game.price)"
-        cell.itemsCountLabel.text = "1" // TODO: Make this show the real number of items to be purchased.
+        cell.itemsCountLabel.text = "\(quantity)"
 
         cell.removalHandler = { [unowned self] in
             let title = NSLocalizedString("Remover", comment: "The title of an alert.")
@@ -217,7 +217,6 @@ extension ShoppingCartTableViewController {
             let alert = self.makeAlertController(withTitle: title, andMessage: message)
             alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel))
             alert.addAction(UIAlertAction(title: title, style: .default) { _ in
-                // Remove the game from the cart.
                 _ = self.user.shoppingCart.removeItem(at: indexPath.row)
                 // TODO: Make this update animated.
                 self.tableView.reloadData()
