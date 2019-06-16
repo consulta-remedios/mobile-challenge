@@ -1,33 +1,43 @@
-## Consulta Remedios Mobile Challenge
+# Games
 
-O teste consiste em construir uma aplicação nativa iOS de um pseudo ecommerce de games.
+Para este projeto foi utilizado o Cocoapods, para gerenciar as bibliotecas utilizadas.
+No projeto foram utilizadas as seguintes bibliotecas:
 
-### Recursos
-- Faça aplicação conforme o layout: [Layout iOS](https://xd.adobe.com/view/46d6098f-efdf-4d13-6096-690517595f3b-30e7/)
-- Documentação da api no arquivo [docs/api.md](docs/api.md)
-- Imagens disponiveis na pasta [images/assets-ios](images/assets-ios/)
+  - Alamofire - Biblioteca para realizar de forma simples e elegante as chamas do  webservice
+  - AlamofireObjectMapper - Biblioteca para realizar o mapeamento do json que vem do webservice
+  - AlamofireImage - Biblioteca para realizar o download das imagens do webservice
+  - RealmSwift - Banco de dados
+  
+# Instrução
 
-### Escopo
-- A lista de jogos deve ser carregada automaticamente ao entrar no aplicativo, jogos devem vir da API
-- Ao clicar em algum item da lista, ir para tela de detalhes
-- O carrinho de compra deve exibir todos os itens adicionados.
-- Cada produto adicionado no carrinho, soma R$:10,00 ao frete do produto
-- O frete é grátis para compras acima de R$:250,00
+Para executar a aplicação é necessário instalar o cocoapods com o seguinte comando  :
 
-### O que iremos avaliar...
-- Funcionamento do aplicativo(ele não pode quebrar)
-- Layout(Usabilidade e se fez conforme escopo)
-- O Código(Domínio da linguagem, estrutura, uso de boas práticas, Legibilidade e Lint)
-- Uso do git e github(iremos olhar os commits; branches; pull request. Recomendado uso do gitflow)
+  sudo gem install cocoapods
 
-### Diferencias
-- Rotinas de teste
+Após a instalação, acessar a pasta do projeto através do terminal e executar o seguinte comando
+  
+  pod install
 
-### Como aplicar
-Faça um pull request para este repositório com o código a ser avaliado
+Com isso as bibliotecas serão instaladas.
 
-##### Recomendações
-* Crie um código escalável
-* Versione como se estivesse trabalhando em equipe
-* Descreva em um `README.md` o que você fez de interessante, a arquitetura que usou, lista de bibliotecas que usou e as dificuldades encontradas no desenvolvimento da aplicação(Se não consegui terminar em tempo hábil, aproveite este espaço para fazer um checklist do que está faltando)
-* Preze pela qualidade, se faltar tempo para terminar o teste, faça uma lista de pendências
+Após a instalação abra o xcode -> File -> Open -> Selecione a pasta onde o projeto foi salvo -> Abra o arquivo ConsultaRemedio.xcworkspace
+
+Após o projeto aberto é só executar.
+
+# Breve descrição
+
+Ao abrir o app os jogos apareçam na tela. Nesta primeira tela o usuário poderá realizar a busca pelo nome do 
+jogo e pode ir para a tela do carrinho de compras. O usuário pode clicar em qualquer jogo, quando fizer isso será mostrada algumas informações do jogo. Na tela dos detalhes o usuário poderá adicionar o jogo no carrinho de compras ou ir para a tela do carrinho de compras.
+Na tela de do carrinho o usuário poderá finalizar a sua comprar.
+
+# Teste 
+
+Foram criados testes unitários para as regras do carrinho.
+Para rodar os testes é só dar o comando cmd + u.
+
+# Melhorias
+- Tentei deixar o layout mais parecido possível com as telas que foram passadas, mas não tinha as dimensões exatas e nem as fontes e seus tamanhos;
+
+# Implentação do webservice;
+- No checkout do carrinho o webservice não retorna o número do pedido, deve ser implementado;
+- Não consegui testar a aplicação funcionando 100%, pois o webservice não estava mais no ar, no domingo dia 16/06
