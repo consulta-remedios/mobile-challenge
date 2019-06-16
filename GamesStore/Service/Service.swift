@@ -14,7 +14,7 @@ class Service {
             "TOKEN": token
         ]
         
-        Alamofire.request(baseUrl + "/games", method: .get, headers: headers)
+        Alamofire.request(baseUrl + "/game", method: .get, headers: headers)
             .responseArray { (response: DataResponse<[Game]>) in
                 switch response.result {
                 case .success:
