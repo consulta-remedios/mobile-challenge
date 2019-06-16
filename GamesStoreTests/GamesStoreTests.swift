@@ -1,11 +1,3 @@
-//
-//  GamesStoreTests.swift
-//  GamesStoreTests
-//
-//  Created by Marcio Habigzang Brufatto on 11/06/19.
-//  Copyright © 2019 Marcio Habigzang Brufatto. All rights reserved.
-//
-
 import XCTest
 import RealmSwift
 @testable import GamesStore
