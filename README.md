@@ -40,4 +40,3 @@ Para rodar os testes é só dar o comando cmd + u.
 
 # Implentação do webservice;
 - No checkout do carrinho o webservice não retorna o número do pedido, deve ser implementado;
-- Não consegui testar a aplicação funcionando 100%, pois o webservice não estava mais no ar, no domingo dia 16/06
