@@ -154,7 +154,7 @@ extension CartController: FinishViewDelegate {
     
     func finishCart() {
         
-        GamesService.shared.checkout(completionHandler: {(checkout, err) in
+        Service.shared.checkout(completionHandler: {(checkout, err) in
             if let err = err {
                 print("Failed to checkout:", err)
                 return
