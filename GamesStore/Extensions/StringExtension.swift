@@ -1,11 +1,3 @@
-//
-//  StringExtension.swift
-//  GamesStore
-//
-//  Created by Marcio Habigzang Brufatto on 12/06/19.
-//  Copyright © 2019 Marcio Habigzang Brufatto. All rights reserved.
-//
-
 import Foundation
 import UIKit
 

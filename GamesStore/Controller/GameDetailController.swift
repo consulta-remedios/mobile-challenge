@@ -1,11 +1,3 @@
-//
-//  GameDetailController.swift
-//  ConsultaRemedio
-//
-//  Created by Marcio Habigzang Brufatto on 27/02/19.
-//  Copyright © 2019 Marcio Habigzang Brufatto. All rights reserved.
-//
-
 import UIKit
 import RealmSwift
 
