@@ -13,8 +13,8 @@ class Game: Mappable {
     
     var id: Int = 0
     var name: String = ""
-    var description: String = ""
-    var price: Int = 0
+    var gameDescription: String = ""
+    var price: Double = 0
     var score: Int = 0
     var platform: String = ""
     var image: String = ""
@@ -26,7 +26,7 @@ class Game: Mappable {
     func mapping(map: Map) {
         id <- map["id"]
         name <- map["name"]
-        description <- map["description"]
+        gameDescription <- map["description"]
         price <- map["price"]
         score <- map["score"]
         platform <- map["platform"]

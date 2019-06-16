@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0035F7DE22B68285002A29B0 /* GamesStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EEB5E22B09E6F00E0A769 /* GamesStoreTests.swift */; };
 		006EEB4A22B09E6D00E0A769 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EEB4922B09E6D00E0A769 /* AppDelegate.swift */; };
 		006EEB4F22B09E6D00E0A769 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 006EEB4D22B09E6D00E0A769 /* Main.storyboard */; };
 		006EEB5122B09E6E00E0A769 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 006EEB5022B09E6E00E0A769 /* Assets.xcassets */; };
 		006EEB5422B09E6E00E0A769 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 006EEB5222B09E6E00E0A769 /* LaunchScreen.storyboard */; };
-		006EEB5F22B09E6F00E0A769 /* GamesStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EEB5E22B09E6F00E0A769 /* GamesStoreTests.swift */; };
 		006EEB6F22B0A13700E0A769 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EEB6E22B0A13700E0A769 /* Game.swift */; };
 		006EEB7122B0A2C900E0A769 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EEB7022B0A2C900E0A769 /* Cart.swift */; };
 		006EEB7322B0A7A300E0A769 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EEB7222B0A7A300E0A769 /* Service.swift */; };
@@ -365,7 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				006EEB5F22B09E6F00E0A769 /* GamesStoreTests.swift in Sources */,
+				0035F7DE22B68285002A29B0 /* GamesStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

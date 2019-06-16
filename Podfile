@@ -12,7 +12,6 @@ target 'GamesStore' do
 
   target 'GamesStoreTests' do
     inherit! :search_paths
-    # Pods for testing
   end
 
 end

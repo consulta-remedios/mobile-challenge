@@ -13,7 +13,7 @@ class Cart: Object {
     
     @objc dynamic var id: Int = 0
     @objc dynamic var name: String = ""
-    @objc dynamic var description: String = ""
+    @objc dynamic var gameDescription: String = ""
     @objc dynamic var price: Double = 0.0
     @objc dynamic var score: Int = 0
     @objc dynamic var platform: String = ""
@@ -29,7 +29,7 @@ class Cart: Object {
                 let cart = Cart()
                 cart.id = game.id
                 cart.name = game.name
-                cart.description = game.description
+                cart.gameDescription = game.gameDescription
                 cart.price = game.price
                 cart.score = game.score
                 cart.platform = game.platform
@@ -52,7 +52,7 @@ class Cart: Object {
         }
         
         let realm = try! Realm()
-        let gamesInCart = realm.objects(cart.self)
+        let gamesInCart = realm.objects(Cart.self)
         var shippingValue: Double = 0.0
         for game in gamesInCart {
             shippingValue += Double(game.count) * 10.0
@@ -69,5 +69,12 @@ class Cart: Object {
         }
         
         return total
+    }
+    
+    func searchGame(gameId: Int) -> Results<Cart>{
+        let realm = try! Realm()
+        let cart = realm.objects(Cart.self).filter("id== \(gameId)")
+        
+        return cart
     }
 }
